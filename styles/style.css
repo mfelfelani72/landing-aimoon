@@ -1,9 +1,118 @@
-@import "tailwindcss";
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@layer base {
+  /* persion */
+
+  /* @font-face {
+      font-family: yekanBakh;
+      font-weight: 100;
+      font-style: normal;
+      src: url('../assets/fonts/Yekan_Bakh_Thin.TTF');
+      font-display: swap;
+  } */
+  @font-face {
+    font-family: yekanBakh;
+    font-weight: 300;
+    font-style: normal;
+    src: url("../assets/fonts/Yekan_Bakh_Light.otf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: yekanBakh;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../assets/fonts/Yekan_Bakh_Regular.otf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: yekanBakh;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../assets/fonts/Yekan_Bakh_Medium.otf");
+    font-display: swap;
+  }
+
+  /* @font-face {
+      font-family: yekanBakh;
+      font-weight:600;
+      font-style: normal;
+      src: url('../assets/fonts/Yekan_Bakh_Semi_Bold.TTF');
+      font-display: swap;
+  } */
+  @font-face {
+    font-family: yekanBakh;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../assets/fonts/Yekan_Bakh_Bold.otf");
+    font-display: swap;
+  }
+
+  /* @font-face {
+      font-family: yekanBakh;
+      font-weight: 800;
+      font-style: normal;
+      src: url('../assets/fonts/Yekan_Bakh_Extra_Bold.TTF');
+      font-display: swap;
+  } */
+
+  /* english */
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 300;
+    font-style: normal;
+    src: url("../assets/fonts/SpaceGrotesk-Light.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../assets/fonts/SpaceGrotesk-Regular.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../assets/fonts/SpaceGrotesk-Medium.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 600;
+    font-style: normal;
+    src: url("../assets/fonts/SpaceGrotesk-SemiBold.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../assets/fonts/SpaceGrotesk-Bold.ttf");
+    font-display: swap;
+  }
+}
 
 @theme {
 
-  /* color */
+  /* Fonts */
 
+  --font-yekanBakh: yekanBakh;
+  --font-spaceGrotesk: spaceGrotesk;
+
+  /* Colors */
+
+  /* warning */
   --color-Warning-600: rgba(215, 187, 30, 1);
   --color-Warning-500: rgba(215, 187, 30, 1);
   --color-Warning-400: rgba(229, 205, 67, 1);
@@ -12,16 +121,62 @@
   --color-Warning-100: rgba(245, 235, 180, 1);
   --color-Warning-50: rgba(245, 235, 180, 1);
 
-  --color-Success-600: rgba(245, 235, 180, 1);
-  --color-Success-500: rgba(245, 235, 180, 1);
-  --color-Success-400: rgba(245, 235, 180, 1);
-  --color-Success-300: rgba(245, 235, 180, 1);
-  --color-Success-200: rgba(245, 235, 180, 1);
-  --color-Success-100: rgba(245, 235, 180, 1);
-  --color-Success-50: rgba(245, 235, 180, 1);
+  /* Success */
+  --color-Success-600: rgba(45, 215, 30, 1);
+  --color-Success-500: rgba(45, 215, 30, 1);
+  --color-Success-400: rgba(80, 229, 67, 1);
+  --color-Success-300: rgba(115, 234, 105, 1);
+  --color-Success-200: rgba(150, 239, 142, 1);
+  --color-Success-100: rgba(185, 245, 180, 1);
+  --color-Success-50: rgba(220, 250, 217, 1);
 
+  /* Error */
+  --color-Error-600: rgba(215, 30, 30, 1);
+  --color-Error-500: rgba(215, 30, 30, 1);
+  --color-Error-400: rgba(229, 67, 67, 1);
+  --color-Error-300: rgba(234, 105, 105, 1);
+  --color-Error-200: rgba(239, 142, 142, 1);
+  --color-Error-100: rgba(245, 180, 180, 1);
+  --color-Error-50: rgba(250, 217, 217, 1);
 
+  /* Secondrary */
+  --color-secondary-600: rgba(145, 118, 234, 1);
+  --color-secondary-500: rgba(145, 118, 234, 1);
+  --color-secondary-400: rgba(180, 162, 241, 1);
+  --color-secondary-300: rgba(195, 181, 244, 1);
+  --color-secondary-200: rgba(225, 218, 249, 1);
+  --color-secondary-100: rgba(240, 236, 252, 1);
+  --color-secondary-50: rgba(247, 246, 254, 1);
+
+  /* Neutral */
+  --color-Neutral-600: rgba(10, 10, 15, 1);
+  --color-Neutral-500: rgba(31, 30, 46, 1);
+  --color-Neutral-400: rgba(76, 75, 88, 1);
+  --color-Neutral-300: rgba(121, 120, 130, 1);
+  --color-Neutral-200: rgba(165, 165, 171, 1);
+  --color-Neutral-100: rgba(210, 210, 213, 1);
+  --color-Neutral-50: rgba(242, 242, 243, 1);
+
+  /* primary */
+  --color-primary-600: rgba(204, 110, 60, 1);
+  --color-primary-500: rgba(204, 110, 60, 1);
+  --color-primary-400: rgba(229, 124, 67, 1);
+  --color-primary-300: rgba(234, 150, 105, 1);
+  --color-primary-200: rgba(239, 176, 142, 1);
+  --color-primary-100: rgba(245, 203, 180, 1);
+  --color-primary-50: rgba(250, 229, 217, 1);
+
+  /* Tertiary */
+  --color-Tertiary-600: rgba(83, 145, 208, 1);
+  --color-Tertiary-500: rgba(83, 145, 208, 1);
+  --color-Tertiary-400: rgba(117, 167, 217, 1);
+  --color-Tertiary-300: rgba(152, 189, 227, 1);
+  --color-Tertiary-200: rgba(186, 211, 236, 1);
+  --color-Tertiary-100: rgba(221, 233, 246, 1);
+  --color-Tertiary-50: rgba(237, 244, 250, 1);
 }
+
+/* my styles */
 
 .dev-banner {
   width: 100vw;

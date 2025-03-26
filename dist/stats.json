@@ -1,13 +1,13 @@
 {
-  "hash": "27503b4c06800fa385a2",
+  "hash": "a1da4ca90e9639964378",
   "version": "5.98.0",
-  "time": 35440,
-  "builtAt": 1742983129997,
+  "time": 35386,
+  "builtAt": 1742989789681,
   "publicPath": "/",
   "outputPath": "/home/mohammad/projects/Front/landing-aimoon/dist",
   "assetsByChunkName": {
     "main-bde52cb3": [
-      "main-bde52cb3.0ce577f1b5b0e2f23137.js"
+      "main-bde52cb3.4a7f7f5a87a627ffe81d.js"
     ]
   },
   "assets": [
@@ -158,15 +158,15 @@
     },
     {
       "type": "asset",
-      "name": "main-c9c31c89.62564441e074e5391acc.js.gz",
-      "size": 9743,
+      "name": "main-c9c31c89.396accdf8e1179732c25.js.gz",
+      "size": 9587,
       "emitted": true,
       "comparedForEmit": false,
       "cached": false,
       "info": {
         "compressed": true,
         "immutable": true,
-        "size": 9743
+        "size": 9587
       },
       "chunkNames": [],
       "chunkIdHints": [],
@@ -370,14 +370,14 @@
     },
     {
       "type": "asset",
-      "name": "main-bde52cb3.0ce577f1b5b0e2f23137.js",
+      "name": "main-bde52cb3.4a7f7f5a87a627ffe81d.js",
       "size": 3257,
       "emitted": true,
       "comparedForEmit": false,
       "cached": false,
       "info": {
         "immutable": true,
-        "contenthash": "0ce577f1b5b0e2f23137",
+        "contenthash": "4a7f7f5a87a627ffe81d",
         "javascriptModule": false,
         "minimized": true,
         "size": 3257
@@ -550,17 +550,17 @@
     },
     {
       "type": "asset",
-      "name": "286.e9e2a9015b9cf1d3c099.js",
-      "size": 223,
-      "emitted": false,
+      "name": "286.f519c768252c5776deef.js",
+      "size": 228,
+      "emitted": true,
       "comparedForEmit": false,
-      "cached": true,
+      "cached": false,
       "info": {
         "immutable": true,
-        "contenthash": "e9e2a9015b9cf1d3c099",
+        "contenthash": "f519c768252c5776deef",
         "javascriptModule": false,
         "minimized": true,
-        "size": 223
+        "size": 228
       },
       "chunkNames": [],
       "chunkIdHints": [],
@@ -1751,8 +1751,8 @@
           "optional": false,
           "orphan": false,
           "dependent": true,
-          "issuer": "javascript/esm|/home/mohammad/projects/Front/landing-aimoon/node_modules/react-i18next/dist/es/useTranslation.js",
-          "issuerName": "./node_modules/react-i18next/dist/es/useTranslation.js",
+          "issuer": "javascript/esm|/home/mohammad/projects/Front/landing-aimoon/node_modules/react-i18next/dist/es/TransWithoutContext.js",
+          "issuerName": "./node_modules/react-i18next/dist/es/TransWithoutContext.js",
           "issuerPath": [
             {
               "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
@@ -1780,16 +1780,16 @@
               "id": null
             },
             {
-              "identifier": "javascript/esm|/home/mohammad/projects/Front/landing-aimoon/node_modules/react-i18next/dist/es/useTranslation.js",
-              "name": "./node_modules/react-i18next/dist/es/useTranslation.js",
-              "id": 437
+              "identifier": "javascript/esm|/home/mohammad/projects/Front/landing-aimoon/node_modules/react-i18next/dist/es/TransWithoutContext.js",
+              "name": "./node_modules/react-i18next/dist/es/TransWithoutContext.js",
+              "id": 814
             }
           ],
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "id": 454,
-          "issuerId": 437,
+          "issuerId": 814,
           "chunks": [
             169
           ],
@@ -8874,9 +8874,9 @@
       "initial": false,
       "entry": false,
       "recorded": false,
-      "size": 172,
+      "size": 177,
       "sizes": {
-        "javascript": 172
+        "javascript": 177
       },
       "names": [],
       "idHints": [],
@@ -8884,10 +8884,10 @@
         "main"
       ],
       "files": [
-        "286.e9e2a9015b9cf1d3c099.js"
+        "286.f519c768252c5776deef.js"
       ],
       "auxiliaryFiles": [],
-      "hash": "c6b115fae4c5edfd8550",
+      "hash": "5ca6e1cdfae0460783cd",
       "childrenByOrder": {},
       "id": 286,
       "siblings": [],
@@ -8900,9 +8900,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 172,
+          "size": 177,
           "sizes": {
-            "javascript": 172
+            "javascript": 177
           },
           "built": true,
           "codeGenerated": true,
@@ -14580,9 +14580,9 @@
       "initial": true,
       "entry": true,
       "recorded": false,
-      "size": 47130,
+      "size": 46401,
       "sizes": {
-        "javascript": 39978,
+        "javascript": 39249,
         "runtime": 7152
       },
       "names": [
@@ -14594,7 +14594,7 @@
       ],
       "files": [],
       "auxiliaryFiles": [],
-      "hash": "45474ff2712dd533c339",
+      "hash": "f7665a102173fb7a93ce",
       "childrenByOrder": {},
       "id": 838,
       "siblings": [
@@ -14617,9 +14617,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 39978,
+          "size": 39249,
           "sizes": {
-            "javascript": 39978
+            "javascript": 39249
           },
           "built": true,
           "codeGenerated": true,
@@ -16613,10 +16613,10 @@
         "main"
       ],
       "files": [
-        "main-bde52cb3.0ce577f1b5b0e2f23137.js"
+        "main-bde52cb3.4a7f7f5a87a627ffe81d.js"
       ],
       "auxiliaryFiles": [],
-      "hash": "8ea8529793efbd932a0b",
+      "hash": "6acf129570df4b3c19f3",
       "childrenByOrder": {},
       "id": 997,
       "siblings": [
@@ -28640,9 +28640,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 39978,
+      "size": 39249,
       "sizes": {
-        "javascript": 39978
+        "javascript": 39249
       },
       "built": true,
       "codeGenerated": true,
@@ -32737,9 +32737,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 172,
+      "size": 177,
       "sizes": {
-        "javascript": 172
+        "javascript": 177
       },
       "built": true,
       "codeGenerated": true,
@@ -34886,8 +34886,8 @@
       "cacheable": true,
       "optional": false,
       "orphan": false,
-      "issuer": "javascript/esm|/home/mohammad/projects/Front/landing-aimoon/node_modules/react-i18next/dist/es/useTranslation.js",
-      "issuerName": "./node_modules/react-i18next/dist/es/useTranslation.js",
+      "issuer": "javascript/esm|/home/mohammad/projects/Front/landing-aimoon/node_modules/react-i18next/dist/es/TransWithoutContext.js",
+      "issuerName": "./node_modules/react-i18next/dist/es/TransWithoutContext.js",
       "issuerPath": [
         {
           "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
@@ -34915,16 +34915,16 @@
           "id": null
         },
         {
-          "identifier": "javascript/esm|/home/mohammad/projects/Front/landing-aimoon/node_modules/react-i18next/dist/es/useTranslation.js",
-          "name": "./node_modules/react-i18next/dist/es/useTranslation.js",
-          "id": 437
+          "identifier": "javascript/esm|/home/mohammad/projects/Front/landing-aimoon/node_modules/react-i18next/dist/es/TransWithoutContext.js",
+          "name": "./node_modules/react-i18next/dist/es/TransWithoutContext.js",
+          "id": 814
         }
       ],
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "id": 454,
-      "issuerId": 437,
+      "issuerId": 814,
       "chunks": [
         169
       ],
@@ -36113,7 +36113,7 @@
           "size": 8114
         },
         {
-          "name": "main-bde52cb3.0ce577f1b5b0e2f23137.js",
+          "name": "main-bde52cb3.4a7f7f5a87a627ffe81d.js",
           "size": 3257
         }
       ],
@@ -36160,7 +36160,7 @@
           "size": 8114
         },
         {
-          "name": "main-bde52cb3.0ce577f1b5b0e2f23137.js",
+          "name": "main-bde52cb3.4a7f7f5a87a627ffe81d.js",
           "size": 3257
         }
       ],
@@ -36183,8 +36183,8 @@
       "name": "HtmlWebpackCompiler",
       "hash": "5980d156a2c881fa3004",
       "version": "5.98.0",
-      "time": 793,
-      "builtAt": 1742983095438,
+      "time": 746,
+      "builtAt": 1742989755114,
       "publicPath": "",
       "outputPath": "/home/mohammad/projects/Front/landing-aimoon/dist",
       "assetsByChunkName": {},

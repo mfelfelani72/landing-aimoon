@@ -22,7 +22,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="!font-yekanBakh">
+    <div className="font-yekanBakh">
       {/* <Header /> */}
 
       {certificate === "app" && <Content />}
