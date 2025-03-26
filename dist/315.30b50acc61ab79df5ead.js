@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbuiler=self.webpackChunkbuiler||[]).push([[315],{315:(e,u,t)=>{t.r(u),t.d(u,{default:()=>n});var l=t(540);const n=function(){return l.createElement("div",null,"TestCode")}}}]);
