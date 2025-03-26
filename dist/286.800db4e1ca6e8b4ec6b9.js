@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbuiler=self.webpackChunkbuiler||[]).push([[286],{286:(e,r,s)=>{s.r(r),s.d(r,{default:()=>t});var u=s(540);const t=function(){return u.createElement("div",{className:"bg-rose-500"},"Home")}}}]);
