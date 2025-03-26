@@ -57,7 +57,7 @@ module.exports = merge(common, {
       algorithm: "gzip",
       deleteOriginalAssets: "keep-source-map",
       // deleteOriginalAssets: true,
-      test: /\.(js|jsx|css|html|svg)$/,
+      test: /\.(js|jsx|css|html|svg|gif)$/,
       threshold: 10240,
       minRatio: 0.8,
       compressionOptions: {

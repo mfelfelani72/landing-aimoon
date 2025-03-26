@@ -1,13 +1,13 @@
 {
-  "hash": "1e7cc55f4d234aadbb3d",
+  "hash": "27503b4c06800fa385a2",
   "version": "5.98.0",
-  "time": 35077,
-  "builtAt": 1742976419318,
+  "time": 35440,
+  "builtAt": 1742983129997,
   "publicPath": "/",
   "outputPath": "/home/mohammad/projects/Front/landing-aimoon/dist",
   "assetsByChunkName": {
     "main-bde52cb3": [
-      "main-bde52cb3.23fa4948469a854f264f.js"
+      "main-bde52cb3.0ce577f1b5b0e2f23137.js"
     ]
   },
   "assets": [
@@ -49,30 +49,6 @@
       "related": [],
       "chunks": [],
       "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    },
-    {
-      "type": "asset",
-      "name": "assets/icons/svg/loading.gif",
-      "size": 72919,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "sourceFilename": "assets/icons/svg/loading.gif",
-        "size": 72919
-      },
-      "chunkNames": [],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [
-        "main-bde52cb3"
-      ],
-      "auxiliaryChunkIdHints": [],
-      "related": [],
-      "chunks": [],
-      "auxiliaryChunks": [
-        997
-      ],
       "isOverSizeLimit": false
     },
     {
@@ -182,15 +158,15 @@
     },
     {
       "type": "asset",
-      "name": "main-c9c31c89.417553a9b7238acd2a25.js.gz",
-      "size": 9528,
+      "name": "main-c9c31c89.62564441e074e5391acc.js.gz",
+      "size": 9743,
       "emitted": true,
       "comparedForEmit": false,
       "cached": false,
       "info": {
         "compressed": true,
         "immutable": true,
-        "size": 9528
+        "size": 9743
       },
       "chunkNames": [],
       "chunkIdHints": [],
@@ -394,6 +370,33 @@
     },
     {
       "type": "asset",
+      "name": "main-bde52cb3.0ce577f1b5b0e2f23137.js",
+      "size": 3257,
+      "emitted": true,
+      "comparedForEmit": false,
+      "cached": false,
+      "info": {
+        "immutable": true,
+        "contenthash": "0ce577f1b5b0e2f23137",
+        "javascriptModule": false,
+        "minimized": true,
+        "size": 3257
+      },
+      "chunkNames": [
+        "main-bde52cb3"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "related": [],
+      "chunks": [
+        997
+      ],
+      "auxiliaryChunks": [],
+      "isOverSizeLimit": false
+    },
+    {
+      "type": "asset",
       "name": "369.3ea6a0b70aa639b16280.js",
       "size": 2757,
       "emitted": false,
@@ -441,13 +444,13 @@
     {
       "type": "asset",
       "name": "service-worker.js",
-      "size": 2419,
+      "size": 2337,
       "emitted": true,
       "comparedForEmit": true,
       "cached": false,
       "info": {
         "minimized": true,
-        "size": 2419
+        "size": 2337
       },
       "chunkNames": [],
       "chunkIdHints": [],
@@ -455,33 +458,6 @@
       "auxiliaryChunkIdHints": [],
       "related": [],
       "chunks": [],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    },
-    {
-      "type": "asset",
-      "name": "main-bde52cb3.23fa4948469a854f264f.js",
-      "size": 2171,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "immutable": true,
-        "contenthash": "23fa4948469a854f264f",
-        "javascriptModule": false,
-        "minimized": true,
-        "size": 2171
-      },
-      "chunkNames": [
-        "main-bde52cb3"
-      ],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "related": [],
-      "chunks": [
-        997
-      ],
       "auxiliaryChunks": [],
       "isOverSizeLimit": false
     },
@@ -576,9 +552,9 @@
       "type": "asset",
       "name": "286.e9e2a9015b9cf1d3c099.js",
       "size": 223,
-      "emitted": true,
+      "emitted": false,
       "comparedForEmit": false,
-      "cached": false,
+      "cached": true,
       "info": {
         "immutable": true,
         "contenthash": "e9e2a9015b9cf1d3c099",
@@ -818,9 +794,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
               "resolvedModule": "./utils/services/i18n/index.js",
               "type": "harmony side effect evaluation",
@@ -828,13 +804,13 @@
               "explanation": "",
               "userRequest": "react-i18next",
               "loc": "2:0-49",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
               "resolvedModule": "./utils/services/i18n/index.js",
               "type": "harmony import specifier",
@@ -842,7 +818,7 @@
               "explanation": "",
               "userRequest": "react-i18next",
               "loc": "6:9-25",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -2614,7 +2590,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "react",
-              "loc": "8:30-49",
+              "loc": "8:29-48",
               "moduleId": null,
               "resolvedModuleId": null
             },
@@ -3067,9 +3043,9 @@
               "resolvedModuleId": 286
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
               "resolvedModule": "./src/app/components/Loader.jsx",
               "type": "harmony side effect evaluation",
@@ -3077,13 +3053,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "1:0-26",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
               "resolvedModule": "./src/app/components/Loader.jsx",
               "type": "harmony import specifier",
@@ -3091,13 +3067,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "4:22-41",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
               "resolvedModule": "./src/app/components/Loader.jsx",
               "type": "harmony import specifier",
@@ -3105,13 +3081,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "6:18-37",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
               "resolvedModule": "./src/app/components/LoaderPage.jsx",
               "type": "harmony side effect evaluation",
@@ -3119,13 +3095,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "1:0-26",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
               "resolvedModule": "./src/app/components/LoaderPage.jsx",
               "type": "harmony import specifier",
@@ -3133,13 +3109,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "4:22-41",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
               "resolvedModule": "./src/app/components/LoaderPage.jsx",
               "type": "harmony import specifier",
@@ -3147,13 +3123,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "6:18-37",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
               "resolvedModule": "./src/app/components/LoaderPage.jsx",
               "type": "harmony import specifier",
@@ -3161,27 +3137,27 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "6:65-84",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
               "resolvedModule": "./src/app/components/LoaderPage.jsx",
               "type": "harmony import specifier",
               "active": true,
               "explanation": "",
               "userRequest": "react",
-              "loc": "8:30-49",
-              "moduleId": 994,
+              "loc": "8:29-48",
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony side effect evaluation",
@@ -3189,13 +3165,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "1:0-57",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony import specifier",
@@ -3203,13 +3179,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "8:27-31",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony import specifier",
@@ -3217,13 +3193,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "12:2-11",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony import specifier",
@@ -3231,13 +3207,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "15:22-41",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony import specifier",
@@ -3245,13 +3221,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "15:42-56",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony import specifier",
@@ -3259,13 +3235,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "15:77-96",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony import specifier",
@@ -3273,13 +3249,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "15:97-105",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony import specifier",
@@ -3287,13 +3263,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "16:27-46",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "harmony import specifier",
@@ -3301,13 +3277,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "17:18-37",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony side effect evaluation",
@@ -3315,13 +3291,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "1:0-26",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony import specifier",
@@ -3329,13 +3305,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "7:64-83",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony import specifier",
@@ -3343,13 +3319,13 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "7:118-137",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony import specifier",
@@ -3357,7 +3333,7 @@
               "explanation": "",
               "userRequest": "react",
               "loc": "7:174-193",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -9248,9 +9224,9 @@
               "resolvedModuleId": 75
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
               "resolvedModule": "./src/app/containers/app/App.js",
               "type": "import()",
@@ -9258,7 +9234,7 @@
               "explanation": "",
               "userRequest": "../app/Landing.js",
               "loc": "9:9-36",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             }
           ],
@@ -10310,9 +10286,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
               "resolvedModule": "./utils/services/i18n/index.js",
               "type": "harmony side effect evaluation",
@@ -10320,13 +10296,13 @@
               "explanation": "",
               "userRequest": "i18next-browser-languagedetector",
               "loc": "3:0-64",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
               "resolvedModule": "./utils/services/i18n/index.js",
               "type": "harmony import specifier",
@@ -10334,7 +10310,7 @@
               "explanation": "",
               "userRequest": "i18next-browser-languagedetector",
               "loc": "7:5-21",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -10471,9 +10447,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony side effect evaluation",
@@ -10481,13 +10457,13 @@
               "explanation": "",
               "userRequest": "react-cookie",
               "loc": "3:0-47",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony import specifier",
@@ -10495,7 +10471,7 @@
               "explanation": "",
               "userRequest": "react-cookie",
               "loc": "7:138-153",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             }
           ],
@@ -10622,9 +10598,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
               "resolvedModule": "./utils/services/i18n/index.js",
               "type": "harmony side effect evaluation",
@@ -10632,13 +10608,13 @@
               "explanation": "",
               "userRequest": "i18next",
               "loc": "1:0-27",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
               "resolvedModule": "./utils/services/i18n/index.js",
               "type": "harmony import specifier",
@@ -10646,13 +10622,13 @@
               "explanation": "",
               "userRequest": "i18next",
               "loc": "6:0-8",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
               "resolvedModule": "./utils/services/i18n/index.js",
               "type": "harmony import specifier",
@@ -10660,7 +10636,7 @@
               "explanation": "",
               "userRequest": "i18next",
               "loc": "29:15-19",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -10920,9 +10896,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony side effect evaluation",
@@ -10930,13 +10906,13 @@
               "explanation": "",
               "userRequest": "react-dom/client",
               "loc": "2:0-46",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony import specifier",
@@ -10944,7 +10920,7 @@
               "explanation": "",
               "userRequest": "react-dom/client",
               "loc": "7:0-10",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             }
           ],
@@ -12582,9 +12558,9 @@
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
               "resolvedModule": "./src/index.js",
               "type": "harmony import specifier",
@@ -12592,7 +12568,7 @@
               "explanation": "(skipped side-effect-free modules)",
               "userRequest": "react-router-dom",
               "loc": "7:84-97",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -14604,9 +14580,9 @@
       "initial": true,
       "entry": true,
       "recorded": false,
-      "size": 45905,
+      "size": 47130,
       "sizes": {
-        "javascript": 38753,
+        "javascript": 39978,
         "runtime": 7152
       },
       "names": [
@@ -14618,7 +14594,7 @@
       ],
       "files": [],
       "auxiliaryFiles": [],
-      "hash": "15add6430969d59b3c0c",
+      "hash": "45474ff2712dd533c339",
       "childrenByOrder": {},
       "id": 838,
       "siblings": [
@@ -14641,9 +14617,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 38753,
+          "size": 39978,
           "sizes": {
-            "javascript": 38753
+            "javascript": 39978
           },
           "built": true,
           "codeGenerated": true,
@@ -14685,9 +14661,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony side effect evaluation",
@@ -14695,13 +14671,13 @@
               "explanation": "",
               "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
               "loc": "8:6-142",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -14709,13 +14685,13 @@
               "explanation": "",
               "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
               "loc": "20:17-24",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony side effect evaluation",
@@ -14723,13 +14699,13 @@
               "explanation": "",
               "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
               "loc": "24:0-112",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony export imported specifier",
@@ -14737,13 +14713,13 @@
               "explanation": "",
               "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
               "loc": "24:0-112",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -14751,13 +14727,13 @@
               "explanation": "",
               "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
               "loc": "25:22-29",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -14765,13 +14741,13 @@
               "explanation": "",
               "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
               "loc": "25:33-47",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -14779,7 +14755,7 @@
               "explanation": "",
               "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
               "loc": "25:50-64",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -15656,9 +15632,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony side effect evaluation",
@@ -15666,13 +15642,13 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
               "loc": "2:6-95",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -15680,7 +15656,7 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
               "loc": "20:13-16",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -15783,9 +15759,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony side effect evaluation",
@@ -15793,13 +15769,13 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/insertBySelector.js",
               "loc": "4:6-92",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -15807,7 +15783,7 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/insertBySelector.js",
               "loc": "16:17-30",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -15910,9 +15886,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony side effect evaluation",
@@ -15920,13 +15896,13 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/insertStyleElement.js",
               "loc": "6:6-104",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -15934,7 +15910,7 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/insertStyleElement.js",
               "loc": "18:29-47",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -16037,9 +16013,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony side effect evaluation",
@@ -16047,13 +16023,13 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
               "loc": "5:6-111",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -16061,7 +16037,7 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
               "loc": "15:24-37",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -16164,9 +16140,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony side effect evaluation",
@@ -16174,13 +16150,13 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/styleDomAPI.js",
               "loc": "3:6-85",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -16188,7 +16164,7 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/styleDomAPI.js",
               "loc": "17:17-23",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -16291,9 +16267,9 @@
           "assets": [],
           "reasons": [
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony side effect evaluation",
@@ -16301,13 +16277,13 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/styleTagTransform.js",
               "loc": "7:6-104",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-              "module": "./src/index.js + 9 modules",
-              "moduleName": "./src/index.js + 9 modules",
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
               "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
               "resolvedModule": "./styles/style.css",
               "type": "harmony import specifier",
@@ -16315,7 +16291,7 @@
               "explanation": "",
               "userRequest": "!../node_modules/style-loader/dist/runtime/styleTagTransform.js",
               "loc": "14:28-47",
-              "moduleId": 994,
+              "moduleId": 256,
               "resolvedModuleId": null
             },
             {
@@ -16625,9 +16601,9 @@
       "initial": true,
       "entry": false,
       "recorded": false,
-      "size": 5318,
+      "size": 6336,
       "sizes": {
-        "javascript": 5318
+        "javascript": 6336
       },
       "names": [
         "main-bde52cb3"
@@ -16637,12 +16613,10 @@
         "main"
       ],
       "files": [
-        "main-bde52cb3.23fa4948469a854f264f.js"
+        "main-bde52cb3.0ce577f1b5b0e2f23137.js"
       ],
-      "auxiliaryFiles": [
-        "assets/icons/svg/loading.gif"
-      ],
-      "hash": "a27f320c7368f8f7fb2f",
+      "auxiliaryFiles": [],
+      "hash": "8ea8529793efbd932a0b",
       "childrenByOrder": {},
       "id": 997,
       "siblings": [
@@ -16663,18 +16637,155 @@
       "modules": [
         {
           "type": "module",
-          "moduleType": "javascript/esm",
+          "moduleType": "javascript/auto",
           "layer": null,
-          "size": 5318,
+          "size": 1084,
           "sizes": {
-            "javascript": 5318
+            "javascript": 1084
           },
           "built": true,
           "codeGenerated": true,
           "buildTimeExecuted": false,
           "cached": false,
-          "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "name": "./src/index.js + 9 modules",
+          "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/svg-url-loader/index.js??ruleSet[1].rules[4].use[0]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.svg",
+          "name": "./assets/icons/svg/loading.svg",
+          "nameForCondition": "/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.svg",
+          "index": 37,
+          "preOrderIndex": 37,
+          "index2": 33,
+          "postOrderIndex": 33,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "dependent": true,
+          "issuer": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+          "issuerName": "./src/app/components/Loader.jsx",
+          "issuerPath": [
+            {
+              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
+              "name": "./src/index.js",
+              "id": null
+            },
+            {
+              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
+              "name": "./src/app/containers/app/App.js",
+              "id": null
+            },
+            {
+              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
+              "name": "./src/app/components/LoaderPage.jsx",
+              "id": null
+            },
+            {
+              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+              "name": "./src/app/components/Loader.jsx",
+              "id": null
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": 758,
+          "issuerId": null,
+          "chunks": [
+            997
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+              "module": "./src/app/components/Loader.jsx",
+              "moduleName": "./src/app/components/Loader.jsx",
+              "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+              "resolvedModule": "./src/app/components/Loader.jsx",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "../../../assets/icons/svg/loading.svg",
+              "loc": "2:0-59",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+              "module": "./src/app/components/Loader.jsx",
+              "moduleName": "./src/app/components/Loader.jsx",
+              "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+              "resolvedModule": "./src/app/components/Loader.jsx",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "../../../assets/icons/svg/loading.svg",
+              "loc": "9:9-15",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
+              "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+              "resolvedModule": "./src/app/components/Loader.jsx",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "../../../assets/icons/svg/loading.svg",
+              "loc": "2:0-59",
+              "moduleId": 256,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+              "module": "./src/index.js + 8 modules",
+              "moduleName": "./src/index.js + 8 modules",
+              "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+              "resolvedModule": "./src/app/components/Loader.jsx",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "../../../assets/icons/svg/loading.svg",
+              "loc": "9:9-15",
+              "moduleId": 256,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/svg-url-loader/index.js??ruleSet[1].rules[4].use[0]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.svg",
+              "module": "./assets/icons/svg/loading.svg",
+              "moduleName": "./assets/icons/svg/loading.svg",
+              "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/svg-url-loader/index.js??ruleSet[1].rules[4].use[0]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.svg",
+              "resolvedModule": "./assets/icons/svg/loading.svg",
+              "type": "cjs self exports reference",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "1:0-14",
+              "moduleId": 758,
+              "resolvedModuleId": 758
+            }
+          ],
+          "usedExports": null,
+          "providedExports": null,
+          "optimizationBailout": [
+            "CommonJS bailout: module.exports is used directly at 1:0-14",
+            "Statement (ExpressionStatement) with side effects in source code at 1:0-1084",
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 4
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/esm",
+          "layer": null,
+          "size": 5252,
+          "sizes": {
+            "javascript": 5252
+          },
+          "built": true,
+          "codeGenerated": true,
+          "buildTimeExecuted": false,
+          "cached": false,
+          "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "name": "./src/index.js + 8 modules",
           "nameForCondition": "/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "index": 0,
           "preOrderIndex": 0,
@@ -16687,13 +16798,11 @@
           "failed": false,
           "errors": 0,
           "warnings": 0,
-          "id": 994,
+          "id": 256,
           "chunks": [
             997
           ],
-          "assets": [
-            "assets/icons/svg/loading.gif"
-          ],
+          "assets": [],
           "reasons": [
             {
               "moduleIdentifier": null,
@@ -16722,6 +16831,7 @@
             "ModuleConcatenation bailout: Cannot concat with ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js: Module is not an ECMAScript module",
             "ModuleConcatenation bailout: Cannot concat with ./node_modules/style-loader/dist/runtime/styleDomAPI.js: Module is not an ECMAScript module",
             "ModuleConcatenation bailout: Cannot concat with ./node_modules/style-loader/dist/runtime/styleTagTransform.js: Module is not an ECMAScript module",
+            "ModuleConcatenation bailout: Cannot concat with ./assets/icons/svg/loading.svg: Module is not an ECMAScript module",
             "ModuleConcatenation bailout: Cannot concat with ./node_modules/i18next-browser-languagedetector/dist/esm/i18nextBrowserLanguageDetector.js: Module ./node_modules/i18next-browser-languagedetector/dist/esm/i18nextBrowserLanguageDetector.js is not in the same chunk(s) (expected in chunk(s) main-bde52cb3, module is in chunk(s) unnamed chunk(s))",
             "ModuleConcatenation bailout: Cannot concat with ./node_modules/i18next/dist/esm/i18next.js: Module ./node_modules/i18next/dist/esm/i18next.js is not in the same chunk(s) (expected in chunk(s) main-bde52cb3, module is in chunk(s) unnamed chunk(s))",
             "ModuleConcatenation bailout: Cannot concat with ./node_modules/react-cookie/esm/index.mjs: Module ./node_modules/react-cookie/esm/index.mjs is not in the same chunk(s) (expected in chunk(s) main-bde52cb3, module is in chunk(s) unnamed chunk(s))",
@@ -17004,9 +17114,9 @@
               "type": "module",
               "moduleType": "javascript/auto",
               "layer": null,
-              "size": 608,
+              "size": 609,
               "sizes": {
-                "javascript": 608
+                "javascript": 609
               },
               "built": true,
               "codeGenerated": false,
@@ -17179,9 +17289,9 @@
               "type": "module",
               "moduleType": "javascript/auto",
               "layer": null,
-              "size": 389,
+              "size": 394,
               "sizes": {
-                "javascript": 389
+                "javascript": 394
               },
               "built": true,
               "codeGenerated": false,
@@ -17249,7 +17359,7 @@
                   "active": true,
                   "explanation": "",
                   "userRequest": "./Loader.jsx",
-                  "loc": "8:50-56",
+                  "loc": "8:49-55",
                   "moduleId": null,
                   "resolvedModuleId": null
                 }
@@ -17454,103 +17564,6 @@
                 "Statement (VariableDeclaration) with side effects in source code at 1:0-7:2"
               ],
               "depth": 4
-            },
-            {
-              "type": "module",
-              "moduleType": "javascript/auto",
-              "layer": null,
-              "size": 72,
-              "sizes": {
-                "javascript": 72
-              },
-              "built": true,
-              "codeGenerated": false,
-              "buildTimeExecuted": false,
-              "cached": false,
-              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/file-loader/dist/cjs.js??ruleSet[1].rules[5].use[0]!/home/mohammad/projects/Front/landing-aimoon/node_modules/image-webpack-loader/index.js??ruleSet[1].rules[5].use[1]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.gif",
-              "name": "./assets/icons/svg/loading.gif",
-              "nameForCondition": "/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.gif",
-              "index": 37,
-              "preOrderIndex": 37,
-              "index2": 33,
-              "postOrderIndex": 33,
-              "cacheable": true,
-              "optional": false,
-              "orphan": false,
-              "dependent": true,
-              "issuer": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-              "issuerName": "./src/app/components/Loader.jsx",
-              "issuerPath": [
-                {
-                  "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
-                  "name": "./src/index.js",
-                  "id": null
-                },
-                {
-                  "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
-                  "name": "./src/app/containers/app/App.js",
-                  "id": null
-                },
-                {
-                  "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
-                  "name": "./src/app/components/LoaderPage.jsx",
-                  "id": null
-                },
-                {
-                  "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-                  "name": "./src/app/components/Loader.jsx",
-                  "id": null
-                }
-              ],
-              "failed": false,
-              "errors": 0,
-              "warnings": 0,
-              "id": null,
-              "issuerId": null,
-              "chunks": [],
-              "assets": [
-                "assets/icons/svg/loading.gif"
-              ],
-              "reasons": [
-                {
-                  "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-                  "module": "./src/app/components/Loader.jsx",
-                  "moduleName": "./src/app/components/Loader.jsx",
-                  "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-                  "resolvedModule": "./src/app/components/Loader.jsx",
-                  "type": "harmony side effect evaluation",
-                  "active": true,
-                  "explanation": "",
-                  "userRequest": "../../../assets/icons/svg/loading.gif",
-                  "loc": "2:0-59",
-                  "moduleId": null,
-                  "resolvedModuleId": null
-                },
-                {
-                  "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-                  "module": "./src/app/components/Loader.jsx",
-                  "moduleName": "./src/app/components/Loader.jsx",
-                  "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-                  "resolvedModule": "./src/app/components/Loader.jsx",
-                  "type": "harmony import specifier",
-                  "active": true,
-                  "explanation": "",
-                  "userRequest": "../../../assets/icons/svg/loading.gif",
-                  "loc": "9:9-15",
-                  "moduleId": null,
-                  "resolvedModuleId": null
-                }
-              ],
-              "usedExports": [
-                "default"
-              ],
-              "providedExports": [
-                "default"
-              ],
-              "optimizationBailout": [
-                "Statement (ExportDefaultDeclaration) with side effects in source code at 1:0-72"
-              ],
-              "depth": 4
             }
           ]
         }
@@ -17571,16 +17584,16 @@
       "type": "module",
       "moduleType": "javascript/esm",
       "layer": null,
-      "size": 5318,
+      "size": 5252,
       "sizes": {
-        "javascript": 5318
+        "javascript": 5252
       },
       "built": true,
       "codeGenerated": true,
       "buildTimeExecuted": false,
       "cached": false,
-      "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-      "name": "./src/index.js + 9 modules",
+      "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+      "name": "./src/index.js + 8 modules",
       "nameForCondition": "/home/mohammad/projects/Front/landing-aimoon/src/index.js",
       "index": 0,
       "preOrderIndex": 0,
@@ -17592,13 +17605,11 @@
       "failed": false,
       "errors": 0,
       "warnings": 0,
-      "id": 994,
+      "id": 256,
       "chunks": [
         997
       ],
-      "assets": [
-        "assets/icons/svg/loading.gif"
-      ],
+      "assets": [],
       "reasons": [
         {
           "moduleIdentifier": null,
@@ -17627,6 +17638,7 @@
         "ModuleConcatenation bailout: Cannot concat with ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js: Module is not an ECMAScript module",
         "ModuleConcatenation bailout: Cannot concat with ./node_modules/style-loader/dist/runtime/styleDomAPI.js: Module is not an ECMAScript module",
         "ModuleConcatenation bailout: Cannot concat with ./node_modules/style-loader/dist/runtime/styleTagTransform.js: Module is not an ECMAScript module",
+        "ModuleConcatenation bailout: Cannot concat with ./assets/icons/svg/loading.svg: Module is not an ECMAScript module",
         "ModuleConcatenation bailout: Cannot concat with ./node_modules/i18next-browser-languagedetector/dist/esm/i18nextBrowserLanguageDetector.js: Module ./node_modules/i18next-browser-languagedetector/dist/esm/i18nextBrowserLanguageDetector.js is not in the same chunk(s) (expected in chunk(s) main-bde52cb3, module is in chunk(s) unnamed chunk(s))",
         "ModuleConcatenation bailout: Cannot concat with ./node_modules/i18next/dist/esm/i18next.js: Module ./node_modules/i18next/dist/esm/i18next.js is not in the same chunk(s) (expected in chunk(s) main-bde52cb3, module is in chunk(s) unnamed chunk(s))",
         "ModuleConcatenation bailout: Cannot concat with ./node_modules/react-cookie/esm/index.mjs: Module ./node_modules/react-cookie/esm/index.mjs is not in the same chunk(s) (expected in chunk(s) main-bde52cb3, module is in chunk(s) unnamed chunk(s))",
@@ -17905,9 +17917,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 608,
+          "size": 609,
           "sizes": {
-            "javascript": 608
+            "javascript": 609
           },
           "built": true,
           "codeGenerated": false,
@@ -18078,9 +18090,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 389,
+          "size": 394,
           "sizes": {
-            "javascript": 389
+            "javascript": 394
           },
           "built": true,
           "codeGenerated": false,
@@ -18147,7 +18159,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "./Loader.jsx",
-              "loc": "8:50-56",
+              "loc": "8:49-55",
               "moduleId": null,
               "resolvedModuleId": null
             }
@@ -18350,102 +18362,6 @@
             "Statement (VariableDeclaration) with side effects in source code at 1:0-7:2"
           ],
           "depth": 4
-        },
-        {
-          "type": "module",
-          "moduleType": "javascript/auto",
-          "layer": null,
-          "size": 72,
-          "sizes": {
-            "javascript": 72
-          },
-          "built": true,
-          "codeGenerated": false,
-          "buildTimeExecuted": false,
-          "cached": false,
-          "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/file-loader/dist/cjs.js??ruleSet[1].rules[5].use[0]!/home/mohammad/projects/Front/landing-aimoon/node_modules/image-webpack-loader/index.js??ruleSet[1].rules[5].use[1]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.gif",
-          "name": "./assets/icons/svg/loading.gif",
-          "nameForCondition": "/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.gif",
-          "index": 37,
-          "preOrderIndex": 37,
-          "index2": 33,
-          "postOrderIndex": 33,
-          "cacheable": true,
-          "optional": false,
-          "orphan": false,
-          "issuer": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-          "issuerName": "./src/app/components/Loader.jsx",
-          "issuerPath": [
-            {
-              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
-              "name": "./src/index.js",
-              "id": null
-            },
-            {
-              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
-              "name": "./src/app/containers/app/App.js",
-              "id": null
-            },
-            {
-              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
-              "name": "./src/app/components/LoaderPage.jsx",
-              "id": null
-            },
-            {
-              "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-              "name": "./src/app/components/Loader.jsx",
-              "id": null
-            }
-          ],
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "id": null,
-          "issuerId": null,
-          "chunks": [],
-          "assets": [
-            "assets/icons/svg/loading.gif"
-          ],
-          "reasons": [
-            {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-              "module": "./src/app/components/Loader.jsx",
-              "moduleName": "./src/app/components/Loader.jsx",
-              "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-              "resolvedModule": "./src/app/components/Loader.jsx",
-              "type": "harmony side effect evaluation",
-              "active": true,
-              "explanation": "",
-              "userRequest": "../../../assets/icons/svg/loading.gif",
-              "loc": "2:0-59",
-              "moduleId": null,
-              "resolvedModuleId": null
-            },
-            {
-              "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-              "module": "./src/app/components/Loader.jsx",
-              "moduleName": "./src/app/components/Loader.jsx",
-              "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
-              "resolvedModule": "./src/app/components/Loader.jsx",
-              "type": "harmony import specifier",
-              "active": true,
-              "explanation": "",
-              "userRequest": "../../../assets/icons/svg/loading.gif",
-              "loc": "9:9-15",
-              "moduleId": null,
-              "resolvedModuleId": null
-            }
-          ],
-          "usedExports": [
-            "default"
-          ],
-          "providedExports": [
-            "default"
-          ],
-          "optimizationBailout": [
-            "Statement (ExportDefaultDeclaration) with side effects in source code at 1:0-72"
-          ],
-          "depth": 4
         }
       ]
     },
@@ -18598,7 +18514,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "react",
-          "loc": "8:30-49",
+          "loc": "8:29-48",
           "moduleId": null,
           "resolvedModuleId": null
         },
@@ -19051,9 +18967,9 @@
           "resolvedModuleId": 286
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
           "resolvedModule": "./src/app/components/Loader.jsx",
           "type": "harmony side effect evaluation",
@@ -19061,13 +18977,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "1:0-26",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
           "resolvedModule": "./src/app/components/Loader.jsx",
           "type": "harmony import specifier",
@@ -19075,13 +18991,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "4:22-41",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
           "resolvedModule": "./src/app/components/Loader.jsx",
           "type": "harmony import specifier",
@@ -19089,13 +19005,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "6:18-37",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
           "resolvedModule": "./src/app/components/LoaderPage.jsx",
           "type": "harmony side effect evaluation",
@@ -19103,13 +19019,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "1:0-26",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
           "resolvedModule": "./src/app/components/LoaderPage.jsx",
           "type": "harmony import specifier",
@@ -19117,13 +19033,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "4:22-41",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
           "resolvedModule": "./src/app/components/LoaderPage.jsx",
           "type": "harmony import specifier",
@@ -19131,13 +19047,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "6:18-37",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
           "resolvedModule": "./src/app/components/LoaderPage.jsx",
           "type": "harmony import specifier",
@@ -19145,27 +19061,27 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "6:65-84",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/LoaderPage.jsx",
           "resolvedModule": "./src/app/components/LoaderPage.jsx",
           "type": "harmony import specifier",
           "active": true,
           "explanation": "",
           "userRequest": "react",
-          "loc": "8:30-49",
-          "moduleId": 994,
+          "loc": "8:29-48",
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony side effect evaluation",
@@ -19173,13 +19089,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "1:0-57",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony import specifier",
@@ -19187,13 +19103,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "8:27-31",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony import specifier",
@@ -19201,13 +19117,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "12:2-11",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony import specifier",
@@ -19215,13 +19131,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "15:22-41",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony import specifier",
@@ -19229,13 +19145,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "15:42-56",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony import specifier",
@@ -19243,13 +19159,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "15:77-96",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony import specifier",
@@ -19257,13 +19173,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "15:97-105",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony import specifier",
@@ -19271,13 +19187,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "16:27-46",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "harmony import specifier",
@@ -19285,13 +19201,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "17:18-37",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony side effect evaluation",
@@ -19299,13 +19215,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "1:0-26",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony import specifier",
@@ -19313,13 +19229,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "7:64-83",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony import specifier",
@@ -19327,13 +19243,13 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "7:118-137",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony import specifier",
@@ -19341,7 +19257,7 @@
           "explanation": "",
           "userRequest": "react",
           "loc": "7:174-193",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -24783,9 +24699,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony side effect evaluation",
@@ -24793,13 +24709,13 @@
           "explanation": "",
           "userRequest": "react-dom/client",
           "loc": "2:0-46",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony import specifier",
@@ -24807,7 +24723,7 @@
           "explanation": "",
           "userRequest": "react-dom/client",
           "loc": "7:0-10",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         }
       ],
@@ -24867,9 +24783,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony side effect evaluation",
@@ -24877,13 +24793,13 @@
           "explanation": "",
           "userRequest": "react-cookie",
           "loc": "3:0-47",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony import specifier",
@@ -24891,7 +24807,7 @@
           "explanation": "",
           "userRequest": "react-cookie",
           "loc": "7:138-153",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         }
       ],
@@ -25189,9 +25105,9 @@
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony import specifier",
@@ -25199,7 +25115,7 @@
           "explanation": "(skipped side-effect-free modules)",
           "userRequest": "react-router-dom",
           "loc": "7:84-97",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -27347,9 +27263,9 @@
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony side effect evaluation",
@@ -27357,13 +27273,13 @@
           "explanation": "",
           "userRequest": "react-router-dom",
           "loc": "6:0-49",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js",
           "resolvedModule": "./src/index.js",
           "type": "harmony import specifier",
@@ -27371,7 +27287,7 @@
           "explanation": "",
           "userRequest": "react-router-dom",
           "loc": "7:84-97",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         }
       ],
@@ -27884,9 +27800,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 608,
+      "size": 609,
       "sizes": {
-        "javascript": 608
+        "javascript": 609
       },
       "built": true,
       "codeGenerated": false,
@@ -28011,9 +27927,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony side effect evaluation",
@@ -28021,13 +27937,13 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
           "loc": "2:6-95",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28035,7 +27951,7 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
           "loc": "20:13-16",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -28137,9 +28053,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony side effect evaluation",
@@ -28147,13 +28063,13 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/styleDomAPI.js",
           "loc": "3:6-85",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28161,7 +28077,7 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/styleDomAPI.js",
           "loc": "17:17-23",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -28263,9 +28179,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony side effect evaluation",
@@ -28273,13 +28189,13 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/insertBySelector.js",
           "loc": "4:6-92",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28287,7 +28203,7 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/insertBySelector.js",
           "loc": "16:17-30",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -28389,9 +28305,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony side effect evaluation",
@@ -28399,13 +28315,13 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
           "loc": "5:6-111",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28413,7 +28329,7 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
           "loc": "15:24-37",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -28515,9 +28431,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony side effect evaluation",
@@ -28525,13 +28441,13 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/insertStyleElement.js",
           "loc": "6:6-104",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28539,7 +28455,7 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/insertStyleElement.js",
           "loc": "18:29-47",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -28641,9 +28557,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony side effect evaluation",
@@ -28651,13 +28567,13 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/styleTagTransform.js",
           "loc": "7:6-104",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28665,7 +28581,7 @@
           "explanation": "",
           "userRequest": "!../node_modules/style-loader/dist/runtime/styleTagTransform.js",
           "loc": "14:28-47",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -28724,9 +28640,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 38753,
+      "size": 39978,
       "sizes": {
-        "javascript": 38753
+        "javascript": 39978
       },
       "built": true,
       "codeGenerated": true,
@@ -28767,9 +28683,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony side effect evaluation",
@@ -28777,13 +28693,13 @@
           "explanation": "",
           "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
           "loc": "8:6-142",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28791,13 +28707,13 @@
           "explanation": "",
           "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
           "loc": "20:17-24",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony side effect evaluation",
@@ -28805,13 +28721,13 @@
           "explanation": "",
           "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
           "loc": "24:0-112",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony export imported specifier",
@@ -28819,13 +28735,13 @@
           "explanation": "",
           "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
           "loc": "24:0-112",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28833,13 +28749,13 @@
           "explanation": "",
           "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
           "loc": "25:22-29",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28847,13 +28763,13 @@
           "explanation": "",
           "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
           "loc": "25:33-47",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/style-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/css-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/node_modules/postcss-loader/dist/cjs.js!/home/mohammad/projects/Front/landing-aimoon/styles/style.css",
           "resolvedModule": "./styles/style.css",
           "type": "harmony import specifier",
@@ -28861,7 +28777,7 @@
           "explanation": "",
           "userRequest": "!!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./style.css",
           "loc": "25:50-64",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -29160,9 +29076,9 @@
           "resolvedModuleId": 75
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/containers/app/App.js",
           "resolvedModule": "./src/app/containers/app/App.js",
           "type": "import()",
@@ -29170,7 +29086,7 @@
           "explanation": "",
           "userRequest": "../app/Landing.js",
           "loc": "9:9-36",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         }
       ],
@@ -30506,9 +30422,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 389,
+      "size": 394,
       "sizes": {
-        "javascript": 389
+        "javascript": 394
       },
       "built": true,
       "codeGenerated": false,
@@ -30575,7 +30491,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "./Loader.jsx",
-          "loc": "8:50-56",
+          "loc": "8:49-55",
           "moduleId": null,
           "resolvedModuleId": null
         }
@@ -31287,9 +31203,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
           "resolvedModule": "./utils/services/i18n/index.js",
           "type": "harmony side effect evaluation",
@@ -31297,13 +31213,13 @@
           "explanation": "",
           "userRequest": "i18next",
           "loc": "1:0-27",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
           "resolvedModule": "./utils/services/i18n/index.js",
           "type": "harmony import specifier",
@@ -31311,13 +31227,13 @@
           "explanation": "",
           "userRequest": "i18next",
           "loc": "6:0-8",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
           "resolvedModule": "./utils/services/i18n/index.js",
           "type": "harmony import specifier",
@@ -31325,7 +31241,7 @@
           "explanation": "",
           "userRequest": "i18next",
           "loc": "29:15-19",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -31428,9 +31344,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
           "resolvedModule": "./utils/services/i18n/index.js",
           "type": "harmony side effect evaluation",
@@ -31438,13 +31354,13 @@
           "explanation": "",
           "userRequest": "react-i18next",
           "loc": "2:0-49",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
           "resolvedModule": "./utils/services/i18n/index.js",
           "type": "harmony import specifier",
@@ -31452,7 +31368,7 @@
           "explanation": "",
           "userRequest": "react-i18next",
           "loc": "6:9-25",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -31989,9 +31905,9 @@
       "assets": [],
       "reasons": [
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
           "resolvedModule": "./utils/services/i18n/index.js",
           "type": "harmony side effect evaluation",
@@ -31999,13 +31915,13 @@
           "explanation": "",
           "userRequest": "i18next-browser-languagedetector",
           "loc": "3:0-64",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
-          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|e7d6f347960a105de3982808d5ea6038",
-          "module": "./src/index.js + 9 modules",
-          "moduleName": "./src/index.js + 9 modules",
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
           "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/utils/services/i18n/index.js",
           "resolvedModule": "./utils/services/i18n/index.js",
           "type": "harmony import specifier",
@@ -32013,7 +31929,7 @@
           "explanation": "",
           "userRequest": "i18next-browser-languagedetector",
           "loc": "7:5-21",
-          "moduleId": 994,
+          "moduleId": 256,
           "resolvedModuleId": null
         },
         {
@@ -32248,24 +32164,24 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 72,
+      "size": 1084,
       "sizes": {
-        "javascript": 72
+        "javascript": 1084
       },
       "built": true,
-      "codeGenerated": false,
+      "codeGenerated": true,
       "buildTimeExecuted": false,
       "cached": false,
-      "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/file-loader/dist/cjs.js??ruleSet[1].rules[5].use[0]!/home/mohammad/projects/Front/landing-aimoon/node_modules/image-webpack-loader/index.js??ruleSet[1].rules[5].use[1]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.gif",
-      "name": "./assets/icons/svg/loading.gif",
-      "nameForCondition": "/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.gif",
+      "identifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/svg-url-loader/index.js??ruleSet[1].rules[4].use[0]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.svg",
+      "name": "./assets/icons/svg/loading.svg",
+      "nameForCondition": "/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.svg",
       "index": 37,
       "preOrderIndex": 37,
       "index2": 33,
       "postOrderIndex": 33,
       "cacheable": true,
       "optional": false,
-      "orphan": true,
+      "orphan": false,
       "issuer": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
       "issuerName": "./src/app/components/Loader.jsx",
       "issuerPath": [
@@ -32293,12 +32209,12 @@
       "failed": false,
       "errors": 0,
       "warnings": 0,
-      "id": null,
+      "id": 758,
       "issuerId": null,
-      "chunks": [],
-      "assets": [
-        "assets/icons/svg/loading.gif"
+      "chunks": [
+        997
       ],
+      "assets": [],
       "reasons": [
         {
           "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
@@ -32309,7 +32225,7 @@
           "type": "harmony side effect evaluation",
           "active": true,
           "explanation": "",
-          "userRequest": "../../../assets/icons/svg/loading.gif",
+          "userRequest": "../../../assets/icons/svg/loading.svg",
           "loc": "2:0-59",
           "moduleId": null,
           "resolvedModuleId": null
@@ -32323,20 +32239,60 @@
           "type": "harmony import specifier",
           "active": true,
           "explanation": "",
-          "userRequest": "../../../assets/icons/svg/loading.gif",
+          "userRequest": "../../../assets/icons/svg/loading.svg",
           "loc": "9:9-15",
           "moduleId": null,
           "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
+          "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+          "resolvedModule": "./src/app/components/Loader.jsx",
+          "type": "harmony side effect evaluation",
+          "active": true,
+          "explanation": "",
+          "userRequest": "../../../assets/icons/svg/loading.svg",
+          "loc": "2:0-59",
+          "moduleId": 256,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/index.js|8d053ecd1d88a6f6781d194d3c3c2ffc",
+          "module": "./src/index.js + 8 modules",
+          "moduleName": "./src/index.js + 8 modules",
+          "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/babel-loader/lib/index.js!/home/mohammad/projects/Front/landing-aimoon/src/app/components/Loader.jsx",
+          "resolvedModule": "./src/app/components/Loader.jsx",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "../../../assets/icons/svg/loading.svg",
+          "loc": "9:9-15",
+          "moduleId": 256,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/svg-url-loader/index.js??ruleSet[1].rules[4].use[0]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.svg",
+          "module": "./assets/icons/svg/loading.svg",
+          "moduleName": "./assets/icons/svg/loading.svg",
+          "resolvedModuleIdentifier": "/home/mohammad/projects/Front/landing-aimoon/node_modules/svg-url-loader/index.js??ruleSet[1].rules[4].use[0]!/home/mohammad/projects/Front/landing-aimoon/assets/icons/svg/loading.svg",
+          "resolvedModule": "./assets/icons/svg/loading.svg",
+          "type": "cjs self exports reference",
+          "active": true,
+          "explanation": "",
+          "userRequest": null,
+          "loc": "1:0-14",
+          "moduleId": 758,
+          "resolvedModuleId": 758
         }
       ],
-      "usedExports": [
-        "default"
-      ],
-      "providedExports": [
-        "default"
-      ],
+      "usedExports": null,
+      "providedExports": null,
       "optimizationBailout": [
-        "Statement (ExportDefaultDeclaration) with side effects in source code at 1:0-72"
+        "CommonJS bailout: module.exports is used directly at 1:0-14",
+        "Statement (ExpressionStatement) with side effects in source code at 1:0-1084",
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 4
     },
@@ -36157,20 +36113,15 @@
           "size": 8114
         },
         {
-          "name": "main-bde52cb3.23fa4948469a854f264f.js",
-          "size": 2171
+          "name": "main-bde52cb3.0ce577f1b5b0e2f23137.js",
+          "size": 3257
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 25439,
-      "auxiliaryAssets": [
-        {
-          "name": "assets/icons/svg/loading.gif",
-          "size": 72919
-        }
-      ],
+      "assetsSize": 26525,
+      "auxiliaryAssets": [],
       "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 72919,
+      "auxiliaryAssetsSize": 0,
       "children": {},
       "childAssets": {},
       "isOverSizeLimit": false
@@ -36209,20 +36160,15 @@
           "size": 8114
         },
         {
-          "name": "main-bde52cb3.23fa4948469a854f264f.js",
-          "size": 2171
+          "name": "main-bde52cb3.0ce577f1b5b0e2f23137.js",
+          "size": 3257
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 25439,
-      "auxiliaryAssets": [
-        {
-          "name": "assets/icons/svg/loading.gif",
-          "size": 72919
-        }
-      ],
+      "assetsSize": 26525,
+      "auxiliaryAssets": [],
       "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 72919,
+      "auxiliaryAssetsSize": 0,
       "children": {},
       "childAssets": {},
       "isOverSizeLimit": false
@@ -36237,8 +36183,8 @@
       "name": "HtmlWebpackCompiler",
       "hash": "5980d156a2c881fa3004",
       "version": "5.98.0",
-      "time": 792,
-      "builtAt": 1742976385102,
+      "time": 793,
+      "builtAt": 1742983095438,
       "publicPath": "",
       "outputPath": "/home/mohammad/projects/Front/landing-aimoon/dist",
       "assetsByChunkName": {},
