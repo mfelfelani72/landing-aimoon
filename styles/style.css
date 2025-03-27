@@ -174,6 +174,39 @@
   --color-Tertiary-200: rgba(186, 211, 236, 1);
   --color-Tertiary-100: rgba(221, 233, 246, 1);
   --color-Tertiary-50: rgba(237, 244, 250, 1);
+
+  /* Responsive */
+
+  /*
+      'watch': '12.5rem',  // 200px - Apple Watch
+      'xs': '20rem',       // 320px - Small phones (iPhone SE)
+      'sm': '22.5rem',     // 360px - Small Android phones
+      'md': '30rem',       // 480px - Medium phones
+      'lg': '40rem',       // 640px - Large phones and small tablets
+      'xl': '48rem',       // 768px - Tablets
+      '2xl': '64rem',      // 1024px - Small laptops
+      '3xl': '80rem',      // 1280px - Medium laptops
+      '4xl': '90rem',      // 1440px - Full HD monitors
+      '5xl': '120rem',     // 1920px - Large screens (Full HD)
+      '6xl': '160rem',     // 2560px - 2K monitors
+      '7xl': '240rem',     // 3840px - 4K monitors
+      '8xl': '480rem',     // 7680px - 8K monitors
+  */
+
+  --breakpoint-watch: 12.5rem;
+  --breakpoint-xs: 20rem;
+  --breakpoint-sm: 22.5rem;
+  --breakpoint-md: 30rem;
+  --breakpoint-lg: 40rem;
+  --breakpoint-xl: 48rem;
+  --breakpoint-2xl: 64rem;
+  --breakpoint-3xl: 80rem;
+  --breakpoint-4xl: 90rem;
+  --breakpoint-5xl: 120rem;
+  --breakpoint-6xl: 160rem;
+  --breakpoint-7xl: 240rem;
+  --breakpoint-8xl: 480rem;
+
 }
 
 /* my styles */

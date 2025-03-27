@@ -12,7 +12,7 @@ const LazyHome = lazy(() => import("../../../features/home/Home.js"));
 
 const Content = () => {
   return (
-    <div className="w-full h-screen xs:grid xs:place-items-center">
+    <>
       <Routes>
         {/* just for test */}
         <Route path="/mohammad/test" element={<Test />}></Route>
@@ -22,7 +22,7 @@ const Content = () => {
         <Route path="*" element={<Landing />}></Route>
         <Route path="/landing" element={<LazyHome />}></Route>
       </Routes>
-    </div>
+    </>
   );
 };
 

@@ -22,14 +22,16 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="font-yekanBakh">
-      {/* <Header /> */}
+    <div className="font-yekanBakh flex flex-col w-full h-full">
+      <div className="container mx-auto">
+        {/* <Header /> */}
 
-      {certificate === "app" && <Content />}
-      {certificate === "404" && <div>404</div>}
-      {certificate === "403" && <div>403</div>}
+        {certificate === "app" && <Content />}
+        {certificate === "404" && <div>404</div>}
+        {certificate === "403" && <div>403</div>}
 
-      {/* <Footer /> */}
+        {/* <Footer /> */}
+      </div>
     </div>
   );
 };
