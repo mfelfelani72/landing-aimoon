@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div className='fixed bottom-0'>Footer</div>
-  )
-}
+    <>
+      <div className="flex flex-col bg-lime-400">Footer</div>
+    </>
+  );
+};
 
-export default Footer
+export default Footer;
