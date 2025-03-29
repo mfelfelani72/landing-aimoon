@@ -4,7 +4,25 @@ const Home = () => {
   return (
     <>
       <div className="mt-[6rem]">
-       home
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
+        <div> home</div>
       </div>
     </>
   );

@@ -30,12 +30,12 @@ const Landing = () => {
     <div className="font-yekanBakh flex flex-col w-full h-full">
       <div className="container mx-auto">
         <Header />
-        <div className="flex flex-col h-screen justify-between">
-          <div>
+        <div className="flex flex-col">
+          {/* <div> */}
             {certificate === "app" && <Content />}
             {certificate === "404" && <div>404</div>}
             {certificate === "403" && <div>403</div>}
-          </div>
+          {/* </div> */}
 
           <Footer />
         </div>
