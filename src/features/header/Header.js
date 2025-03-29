@@ -2,7 +2,8 @@ import React from "react";
 
 // Components
 
-import Image from "../core/Image.jsx";
+import { ImageLazy } from "../core/components/Image.jsx";
+import { ButtonLink } from "../core/components/Button.jsx";
 
 // png
 
@@ -13,12 +14,12 @@ const Header = () => {
     <>
       <div className="fixed top-0 inset-x-0">
         <div className="container mx-auto bg-white">
-          <div className="flex flex-row justify-between items-center px-[116px]">
+          <div className="flex flex-row justify-between items-center px-[116px] py-2">
             <header>
               <nav className="flex flex-row items-center">
                 {/* logo */}
                 <div className="flex flex-col items-center">
-                  <Image
+                  <ImageLazy
                     src={logo}
                     alt="logo"
                     className={"w-[66px] h-[58px]"}
@@ -36,7 +37,11 @@ const Header = () => {
                 </ul>
               </nav>
             </header>
-            <div>Header</div>
+            <div>
+              <ButtonLink className="p-4 h-[45px]">
+                ورود به بات تلگرام
+              </ButtonLink>
+            </div>
           </div>
         </div>
       </div>
