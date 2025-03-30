@@ -12,9 +12,9 @@ import logo from "../../../assets/icons/png/logo.png";
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 inset-x-0">
+      <div className="fixed top-0 inset-x-0 z-[999]">
         <div className="container mx-auto bg-white">
-          <div className="flex flex-row justify-between items-center px-[116px] py-2">
+          <div className="flex flex-row justify-between items-center px-default py-2">
             <header>
               <nav className="flex flex-row items-center">
                 {/* logo */}

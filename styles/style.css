@@ -207,6 +207,10 @@
   --breakpoint-7xl: 240rem;
   --breakpoint-8xl: 480rem;
 
+  /* spacing */
+
+  --spacing-default: 7.25rem;
+
 }
 
 /* my styles */
