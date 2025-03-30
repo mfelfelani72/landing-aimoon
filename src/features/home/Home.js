@@ -5,24 +5,6 @@ const Home = () => {
     <>
       <div className="mt-[6rem]">
         <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
-        <div> home</div>
       </div>
     </>
   );
