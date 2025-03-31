@@ -103,6 +103,18 @@
   }
 }
 
+/* my styles */
+
+@layer utilities {
+  .right-to-left {
+    direction: rtl;
+  }
+
+  .left-to-right {
+    direction: ltr;
+  }
+}
+
 @theme {
 
   /* Fonts */
@@ -213,7 +225,8 @@
 
 }
 
-/* my styles */
+
+
 
 .dev-banner {
   width: 100vw;

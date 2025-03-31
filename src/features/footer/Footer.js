@@ -9,6 +9,10 @@ import { ImageLazy } from "../core/components/Image.jsx";
 import vector from "../../../assets/images/vector/vector-footer.svg";
 import location from "../../../assets/icons/svg/location.svg";
 import call from "../../../assets/icons/svg/call.svg";
+import telegram from "../../../assets/icons/svg/telegram.svg";
+import instagram from "../../../assets/icons/svg/instagram.svg";
+import medium from "../../../assets/icons/svg/medium.svg";
+import logo from "../../../assets/icons/png/logo-dark.png";
 
 const Footer = () => {
   return (
@@ -19,7 +23,7 @@ const Footer = () => {
             <ImageLazy src={vector} alt="vector-footer" />
           </div>
           <div className="absolute top-0 inset-x-0 w-full bg-[#28263A]">
-            <div className="flex flex-col mt-[15rem] text-white mb-[175px]">
+            <div className="flex flex-col mt-[15rem] text-white mb-[175px] px-default">
               {/* menu */}
               <div className="flex flex-row w-full gap-16 items-center justify-center">
                 <div className="justify-start text-orange-400 text-base font-medium font-['Yekan_Bakh'] underline uppercase leading-normal">
@@ -45,7 +49,7 @@ const Footer = () => {
                 </div>
               </div>
               {/* address */}
-              <div className="flex flex-row justify-between mt-28 px-default">
+              <div className="flex flex-row justify-between mt-28">
                 <div className="flex flex-row items-center gap-1">
                   <ImageLazy
                     src={location}
@@ -62,6 +66,52 @@ const Footer = () => {
                   <div className="text-sm font-normal pt-1.5">
                     تلفن: <span className="underline">05138514529</span>
                   </div>
+                </div>
+              </div>
+
+              {/* copyright and social media */}
+              <div className="flex flex-row items-center justify-between mt-10">
+                {/* copyright */}
+                <div className="text-sm font-normal font-spaceGrotesk left-to-right">
+                  © 2025 Aimoon Hub. All rights reserved.
+                </div>
+
+                {/* social media */}
+                <div className="flex flex-row gap-3">
+                  {/* medium */}
+                  <div className="p-4 rounded-full border-2 border-white/5">
+                    <ImageLazy
+                      src={medium}
+                      alt={"medium"}
+                      className="w-5 h-5"
+                    />
+                  </div>
+                  {/* instagram */}
+                  <div className="p-4 rounded-full border-2 border-white/5">
+                    <ImageLazy
+                      src={instagram}
+                      alt={"instagram"}
+                      className="w-5 h-5"
+                    />
+                  </div>
+                  {/* telegram */}
+                  <div className="p-4 rounded-full border-2 border-white/5">
+                    <ImageLazy
+                      src={telegram}
+                      alt={"telegram"}
+                      className="w-5 h-5"
+                    />
+                  </div>
+                </div>
+
+                {/* logo */}
+                <div className="flex flex-col items-center">
+                  <ImageLazy
+                    src={logo}
+                    alt="logo"
+                    className={"w-[95px] h-[58px]"}
+                  />
+                  <span className="font-bold text-sm text-primary-400">AIMOONHUB</span>
                 </div>
               </div>
             </div>
