@@ -17,13 +17,15 @@ import logo from "../../../assets/icons/png/logo-dark.png";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-col bg-lime-500">
+      <div className="flex flex-col">
         <div className="relative">
-          <div className="absolute -top-1  z-30 -inset-x-1 w-[calc(100%+2rem)]">
+          {/* shape */}
+          <div className="absolute -top-1 z-30 -inset-x-1 w-[calc(100%+2rem)]">
             <ImageLazy src={vector} alt="vector-footer" />
           </div>
+          {/* background */}
           <div className="absolute top-0 inset-x-0 w-full bg-[#28263A]">
-            <div className="flex flex-col mt-[15rem] text-white mb-[175px] px-default">
+            <div className="flex flex-col mt-[17rem] text-white  px-default">
               {/* menu */}
               <div className="flex flex-row w-full gap-16 items-center justify-center">
                 <div className="justify-start text-orange-400 text-base font-medium font-['Yekan_Bakh'] underline uppercase leading-normal">
@@ -70,7 +72,7 @@ const Footer = () => {
               </div>
 
               {/* copyright and social media */}
-              <div className="flex flex-row items-center justify-between mt-10">
+              <div className="flex flex-row items-center justify-between mt-10 mb-[7rem]">
                 {/* copyright */}
                 <div className="text-sm font-normal font-spaceGrotesk left-to-right">
                   © 2025 Aimoon Hub. All rights reserved.
