@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // Components
 
@@ -15,6 +16,8 @@ import medium from "../../../assets/icons/svg/medium.svg";
 import logo from "../../../assets/icons/png/logo-dark.png";
 
 const Footer = () => {
+  // hooks
+  const { t } = useTranslation();
   return (
     <>
       <div className="flex flex-col">
@@ -25,29 +28,23 @@ const Footer = () => {
           </div>
           {/* background */}
           <div className="absolute top-0 inset-x-0 w-full bg-[#28263A]">
-            <div className="flex flex-col mt-[17rem] text-white  px-default">
+            <div className="flex flex-col mt-[17rem] text-white px-default">
               {/* menu */}
               <div className="flex flex-row w-full gap-16 items-center justify-center">
-                <div className="justify-start text-orange-400 text-base font-medium font-['Yekan_Bakh'] underline uppercase leading-normal">
-                  صفحه اصلی
+                <div className="text-orange-400 text-base font-medium underline leading-normal">
+                  {t("home")}
                 </div>
-                <div className="opacity-20 justify-start text-white text-base font-bold font-['Azo_Sans'] uppercase">
-                  /
+                <div className="opacity-20 text-base font-bold">/</div>
+                <div className="text-base font-medium underline leading-normal">
+                  {t("contact_us")}
                 </div>
-                <div className="text-right justify-start text-white text-base font-medium font-['Yekan_Bakh'] underline uppercase leading-normal">
-                  تماس با ما
+                <div className="opacity-20 text-base font-bold">/</div>
+                <div className="text-base font-medium underline leading-normal">
+                  {t("features")}
                 </div>
-                <div className="opacity-20 justify-start text-white text-base font-bold font-['Azo_Sans'] uppercase">
-                  /
-                </div>
-                <div className="text-right justify-start text-white text-base font-medium font-['Yekan_Bakh'] underline uppercase leading-normal">
-                  ویژگی ها
-                </div>
-                <div className="opacity-20 justify-start text-white text-base font-bold font-['Azo_Sans'] uppercase">
-                  /
-                </div>
-                <div className="text-right justify-start text-white text-base font-medium font-['Yekan_Bakh'] underline uppercase leading-normal">
-                  قیمت ها
+                <div className="opacity-20 text-base font-bold">/</div>
+                <div className="text-base font-medium underline leading-normal">
+                  {t("prices")}
                 </div>
               </div>
               {/* address */}
@@ -113,7 +110,9 @@ const Footer = () => {
                     alt="logo"
                     className={"w-[95px] h-[58px]"}
                   />
-                  <span className="font-bold text-sm text-primary-400">AIMOONHUB</span>
+                  <span className="font-bold text-sm text-primary-400">
+                    AIMOONHUB
+                  </span>
                 </div>
               </div>
             </div>
