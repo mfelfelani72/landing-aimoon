@@ -2,7 +2,7 @@ const en = {
   // global
   aimoonhub: "AIMOONHUB",
 
-  // menu
+  // header
   home: "Home",
   about_us: "About Us",
   contact_us: "Contact Us",
@@ -10,6 +10,11 @@ const en = {
   prices: "Prices",
   support: "Support",
   login_telegram: "Login Telegram",
+
+  // footer
+  address: "beheshti 47",
+  phone: "Phone",
+  copyright: "© 2025 Aimoon Hub. All rights reserved",
 
   // settings
   persion: "Persion",

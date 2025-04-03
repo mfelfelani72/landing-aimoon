@@ -55,16 +55,13 @@ const Footer = () => {
                     alt="location"
                     className="w-6 h-6"
                   />
-                  <div className="text-sm font-normal pt-1">
-                    آدرس شرکت: مشهد، خیابان کوهسنگی، ملک الشعرا بهار ۵۶ ( خیابان
-                    شهید بهشتی )، شهید بهشتی ۷، پلاک ۴۷
-                  </div>
+                  <div className="text-sm font-normal pt-1">{t("address")}</div>
                 </div>
                 <div className="flex flex-row items-center gap-1">
                   <ImageLazy src={call} alt="call" className="w-6 h-6" />
-                  <div className="text-sm font-normal pt-1.5">
-                    تلفن: <span className="underline">05138514529</span>
-                  </div>
+                  <a href="tel:+985138514529" className="text-sm font-normal pt-1.5">
+                    {t("phone")}: <span className="underline ltr:font-spaceGrotesk">05138514529</span>
+                  </a>
                 </div>
               </div>
 
@@ -72,7 +69,7 @@ const Footer = () => {
               <div className="flex flex-row items-center justify-between mt-10 mb-[7rem]">
                 {/* copyright */}
                 <div className="text-sm font-normal font-spaceGrotesk left-to-right">
-                  © 2025 Aimoon Hub. All rights reserved.
+                 {t("copyright")}
                 </div>
 
                 {/* social media */}
