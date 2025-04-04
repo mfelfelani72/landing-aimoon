@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
+import NewsBox from "../../core/components/NewsBox.jsx";
 import { Image } from "../../core/components/Image.jsx";
 
 // SVG
@@ -10,7 +11,7 @@ import { Image } from "../../core/components/Image.jsx";
 import news_pic_1 from "../../../../assets/images/png/news-pic-1.png";
 import news_pic_2 from "../../../../assets/images/png/news-pic-2.png";
 import news_pic_3 from "../../../../assets/images/png/news-pic-3.png";
-import arrow from "../../../../assets/icons/svg/arrow-orange.svg";
+import arrow from "../../../../assets/icons/svg/arrow-dark.svg";
 
 const LatestNews = () => {
   // hooks
@@ -23,68 +24,20 @@ const LatestNews = () => {
           {t("latest_news")}
         </div>
         {/* content */}
-        <div className="flex flex-row gap-8">
-          <div className="flex flex-col p-6 w-96 h-[491px] items-center bg-theme rounded-[20px]">
-            <div>
-              <Image src={news_pic_1} alt="1" className={"w-full h-48"} />
-            </div>
-            <div className="text-center mt-9 text-white text-2xl font-medium">
-              بیت‌کوین در آستانه سقوط یا جهش؟
-            </div>
-            <div className="w-80 opacity-90 text-center text-white text-base font-normal mt-9">
-              بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده
-              است. برخی تحلیلگران معتقدند که ...
-            </div>
-
-            <div className="flex flex-row-reverse gap-2 items-center w-full px-4 mt-9 text-primary-400 text-base font-bold leading-none cursor-pointer">
-              <span>
-                {" "}
-                <Image src={arrow} alt="arrow" className={"w-6 h-6"} />
-              </span>
-              <span>بیشتر بدانید</span>
-            </div>
+        <div className="flex flex-col">
+          <div className="flex flex-row gap-8">
+            <NewsBox image={news_pic_1} />
+            <NewsBox image={news_pic_2} className={"mt-12"} />
+            <NewsBox image={news_pic_3} />
           </div>
-          {/*  */}
-          <div className="flex flex-col mt-12 p-6 w-96 h-[491px] items-center bg-theme rounded-[20px]">
-            <div>
-              <Image src={news_pic_2} alt="1" className={"w-full h-48"} />
-            </div>
-            <div className="text-center mt-9 text-white text-2xl font-medium">
-              بیت‌کوین در آستانه سقوط یا جهش؟
-            </div>
-            <div className="w-80 opacity-90 text-center text-white text-base font-normal mt-9">
-              بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده
-              است. برخی تحلیلگران معتقدند که ...
-            </div>
 
-            <div className="flex flex-row-reverse gap-2 items-center w-full px-4 mt-9 text-primary-400 text-base font-bold leading-none cursor-pointer">
-              <span>
-                {" "}
-                <Image src={arrow} alt="arrow" className={"w-6 h-6"} />
-              </span>
-              <span>بیشتر بدانید</span>
-            </div>
+          <div className="flex flex-row w-full gap-3.5 items-center justify-center mt-12">
+            <Image src={arrow} alt={"arrow-slider"} className={"w-4 h-4"} />
+            <Image src={arrow} alt={"arrow-slider"} className={"w-4 h-4 rotate-180"} />
           </div>
-          {/*  */}
-          <div className="flex flex-col p-6 w-96 h-[491px] items-center bg-theme rounded-[20px]">
-            <div>
-              <Image src={news_pic_3} alt="1" className={"w-full h-48"} />
-            </div>
-            <div className="text-center mt-9 text-white text-2xl font-medium">
-              بیت‌کوین در آستانه سقوط یا جهش؟
-            </div>
-            <div className="w-80 opacity-90 text-center text-white text-base font-normal mt-9">
-              بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده
-              است. برخی تحلیلگران معتقدند که ...
-            </div>
 
-            <div className="flex flex-row-reverse gap-2 items-center w-full px-4 mt-9 text-primary-400 text-base font-bold leading-none cursor-pointer">
-              <span>
-                {" "}
-                <Image src={arrow} alt="arrow" className={"w-6 h-6"} />
-              </span>
-              <span>بیشتر بدانید</span>
-            </div>
+          <div className="mt-6 text-center text-primary-400 text-base font-bold leading-7">
+            دیدن تمام خبرها
           </div>
         </div>
       </div>
