@@ -27,7 +27,7 @@ const Footer = () => {
             <ImageLazy src={vector} alt="vector-footer" />
           </div>
           {/* background */}
-          <div className="absolute top-0 inset-x-0 w-full bg-[#28263A]">
+          <div className="absolute top-0 inset-x-0 w-full bg-theme">
             <div className="flex flex-col mt-[17rem] text-white px-default">
               {/* menu */}
               <div className="flex flex-row w-full gap-16 items-center justify-center">

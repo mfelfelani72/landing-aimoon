@@ -11,6 +11,10 @@ const fa = {
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
 
+  // latest news
+
+  latest_news: "آخرین اخبار",
+
   // faq
   faq: "سوالات متداول",
 
