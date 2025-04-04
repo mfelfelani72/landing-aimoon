@@ -15,7 +15,6 @@ const ContactUs = () => {
   const { t } = useTranslation();
   return (
     <>
-      {/* <div className="container mx-auto bg-Error-50"> */}
       <div className="flex flex-col items-center justify-center mx-default">
         <div className="text-center text-Neutral-500 text-3xl font-bold">
           {t("contact_us")}
@@ -24,7 +23,7 @@ const ContactUs = () => {
           {t("title_contact_us")}
         </div>
 
-        <div className="flex flex-col w-full h-[677.69px] mt-12 mb-10 rounded-[20px] border border-Neutral-100">
+        <div className="flex flex-col w-full h-[42.5rem] mt-12 mb-10 rounded-[1.25rem] border border-Neutral-100">
           <form className="px-14 pt-6 pb-13">
             {/* name and last name */}
             <div className="flex flex-row w-full gap-4">
@@ -55,7 +54,6 @@ const ContactUs = () => {
           </form>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 };
