@@ -27,7 +27,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="font-yekanBakh flex flex-col w-full h-full">
+    <div className="!font-yekanBakh flex flex-col w-full h-full">
       <div className="container mx-auto">
         <Header />
         <div className="flex flex-col">
