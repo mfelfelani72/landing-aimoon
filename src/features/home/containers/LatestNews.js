@@ -8,6 +8,8 @@ import { Image } from "../../core/components/Image.jsx";
 // SVG
 
 import news_pic_1 from "../../../../assets/images/png/news-pic-1.png";
+import news_pic_2 from "../../../../assets/images/png/news-pic-2.png";
+import news_pic_3 from "../../../../assets/images/png/news-pic-3.png";
 import arrow from "../../../../assets/icons/svg/arrow-orange.svg";
 
 const LatestNews = () => {
@@ -45,7 +47,7 @@ const LatestNews = () => {
           {/*  */}
           <div className="flex flex-col mt-12 p-6 w-96 h-[491px] items-center bg-theme rounded-[20px]">
             <div>
-              <Image src={news_pic_1} alt="1" className={"w-full h-48"} />
+              <Image src={news_pic_2} alt="1" className={"w-full h-48"} />
             </div>
             <div className="text-center mt-9 text-white text-2xl font-medium">
               بیت‌کوین در آستانه سقوط یا جهش؟
@@ -66,7 +68,7 @@ const LatestNews = () => {
           {/*  */}
           <div className="flex flex-col p-6 w-96 h-[491px] items-center bg-theme rounded-[20px]">
             <div>
-              <Image src={news_pic_1} alt="1" className={"w-full h-48"} />
+              <Image src={news_pic_3} alt="1" className={"w-full h-48"} />
             </div>
             <div className="text-center mt-9 text-white text-2xl font-medium">
               بیت‌کوین در آستانه سقوط یا جهش؟
