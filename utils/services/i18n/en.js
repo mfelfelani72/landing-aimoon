@@ -11,6 +11,10 @@ const en = {
   support: "Support",
   login_telegram: "Login Telegram",
 
+  // faq
+
+  faq: "FAQ",
+
   // contact us
   contact_us: "Contact Us",
   title_contact_us:

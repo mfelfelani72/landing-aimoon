@@ -11,6 +11,9 @@ const fa = {
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
 
+  // faq
+  faq: "سوالات متداول",
+
   // contact us
   contact_us: "با ما در ارتباط باشید",
   title_contact_us:
