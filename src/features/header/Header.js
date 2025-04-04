@@ -30,7 +30,7 @@ const Header = () => {
                   <span className="font-bold text-sm">{t("aimoonhub")}</span>
                 </div>
                 {/* menu */}
-                <ul className="flex flex-row gap-12 rtl:pr-11">
+                <ul className="flex flex-row gap-12 rtl:pr-11 ltr:pl-11">
                   <li className="text-primary-400">{t("home")}</li>
                   <li>{t("about_us")}</li>
                   <li>{t("contact_us")}</li>
