@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Components
@@ -13,6 +13,17 @@ import vector from "../../../../assets/images/vector/vector-plans.svg";
 const Plans = () => {
   // hooks
   const { t } = useTranslation();
+
+  // states
+  const [freePlanOptions, setFreePlanOptions] = useState([
+    { title: "bot_telegram", value: true },
+    { title: "user_aimoonhub", value: true },
+    { title: "news_analysis", value: true },
+    { title: "coins_analysis", value: false },
+    { title: "news_dashboard", value: false },
+    { title: "reporter_dashboard", value: false },
+  ]);
+
   return (
     <>
       <div className="relative w-full">
@@ -25,7 +36,7 @@ const Plans = () => {
             </div>
             {/* content */}
             <div className="flex flex-row gap-20">
-              <PlansBox />
+              <PlansBox options={freePlanOptions} />
             </div>
           </div>
         </div>
