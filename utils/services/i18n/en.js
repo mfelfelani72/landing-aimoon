@@ -11,12 +11,13 @@ const en = {
   support: "Support",
   login_telegram: "Login Telegram",
 
-  // latest news
+  // plans
+  plans_title: "Subscription plans suitable for every trading style",
 
+  // latest news
   latest_news: "Latest News",
 
   // faq
-
   faq: "FAQ",
 
   // contact us

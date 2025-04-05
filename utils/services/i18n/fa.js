@@ -11,8 +11,10 @@ const fa = {
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
 
-  // latest news
+  // plans
+  plans_title: "پلن‌های اشتراک، مناسب برای هر سبک معاملاتی",
 
+  // latest news
   latest_news: "آخرین اخبار",
 
   // faq

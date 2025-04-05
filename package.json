@@ -16,6 +16,7 @@
     "i18next-browser-languagedetector": "^8.0.4",
     "image-webpack-loader": "^8.1.0",
     "postcss": "^8.5.3",
+    "postcss-loader": "^8.1.1",
     "react": "^19.0.0",
     "react-cookie": "^8.0.1",
     "react-country-flag": "^3.1.0",

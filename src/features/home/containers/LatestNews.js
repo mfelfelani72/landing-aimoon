@@ -18,7 +18,7 @@ const LatestNews = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex flex-col items-center justify-center mx-default mb-28">
+      <div className="flex flex-col items-center justify-center mx-default my-28">
         {/* title */}
         <div className="text-center text-Neutral-500 text-3xl font-bold mb-10">
           {t("latest_news")}
