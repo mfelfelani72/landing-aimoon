@@ -47,14 +47,35 @@ const Plans = () => {
         <div className="absolute top-0 inset-x-0">
           <div className="flex flex-col items-center justify-center mx-default">
             {/* title */}
-            <div className="text-center text-Neutral-500 text-3xl font-bold mb-10">
+            <div className="text-center text-Neutral-500 text-3xl font-bold mb-5">
               {t("plans_title")}
             </div>
             {/* content */}
             <div className="flex flex-row gap-20">
-              <PlansBox options={freePlanOptions} />
-              <PlansBox options={professionalPlanOptions} />
-              <PlansBox options={vanguardPlanOptions} />
+              <PlansBox
+                name={t("base_plan")}
+                price={t("free")}
+                description={"تصمیمات تریدت رو هوشمند کن – الان شروع کن!"}
+                options={freePlanOptions}
+              />
+              <PlansBox
+                className={"mt-16"}
+                name={t("professional_plan")}
+                price={t("5$")}
+                description={
+                  "یک قدم جلوتر از بازار! تحلیل عمیق و بینش حرفه‌ای برای تریدرهای باهوش"
+                }
+                options={professionalPlanOptions}
+              />
+              <PlansBox
+                className={"mt-40"}
+                name={t("vanguard_plan")}
+                price={t("10$")}
+                description={
+                  "تمام ابزارهای حرفه‌ای در دستان شما! از اخبار تا تحلیل‌های دقیق، همه‌چیز را در یک پلتفرم داشته باشید"
+                }
+                options={vanguardPlanOptions}
+              />
             </div>
           </div>
         </div>

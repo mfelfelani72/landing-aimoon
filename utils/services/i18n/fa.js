@@ -13,6 +13,10 @@ const fa = {
 
   // plans
   plans_title: "پلن‌های اشتراک، مناسب برای هر سبک معاملاتی",
+  free: "رایگان",
+  base_plan:"پکیج پایه",
+  professional_plan:"پکیج حرفه‌ای",
+  vanguard_plan:"پکیج پیشتاز",
   bot_telegram: "بات تلگرام",
   user_aimoonhub: "کاربر آیمون هاب",
   news_analysis: "تحلیل خبر",

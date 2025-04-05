@@ -6,21 +6,34 @@ import { useTranslation } from "react-i18next";
 import { ButtonNoLink } from "./Button.jsx";
 import { Image } from "./Image.jsx";
 
+// Functions
+
+import { cn } from "../../../../utils/lib/cn.js";
+
 // Svg
 
 import tick from "../../../../assets/icons/svg/tick-icon.svg";
 import close from "../../../../assets/icons/svg/close-icon.svg";
 
-const PlansBox = ({ ...props }) => {
+const PlansBox = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex flex-col gap-6 text-white p-8 w-[24.5rem] h-[40rem] bg-[#28263a] rounded-[2.25rem] backdrop-blur-[2rem]">
-        <div className="text-2xl font-medium">پکیج پایه</div>
-        <div className="text-2xl font-medium">Free</div>
+      <div
+        className={cn(
+          "flex flex-col gap-6 text-white p-8 w-[24.5rem] h-[40rem] bg-[#28263a] rounded-[2.25rem] backdrop-blur-[2rem]",
+          className
+        )}
+      >
+        <div className="text-2xl font-medium ltr:font-spaceGrotesk rtl:font-yekanBakh">
+          {props?.name}
+        </div>
+        <div className="text-2xl font-medium ltr:font-spaceGrotesk rtl:font-yekanBakh">
+          {props?.price}
+        </div>
         <div className="text-Neutral-200 text-base font-medium">
-          تصمیمات تریدت رو هوشمند کن – الان شروع کن!
+          {props?.description}
         </div>
 
         <ButtonNoLink className={"h-[2.75rem]"}> تست رایگان</ButtonNoLink>
