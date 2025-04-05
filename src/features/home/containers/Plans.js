@@ -43,7 +43,7 @@ const Plans = () => {
   return (
     <>
       <div className="relative w-full">
-        <Image src={vector} alt="plans-vevtor" className={""} />
+        <Image src={vector} alt="plans-vevtor" className={"w-[2000px] h-[1618px]"} />
         <div className="absolute top-0 inset-x-0">
           <div className="flex flex-col items-center justify-center mx-default">
             {/* title */}
@@ -76,6 +76,22 @@ const Plans = () => {
                 }
                 options={vanguardPlanOptions}
               />
+            </div>
+            <div className="text-white mt-44">
+              <span class="text-white text-[32px] font-bold">
+                با عضویت در پنل
+              </span>
+              <span class="px-2 text-primary-400 text-[32px] font-bold">
+                آیمونیکس
+              </span>
+              <span class="text-white text-[32px] font-bold">
+                می‌توانید به صورت رایگان از پکیج پیشتاز آیمون هاب برخوردار شوید
+              </span>
+            </div>
+            <div className="w-[647px]  text-center  text-Neutral-100 text-xl font-normal ">
+              یک قدم جلوتر از بازار باشید! با تحلیل‌های هوشمند ایمون هاب، تأثیر
+              اخبار بر معاملات خود را سریع‌تر از دیگران درک کنید و تصمیم‌های
+              آگاهانه بگیرید
             </div>
           </div>
         </div>

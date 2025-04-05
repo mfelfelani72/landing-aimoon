@@ -22,7 +22,7 @@ const PlansBox = ({ className, ...props }) => {
     <>
       <div
         className={cn(
-          "flex flex-col gap-6 text-white p-8 w-[24.5rem] h-[40rem] bg-[#28263a] rounded-[2.25rem] backdrop-blur-[2rem]",
+          "flex flex-col gap-5 text-white xs:dsf p-8 w-[24.5rem] h-[40rem] bg-[#28263a] rounded-[2.25rem] backdrop-blur-[2rem]",
           className
         )}
       >
@@ -36,7 +36,7 @@ const PlansBox = ({ className, ...props }) => {
           {props?.description}
         </div>
 
-        <ButtonNoLink className={"h-[2.75rem]"}> تست رایگان</ButtonNoLink>
+        <ButtonNoLink className={"h-[2.75rem]"}>تست رایگان</ButtonNoLink>
 
         <div className="w-ful h-0 outline-1 outline-offset-[-0.50px] outline-Neutral-400" />
         <div className="text-base font-medium">ویژگی های پلن رایگان:</div>
