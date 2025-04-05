@@ -23,6 +23,22 @@ const Plans = () => {
     { title: "news_dashboard", value: false },
     { title: "reporter_dashboard", value: false },
   ]);
+  const [professionalPlanOptions, setProfessionalPlanOptions] = useState([
+    { title: "bot_telegram", value: true },
+    { title: "user_aimoonhub", value: true },
+    { title: "news_analysis", value: true },
+    { title: "coins_analysis", value: true },
+    { title: "news_dashboard", value: false },
+    { title: "reporter_dashboard", value: false },
+  ]);
+  const [vanguardPlanOptions, setVanguardPlanOptions] = useState([
+    { title: "bot_telegram", value: true },
+    { title: "user_aimoonhub", value: true },
+    { title: "news_analysis", value: true },
+    { title: "coins_analysis", value: true },
+    { title: "news_dashboard", value: true },
+    { title: "reporter_dashboard", value: true },
+  ]);
 
   return (
     <>
@@ -37,6 +53,8 @@ const Plans = () => {
             {/* content */}
             <div className="flex flex-row gap-20">
               <PlansBox options={freePlanOptions} />
+              <PlansBox options={professionalPlanOptions} />
+              <PlansBox options={vanguardPlanOptions} />
             </div>
           </div>
         </div>

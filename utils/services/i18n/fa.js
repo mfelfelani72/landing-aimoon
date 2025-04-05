@@ -13,6 +13,12 @@ const fa = {
 
   // plans
   plans_title: "پلن‌های اشتراک، مناسب برای هر سبک معاملاتی",
+  bot_telegram: "بات تلگرام",
+  user_aimoonhub: "کاربر آیمون هاب",
+  news_analysis: "تحلیل خبر",
+  coins_analysis: "تحلیل کوین",
+  news_dashboard: "داشبورد خبرگذاری",
+  reporter_dashboard: "داشبورد خبرنگار",
 
   // latest news
   latest_news: "آخرین اخبار",

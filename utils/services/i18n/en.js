@@ -13,6 +13,12 @@ const en = {
 
   // plans
   plans_title: "Subscription plans suitable for every trading style",
+  bot_telegram: "Telegram Bot",
+  user_aimoonhub: "Aimonhub user",
+  news_analysis: "News analysis",
+  coins_analysis: "Coins analysis",
+  news_dashboard: "News dashboard",
+  reporter_dashboard: "Reporter dashboard",
 
   // latest news
   latest_news: "Latest News",

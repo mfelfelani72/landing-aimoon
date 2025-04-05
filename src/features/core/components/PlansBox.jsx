@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // Components
 
@@ -11,7 +12,8 @@ import tick from "../../../../assets/icons/svg/tick-icon.svg";
 import close from "../../../../assets/icons/svg/close-icon.svg";
 
 const PlansBox = ({ ...props }) => {
-  console.log(props?.options);
+  // hooks
+  const { t } = useTranslation();
   return (
     <>
       <div className="flex flex-col gap-6 text-white p-8 w-[24.5rem] h-[40rem] bg-[#28263a] rounded-[2.25rem] backdrop-blur-[2rem]">
@@ -34,7 +36,7 @@ const PlansBox = ({ ...props }) => {
             )}
 
             <div className="text-Neutral-200 text-base font-medium pt-0.5">
-              {option?.title}
+              {t(option?.title)}
             </div>
           </div>
         ))}
