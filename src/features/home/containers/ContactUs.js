@@ -15,7 +15,7 @@ const ContactUs = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden">
+      <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
         <div className="width-theme px-default">
           <div className="text-center text-Neutral-500 text-3xl font-bold">
             {t("contact_us")}
