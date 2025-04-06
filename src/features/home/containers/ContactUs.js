@@ -15,45 +15,51 @@ const ContactUs = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex flex-col items-center justify-center mx-default">
-        <div className="text-center text-Neutral-500 text-3xl font-bold">
-          {t("contact_us")}
-        </div>
-        <div className="w-full px-[5rem] pt-4 text-center text-Neutral-500 text-xl font-normal">
-          {t("title_contact_us")}
-        </div>
+      <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden">
+        <div className="width-theme px-default">
+          <div className="text-center text-Neutral-500 text-3xl font-bold">
+            {t("contact_us")}
+          </div>
+          <div className="w-full px-[5rem] pt-4 text-center text-Neutral-500 text-xl font-normal">
+            {t("title_contact_us")}
+          </div>
 
-        <div className="flex flex-col w-full h-[42.5rem] mt-12 mb-10 rounded-[1.25rem] border border-Neutral-100">
-          <form className="px-14 pt-6 pb-13">
-            {/* name and last name */}
-            <div className="flex flex-row w-full gap-4">
-              <div className="basis-1/2">
-                <InputText id="name" label={t("name")} />
+          <div className="flex flex-col w-full h-[42.5rem] mt-12 mb-10 rounded-[1.25rem] border border-Neutral-100">
+            <form className="px-14 pt-6 pb-13">
+              {/* name and last name */}
+              <div className="flex flex-row w-full gap-4">
+                <div className="basis-1/2">
+                  <InputText id="name" label={t("name")} />
+                </div>
+                <div className="basis-1/2">
+                  <InputText id="last_name" label={t("last_name")} />
+                </div>
               </div>
-              <div className="basis-1/2">
-                <InputText id="last_name" label={t("last_name")} />
+              {/* email */}
+              <div className="mt-5">
+                <InputEmail id="email" label={t("email")} />
               </div>
-            </div>
-            {/* email */}
-            <div className="mt-5">
-              <InputEmail id="email" label={t("email")} />
-            </div>
-            {/* message  */}
-            <div className="mt-5">
-              <InputTextArea
-                id="message"
-                label={t("write_here_message")}
-                rows={"7"}
-              />
-            </div>
-            <div>
-              <ButtonNoLink className={"w-full h-20 mt-8"}>
-                {t("send")}
-              </ButtonNoLink>
-            </div>
-          </form>
+              {/* message  */}
+              <div className="mt-5">
+                <InputTextArea
+                  id="message"
+                  label={t("write_here_message")}
+                  rows={"7"}
+                />
+              </div>
+              <div>
+                <ButtonNoLink className={"w-full h-20 mt-8"}>
+                  {t("send")}
+                </ButtonNoLink>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+
+      {false && (
+        <div className="flex flex-col w-full items-center justify-center"></div>
+      )}
     </>
   );
 };
