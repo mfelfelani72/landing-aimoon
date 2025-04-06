@@ -16,7 +16,7 @@ const Home = () => {
         {/* LatestNews */}
         {/* <LatestNews /> */}
         {/* FAQ */}
-        {/* <FAQ /> */}
+        <FAQ />
         {/* Contact us */}
         <ContactUs />
       </div>
