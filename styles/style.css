@@ -113,6 +113,10 @@
   .left-to-right {
     direction: ltr;
   }
+
+  .width-theme {
+    width: 100rem;
+  }
 }
 
 @theme {

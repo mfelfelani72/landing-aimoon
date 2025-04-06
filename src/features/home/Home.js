@@ -12,11 +12,11 @@ const Home = () => {
     <>
       <div className="flex flex-col mt-[6rem]">
         {/* Plans */}
-        <Plans />
+        {/* <Plans /> */}
         {/* LatestNews */}
-        <LatestNews />
+        {/* <LatestNews /> */}
         {/* FAQ */}
-        <FAQ />
+        {/* <FAQ /> */}
         {/* Contact us */}
         <ContactUs />
       </div>

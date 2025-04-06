@@ -20,16 +20,17 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden">
         <div className="relative">
-          {/* shape */}
-          <div className="absolute -top-1 z-30 -inset-x-1 w-[calc(100%+2rem)]">
-            <ImageLazy src={vector} alt="vector-footer" />
-          </div>
-          {/* background */}
-          <div className="absolute top-0 inset-x-0 w-full bg-theme">
-            <div className="flex flex-col mt-[17rem] text-white px-default">
-              {/* menu */}
+          <ImageLazy
+            src={vector}
+            alt="vector-footer"
+            className="width-theme h-[50rem] object-none"
+          />
+
+          <div className="absolute top-0 left-0 w-full">
+            <div className="flex flex-col mt-[20rem] text-white px-[13rem]">
+              {/* Menu */}
               <div className="flex flex-row w-full gap-16 items-center justify-center">
                 <div className="text-orange-400 text-base font-medium underline leading-normal">
                   {t("home")}
@@ -47,7 +48,8 @@ const Footer = () => {
                   {t("prices")}
                 </div>
               </div>
-              {/* address */}
+
+              {/* Address */}
               <div className="flex flex-row justify-between mt-28">
                 <div className="flex flex-row items-center gap-1">
                   <ImageLazy
@@ -59,22 +61,27 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-row items-center gap-1">
                   <ImageLazy src={call} alt="call" className="w-6 h-6" />
-                  <a href="tel:+985138514529" className="text-sm font-normal pt-1.5">
-                    {t("phone")}: <span className="underline ltr:font-spaceGrotesk">05138514529</span>
+                  <a
+                    href="tel:+985138514529"
+                    className="text-sm font-normal pt-1.5"
+                  >
+                    {t("phone")}:{" "}
+                    <span className="underline ltr:font-spaceGrotesk">
+                      05138514529
+                    </span>
                   </a>
                 </div>
               </div>
 
-              {/* copyright and social media */}
+              {/* Copyright and Social Media */}
               <div className="flex flex-row items-center justify-between mt-10 mb-[7rem]">
-                {/* copyright */}
+                {/* Copyright */}
                 <div className="text-sm font-normal font-spaceGrotesk left-to-right">
-                 {t("copyright")}
+                  {t("copyright")}
                 </div>
 
-                {/* social media */}
+                {/* Social Media */}
                 <div className="flex flex-row gap-3">
-                  {/* medium */}
                   <div className="p-4 rounded-full border-2 border-white/5">
                     <ImageLazy
                       src={medium}
@@ -82,7 +89,6 @@ const Footer = () => {
                       className="w-5 h-5"
                     />
                   </div>
-                  {/* instagram */}
                   <div className="p-4 rounded-full border-2 border-white/5">
                     <ImageLazy
                       src={instagram}
@@ -90,7 +96,6 @@ const Footer = () => {
                       className="w-5 h-5"
                     />
                   </div>
-                  {/* telegram */}
                   <div className="p-4 rounded-full border-2 border-white/5">
                     <ImageLazy
                       src={telegram}
@@ -100,7 +105,7 @@ const Footer = () => {
                   </div>
                 </div>
 
-                {/* logo */}
+                {/* Logo */}
                 <div className="flex flex-col items-center">
                   <ImageLazy
                     src={logo}
