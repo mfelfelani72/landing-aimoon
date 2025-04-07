@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { Image } from "../../core/components/Image.jsx";
 import PlansBox from "../../core/components/PlansBox.jsx";
+import RegisterAimoonex from "../components/plans/RegisterAimoonex.jsx";
 
 // Svg
 
@@ -79,6 +80,7 @@ const Plans = () => {
                 />
               </div>
               <div className="relative w-full">
+                {/* circle and table */}
                 <div className="absolute top-[5rem] inset-x-0 inline-flex justify-center items-center">
                   <div className="w-80 h-80 opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-2xl z-10" >
                   </div>
@@ -128,6 +130,7 @@ const Plans = () => {
                     </div>
                   </div>
                 </div>
+                {/* text and input */}
                 <div className="absolute top-0 inset-x-0 inline-flex justify-center items-center">
                   <div className="flex flex-col items-center justify-center w-[40rem]">
                     <div className="text-white mt-44 text-center">
@@ -152,6 +155,8 @@ const Plans = () => {
                   </div>
                 </div>
               </div>
+
+              <RegisterAimoonex />
 
 
             </div>
