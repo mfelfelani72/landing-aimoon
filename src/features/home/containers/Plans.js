@@ -82,7 +82,7 @@ const Plans = () => {
               <div className="relative w-full">
                 {/* circle and table */}
                 <div className="absolute top-[5rem] inset-x-0 inline-flex justify-center items-center">
-                  <div className="w-80 h-80 opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-2xl z-10" >
+                  <div className="w-80 h-80 mt-[2rem] opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-2xl z-10" >
                   </div>
 
                   {/* table shape */}
