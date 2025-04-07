@@ -78,25 +78,36 @@ const Plans = () => {
                   options={vanguardPlanOptions}
                 />
               </div>
-              <div className="flex flex-col items-center justify-center w-[40rem]">
-                <div className="text-white mt-44 text-center">
-                  <span class="text-[32px] font-bold">
-                    با عضویت در پنل{" "}
-                  </span>
-                  <span class="px-2 text-primary-400 text-[32px] font-bold uppercase">
-                    آیمونیکس
-                  </span>
-                  <span class="text-[32px] font-bold">
-                    {" "}
-                    می‌توانید به صورت رایگان از پکیج پیشتاز آیمون هاب برخوردار شوید
-                  </span>
+              <div className="relative w-full">
+                <div className="absolute top-[5rem] inset-x-0 inline-flex justify-center items-center">
+                  <div className="w-80 h-80 opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-2xl" />
                 </div>
-                <div className="w-[647px]  text-center  text-Neutral-100 text-xl font-normal mt-[24px]">
-                  یک قدم جلوتر از بازار باشید! با تحلیل‌های هوشمند ایمون هاب، تأثیر
-                  اخبار بر معاملات خود را سریع‌تر از دیگران درک کنید و تصمیم‌های
-                  آگاهانه بگیرید
+                <div className="absolute top-0 inset-x-0 inline-flex justify-center items-center">
+                  <div className="flex flex-col items-center justify-center w-[40rem]">
+                    <div className="text-white mt-44 text-center">
+                      <span className="text-[32px] font-bold">
+                        با عضویت در پنل{" "}
+                      </span>
+                      <span className="px-2 text-primary-400 text-[32px] font-bold uppercase">
+                        آیمونیکس
+                      </span>
+                      <span className="text-[32px] font-bold">
+                        {" "}
+                        می‌توانید به صورت رایگان از پکیج پیشتاز آیمون هاب برخوردار شوید
+                      </span>
+                    </div>
+                    <div className="w-[647px]  text-center  text-Neutral-100 text-xl font-normal mt-[24px]">
+                      یک قدم جلوتر از بازار باشید! با تحلیل‌های هوشمند ایمون هاب، تأثیر
+                      اخبار بر معاملات خود را سریع‌تر از دیگران درک کنید و تصمیم‌های
+                      آگاهانه بگیرید
+                    </div>
+
+                  </div>
                 </div>
               </div>
+
+
+
             </div>
           </div>
         </div>
