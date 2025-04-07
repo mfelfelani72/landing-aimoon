@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 // Components
 
@@ -56,30 +56,30 @@ const Plans = () => {
               <div className="flex flex-row gap-20">
                 <PlansBox
                   name={t("base_plan")}
-                  buttonName={"تست رایگان"}
+                  buttonName={t("free_test")}
                   price={t("free")}
-                  description={"تصمیمات تریدت رو هوشمند کن – الان شروع کن!"}
+                  description={t("free_description")}
                   options={freePlanOptions}
                 />
                 <PlansBox
                   className={"mt-24"}
                   name={t("professional_plan")}
-                  buttonName={"خرید"}
+                  buttonName={(t("buy"))}
                   buttonClassName={"bg-transparent border border-primary-400 text-primary-400 text-base font-bold hover:bg-transparent"}
                   price={t("5$")}
                   description={
-                    "یک قدم جلوتر از بازار! تحلیل عمیق و بینش حرفه‌ای برای تریدرهای باهوش"
+                    t("professional_description")
                   }
                   options={professionalPlanOptions}
                 />
                 <PlansBox
                   className={"mt-64"}
                   name={t("vanguard_plan")}
-                  buttonName={"خرید"}
+                  buttonName={(t("buy"))}
                   buttonClassName={"bg-transparent border border-primary-400 text-primary-400 text-base font-bold hover:bg-transparent"}
                   price={t("10$")}
                   description={
-                    "تمام ابزارهای حرفه‌ای در دستان شما! از اخبار تا تحلیل‌های دقیق، همه‌چیز را در یک پلتفرم داشته باشید"
+                    t("vanguard_description")
                   }
                   options={vanguardPlanOptions}
                 />
@@ -89,48 +89,44 @@ const Plans = () => {
                 <div className="absolute top-[5rem] inset-x-0 inline-flex justify-center items-center">
                   <div className="w-80 h-80 mt-[2rem] opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-2xl z-10" >
                   </div>
-
                   {/* table shape */}
                   {/* columns */}
                   <div className="absolute -top-[2rem] inset-x-0 inline-flex items-center justify-center gap-20">
-
                     <div className="flex flex-row items-center justify-center gap-[6.5rem]">
-                      <div className="w-0 h-[522.38px]">
-                        <div className=" w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-0 h-[32.5rem]">
+                        <div className="w-[0.4375rem] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
-                      <div className="w-0 h-[522.38px]">
-                        <div className=" w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-0 h-[32.5rem]">
+                        <div className="w-[0.4375rem] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
-                      <div className="w-0 h-[522.38px]">
-                        <div className=" w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-0 h-[32.5rem]">
+                        <div className="w-[0.4375rem] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
-                      <div className="w-0 h-[522.38px]">
-                        <div className=" w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-0 h-[32.5rem]">
+                        <div className="w-[0.4375rem] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
-                      <div className="w-0 h-[522.38px]">
-                        <div className="w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-0 h-[32.5rem]">
+                        <div className="w-[0.4375rem] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
-                      <div className="w-0 h-[522.38px]">
-                        <div className="w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-0 h-[32.5rem]">
+                        <div className="w-[0.4375rem] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
                     </div>
-
-
                   </div>
                   {/* rows */}
                   <div className="absolute top-[6rem] inset-x-0 inline-flex items-center justify-center gap-20">
                     <div className="flex flex-col items-center justify-center gap-[6.5rem]">
-                      <div className="w-[700px] h-0">
-                        <div className="w-full h-[7px] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-[44rem] h-0">
+                        <div className="w-full h-[0.4375rem] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
-                      <div className="w-[700px] h-0">
-                        <div className="w-full h-[7px] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-[44rem] h-0">
+                        <div className="w-full h-[0.4375rem] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
-                      <div className="w-[700px] h-0">
-                        <div className="w-full h-[7px] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-[44rem] h-0">
+                        <div className="w-full h-[0.4375rem] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
-                      <div className="w-[700px] h-0">
-                        <div className="w-full h-[7px] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      <div className="w-[44rem] h-0">
+                        <div className="w-full h-[0.4375rem] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
                       </div>
                     </div>
                   </div>
@@ -138,32 +134,27 @@ const Plans = () => {
                 {/* text and input */}
                 <div className="absolute top-0 inset-x-0 inline-flex justify-center items-center">
                   <div className="flex flex-col items-center justify-center w-[40rem]">
-                    <div className="text-white mt-44 text-center">
-                      <span className="text-[32px] font-bold">
-                        با عضویت در پنل{" "}
-                      </span>
-                      <span className="px-2 text-primary-400 text-[32px] font-bold uppercase">
-                        آیمونیکس
-                      </span>
-                      <span className="text-[32px] font-bold">
-                        {" "}
-                        می‌توانید به صورت رایگان از پکیج پیشتاز آیمون هاب برخوردار شوید
-                      </span>
-                    </div>
-                    <div className="w-[647px]  text-center  text-Neutral-100 text-xl font-normal mt-[24px]">
+                    <p className="text-white mt-44 text-center text-3xl font-bold">
+                      <Trans
+                        i18nKey="plan_description"
+                        values={{
+                          aimoonex: t('aimoonex'),
+                          buy: t('buy'),
+                        }}
+                      >
+                        <span className="text-primary-400"></span>
+                        <span className="text-lime-500"></span>
+                      </Trans>
+                    </p>
+                    <div className="w-[40rem]  text-center  text-Neutral-100 text-xl font-normal mt-6">
                       یک قدم جلوتر از بازار باشید! با تحلیل‌های هوشمند ایمون هاب، تأثیر
                       اخبار بر معاملات خود را سریع‌تر از دیگران درک کنید و تصمیم‌های
                       آگاهانه بگیرید
                     </div>
-
-
                   </div>
                 </div>
               </div>
-
               <RegisterAimoonex />
-
-
             </div>
           </div>
         </div>

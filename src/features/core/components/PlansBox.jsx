@@ -41,7 +41,7 @@ const PlansBox = ({ className, buttonClassName, ...props }) => {
         </ButtonNoLink>
 
         <div className="w-ful h-0 outline-1 outline-offset-[-0.50px] outline-Neutral-400" />
-        <div className="text-base font-medium">ویژگی های پلن رایگان:</div>
+        <div className="text-base font-medium">{t("features")} : </div>
         {props?.options?.map((option, index) => (
           <div key={index} className="flex flex-row gap-2 items-center">
             {option?.value == true ? (

@@ -23,6 +23,15 @@ const en = {
   coins_analysis: "Coins analysis",
   news_dashboard: "News dashboard",
   reporter_dashboard: "Reporter dashboard",
+  free_test: "Free test",
+  buy: "Buy",
+  free_description: "Make your trading decisions smarter – start now!",
+  professional_description: "One step ahead of the market! In-depth analysis and professional insights for smart traders",
+  vanguard_description: "All the professional tools at your fingertips! From news to detailed analysis, have everything on one platform",
+  features: "Features",
+  plan_description: "By subscribing to the {{aimoonex}} panel, you can enjoy the leading Imon Hub package for free",
+  aimoonex: "Aimoonex",
+
 
   // latest news
   latest_news: "Latest News",
