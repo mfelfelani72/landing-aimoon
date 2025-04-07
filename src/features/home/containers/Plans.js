@@ -139,19 +139,13 @@ const Plans = () => {
                         i18nKey="plan_description"
                         values={{
                           aimoonex: t('aimoonex'),
-                          buy: 25,
-                          xxxx: 30,
                         }}
                       >
                         <span className="text-primary-400"></span>
-                        <span className="text-lime-500"></span>
-                        <span className="text-lime-500"></span>
                       </Trans>
                     </p>
-                    <div className="w-[40rem]  text-center  text-Neutral-100 text-xl font-normal mt-6">
-                      یک قدم جلوتر از بازار باشید! با تحلیل‌های هوشمند ایمون هاب، تأثیر
-                      اخبار بر معاملات خود را سریع‌تر از دیگران درک کنید و تصمیم‌های
-                      آگاهانه بگیرید
+                    <div className="w-[40rem] text-center text-Neutral-100 text-xl font-normal mt-6">
+                      {t("plan_slogan")}
                     </div>
                   </div>
                 </div>
@@ -159,7 +153,7 @@ const Plans = () => {
               <RegisterAimoonex />
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </>
   );

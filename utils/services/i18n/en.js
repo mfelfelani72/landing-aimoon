@@ -29,9 +29,11 @@ const en = {
   professional_description: "One step ahead of the market! In-depth analysis and professional insights for smart traders",
   vanguard_description: "All the professional tools at your fingertips! From news to detailed analysis, have everything on one platform",
   features: "Features",
-  plan_description: "By subscribing to the {{aimoonex}} panel, you can enjoy the leading Imon Hub package for free",
+  plan_description: "By subscribing to the <0>{{aimoonex}}</0> panel, you can enjoy the leading Aimonhub package for free",
   aimoonex: "Aimoonex",
-
+  plan_slogan: "Stay one step ahead of the market! With EmonHub's smart analytics, understand the impact of news on your trades faster than others and make informed decisions",
+  enter_email: "Enter your email address",
+  register_aimoonex: "Register in Aimoonex",
 
   // latest news
   latest_news: "Latest News",
