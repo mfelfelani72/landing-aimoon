@@ -11,6 +11,9 @@ const fa = {
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
 
+   // customer reviews
+   our_customer_reviews: "نظرات مشتریان ما",
+
   // plans
   plans_title: "پلن‌های اشتراک، مناسب برای هر سبک معاملاتی",
   free: "رایگان",
@@ -37,6 +40,7 @@ const fa = {
 
   // latest news
   latest_news: "آخرین اخبار",
+  all_news: "دیدن تمام خبرها",
 
   // faq
   faq: "سوالات متداول",

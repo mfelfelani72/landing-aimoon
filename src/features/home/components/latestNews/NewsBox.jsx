@@ -1,17 +1,20 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // Components
 
-import { Image } from "./Image.jsx";
+import { Image } from "../../../core/components/Image.jsx";
 
 // Functions
 
-import { cn } from "../../../../utils/lib/cn.js";
+import { cn } from "../../../../../utils/lib/cn.js";
 
 // SVG
-import arrow from "../../../../assets/icons/svg/arrow-orange.svg";
+import arrow from "../../../../../assets/icons/svg/arrow-orange.svg";
 
 const NewsBox = ({ className, ...props }) => {
+  // hooks
+  const { t } = useTranslation();
   return (
     <>
       <div
@@ -24,18 +27,17 @@ const NewsBox = ({ className, ...props }) => {
           <Image src={props?.image} alt="1" className={"w-full h-48"} />
         </div>
         <div className="text-center mt-9 text-white text-2xl font-medium">
-          بیت‌کوین در آستانه سقوط یا جهش؟
+          {props?.title}
         </div>
         <div className="w-80 opacity-90 text-center text-white text-base font-normal mt-9">
-          بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است.
-          برخی تحلیلگران معتقدند که ...
+          {props?.summary}
         </div>
 
-        <div className="flex flex-row-reverse gap-2 items-center w-full px-4 mt-9 text-primary-400 text-base font-bold leading-none cursor-pointer">
+        <div className="flex flex-row rtl:flex-row-reverse gap-2 items-center w-full px-4 mt-9 text-primary-400 text-base font-bold leading-none cursor-pointer">
           <span>
             <Image src={arrow} alt="arrow" className={"w-6 h-6"} />
           </span>
-          <span>بیشتر بدانید</span>
+          <span>{t("read_more")}</span>
         </div>
       </div>
     </>

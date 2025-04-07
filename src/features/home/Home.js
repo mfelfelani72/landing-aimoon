@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 
+import CustomerReview from "./containers/CustomerReview";
 import Plans from "./containers/Plans";
 import LatestNews from "./containers/LatestNews";
 import ContactUs from "./containers/ContactUs";
@@ -11,9 +12,11 @@ const Home = () => {
   return (
     <>
       <div className="flex flex-col mt-[6rem]">
+        {/* Customer Review  */}
+        <CustomerReview />
         {/* Plans */}
         <Plans />
-        {/* LatestNews */}
+        {/* Latest News */}
         <LatestNews />
         {/* FAQ */}
         <FAQ />

@@ -11,6 +11,9 @@ const en = {
   support: "Support",
   login_telegram: "Login Telegram",
 
+  // customer reviews
+  our_customer_reviews: "Our customer reviews",
+
   // plans
   plans_title: "Subscription plans suitable for every trading style",
   free: "Free",
@@ -37,6 +40,7 @@ const en = {
 
   // latest news
   latest_news: "Latest News",
+  all_news: "All news",
 
   // faq
   faq: "FAQ",
