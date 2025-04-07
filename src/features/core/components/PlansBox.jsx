@@ -15,7 +15,7 @@ import { cn } from "../../../../utils/lib/cn.js";
 import tick from "../../../../assets/icons/svg/tick-icon.svg";
 import close from "../../../../assets/icons/svg/close-icon.svg";
 
-const PlansBox = ({ className, ...props }) => {
+const PlansBox = ({ className, buttonClassName, ...props }) => {
   // hooks
   const { t } = useTranslation();
   return (
@@ -36,7 +36,9 @@ const PlansBox = ({ className, ...props }) => {
           {props?.description}
         </div>
 
-        <ButtonNoLink className={"h-[2.75rem]"}>تست رایگان</ButtonNoLink>
+        <ButtonNoLink className={cn("h-[2.75rem]", buttonClassName)}>
+          {props?.buttonName}
+        </ButtonNoLink>
 
         <div className="w-ful h-0 outline-1 outline-offset-[-0.50px] outline-Neutral-400" />
         <div className="text-base font-medium">ویژگی های پلن رایگان:</div>

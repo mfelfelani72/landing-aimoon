@@ -45,7 +45,7 @@ const Plans = () => {
     <>
       <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden">
         <div className="relative width-theme">
-          <Image src={vector} alt="plans-vevtor" className={"width-theme h-[1600px] object-none mt-[13rem]"} />
+          <Image src={vector} alt="plans-vevtor" className={"width-theme h-full object-none mt-[13rem]"} />
           <div className="absolute top-0 inset-x-0">
             <div className="flex flex-col items-center justify-center mx-default">
               {/* title */}
@@ -56,6 +56,7 @@ const Plans = () => {
               <div className="flex flex-row gap-20">
                 <PlansBox
                   name={t("base_plan")}
+                  buttonName={"تست رایگان"}
                   price={t("free")}
                   description={"تصمیمات تریدت رو هوشمند کن – الان شروع کن!"}
                   options={freePlanOptions}
@@ -63,6 +64,8 @@ const Plans = () => {
                 <PlansBox
                   className={"mt-24"}
                   name={t("professional_plan")}
+                  buttonName={"خرید"}
+                  buttonClassName={"bg-transparent border border-primary-400 text-primary-400 text-base font-bold hover:bg-transparent"}
                   price={t("5$")}
                   description={
                     "یک قدم جلوتر از بازار! تحلیل عمیق و بینش حرفه‌ای برای تریدرهای باهوش"
@@ -72,6 +75,8 @@ const Plans = () => {
                 <PlansBox
                   className={"mt-64"}
                   name={t("vanguard_plan")}
+                  buttonName={"خرید"}
+                  buttonClassName={"bg-transparent border border-primary-400 text-primary-400 text-base font-bold hover:bg-transparent"}
                   price={t("10$")}
                   description={
                     "تمام ابزارهای حرفه‌ای در دستان شما! از اخبار تا تحلیل‌های دقیق، همه‌چیز را در یک پلتفرم داشته باشید"
