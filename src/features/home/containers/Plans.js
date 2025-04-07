@@ -139,10 +139,12 @@ const Plans = () => {
                         i18nKey="plan_description"
                         values={{
                           aimoonex: t('aimoonex'),
-                          buy: t('buy'),
+                          buy: 25,
+                          xxxx: 30,
                         }}
                       >
                         <span className="text-primary-400"></span>
+                        <span className="text-lime-500"></span>
                         <span className="text-lime-500"></span>
                       </Trans>
                     </p>
@@ -157,7 +159,7 @@ const Plans = () => {
               <RegisterAimoonex />
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </>
   );
