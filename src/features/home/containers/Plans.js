@@ -80,7 +80,53 @@ const Plans = () => {
               </div>
               <div className="relative w-full">
                 <div className="absolute top-[5rem] inset-x-0 inline-flex justify-center items-center">
-                  <div className="w-80 h-80 opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-2xl" />
+                  <div className="w-80 h-80 opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-2xl z-10" >
+                  </div>
+
+                  {/* table shape */}
+                  {/* columns */}
+                  <div className="absolute -top-[2rem] inset-x-0 inline-flex items-center justify-center gap-20">
+
+                    <div className="flex flex-row items-center justify-center gap-[6.5rem]">
+                      <div className="w-0 h-[522.38px]">
+                        <div className=" w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                      <div className="w-0 h-[522.38px]">
+                        <div className=" w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                      <div className="w-0 h-[522.38px]">
+                        <div className=" w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                      <div className="w-0 h-[522.38px]">
+                        <div className=" w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                      <div className="w-0 h-[522.38px]">
+                        <div className="w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                      <div className="w-0 h-[522.38px]">
+                        <div className="w-[7px] h-full bg-gradient-to-b from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  {/* rows */}
+                  <div className="absolute top-[6rem] inset-x-0 inline-flex items-center justify-center gap-20">
+                    <div className="flex flex-col items-center justify-center gap-[6.5rem]">
+                      <div className="w-[700px] h-0">
+                        <div className="w-full h-[7px] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                      <div className="w-[700px] h-0">
+                        <div className="w-full h-[7px] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                      <div className="w-[700px] h-0">
+                        <div className="w-full h-[7px] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                      <div className="w-[700px] h-0">
+                        <div className="w-full h-[7px] bg-gradient-to-r from-[#161521] via-Neutral-500 to-[#161521]"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="absolute top-0 inset-x-0 inline-flex justify-center items-center">
                   <div className="flex flex-col items-center justify-center w-[40rem]">
@@ -102,10 +148,10 @@ const Plans = () => {
                       آگاهانه بگیرید
                     </div>
 
+
                   </div>
                 </div>
               </div>
-
 
 
             </div>
