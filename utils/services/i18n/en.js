@@ -11,6 +11,15 @@ const en = {
   support: "Support",
   login_telegram: "Login Telegram",
 
+  // aimoonhub statistics
+  aimoonhub_statistics_slogan: "Transparent and Accurate | Aimoonhub Statistics",
+  count_agencies: "Count of news agencies",
+  count_analyses: "Count of analyses",
+  count_reporters: "Count of reporters",
+  count_aimoonhub_users: "Count of aimoonhub users",
+  financial_chart_currency_pairs_prices: "Financial chart of currency pairs prices",
+  count_news: "Count of news items in the database",
+
   // customer reviews
   our_customer_reviews: "Our customer reviews",
   all_reviews: "All <0>{{count}}</0> comments",

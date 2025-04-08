@@ -11,10 +11,20 @@ const fa = {
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
 
-   // customer reviews
-   our_customer_reviews: "نظرات مشتریان ما",
-   all_reviews: "دیدن تمام <0>{{count}}</0> نظر",
-   count_reviews: "<0>{{count}}</0> نفر به آیمون هاب نظر مثبت داده اند",
+  // aimoonhub statistics
+  aimoonhub_statistics_slogan: "شفاف و دقیق | آمارهای ایمون هاب",
+  count_agencies: "تعداد خبرگزاری ها",
+  count_analyses: "تعداد تحلیل‌ها",
+  count_reporters: "تعداد خبرنگاران",
+  count_aimoonhub_users: "تعداد کاربران آیمون‌هاب",
+  financial_chart_currency_pairs_prices: "نمودار مالی قیمت جفت ارزها",
+  count_news: "تعداد خبرهای موجود در بانک اطلاعاتی",
+
+
+  // customer reviews
+  our_customer_reviews: "نظرات مشتریان ما",
+  all_reviews: "دیدن تمام <0>{{count}}</0> نظر",
+  count_reviews: "<0>{{count}}</0> نفر به آیمون هاب نظر مثبت داده اند",
 
   // plans
   plans_title: "پلن‌های اشتراک، مناسب برای هر سبک معاملاتی",

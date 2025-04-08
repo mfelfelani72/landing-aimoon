@@ -36,7 +36,9 @@ const AimoonhubStatistics = () => {
                     </div>
                     <div className="absolute top-[20rem] inset-x-0">
                         {/* title */}
-                        <div className="inline-flex items-center justify-center w-full h-80 text-white text-3xl font-bold">شفاف و دقیق | آمارهای ایمون هاب</div>
+                        <div className="inline-flex items-center justify-center w-full h-80 text-white text-3xl font-bold">
+                            {t("aimoonhub_statistics_slogan")}
+                        </div>
 
                         {/* content */}
 
@@ -46,9 +48,9 @@ const AimoonhubStatistics = () => {
                                     <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
                                         <Image src={acticity} alt="acticity" className={"w-10 h-10"} />
                                     </div>
-                                    <div className="text-Neutral-200 text-xl font-bold">تعداد خبرگزاری ها</div>
+                                    <div className="text-Neutral-200 text-xl font-bold">{t("count_agencies")}</div>
                                     <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+100</div>
-                                    <div className="relative w-44 h-12 bg-[#28263A] rounded-[20px] " >
+                                    <div className="relative w-44 h-12 bg-[#28263A] rounded-[20px]" >
                                         <Image src={news_agency_1} alt="news_agency_1" className={"w-9 h-9 absolute top-1.5 right-2 rounded-full"} />
                                         <Image src={news_agency_2} alt="news_agency_2" className={"w-9 h-9 absolute top-1.5 right-10 rounded-full"} />
                                         <Image src={news_agency_3} alt="news_agency_3" className={"w-9 h-9 absolute top-1.5 right-18 rounded-full"} />
@@ -56,18 +58,18 @@ const AimoonhubStatistics = () => {
                                         <Image src={news_agency_5} alt="news_agency_5" className={"w-9 h-9 absolute top-1.5 right-33 rounded-full"} />
                                     </div>
                                 </div>
-                                <div className='basis-1/3 border-r-1 border-Neutral-300 flex flex-col items-center py-2 gap-8'>
+                                <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center py-2 gap-8'>
                                     <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
                                         <Image src={chart} alt="chart" className={"w-10 h-10"} />
                                     </div>
-                                    <div className="text-Neutral-200 text-xl font-bold">تعداد تحلیل‌ها</div>
+                                    <div className="text-Neutral-200 text-xl font-bold">{t("count_analyses")}</div>
                                     <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+10,000</div>
                                 </div>
-                                <div className='basis-1/3 border-r-1 border-Neutral-300 flex flex-col items-center py-2 gap-8'>
+                                <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center py-2 gap-8'>
                                     <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
                                         <Image src={headphones} alt="headphones" className={"w-10 h-10"} />
                                     </div>
-                                    <div className="text-Neutral-200 text-xl font-bold">تعداد خبرنگاران</div>
+                                    <div className="text-Neutral-200 text-xl font-bold">{t("count_reporters")}</div>
                                     <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+300</div>
                                     <div className="relative w-44 h-12 bg-[#28263A] rounded-[20px] " >
                                         <Image src={news_agency_1} alt="news_agency_1" className={"w-9 h-9 absolute top-1.5 right-2 rounded-full"} />
@@ -83,18 +85,18 @@ const AimoonhubStatistics = () => {
                                     <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
                                         <Image src={graph} alt="graph" className={"w-10 h-10"} />
                                     </div>
-                                    <div className="text-Neutral-200 text-xl font-bold">تعداد کاربران آیمون‌هاب</div>
+                                    <div className="text-Neutral-200 text-xl font-bold">{t("count_aimoonhub_users")}</div>
                                     <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+1,000</div>
                                 </div>
-                                <div className='basis-1/3 border-r-1 border-Neutral-300 flex flex-col items-center justify-center gap-8'>
+                                <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center justify-center gap-8'>
                                     <Image src={baseChart} alt="baseChart" className={"w-80 h-44"} />
-                                    <div className="text-Neutral-200 text-xl font-bold">نمودار مالی قیمت جفت ارزها</div>
+                                    <div className="text-Neutral-200 text-xl font-bold">{t("financial_chart_currency_pairs_prices")}</div>
                                 </div>
-                                <div className='basis-1/3 border-r-1 border-Neutral-300 flex flex-col items-center justify-center gap-8'>
+                                <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center justify-center gap-8'>
                                     <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
                                         <Image src={folder} alt="folder" className={"w-10 h-10"} />
                                     </div>
-                                    <div className="text-Neutral-200 text-xl font-bold">تعداد خبرهای موجود در بانک اطلاعاتی</div>
+                                    <div className="text-Neutral-200 text-xl font-bold">{t("count_news")}</div>
                                     <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+55,000</div>
                                 </div>
                             </div>

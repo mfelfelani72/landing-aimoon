@@ -14,11 +14,11 @@ const CustomerReview = () => {
     const { t } = useTranslation();
     return (
         <>
-            <div className='relative h-[800px] pt-[15rem] overflow-hidden'>
+            <div className='relative h-[50rem] pt-[15rem] overflow-hidden'>
 
                 {/* table */}
 
-                <div className='absolute top-[15rem] mx-[calc(50%-50rem)]'>
+                <div className='absolute top-[15rem] right-0 mx-[calc(50%-50rem)]'>
                     <div className='flex flex-col gap-[86px]'>
                         <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
                         <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
@@ -49,14 +49,14 @@ const CustomerReview = () => {
                         <div className="width-theme">
                             {/* title */}
                             <div className='flex flex-col gap-3 items-center justify-center'>
-                                <div className="w-[465px] text-center text-zinc-600 text-base font-normal leading-loose">
+                                <div className="w-[29rem] text-center text-zinc-600 text-base font-normal leading-loose">
                                     <Trans
                                         i18nKey="count_reviews"
                                         values={{
                                             count: 2157,
                                         }}
                                     >
-                                        <span className=""></span>
+                                        <span className="ltr:font-spaceGrotesk"></span>
                                     </Trans>
 
                                 </div>
@@ -66,16 +66,16 @@ const CustomerReview = () => {
                             </div>
                             {/* content */}
                             <div className="flex flex-col mt-[4.5rem]">
-                                <div className='flex flex-row w-full items-center justify-center gap-16'>
+                                <div className='flex flex-row w-full items-center justify-center gap-16 right-to-left'>
                                     <ReviewBox name={"سعید محمدی"} bio={"تحلیلگر بازارهای مالی"} review={"ایمون هاب بهم کمک کرد که سریع‌تر از رقبا به اخبار مهم دسترسی داشته باشم. حالا می‌تونم تحلیل‌هام رو با اطلاعات دقیق‌تری انجام بدم و تصمیمات بهتری بگیرم"} className={"shadow-[0px_42.444149017333984px_61.30821228027344px_0px_rgba(0,0,0,0.08)]"} />
                                     <ReviewBox name={"سعید محمدی"} bio={"تحلیلگر بازارهای مالی"} review={"ایمون هاب بهم کمک کرد که سریع‌تر از رقبا به اخبار مهم دسترسی داشته باشم. حالا می‌تونم تحلیل‌هام رو با اطلاعات دقیق‌تری انجام بدم و تصمیمات بهتری بگیرم"} className={"mt-13"} colorShadow={true} />
                                     <ReviewBox name={"سعید محمدی"} bio={"تحلیلگر بازارهای مالی"} review={"ایمون هاب بهم کمک کرد که سریع‌تر از رقبا به اخبار مهم دسترسی داشته باشم. حالا می‌تونم تحلیل‌هام رو با اطلاعات دقیق‌تری انجام بدم و تصمیمات بهتری بگیرم"} />
                                 </div>
 
                             </div>
-                            <div className="flex flex-row w-full gap-3.5 items-center justify-center mt-12">
-                                <Image src={arrow} alt={"arrow-slider-left"} className={"w-4 h-4 ltr:rotate-180 cursor-pointer"} />
-                                <Image src={arrow} alt={"arrow-slider-right"} className={"w-4 h-4 rtl:rotate-180 cursor-pointer"} />
+                            <div className="flex w-full rtl:flex-row-reverse ltr:flex-row gap-3.5 items-center justify-center mt-12">
+                                <Image src={arrow} alt={"arrow-slider-left"} className={"w-4 h-4 ltr:rotate-180 rtl:-rotate-180 cursor-pointer"} />
+                                <Image src={arrow} alt={"arrow-slider-right"} className={"w-4 h-4 cursor-pointer"} />
                             </div>
 
                             <div className="mt-6 text-center text-primary-400 text-base font-bold leading-7">
@@ -85,7 +85,7 @@ const CustomerReview = () => {
                                         count: 2157,
                                     }}
                                 >
-                                    <span className=""></span>
+                                    <span className="ltr:font-spaceGrotesk"></span>
                                 </Trans>
                             </div>
                         </div>
