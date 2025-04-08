@@ -117,6 +117,10 @@
   .width-theme {
     width: 100rem;
   }
+
+  .review-box-shadow-gradiant {
+    background: linear-gradient(90deg, #9175EA 33.33%, #CC6E3C 33.33%);
+  }
 }
 
 @theme {
