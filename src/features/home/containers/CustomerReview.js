@@ -16,7 +16,7 @@ const CustomerReview = () => {
         <>
             <div className='relative h-[700px] pt-[15rem] overflow-hidden'>
 
-                <div className='absolute top-[10rem] right-0 '>
+                <div className='absolute top-[10rem] mx-[calc(50%-50rem)]'>
                     <div className='flex flex-col gap-[86px]'>
                         <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-10 bg-black border border-black" />
                         <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-10 bg-black border border-black" />
@@ -31,7 +31,7 @@ const CustomerReview = () => {
                 {[...Array(11)].map((_, i) => (
                     <div
                         key={i}
-                        className={`absolute`}
+                        className={`absolute mx-[calc(50%-50rem)]`}
                         style={{ right: `-${50 - i * 5}rem`, top: `${39.6 + i * 2.33}rem` }}
                     >
                         <div className='flex flex-col gap-[86px] w-full items-center'>
