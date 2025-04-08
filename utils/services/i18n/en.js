@@ -14,6 +14,7 @@ const en = {
   // customer reviews
   our_customer_reviews: "Our customer reviews",
   all_reviews: "All <0>{{count}}</0> comments",
+  count_reviews: "<0>{{count}}</0> people have given positive feedback on Aimoonhub",
 
   // plans
   plans_title: "Subscription plans suitable for every trading style",

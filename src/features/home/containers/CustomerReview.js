@@ -18,7 +18,17 @@ const CustomerReview = () => {
                 <div className="relative width-theme">
                     {/* title */}
                     <div className='flex flex-col gap-3 items-center justify-center'>
-                        <div className="w-[465px] text-center text-zinc-600 text-base font-normal leading-loose">2,157نفر به آیمون‌هاب نظر مثبت داده‌اند</div>
+                        <div className="w-[465px] text-center text-zinc-600 text-base font-normal leading-loose">
+                            <Trans
+                                i18nKey="count_reviews"
+                                values={{
+                                    count: 2157,
+                                }}
+                            >
+                                <span className=""></span>
+                            </Trans>
+
+                        </div>
                         <div className="text-center text-Neutral-500 text-3xl font-bold">
                             {t("our_customer_reviews")}
                         </div>
