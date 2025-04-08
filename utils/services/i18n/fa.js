@@ -13,6 +13,7 @@ const fa = {
 
    // customer reviews
    our_customer_reviews: "نظرات مشتریان ما",
+   all_reviews: "دیدن تمام <0>{{count}}</0> نظر",
 
   // plans
   plans_title: "پلن‌های اشتراک، مناسب برای هر سبک معاملاتی",

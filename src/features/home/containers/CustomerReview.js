@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 // Components
 
@@ -24,10 +24,10 @@ const CustomerReview = () => {
                         </div>
                     </div>
                     {/* content */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col mt-[4.5rem]">
                         <div className='flex flex-row w-full items-center justify-center gap-16'>
                             <ReviewBox />
-                            <ReviewBox />
+                            <ReviewBox className={"mt-11"} />
                             <ReviewBox />
                         </div>
 
@@ -38,7 +38,14 @@ const CustomerReview = () => {
                     </div>
 
                     <div className="mt-6 text-center text-primary-400 text-base font-bold leading-7">
-                        {t("all_news")}
+                        <Trans
+                            i18nKey="all_reviews"
+                            values={{
+                                count: 2157,
+                            }}
+                        >
+                            <span className=""></span>
+                        </Trans>
                     </div>
                 </div>
             </div>
