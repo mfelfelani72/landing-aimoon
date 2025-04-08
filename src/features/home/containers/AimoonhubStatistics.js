@@ -5,9 +5,21 @@ import { useTranslation } from "react-i18next";
 
 import { Image } from '../../core/components/Image.jsx';
 
-// Svg
+// Svg and Png
 
 import vector from "../../../../assets/images/vector/vector-aimoonhub-statistics.svg"
+import acticity from "../../../../assets/icons/svg/icon-activity.svg"
+import chart from "../../../../assets/icons/svg/icon-chart.svg"
+import folder from "../../../../assets/icons/svg/icon-folder.svg"
+import graph from "../../../../assets/icons/svg/icon-graph.svg"
+import headphones from "../../../../assets/icons/svg/icon-headphones.svg"
+import baseChart from "../../../../assets/images/svg/base-chart.svg"
+
+import news_agency_1 from "../../../../assets/images/png/image-163.png"
+import news_agency_2 from "../../../../assets/images/png/image-164.png"
+import news_agency_3 from "../../../../assets/images/png/image-165.png"
+import news_agency_4 from "../../../../assets/images/png/image-166.png"
+import news_agency_5 from "../../../../assets/images/png/image-168.png"
 
 const AimoonhubStatistics = () => {
     // hooks
@@ -29,15 +41,28 @@ const AimoonhubStatistics = () => {
                         {/* content */}
 
                         <div className='flex flex-col px-[9.5rem]'>
-                            <div className='flex flex-row w-full h-[18rem] border-b-1 border-Neutral-300'>
-                                <div className='basis-1/3'></div>
-                                <div className='basis-1/3 border-r-1 border-Neutral-300'></div>
-                                <div className='basis-1/3 border-r-1 border-Neutral-300'></div>
+                            <div className='flex flex-row w-full h-[20rem] border-b-1 border-Neutral-300'>
+                                <div className='basis-1/3 flex flex-col items-center py-2 gap-8'>
+                                    <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
+                                        <Image src={acticity} alt="acticity" className={" w-10 h-10"} />
+                                    </div>
+                                    <div className="text-Neutral-200 text-xl font-bold">تعداد خبرگزاری ها</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white">+100</div>
+                                    <div className="relative w-44 h-12 bg-[#28263A] rounded-[20px] " >
+                                        <Image src={news_agency_1} alt="news_agency_1" className={"w-9 h-9 absolute top-1.5 right-2 rounded-full"} />
+                                        <Image src={news_agency_2} alt="news_agency_2" className={"w-9 h-9 absolute top-1.5 right-10 rounded-full"} />
+                                        <Image src={news_agency_3} alt="news_agency_3" className={"w-9 h-9 absolute top-1.5 right-18 rounded-full"} />
+                                        <Image src={news_agency_4} alt="news_agency_4" className={"w-9 h-9 absolute top-1.5 right-26 rounded-full"} />
+                                        <Image src={news_agency_5} alt="news_agency_5" className={"w-9 h-9 absolute top-1.5 right-33 rounded-full"} />
+                                    </div>
+                                </div>
+                                <div className='basis-1/3 border-r-1 border-Neutral-300 flex flex-col items-center py-2'></div>
+                                <div className='basis-1/3 border-r-1 border-Neutral-300 flex flex-col items-center py-2'></div>
                             </div>
-                            <div className='flex flex-row w-full h-[18rem] '>
-                                <div className='basis-1/3'></div>
-                                <div className='basis-1/3 border-r-1 border-Neutral-300'></div>
-                                <div className='basis-1/3 border-r-1 border-Neutral-300'></div>
+                            <div className='flex flex-row w-full h-[20rem] '>
+                                <div className='basis-1/3 flex flex-col items-center py-2'></div>
+                                <div className='basis-1/3 border-r-1 border-Neutral-300 flex flex-col items-center py-2'></div>
+                                <div className='basis-1/3 border-r-1 border-Neutral-300 flex flex-col items-center py-2'></div>
                             </div>
                         </div>
 
