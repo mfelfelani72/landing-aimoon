@@ -14,7 +14,41 @@ const CustomerReview = () => {
     const { t } = useTranslation();
     return (
         <>
-            <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden mb-44">
+            <div className='relative h-screen pt-[10rem]'>
+
+                <div className='absolute top-0 right-0 '>
+                    <div className='flex flex-col gap-[86px]'>
+                        <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-20 bg-black border border-black" />
+                        <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-20 bg-black border border-black" />
+                        <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-20 bg-black border border-black" />
+                        <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-20 bg-black border border-black" />
+                        <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-20 bg-black border border-black" />
+                        <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-20 bg-black border border-black" />
+                        <div className="w-[1000px] h-[2px] origin-top-right -rotate-[25deg] opacity-20 bg-black border border-black" />
+                    </div>
+                </div>
+                <div className='absolute top-[29.6rem] -right-[50rem]'>
+                    <div className='flex flex-col gap-[86px] w-full items-center'>
+                        <div className="w-[1000px] h-[2px] origin-top-right rotate-[25deg] opacity-20 bg-black border border-black" />
+                    </div>
+                </div>
+                <div className='absolute top-[31.9rem] -right-[45rem]'>
+                    <div className='flex flex-col gap-[86px] w-full items-center'>
+                        <div className="w-[1000px] h-[2px] origin-top-right rotate-[25deg] opacity-20 bg-black border border-black" />
+                    </div>
+                </div>
+                <div className='absolute top-[34.2rem] -right-[40rem]'>
+                    <div className='flex flex-col gap-[86px] w-full items-center'>
+                        <div className="w-[1000px] h-[2px] origin-top-right rotate-[25deg] opacity-20 bg-black border border-black" />
+                    </div>
+                </div>
+                <div className='absolute top-[36.5rem] -right-[35rem]'>
+                    <div className='flex flex-col gap-[86px] w-full items-center'>
+                        <div className="w-[1000px] h-[2px] origin-top-right rotate-[25deg] opacity-20 bg-black border border-black" />
+                    </div>
+                </div>
+            </div>
+            {false && <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden mb-44">
                 <div className="relative width-theme">
                     {/* title */}
                     <div className='flex flex-col gap-3 items-center justify-center'>
@@ -58,7 +92,7 @@ const CustomerReview = () => {
                         </Trans>
                     </div>
                 </div>
-            </div>
+            </div>}
         </>
 
     )
