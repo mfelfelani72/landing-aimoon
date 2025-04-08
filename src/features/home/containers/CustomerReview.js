@@ -42,7 +42,7 @@ const CustomerReview = () => {
                     </div>
                 ))}
                 {/* table */}
-                
+
                 {/* content */}
                 <div className='absolute top-6 inset-x-0'>
                     <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden mb-44">
@@ -93,7 +93,6 @@ const CustomerReview = () => {
                 </div>
                 <div
                     className="absolute bottom-0 inset-x-0 w-full h-40 bg-gradient-to-t from-white to-transparent"
-                    
                 ></div>
                 {/* content */}
 
