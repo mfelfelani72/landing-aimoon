@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 
+import AimoonhubStatistics from "./containers/AimoonhubStatistics";
 import CustomerReview from "./containers/CustomerReview";
 import Plans from "./containers/Plans";
 import LatestNews from "./containers/LatestNews";
@@ -13,12 +14,15 @@ const Home = () => {
     <>
       <div className="fixed inset-y-0 left-0  w-[calc(50%-50rem)] bg-white z-[100]"></div>
       <div className="fixed inset-y-0 right-0 w-[calc(50%-50rem)] bg-white z-[100]"></div>
+
       <div className="flex flex-col mt-[6rem]">
-        {/* Customer Review  */}
+        {/* Aimoonhub statistics */}
+        <AimoonhubStatistics />
+        {/* Customer review  */}
         <CustomerReview />
         {/* Plans */}
         <Plans />
-        {/* Latest News */}
+        {/* Latest news */}
         <LatestNews />
         {/* FAQ */}
         <FAQ />
