@@ -26,7 +26,7 @@ const AimoonhubStatistics = () => {
     const { t } = useTranslation();
     return (
         <>
-            <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden py-40">
+            <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden pb-40">
                 <div className="relative width-theme px-default h-[101rem]">
                     <div className='absolute top-0 inset-x-0 w-full'>
                         <Image src={vector} alt="vector-aimoonhub-statistics" />

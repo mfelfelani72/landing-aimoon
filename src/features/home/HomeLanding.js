@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 
+import HowToUse from "./containers/HowToUse";
 import AimoonhubStatistics from "./containers/AimoonhubStatistics";
 import CustomerReview from "./containers/CustomerReview";
 import Plans from "./containers/Plans";
@@ -16,6 +17,8 @@ const Home = () => {
       <div className="fixed inset-y-0 right-0 w-[calc(50%-50rem)] bg-white z-[100]"></div>
 
       <div className="flex flex-col mt-[6rem]">
+        {/* HowToUse */}
+        <HowToUse />
         {/* Aimoonhub statistics */}
         <AimoonhubStatistics />
         {/* Customer review  */}
