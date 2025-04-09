@@ -54,20 +54,69 @@ const HowToUse = () => {
                 <div className='absolute top-0  mx-[calc(50%-50rem)] width-theme'>
 
                     <div className='flex flex-row'>
-                        <div className='basis-5/12 flex flex-col gap-[262px] pr-[22rem]'>
+                        <div className='basis-5/12 flex flex-col gap-[19rem] pr-[22rem]'>
                             <StepBox number={1} title={"جمع آوری لحظه ای خبر"} >
-                                <div className="w-60 text-Neutral-500 text-base font-medium">بات به‌صورت خودکار از بیش لز 1000  منابع خبری معتبر داده‌ها رو دریافت می‌کنه. (مثلاً سایت‌های خبری کریپتو، توییتر، ردیت و ...)</div>
+                                <div className="w-60 text-Neutral-500 text-base font-medium">بات به‌صورت خودکار از بیش لز 1000  منابع خبری معتبر داده‌ها رو دریافت می‌کنه.(مثلاً سایت‌های خبری کر یپتو، توییتر، ردیت و ...)</div>
                             </StepBox>
                             <StepBox number={3} title={"نمایش نتیجه در تلگرام"} >
                                 <div className='flex flex-col'>
-                                    asdas
+                                    <div className='w-60 text-Neutral-500 text-base'>بعد از پردازش، نتیجه تحلیل مستقیم توی تلگرام کاربر ارسال می‌شه:</div>
+                                    <div className='w-60 text-Neutral-500 text-base'>✔️ خلاصه خبر + تحلیل احساسات</div>
+                                    <div className='w-60 text-Neutral-500 text-base'>✔️ هشدارها (مثلاً نوسان شدید روی یه کوین خاص)</div>
+                                    <div className='w-60 text-Neutral-500 text-base'>✔️ لینک منبع خبر برای مطالعه کام</div>
+                                    <div className='w-60 text-Neutral-500 text-base'>✔️تحلیل خبر جفت ارزهای مهم در ساعات تعریف شده</div>
                                 </div>
                             </StepBox>
                         </div>
-                        <div className='w-[8rem] inline-flex justify-start bg-lime-200'>sad</div>
+                        <div className='w-[8rem] inline-flex justify-start'>
+                            <div className='relative'>
+
+                                <div className="absolute top- right-[7px] w-[2px] h-[800px] mt-[6rem] opacity-80 bg-gradient-to-b from-secondary-50 via-secondary-200 to-secondary-50 z-10"></div>
+                                <div className="absolute top-0 inset-x-0 w-4 h-4 mt-[6rem] bg-secondary-500 rounded-full z-20" />
+                                <div className="absolute top-0 inset-x-0 w-4 h-4 mt-[20rem] bg-secondary-200 rounded-full z-20" />
+                                <div className="absolute top-0 inset-x-0 w-4 h-4 mt-[35rem] bg-secondary-200 rounded-full z-20" />
+                                <div className="absolute top-0 inset-x-0 w-4 h-4 mt-[50rem] bg-secondary-200 rounded-full z-20" />
+                            </div>
+                        </div>
                         <div className='basis-5/12 flex flex-col mt-[15rem] gap-[262px]'>
-                            <StepBox number={2} title={"پردازش و تحلیل با هوش مصنوعی"} ></StepBox>
-                            <StepBox number={4} title={" داشبورد حرفه‌ای برای کاربران پیشرفته"} ></StepBox>
+                            <StepBox number={2} title={"پردازش و تحلیل با هوش مصنوعی"} >
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    با استفاده از مدل پیریخته زبانی و تحلیل احساس اخبار تحلیل می‌شود:
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ بررسی احساسات (مثبت، منفی، خنثی)
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ تشخیص اخبار فیک یا شایعه
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ تحلیل ارتباط خبر با کوین‌های مهم
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ ارائه تحلیل مود خبر
+                                </div>
+                            </StepBox>
+                            <StepBox number={4} title={" داشبورد حرفه‌ای برای کاربران پیشرفته"} >
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    کاربران پلن‌های پولی، می‌تونن توی داشبورد وب جزئیات بیشتری ببینن:
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ نمودارهای تحلیل روند خبرها
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ مشاهده سوابق تحلیل‌ها
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ فیلترهای سفارشی برای دریافت اخبار خاص
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ ارائه داشبورد خبرگزاری
+                                </div>
+                                <div className='w-60 text-Neutral-500 text-base'>
+                                    ✔️ ارائه داشبورد خبرنگار
+                                </div>
+
+                            </StepBox>
                         </div>
                     </div>
                 </div>

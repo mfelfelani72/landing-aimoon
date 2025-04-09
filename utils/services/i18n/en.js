@@ -55,6 +55,7 @@ const en = {
   // latest news
   latest_news: "Latest News",
   all_news: "All news",
+  read_more: "Read more",
 
   // faq
   faq: "FAQ",

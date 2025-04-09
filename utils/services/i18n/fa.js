@@ -56,6 +56,7 @@ const fa = {
   // latest news
   latest_news: "آخرین اخبار",
   all_news: "دیدن تمام خبرها",
+  read_more: "بیشتر بدانید",
 
   // faq
   faq: "سوالات متداول",
