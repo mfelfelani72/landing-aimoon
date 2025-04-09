@@ -55,13 +55,19 @@ const HowToUse = () => {
 
                     <div className='flex flex-row'>
                         <div className='basis-5/12 flex flex-col gap-[262px] pr-[22rem]'>
-                            <StepBox />
-                            <StepBox />
+                            <StepBox number={1} title={"جمع آوری لحظه ای خبر"} >
+                                <div className="w-60 text-Neutral-500 text-base font-medium">بات به‌صورت خودکار از بیش لز 1000  منابع خبری معتبر داده‌ها رو دریافت می‌کنه. (مثلاً سایت‌های خبری کریپتو، توییتر، ردیت و ...)</div>
+                            </StepBox>
+                            <StepBox number={3} title={"نمایش نتیجه در تلگرام"} >
+                                <div className='flex flex-col'>
+                                    asdas
+                                </div>
+                            </StepBox>
                         </div>
                         <div className='w-[8rem] inline-flex justify-start bg-lime-200'>sad</div>
                         <div className='basis-5/12 flex flex-col mt-[15rem] gap-[262px]'>
-                            <StepBox />
-                            <StepBox />
+                            <StepBox number={2} title={"پردازش و تحلیل با هوش مصنوعی"} ></StepBox>
+                            <StepBox number={4} title={" داشبورد حرفه‌ای برای کاربران پیشرفته"} ></StepBox>
                         </div>
                     </div>
                 </div>
