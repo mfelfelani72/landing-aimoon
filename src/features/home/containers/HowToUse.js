@@ -3,8 +3,10 @@ import React from 'react'
 const HowToUse = () => {
     return (
         <>
-            <div className='relative w-full h-[50rem] pt-[0rem] overflow-hidden -bottom-[19rem]'>
-                {/* table */}
+            <div className='relative w-full h-[5rem] overflow-hidden -bottom-[19rem] bg-lime-300 -mt-[19rem]'></div>
+            <div className='relative w-full h-[50rem] overflow-hidden -bottom-[19rem]'>
+
+                {/* table bottom*/}
 
                 <div className='absolute top-[4rem] right-0 mx-[calc(50%-50rem)]'>
                     <div className='flex flex-col gap-[86px]'>
@@ -29,6 +31,8 @@ const HowToUse = () => {
                         </div>
                     </div>
                 ))}
+                {/* table bottom*/}
+
             </div>
         </>
 

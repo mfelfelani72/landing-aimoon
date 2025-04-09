@@ -14,7 +14,7 @@ const CustomerReview = () => {
     const { t } = useTranslation();
     return (
         <>
-            <div className='relative h-[50rem] pt-[15rem] overflow-hidden'>
+            <div className='relative h-[50rem] pt-[15rem] overflow-hidden z-10'>
 
                 {/* table */}
 
