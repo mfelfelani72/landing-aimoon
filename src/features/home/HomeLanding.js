@@ -9,6 +9,7 @@ import Plans from "./containers/Plans";
 import LatestNews from "./containers/LatestNews";
 import ContactUs from "./containers/ContactUs";
 import FAQ from "./containers/FAQ";
+import WhyAimoonhub from "./containers/WhyAimoonhub";
 
 const Home = () => {
   return (
@@ -17,6 +18,8 @@ const Home = () => {
       <div className="fixed inset-y-0 right-0 w-[calc(50%-50rem)] bg-white z-[100]"></div>
 
       <div className="flex flex-col mt-[6rem]">
+        {/* WhyAimoonhub */}
+        <WhyAimoonhub />
         {/* HowToUse */}
         <HowToUse />
         {/* Aimoonhub statistics */}
