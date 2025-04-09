@@ -11,6 +11,9 @@ const fa = {
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
 
+  // how to work
+  how_to_work_aimoonhub: "آیمون هاب چگونه کار میکند؟",
+
   // aimoonhub statistics
   aimoonhub_statistics_slogan: "شفاف و دقیق | آمارهای ایمون هاب",
   count_agencies: "تعداد خبرگزاری ها",

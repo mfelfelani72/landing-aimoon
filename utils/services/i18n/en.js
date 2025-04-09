@@ -11,6 +11,9 @@ const en = {
   support: "Support",
   login_telegram: "Login Telegram",
 
+  // how to work
+  how_to_work_aimoonhub: "How does Aimoonhub work?",
+
   // aimoonhub statistics
   aimoonhub_statistics_slogan: "Transparent and Accurate | Aimoonhub Statistics",
   count_agencies: "Count of news agencies",

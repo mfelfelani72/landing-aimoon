@@ -2,7 +2,7 @@ import React from "react";
 
 // Components
 
-import HowToUse from "./containers/HowToUse";
+import HowToWork from "./containers/HowToWork";
 import AimoonhubStatistics from "./containers/AimoonhubStatistics";
 import CustomerReview from "./containers/CustomerReview";
 import Plans from "./containers/Plans";
@@ -21,7 +21,7 @@ const Home = () => {
         {/* WhyAimoonhub */}
         <WhyAimoonhub />
         {/* HowToUse */}
-        <HowToUse />
+        <HowToWork />
         {/* Aimoonhub statistics */}
         <AimoonhubStatistics />
         {/* Customer review  */}
