@@ -11,11 +11,11 @@ const TestCode = () => {
   const cellsRef = useRef([]);
 
   // Configurable variables
-  const BOARD_SIZE = 600; // px
+  const BOARD_SIZE = 1200; // px
   const BOARD_ROTATION = 25; // deg
-  const TOTAL_COLUMNS = 8;
-  const TOTAL_ROWS = 8;
-  const GRAVITY_MAX_DISTANCE = 150; // px
+  const TOTAL_COLUMNS = 16;
+  const TOTAL_ROWS = 16;
+  const GRAVITY_MAX_DISTANCE = 160; // px
   const GRAVITY_MAX_TRANSLATE = 25; // px
   const SCROLL_DELAY_MULT = 30; // ms
 
@@ -24,44 +24,49 @@ const TestCode = () => {
   const cells = Array.from({ length: totalCells }, (_, i) => i);
 
   // Scroll animation with IntersectionObserver
-  // useEffect(() => {
-  //   const observerOptions = {
-  //     root: null,
-  //     rootMargin: '0px',
-  //     threshold: 0.5,
-  //   };
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.01,
+    };
 
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry, index) => {
-  //       if (entry.isIntersecting) {
-  //         setTimeout(() => {
-  //           entry.target.classList.add('opacity-100');
-  //         }, index * SCROLL_DELAY_MULT);
-  //         observer.unobserve(entry.target);
-  //       }
-  //     });
-  //   }, observerOptions);
 
-  //   cellsRef.current.forEach(cell => {
-  //     if (cell) observer.observe(cell);
-  //   });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
 
-  //   return () => {
-  //     cellsRef.current.forEach(cell => {
-  //       if (cell) observer.unobserve(cell);
-  //     });
-  //   };
-  // }, []);
+          console.log(index)
+          setTimeout(() => {
+            entry.target.classList.add('opacity-100');
+            observer.unobserve(entry.target);
+
+            // بررسی آیا این آخرین سلول است
+            if (index === 123) {
+              document.getElementById("table").classList.add("bg-[#f2f2f3]");
+              console.log('آخرین انیمیشن سلول اجرا شد');
+            }
+          }, index * SCROLL_DELAY_MULT);
+        }
+      });
+    }, observerOptions);
+
+    cellsRef.current.forEach((cell, index) => {
+      if (cell) observer.observe(cell);
+    });
+
+    return () => {
+      cellsRef.current.forEach(cell => {
+        if (cell) observer.unobserve(cell);
+      });
+    };
+  }, []);
 
   // Gravity effect on hover
   const handleMouseMove = (e) => {
 
     cellsRef.current.forEach((cell, index) => {
       if (!cell) return;
-
-
-
-
       const inner = cell.firstChild;
       const rect = cell.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
@@ -76,14 +81,8 @@ const TestCode = () => {
       const translateY = strength * -GRAVITY_MAX_TRANSLATE;
       const translateX = strength * -GRAVITY_MAX_TRANSLATE;
 
-
       inner.style.transform = `translateY(${translateY}px) translateX(${translateX}px)`;
-
-
-
       inner.style.zIndex = parseInt(strength * 1000);
-
-
 
     });
   };
@@ -102,20 +101,19 @@ const TestCode = () => {
       <div className="fixed inset-y-0 right-0 w-[calc(50%-50rem)] bg-white z-[100]"></div>
 
       <div className='flex flex-col w-full h-full items-center justify-center'>
-        <div className='width-theme h-screen relative'>
+        <div className='w-full relative overflow-x-clip h-[60rem] overflow-y-clip'>
 
           <div className='absolute top-0 inset-x-0 z-20 pointer-events-none'>
             <Image src={vector_1} alt={"vector"} />
           </div>
 
-          <div className='absolute top-[10rem] left-[10rem] z-10'>
+          <div style={{ transform: `rotate(${BOARD_ROTATION}deg) skewX(-25deg)` }} id={"table"} className='absolute top-[32rem] -left-[25rem] z-10'>
             <div
               ref={boardRef}
-              className="grid grid-cols-8 grid-rows-8 relative "
+              className={`grid grid-cols-${TOTAL_COLUMNS} grid-rows-${TOTAL_ROWS} relative`}
               style={{
                 width: `${BOARD_SIZE}px`,
                 height: `${BOARD_SIZE}px`,
-                transform: `rotate(${BOARD_ROTATION}deg) skewX(-25deg)`,
                 perspective: '800px',
               }}
               onMouseMove={handleMouseMove}
@@ -126,14 +124,13 @@ const TestCode = () => {
                   key={index}
                   ref={(el) => (cellsRef.current[index] = el)}
 
-                  className="cell opacity-100 transition-opacity duration-400 ease-out"
+                  className="cell opacity-0 transition-opacity duration-400 ease-out"
                 >
-                  <div className="relative w-full h-full border border-Neutral-100  bg-white transition-transform duration-700 ease-out will-change-transform" />
+                  <div className="relative w-full h-full border border-Neutral-100/50  bg-white transition-transform duration-700 ease-out will-change-transform" />
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </>
