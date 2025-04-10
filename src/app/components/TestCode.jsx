@@ -1,87 +1,58 @@
 import React, { useEffect, useRef } from 'react';
 
+
 const TestCode = () => {
-  const gridRef = useRef(null);
 
-  useEffect(() => {
-    const lines = gridRef.current.querySelectorAll('.bar-line');
+  const boardRef = useRef(null);
+  const cellsRef = useRef([]);
 
-    const onMouseMove = (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
+  // Configurable variables
+  const BOARD_SIZE = 600; // px
+  const BOARD_ROTATION = 45; // deg
+  const TOTAL_COLUMNS = 8;
+  const TOTAL_ROWS = 8;
+  const GRAVITY_MAX_DISTANCE = 150; // px
+  const GRAVITY_MAX_TRANSLATE = 20; // px
+  const SCROLL_DELAY_MULT = 30; // ms
 
-      lines.forEach(line => {
-        const rect = line.getBoundingClientRect();
-        const dx = mouseX - (rect.left + rect.width / 2);
-        const dy = mouseY - (rect.top + rect.height / 2);
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const maxDist = 300;
-        const strength = Math.max(0, 1 - dist / maxDist);
-
-        line.style.transform = `${line.dataset.baseTransform} translateZ(${strength * 50}px) scaleY(${1 + strength * 0.2})`;
-      });
-    };
-
-    const onMouseLeave = () => {
-      lines.forEach(line => {
-        line.style.transform = line.dataset.baseTransform;
-      });
-    };
-
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseleave', onMouseLeave);
-
-    return () => {
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseleave', onMouseLeave);
-    };
-  }, []);
+    // Generate cells
+    const totalCells = TOTAL_COLUMNS * TOTAL_ROWS;
+    const cells = Array.from({ length: totalCells }, (_, i) => i);
 
   return (
-    <div ref={gridRef}>
-      {/* Bottom Grid Section */}
-      <div className="absolute top-[27rem] left-1/2 -translate-x-1/2 flex flex-col gap-[86px]">
-        {[...Array(7)].map((_, i) => (
-          <div
-            key={`bottom-${i}`}
-            className="bar-line w-[1700px] h-[2px] bg-black opacity-5 border border-black"
-            data-base-transform="rotate(-25deg)"
-            style={{
-              transform: 'rotate(-25deg)',
-              transition: 'transform 0.2s ease-out',
-              willChange: 'transform',
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Right Arc */}
-      {[...Array(20)].map((_, i) => {
-        const right = `${50 - i * 5}rem`;
-        const bottom = `${-15 + i * 2.33}rem`;
-
-        return (
-          <div
-            key={`arc-${i}`}
-            className="absolute mx-[calc(50%-50rem)]"
-            style={{ right, bottom }}
-          >
-            <div className="flex flex-col gap-[86px] w-full items-center">
-              <div
-                className="bar-line w-[710px] h-[2px] bg-black opacity-5 border border-black"
-                data-base-transform="rotate(25deg)"
-                style={{
-                  transform: 'rotate(25deg)',
-                  transition: 'transform 0.2s ease-out',
-                  willChange: 'transform',
-                }}
-              />
+    <>
+      <div className='flex flex-col w-full h-full items-center justify-center'>
+        <div className='width-theme h-screen relative'>
+          <div className='absolute top-0 left-0'>
+            <div
+              ref={boardRef}
+              className="grid grid-cols-8 grid-rows-8 relative"
+              style={{
+                width: `${BOARD_SIZE}px`,
+                height: `${BOARD_SIZE}px`,
+                transform: `rotate(${BOARD_ROTATION}deg)`,
+                perspective: '800px',
+              }}
+              // onMouseMove={handleMouseMove}
+              // onMouseLeave={handleMouseLeave}
+            >
+              {cells.map((_, index) => (
+                <div
+                  key={index}
+                  ref={(el) => (cellsRef.current[index] = el)}
+                  // className="cell opacity-0 transition-opacity duration-400 ease-out"
+                  className="cell opacity-100 transition-opacity duration-400 ease-out"
+                >
+                  <div className="w-full h-full border border-black opacity-50 bg-white transition-transform duration-200 ease-out will-change-transform" />
+                </div>
+              ))}
             </div>
           </div>
-        );
-      })}
-    </div>
+        </div>
+      </div>
+    </>
   );
+
 };
 
 export default TestCode;
