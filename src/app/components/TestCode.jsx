@@ -16,7 +16,7 @@ const TestCode = () => {
   const TOTAL_COLUMNS = 8;
   const TOTAL_ROWS = 8;
   const GRAVITY_MAX_DISTANCE = 150; // px
-  const GRAVITY_MAX_TRANSLATE = 20; // px
+  const GRAVITY_MAX_TRANSLATE = 25; // px
   const SCROLL_DELAY_MULT = 30; // ms
 
   // Generate cells
@@ -55,21 +55,41 @@ const TestCode = () => {
 
   // Gravity effect on hover
   const handleMouseMove = (e) => {
+   
     cellsRef.current.forEach((cell, index) => {
       if (!cell) return;
+      
 
+     
+      
       const inner = cell.firstChild;
       const rect = cell.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
-
+      
       const dx = e.clientX - centerX;
       const dy = e.clientY - centerY;
       const distance = Math.sqrt(dx * dx + dy * dy);
+      
+      
       const strength = Math.max(0, 1 - distance / GRAVITY_MAX_DISTANCE);
       const translateY = strength * -GRAVITY_MAX_TRANSLATE;
+      const translateX = strength * -GRAVITY_MAX_TRANSLATE;
 
-      inner.style.transform = `translateY(${translateY}px)`;
+
+      inner.style.transform = `translateY(${translateY}px) translateX(${translateX}px)`;
+      // if (index == cellsRef.current.length - 1) {
+      //   inner.style.z_index = 999 ; 
+      // } else {
+      //   inner.style.z_index = - ; 
+
+      // }
+      console.log(strength);
+      
+        inner.style.zIndex  = parseInt(strength* 1000)  ; 
+
+      
+
     });
   };
 
@@ -89,9 +109,9 @@ const TestCode = () => {
       <div className='flex flex-col w-full h-full items-center justify-center'>
         <div className='width-theme h-screen relative'>
 
-          <div className='absolute top-0 inset-x-0 z-20'>
+          {/* <div className='absolute top-0 inset-x-0 z-20'>
             <Image src={vector_1} alt={"vector"} />
-          </div>
+          </div> */}
 
           <div className='absolute top-[10rem] left-0 z-10'>
             <div
@@ -110,10 +130,10 @@ const TestCode = () => {
                 <div
                   key={index}
                   ref={(el) => (cellsRef.current[index] = el)}
-                  // className="cell opacity-0 transition-opacity duration-400 ease-out"
-                  className="cell opacity-20 transition-opacity duration-400 ease-out "
+               
+                  className="cell opacity-0 transition-opacity duration-400 ease-out "
                 >
-                  <div className="w-full h-full border border-black opacity-50 bg-white transition-transform duration-200 ease-out will-change-transform" />
+                  <div className="relative w-full h-full border border-black  bg-rose-300 transition-transform duration-200 ease-out will-change-transform" />
                 </div>
               ))}
             </div>
