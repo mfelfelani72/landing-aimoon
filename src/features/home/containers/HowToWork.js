@@ -15,8 +15,8 @@ const HowToUse = () => {
             <div className='relative w-full h-[26.5rem] overflow-hidden -bottom-[19rem] -mt-[35rem] z-10'>
                 {/* table top*/}
 
-                <div className='absolute -top-[2rem] -left-[40rem] z-10'>
-                    <ChessBoard className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-Neutral-50"} mosaicClassName={"border-Neutral-50"} />
+                <div className='absolute -top-[2rem] -left-[40rem] z-10 opacity-10'>
+                    <ChessBoard className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-[#000]"} mosaicClassName={"border-[#000]"} />
                 </div>
 
                 {/* title */}
@@ -103,6 +103,10 @@ const HowToUse = () => {
                 </div>
 
                 {/* bottom table */}
+
+                {/* <div className='absolute -top-[2rem] -left-[40rem] z-10'>
+                    <ChessBoard className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
+                </div> */}
 
                 <div className='absolute top-[27rem] right-0 mx-[calc(50%-50rem)]'>
                     <div className='flex flex-col gap-[86px]'>
