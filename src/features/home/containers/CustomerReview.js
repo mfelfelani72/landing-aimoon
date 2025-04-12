@@ -5,6 +5,7 @@ import { Trans, useTranslation } from "react-i18next";
 
 import ReviewBox from '../components/customerReview/ReviewBox.jsx';
 import { Image } from '../../core/components/Image.jsx';
+import ChessBoard from '../../core/components/ChessBoard.jsx';
 
 // Svg
 import arrow from "../../../../assets/icons/svg/arrow-dark.svg";
@@ -18,33 +19,15 @@ const CustomerReview = () => {
 
                 {/* table */}
 
-                <div className='absolute top-[15rem] right-0 mx-[calc(50%-50rem)]'>
-                    <div className='flex flex-col gap-[86px]'>
-                        <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1100px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                    </div>
+                <div className='absolute top-[13rem] -right-[45rem] z-10'>
+                    <ChessBoard id={"table-customer-review"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
                 </div>
 
-                {[...Array(15)].map((_, i) => (
-                    <div
-                        key={i}
-                        className={`absolute mx-[calc(50%-50rem)]`}
-                        style={{ right: `-${72 - i * 5}rem`, top: `${39.6 + i * 2.33}rem` }}
-                    >
-                        <div className='flex flex-col gap-[86px] w-full items-center'>
-                            <div className="w-[1100px] h-[2px] origin-top-right rotate-[25deg] opacity-5 bg-black border border-black" />
-                        </div>
-                    </div>
-                ))}
+
                 {/* table */}
 
                 {/* content */}
-                <div className='absolute top-6 inset-x-0'>
+                <div className='absolute top-6 inset-x-0 z-20 pointer-events-none'>
                     <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden mb-44">
                         <div className="width-theme">
                             {/* title */}
@@ -92,7 +75,7 @@ const CustomerReview = () => {
                     </div>
                 </div>
                 <div
-                    className="absolute bottom-0 inset-x-0 w-full h-40 bg-gradient-to-t from-white to-transparent"
+                    className="absolute bottom-0 inset-x-0 w-full h-40 bg-gradient-to-t from-white to-transparent pointer-events-none z-20"
                 ></div>
                 {/* content */}
 

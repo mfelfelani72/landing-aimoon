@@ -44,7 +44,7 @@ const Plans = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden">
-        <div className="relative width-theme">
+        <div className="relative width-theme z-20">
           <Image src={vector} alt="plans-vevtor" className={"width-theme h-full object-none mt-[13rem]"} />
           <div className="absolute top-0 inset-x-0">
             <div className="flex flex-col items-center justify-center mx-default">

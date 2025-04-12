@@ -16,7 +16,7 @@ const HowToUse = () => {
                 {/* table top*/}
 
                 <div className='absolute -top-[2rem] -left-[40rem] z-10 opacity-10'>
-                    <ChessBoard id={"table-top"} className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-[#000]"} mosaicClassName={"border-[#000]"} />
+                    <ChessBoard id={"table-work-top"} className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-[#000]"} mosaicClassName={"border-[#000]"} />
                 </div>
 
                 {/* title */}
@@ -105,7 +105,7 @@ const HowToUse = () => {
                 {/* bottom table */}
 
                 <div className='absolute top-[27rem] -right-[45rem]'>
-                    <ChessBoard id={"table-bottom"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
+                    <ChessBoard id={"table-work-bottom"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
                 </div>
             </div>
         </>
