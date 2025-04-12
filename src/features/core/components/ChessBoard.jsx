@@ -1,21 +1,24 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-const ChessBoard = () => {
+// Functions
 
-    const boardRef = useRef(null);
+import { cn } from '../../../../utils/lib/cn';
+
+const ChessBoard = ({ className, bordClassName, mosaicClassName, ...props }) => {
+    // refs and consts
     const cellsRef = useRef([]);
 
+    const [cells, setCells] = useState(["empty"]);
+
     // Configurable variables
-    const BOARD_SIZE = 1600; // px
-    const BOARD_ROTATION = 25; // deg
-    const TOTAL_COLUMNS = 16;
-    const TOTAL_ROWS = 16;
+    const TOTAL_COLUMNS = props?.totalCollumns;
+    const TOTAL_ROWS = props?.toatalRows;
     const GRAVITY_MAX_DISTANCE = 160; // px
     const GRAVITY_MAX_TRANSLATE = 25; // px
 
-    // Generate cells
-    const totalCells = TOTAL_COLUMNS * TOTAL_ROWS;
-    const cells = Array.from({ length: totalCells }, (_, i) => i);
+
+
+    // functions
 
     // Gravity effect on hover
     const handleMouseMove = (e) => {
@@ -50,19 +53,38 @@ const ChessBoard = () => {
         });
     };
 
+    useEffect(() => {
+        const element = document.getElementById("bord");
+        if (element) {
+
+            const cols = Array.from(element.classList).find(cls => cls.startsWith("grid-cols-"));
+            const rows = Array.from(element.classList).find(cls => cls.startsWith("grid-rows-"));
+
+            if (cols && rows) {
+                let col = cols.split("-").pop();
+                let row = rows.split("-").pop();
+                col = parseInt(col, 10);
+                row = parseInt(row, 10);
+
+
+                // Generate cells
+                const totalCells = col * row;
+                setCells(Array.from({ length: totalCells }, (_, i) => i));
+
+            }
+        }
+    }, [])
+
     return (
         <>
-            <div className='flex flex-col w-screen h-full items-center justify-center bg-rose-300'>
+
+            {cells !== "empty" && <div className='flex flex-col w-screen h-full items-center justify-center'>
                 <div className='relative w-full inline-flex justify-center items-center'>
-                    <div style={{ transform: `rotate(${BOARD_ROTATION}deg) skewX(-25deg)` }} id={"table"} className='absolute top-[0] z-10 bg-[#f2f2f3]'>
+                    <div className={cn("absolute top-[0] z-10", className)}>
                         <div
-                            ref={boardRef}
-                            className={`grid grid-cols-16 grid-rows-16 relative`}
-                            style={{
-                                width: `${BOARD_SIZE}px`,
-                                height: `${BOARD_SIZE}px`,
-                                perspective: '800px',
-                            }}
+                            id="bord"
+                            className={cn("grid perspective-[800px] relative ", bordClassName)}
+
                             onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                         >
@@ -73,13 +95,14 @@ const ChessBoard = () => {
 
                                     className="cell opacity-100 transition-opacity duration-400 ease-out"
                                 >
-                                    <div className="relative w-full h-full border border-Neutral-100/50  bg-white transition-transform duration-700 ease-out will-change-transform" />
+                                    <div className={cn("relative w-full h-full border bg-white transition-transform duration-700 ease-out will-change-transform", mosaicClassName)} />
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>}
+
 
         </>
     )
