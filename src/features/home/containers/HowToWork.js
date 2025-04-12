@@ -102,6 +102,20 @@ const HowToUse = () => {
                     </div>
                 </div>
 
+                {/* circle */}
+                <div className='absolute top-[15rem] right-[calc(50%-70rem)] z-30 pointer-events-none'>
+                    <div className='relative'>
+                        <div className='absolute top-0 right-0 w-[500px] h-[500px] bg-white rounded-full blur-3xl'></div>
+                        <div className="absolute top-0 right-0 w-[500px] h-[500px] opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-3xl" />
+                    </div>
+                </div>
+
+                {/* left table */}
+
+                <div className='absolute -top-[23rem] -left-[115rem] z-10 opacity-30'>
+                    <ChessBoard id={"table-work-left"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
+                </div>
+
                 {/* bottom table */}
 
                 <div className='absolute top-[27rem] -right-[45rem]'>

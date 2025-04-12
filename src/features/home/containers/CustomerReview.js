@@ -23,7 +23,6 @@ const CustomerReview = () => {
                     <ChessBoard id={"table-customer-review"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
                 </div>
 
-
                 {/* table */}
 
                 {/* content */}
