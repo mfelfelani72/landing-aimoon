@@ -28,13 +28,13 @@ const Landing = () => {
 
   return (
     <div className="!font-yekanBakh flex flex-col w-full h-full">
-      {/* <Header /> */}
+      <Header />
       <div className="flex flex-col">
         {certificate === "app" && <Content />}
         {certificate === "404" && <div>404</div>}
         {certificate === "403" && <div>403</div>}
 
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );

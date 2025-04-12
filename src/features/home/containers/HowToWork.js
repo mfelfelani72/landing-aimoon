@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 // Components
 
 import StepBox from '../components/HowToWork/StepBox.jsx';
+import ChessBoard from '../../core/components/ChessBoard.jsx';
 
 const HowToUse = () => {
     // hooks
@@ -14,32 +15,12 @@ const HowToUse = () => {
             <div className='relative w-full h-[26.5rem] overflow-hidden -bottom-[19rem] -mt-[35rem] z-10'>
                 {/* table top*/}
 
-                {[...Array(13)].map((_, i) => (
-                    <div
-                        key={i}
-                        className={`absolute mx-[calc(50%-50rem)]`}
-                        style={{ left: `-${60 - i * 5}rem`, top: `${30 + i * 2.33}rem` }}
-                    >
-                        <div className='flex flex-col gap-[86px] w-full items-center'>
-                            <div className="w-[1270px] h-[2px] origin-top-left -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        </div>
-                    </div>
-                ))}
-
-                <div className={`absolute -left-[34rem] -top-[25rem] mx-[calc(50%-50rem)]`}>
-                    <div className='flex flex-col gap-[86px] w-full items-center'>
-                        <div className="w-[2000px] h-[2px] origin-top-left rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[2000px] h-[2px] origin-top-left rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[2000px] h-[2px] origin-top-left rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[2000px] h-[2px] origin-top-left rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[2000px] h-[2px] origin-top-left rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[2000px] h-[2px] origin-top-left rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[2000px] h-[2px] origin-top-left rotate-[25deg] opacity-5 bg-black border border-black" />
-                    </div>
+                <div className='absolute -top-[2rem] -left-[40rem] z-10'>
+                    <ChessBoard className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-Neutral-50"} mosaicClassName={"border-Neutral-50"} />
                 </div>
 
                 {/* title */}
-                <div className='absolute top-[20rem] inset-x-0 w-full inline-flex items-center justify-center '>
+                <div className='absolute top-[20rem] inset-x-0 w-full inline-flex items-center justify-center z-20 pointer-events-none'>
                     <div className="text-center text-Neutral-500 text-3xl font-bold">
                         {t("how_to_work_aimoonhub")}
                     </div>
