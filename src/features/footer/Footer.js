@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden">
-        <div className="relative">
+        <div className="relative z-[998]">
           <ImageLazy
             src={vector}
             alt="vector-footer"

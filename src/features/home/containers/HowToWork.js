@@ -16,7 +16,7 @@ const HowToUse = () => {
                 {/* table top*/}
 
                 <div className='absolute -top-[2rem] -left-[40rem] z-10 opacity-10'>
-                    <ChessBoard className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-[#000]"} mosaicClassName={"border-[#000]"} />
+                    <ChessBoard id={"table-top"} className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-[#000]"} mosaicClassName={"border-[#000]"} />
                 </div>
 
                 {/* title */}
@@ -32,7 +32,7 @@ const HowToUse = () => {
 
                 {/* content */}
 
-                <div className='absolute top-0  mx-[calc(50%-50rem)] width-theme'>
+                <div className='absolute top-0 mx-[calc(50%-50rem)] width-theme z-20 pointer-events-none'>
 
                     <div className='flex flex-row'>
                         <div className='basis-5/12 flex flex-col gap-[19rem] pr-[22rem]'>
@@ -104,34 +104,9 @@ const HowToUse = () => {
 
                 {/* bottom table */}
 
-                {/* <div className='absolute -top-[2rem] -left-[40rem] z-10'>
-                    <ChessBoard className={"rotate-[30deg] skew-x-[-30deg] skew-y-[-5deg]"} bordClassName={`grid-cols-12 grid-rows-12 w-[70rem] h-[70rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
-                </div> */}
-
-                <div className='absolute top-[27rem] right-0 mx-[calc(50%-50rem)]'>
-                    <div className='flex flex-col gap-[86px]'>
-                        <div className="w-[1700px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1700px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1700px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1700px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1700px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1700px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                        <div className="w-[1700px] h-[2px] origin-top-right -rotate-[25deg] opacity-5 bg-black border border-black" />
-                    </div>
+                <div className='absolute top-[27rem] -right-[45rem]'>
+                    <ChessBoard id={"table-bottom"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
                 </div>
-
-                {[...Array(20)].map((_, i) => (
-                    <div
-                        key={i}
-                        className={`absolute mx-[calc(50%-50rem)]`}
-                        style={{ right: `${50 - i * 5}rem`, bottom: `${-15 + i * 2.33}rem` }}
-                    >
-                        <div className='flex flex-col gap-[86px] w-full items-center'>
-                            <div className="w-[710px] h-[2px] origin-top-right rotate-[25deg] opacity-5 bg-black border border-black" />
-                        </div>
-                    </div>
-                ))}
-
             </div>
         </>
 

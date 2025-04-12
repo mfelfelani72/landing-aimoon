@@ -54,7 +54,7 @@ const ChessBoard = ({ className, bordClassName, mosaicClassName, ...props }) => 
     };
 
     useEffect(() => {
-        const element = document.getElementById("bord");
+        const element = document.getElementById(props?.id);
         if (element) {
 
             const cols = Array.from(element.classList).find(cls => cls.startsWith("grid-cols-"));
@@ -86,7 +86,7 @@ const ChessBoard = ({ className, bordClassName, mosaicClassName, ...props }) => 
                 <div className='relative w-full inline-flex justify-center items-center'>
                     <div className={cn("absolute top-[0] z-10", className)}>
                         <div
-                            id="bord"
+                            id={props?.id}
                             className={cn("grid perspective-[800px] relative ", bordClassName)}
 
                             onMouseMove={handleMouseMove}
