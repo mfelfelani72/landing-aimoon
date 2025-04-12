@@ -8,7 +8,7 @@ const ChessBoard = ({ className, bordClassName, mosaicClassName, ...props }) => 
     // refs and consts
     const cellsRef = useRef([]);
 
-    const [cells, setCells] = useState(["empty"]);
+    const [cells, setCells] = useState([]);
 
     // Configurable variables
     const TOTAL_COLUMNS = props?.totalCollumns;
@@ -66,19 +66,23 @@ const ChessBoard = ({ className, bordClassName, mosaicClassName, ...props }) => 
                 col = parseInt(col, 10);
                 row = parseInt(row, 10);
 
-
                 // Generate cells
                 const totalCells = col * row;
                 setCells(Array.from({ length: totalCells }, (_, i) => i));
+                setTimeout(() => {
+                    element.classList.add(props?.backgroundColor)
+                }, 500)
 
             }
         }
+
+
     }, [])
 
     return (
         <>
 
-            {cells !== "empty" && <div className='flex flex-col w-screen h-full items-center justify-center'>
+            <div className='flex flex-col w-screen h-full items-center justify-center'>
                 <div className='relative w-full inline-flex justify-center items-center'>
                     <div className={cn("absolute top-[0] z-10", className)}>
                         <div
@@ -101,7 +105,7 @@ const ChessBoard = ({ className, bordClassName, mosaicClassName, ...props }) => 
                         </div>
                     </div>
                 </div>
-            </div>}
+            </div>
 
 
         </>
