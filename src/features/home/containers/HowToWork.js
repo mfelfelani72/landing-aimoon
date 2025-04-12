@@ -36,10 +36,10 @@ const HowToUse = () => {
 
                     <div className='flex flex-row'>
                         <div className='basis-5/12 flex flex-col gap-[19rem] pr-[22rem]'>
-                            <StepBox number={1} title={"جمع آوری لحظه ای خبر"} >
+                            <StepBox className={"mt-[2rem]"} number={1} title={"جمع آوری لحظه ای خبر"} >
                                 <div className="w-60 text-Neutral-500 text-base font-medium">بات به‌صورت خودکار از بیش لز 1000  منابع خبری معتبر داده‌ها رو دریافت می‌کنه.(مثلاً سایت‌های خبری کر یپتو، توییتر، ردیت و ...)</div>
                             </StepBox>
-                            <StepBox number={3} title={"نمایش نتیجه در تلگرام"} >
+                            <StepBox className={"mr-[1.5rem]"} number={3} title={"نمایش نتیجه در تلگرام"} >
                                 <div className='flex flex-col'>
                                     <div className='w-60 text-Neutral-500 text-base'>بعد از پردازش، نتیجه تحلیل مستقیم توی تلگرام کاربر ارسال می‌شه:</div>
                                     <div className='w-60 text-Neutral-500 text-base'>✔️ خلاصه خبر + تحلیل احساسات</div>
@@ -51,7 +51,6 @@ const HowToUse = () => {
                         </div>
                         <div className='w-[8rem] inline-flex justify-start'>
                             <div className='relative'>
-
                                 <div className="absolute top- right-[7px] w-[2px] h-[800px] mt-[6rem] opacity-80 bg-gradient-to-b from-secondary-50 via-secondary-200 to-secondary-50 z-10"></div>
                                 <div className="absolute top-0 inset-x-0 w-4 h-4 mt-[6rem] bg-secondary-500 rounded-full z-20" />
                                 <div className="absolute top-0 inset-x-0 w-4 h-4 mt-[20rem] bg-secondary-200 rounded-full z-20" />
@@ -60,7 +59,7 @@ const HowToUse = () => {
                             </div>
                         </div>
                         <div className='basis-5/12 flex flex-col mt-[15rem] gap-[262px]'>
-                            <StepBox number={2} title={"پردازش و تحلیل با هوش مصنوعی"} >
+                            <StepBox className={"mt-[3.5rem]"} number={2} title={"پردازش و تحلیل با هوش مصنوعی"} >
                                 <div className='w-60 text-Neutral-500 text-base'>
                                     با استفاده از مدل پیریخته زبانی و تحلیل احساس اخبار تحلیل می‌شود:
                                 </div>
@@ -77,7 +76,7 @@ const HowToUse = () => {
                                     ✔️ ارائه تحلیل مود خبر
                                 </div>
                             </StepBox>
-                            <StepBox number={4} title={" داشبورد حرفه‌ای برای کاربران پیشرفته"} >
+                            <StepBox className={"mt-[0.75rem]"} number={4} title={" داشبورد حرفه‌ای برای کاربران پیشرفته"} >
                                 <div className='w-60 text-Neutral-500 text-base'>
                                     کاربران پلن‌های پولی، می‌تونن توی داشبورد وب جزئیات بیشتری ببینن:
                                 </div>
@@ -105,8 +104,8 @@ const HowToUse = () => {
                 {/* circle */}
                 <div className='absolute top-[15rem] right-[calc(50%-70rem)] z-30 pointer-events-none'>
                     <div className='relative'>
-                        <div className='absolute top-0 right-0 w-[500px] h-[500px] bg-white rounded-full blur-3xl'></div>
-                        <div className="absolute top-0 right-0 w-[500px] h-[500px] opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-3xl" />
+                        <div className='absolute top-0 right-0 w-[31.25rem] h-[31.25rem] bg-white rounded-full blur-3xl'></div>
+                        <div className="absolute top-0 right-0 w-[31.25rem] h-[31.25rem] opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-3xl" />
                     </div>
                 </div>
 
