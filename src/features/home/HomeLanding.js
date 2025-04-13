@@ -19,13 +19,13 @@ const Home = () => {
 
       <div className="flex flex-col mt-[6rem]">
         {/* WhyAimoonhub */}
-        {/* <WhyAimoonhub /> */}
+        <WhyAimoonhub />
         {/* HowToUse */}
-        {/* <HowToWork /> */}
+        <HowToWork />
         {/* Aimoonhub statistics */}
-        {/* <AimoonhubStatistics /> */}
+        <AimoonhubStatistics />
         {/* Customer review  */}
-        {/* <CustomerReview /> */}
+        <CustomerReview />
         {/* Plans */}
         <Plans />
         {/* Latest news */}
