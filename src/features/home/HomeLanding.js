@@ -27,7 +27,7 @@ const Home = () => {
         {/* Customer review  */}
         <CustomerReview />
         {/* Plans */}
-        <Plans />
+        {/* <Plans /> */}
         {/* Latest news */}
         <LatestNews />
         {/* FAQ */}
