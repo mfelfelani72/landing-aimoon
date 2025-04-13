@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import StepBox from '../components/HowToWork/StepBox.jsx';
+import StepBox from '../components/howToWork/StepBox.jsx';
 import ChessBoard from '../../core/components/ChessBoard.jsx';
 
 const HowToUse = () => {

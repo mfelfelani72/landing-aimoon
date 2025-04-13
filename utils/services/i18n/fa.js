@@ -11,6 +11,11 @@ const fa = {
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
 
+  // why aimoonhub
+  free_test_aimoonex: "تست رایگان",
+  why_aimoonhub_description: "آیمون هاب - تحلیل هوشمند اخبار ترید در لحظه",
+  why_aimoonhub_slogan: "یک قدم جلوتر از بازار باشید! با تحلیل‌های هوشمند ایمون هاب، تأثیر اخبار بر معاملات خود را سریع‌تر از دیگران درک کنید و تصمیم‌های آگاهانه بگیرید",
+
   // how to work
   how_to_work_aimoonhub: "آیمون هاب چگونه کار میکند؟",
 

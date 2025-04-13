@@ -12,7 +12,7 @@ import coin_1 from "../../../../assets/icons/svg/icon-coin-1.svg"
 import usdt from "../../../../assets/icons/svg/icon-usdt.svg"
 import bitcoin from "../../../../assets/icons/svg/icon-bitcoin.svg"
 import eth from "../../../../assets/icons/svg/icon-eth.svg"
-import RegisterAimoonex from '../components/plans/RegisterAimoonex.jsx'
+import FreeTestAimoonex from '../components/whyAimoonhub/FreeTestAimoonex.jsx'
 
 
 const WhyAimoonhub = () => {
@@ -96,22 +96,15 @@ const WhyAimoonhub = () => {
                                         <div className="absolute top-0 inset-x-0 inline-flex justify-center items-center">
                                             <div className="flex flex-col items-center justify-center w-[40rem]">
                                                 <p className="text-white mt-44 text-center text-3xl font-bold">
-                                                    <Trans
-                                                        i18nKey="plan_description"
-                                                        values={{
-                                                            aimoonex: t('aimoonex'),
-                                                        }}
-                                                    >
-                                                        <span className="text-primary-400"></span>
-                                                    </Trans>
+                                                {t("why_aimoonhub_description")}
                                                 </p>
                                                 <div className="w-[40rem] text-center text-Neutral-100 text-xl font-normal mt-6">
-                                                    {t("plan_slogan")}
+                                                    {t("why_aimoonhub_slogan")}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <RegisterAimoonex />
+                                    <FreeTestAimoonex />
                                 </div>
                             </div>
                         </div>
