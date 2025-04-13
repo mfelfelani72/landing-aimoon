@@ -1,0 +1,20 @@
+<svg width="58" height="57" viewBox="0 0 58 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="eth" clip-path="url(#clip0_5342_20205)">
+<g id="Group">
+<path id="Vector" d="M29.0591 56.6913C44.5846 56.6913 57.1704 44.1054 57.1704 28.58C57.1704 13.0546 44.5846 0.46875 29.0591 0.46875C13.5337 0.46875 0.947876 13.0546 0.947876 28.58C0.947876 44.1054 13.5337 56.6913 29.0591 56.6913Z" fill="#627EEA"/>
+<g id="Group_2">
+<path id="Vector_2" d="M29.9377 7.49414V23.0783L43.1096 28.9641L29.9377 7.49414Z" fill="white" fill-opacity="0.602"/>
+<path id="Vector_3" d="M29.9342 7.49414L16.7606 28.9641L29.9342 23.0783V7.49414Z" fill="white"/>
+<path id="Vector_4" d="M29.9377 39.0652V49.6544L43.1184 31.4189L29.9377 39.0652Z" fill="white" fill-opacity="0.602"/>
+<path id="Vector_5" d="M29.9342 49.6544V39.0635L16.7606 31.4189L29.9342 49.6544Z" fill="white"/>
+<path id="Vector_6" d="M29.9377 36.6172L43.1096 28.9692L29.9377 23.0869V36.6172Z" fill="white" fill-opacity="0.2"/>
+<path id="Vector_7" d="M16.7606 28.9692L29.9342 36.6172V23.0869L16.7606 28.9692Z" fill="white" fill-opacity="0.602"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_5342_20205">
+<rect width="56.2225" height="56.2225" fill="white" transform="translate(0.947876 0.469727)"/>
+</clipPath>
+</defs>
+</svg>

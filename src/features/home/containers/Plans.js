@@ -3,13 +3,17 @@ import { Trans, useTranslation } from "react-i18next";
 
 // Components
 
-import { Image } from "../../core/components/Image.jsx";
+import { Image, ImageLazy } from "../../core/components/Image.jsx";
 import PlansBox from "../../core/components/PlansBox.jsx";
 import RegisterAimoonex from "../components/plans/RegisterAimoonex.jsx";
 
 // Svg
 
 import vector from "../../../../assets/images/vector/vector-plans.svg";
+import coin_1 from "../../../../assets/icons/svg/icon-coin-1.svg"
+import usdt from "../../../../assets/icons/svg/icon-usdt.svg"
+import bitcoin from "../../../../assets/icons/svg/icon-bitcoin.svg"
+import eth from "../../../../assets/icons/svg/icon-eth.svg"
 
 const Plans = () => {
   // hooks
@@ -130,6 +134,19 @@ const Plans = () => {
                       </div>
                     </div>
                   </div>
+                </div>
+                {/* coins-icon */}
+                <div className="absolute top-[9rem] right-[13rem] mx-default">
+                  <ImageLazy src={coin_1} alt={"coin_1"} className={"w-8 h-8"} />
+                </div>
+                <div className="absolute top-[20rem] right-[3rem] mx-default">
+                  <ImageLazy src={eth} alt={"eth"} className={"w-8 h-8"} />
+                </div>
+                <div className="absolute top-[12rem] left-[8.5rem] mx-default">
+                  <ImageLazy src={usdt} alt={"usdt"} className={"w-10 h-10"} />
+                </div>
+                <div className="absolute top-[22rem] left-[2rem] mx-default">
+                  <ImageLazy src={bitcoin} alt={"bitcoin"} className={"w-8 h-8"} />
                 </div>
                 {/* text and input */}
                 <div className="absolute top-0 inset-x-0 inline-flex justify-center items-center">
