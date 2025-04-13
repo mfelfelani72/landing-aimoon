@@ -14,7 +14,7 @@ import stars from "../../../../assets/icons/svg/stars.svg"
 const Welcome = () => {
     return (
         <>
-            <div className='relative w-full h-[40rem] inline-flex justify-center overflow-hidden'>
+            <div className='relative w-full h-[45rem] inline-flex justify-center overflow-hidden'>
                 <div className='w-[50rem] px-default flex flex-col z-30 pointer-events-none'>
                     <h1 className="w-[532.63px] text-5xl font-bold leading-[66px]"><span className="">تحلیل لحظه ای اخبار <br /></span><span className="text-secondary-500">بازارهای مالی</span><span className=""> و </span><span className="text-secondary-500">رمزارزها </span></h1>
                     <h2 className="w-[533px] text-Neural-300 text-lg font-normal leading-7 mt-8">ایمون هاب با استفاده از هوش مصنوعی، اخبار و داده‌های بازار را در لحظه تحلیل کرده و اطلاعاتی دقیق برای تصمیم‌گیری بهتر به شما ارائه می‌دهد.</h2>
@@ -34,9 +34,11 @@ const Welcome = () => {
                 </div>
                 <div className='w-[50rem]'>s</div>
 
-                <div className='absolute -top-[3rem] right-[65rem]'>
+                <div className='absolute top-0 right-[65rem]'>
                     <ChessBoard id={"table-work-bottom"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
                 </div>
+
+                <div className="absolute bottom-0 inset-x-0 w-full h-40 bg-gradient-to-t from-white to-transparent pointer-events-none z-20"></div>
             </div>
         </>
     )
