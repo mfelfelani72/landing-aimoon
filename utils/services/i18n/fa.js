@@ -10,6 +10,7 @@ const fa = {
   prices: "قیمت ها",
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
+  login_dashboard: "ورود به داشبورد",
 
   // why aimoonhub
   free_test_aimoonex: "تست رایگان",

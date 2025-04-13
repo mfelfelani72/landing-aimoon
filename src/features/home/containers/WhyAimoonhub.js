@@ -34,7 +34,7 @@ const WhyAimoonhub = () => {
                     {t("تحلیل لحظه‌ای اخبار و کوین‌ها برای تریدرهای حرفه‌ای تحلیل لحظه‌ای اخبار و کوین‌ها برای تریدرهای حرفه‌ای")}
 
                 </div>
-                <div className='relative w-[135rem] h-[82.5rem] z-20'>
+                <div className='relative w-[135rem] h-[82.5rem] z-20 pointer-events-none'>
 
                     <div className='absolute top-0 left-[10rem]'>
                         <div className="relative w-[135rem] h-[82.5rem]">
@@ -116,7 +116,7 @@ const WhyAimoonhub = () => {
                                     <ImageLazy src={bitcoin} alt={"bitcoin"} className={"w-8 h-8"} />
                                 </div>
                                 {/* text and input */}
-                                <div className="absolute top-[2rem] inset-x-0 inline-flex justify-center items-center">
+                                <div className="absolute top-[2rem] inset-x-0 inline-flex justify-center items-center pointer-events-auto">
                                     <div className="flex flex-col items-center justify-center w-[40rem]">
                                         <p className="text-white mt-44 text-center text-3xl font-bold">
                                             {t("why_aimoonhub_description")}

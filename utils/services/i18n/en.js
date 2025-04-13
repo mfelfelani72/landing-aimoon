@@ -15,6 +15,7 @@ const en = {
   free_test_aimoonex: "Free test Aimoonex",
   why_aimoonhub_description: "Aimoonhub - Smart analysis of real-time trading news",
   why_aimoonhub_slogan: "Stay one step ahead of the market! With EmonHub's smart analytics, understand the impact of news on your trades faster than others and make informed decisions",
+  login_dashboard: "Login to dashboard",
 
   // how to work
   how_to_work_aimoonhub: "How does Aimoonhub work?",
