@@ -10,7 +10,7 @@ const FreeTestAimoonex = () => {
     const { t } = useTranslation();
     return (
         <>
-            <div className='w-full inline-flex items-center justify-center mt-[26rem] z-10'>
+            <div className='w-full inline-flex items-center justify-center mt-[5rem] z-10'>
 
                 <div className='relative w-[29rem]'>
                     <input placeholder={t("enter_email")} className='relative placeholder:text-Neutral-200 text-Neutral-200 text-lg font-bold h-24 bg-[#28263A] rounded-3xl rtl:pr-[15rem] ltr:pl-[15rem]' />

@@ -14,6 +14,9 @@ import coin_1 from "../../../../assets/icons/svg/icon-coin-1.svg"
 import usdt from "../../../../assets/icons/svg/icon-usdt.svg"
 import bitcoin from "../../../../assets/icons/svg/icon-bitcoin.svg"
 import eth from "../../../../assets/icons/svg/icon-eth.svg"
+import stars from "../../../../assets/icons/svg/feature-stars.svg"
+import auto from "../../../../assets/icons/svg/feature-auto.svg"
+import dashboard from "../../../../assets/icons/svg/feature-dashboard.svg"
 
 
 const WhyAimoonhub = () => {
@@ -22,6 +25,15 @@ const WhyAimoonhub = () => {
     return (
         <>
             <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden">
+                {/* title */}
+
+                <div className="text-center text-Neutral-500 text-3xl font-bold">
+                    {t("چرا ایمون هاب؟ ویژگی‌های منحصربه‌فرد ما")}
+                </div>
+                <div className=" text-center text-Neutral-200 text-base font-normal leading-loose mt-6">
+                    {t("تحلیل لحظه‌ای اخبار و کوین‌ها برای تریدرهای حرفه‌ای تحلیل لحظه‌ای اخبار و کوین‌ها برای تریدرهای حرفه‌ای")}
+
+                </div>
                 <div className='relative w-[135rem] h-[82.5rem] z-20'>
 
                     <div className='absolute top-0 left-[10rem]'>
@@ -38,9 +50,9 @@ const WhyAimoonhub = () => {
                                 {/* FeatureBoxes */}
                                 <div className='absolute -top-[25rem] inset-x-0 -mr-[5rem]'>
                                     <div className='flex flex-row w-full justify-center gap-6'>
-                                        <FeatureBox />
-                                        <FeatureBox />
-                                        <FeatureBox />
+                                        <FeatureBox id={1} icon={stars} title={"تحلیل اخبار مبتنی بر AI"} description={"جمع‌آوری اخبار از منابع معتبر و تحلیل تاثیر آن‌ها بر بازار کریپتو"} />
+                                        <FeatureBox id={2} icon={auto} title={"تحلیل خودکار کوین‌ها"} description={"بررسی روندهای قیمتی و رفتار بازار با استفاده از الگوریتم‌های پیشرفته"} />
+                                        <FeatureBox id={3} icon={dashboard} title={" داشبورد هوشمند برای خبرنگاران"} description={"ارائه داده‌های دقیق برای خبرنگاران و معامله‌گران حرفه‌ای"} />
                                     </div>
                                 </div>
 
@@ -91,20 +103,20 @@ const WhyAimoonhub = () => {
                                     </div>
                                 </div>
                                 {/* coins-icon */}
-                                <div className="absolute top-[9rem] right-[13rem] mx-default">
+                                <div className="absolute top-[11rem] right-[13rem] mx-default">
                                     <ImageLazy src={coin_1} alt={"coin_1"} className={"w-8 h-8"} />
                                 </div>
-                                <div className="absolute top-[20rem] right-[3rem] mx-default">
+                                <div className="absolute top-[22rem] right-[3rem] mx-default">
                                     <ImageLazy src={eth} alt={"eth"} className={"w-8 h-8"} />
                                 </div>
-                                <div className="absolute top-[12rem] left-[8.5rem] mx-default">
+                                <div className="absolute top-[14rem] left-[8.5rem] mx-default">
                                     <ImageLazy src={usdt} alt={"usdt"} className={"w-10 h-10"} />
                                 </div>
-                                <div className="absolute top-[22rem] left-[2rem] mx-default">
+                                <div className="absolute top-[24rem] left-[2rem] mx-default">
                                     <ImageLazy src={bitcoin} alt={"bitcoin"} className={"w-8 h-8"} />
                                 </div>
                                 {/* text and input */}
-                                <div className="absolute top-0 inset-x-0 inline-flex justify-center items-center">
+                                <div className="absolute top-[2rem] inset-x-0 inline-flex justify-center items-center">
                                     <div className="flex flex-col items-center justify-center w-[40rem]">
                                         <p className="text-white mt-44 text-center text-3xl font-bold">
                                             {t("why_aimoonhub_description")}
@@ -112,10 +124,11 @@ const WhyAimoonhub = () => {
                                         <div className="w-[40rem] text-center text-Neutral-100 text-xl font-normal mt-6">
                                             {t("why_aimoonhub_slogan")}
                                         </div>
+                                        <FreeTestAimoonex />
                                     </div>
                                 </div>
                             </div>
-                            <FreeTestAimoonex />
+
                         </div>
                     </div>
                 </div>

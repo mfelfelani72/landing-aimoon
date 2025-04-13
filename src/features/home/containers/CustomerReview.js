@@ -31,7 +31,7 @@ const CustomerReview = () => {
                         <div className="width-theme">
                             {/* title */}
                             <div className='flex flex-col gap-3 items-center justify-center'>
-                                <div className="w-[29rem] text-center text-zinc-600 text-base font-normal leading-loose">
+                                <div className="w-[29rem] text-center text-Neutral-200 text-base font-normal leading-loose">
                                     <Trans
                                         i18nKey="count_reviews"
                                         values={{
