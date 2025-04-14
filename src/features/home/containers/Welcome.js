@@ -97,7 +97,7 @@ const Welcome = () => {
                 </div>
 
                 <div className='absolute top-[6rem] rtl:right-[65rem] ltr:left-[65rem]'>
-                    <ChessBoard id={"table-work-bottom"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
+                    <ChessBoard id={"table-welcome-bottom"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
                 </div>
 
                 <div className="absolute bottom-0 inset-x-0 w-full h-20 bg-gradient-to-t from-white to-transparent pointer-events-none z-20"></div>

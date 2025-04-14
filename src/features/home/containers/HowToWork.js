@@ -11,7 +11,7 @@ import ChessBoard from '../../core/components/ChessBoard.jsx';
 const HowToUse = () => {
     // hooks
     const { t } = useTranslation();
-    const { ref: inViewRef, inView } = useInView({ threshold: 0.8 });
+    const { ref: inViewRef, inView } = useInView({ threshold: 0.9 });
 
     // states and consts
     const countStepBoxes = 4;
@@ -61,7 +61,7 @@ const HowToUse = () => {
 
     return (
         <>
-            <div ref={setRefs} onWheel={handleWheel}>
+            <div className='w-[calc(100%-2rem)]' ref={setRefs} onWheel={handleWheel}>
                 {/* top section -> { top table and title } */}
                 <div className='relative w-full h-[26.5rem] overflow-hidden -bottom-[19rem] -mt-[35rem] z-10'>
                     {/* table top*/}
@@ -79,7 +79,7 @@ const HowToUse = () => {
                 </div>
 
                 {/* bottom section -> { content and bottom table } */}
-                <div className='relative w-screen h-[73rem] overflow-hidden -bottom-[19rem]'>
+                <div className='relative w-full h-[73rem] overflow-hidden -bottom-[19rem]'>
 
                     {/* content */}
 
