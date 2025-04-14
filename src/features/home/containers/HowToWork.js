@@ -86,7 +86,7 @@ const HowToUse = () => {
                     <div className='absolute top-0 mx-[calc(50%-50rem)] width-theme z-20 pointer-events-none'>
 
                         <div className='flex flex-row'>
-                            <div className='basis-5/12 flex flex-col gap-[19rem] pr-[22rem]'>
+                            <div className='basis-5/12 flex flex-col gap-[19rem] rtl:pr-[22rem] ltr:pl-[22rem]'>
                                 <motion.div initial={{ opacity: 0, y: 100 }}
                                     animate={0 <= stepIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
                                     transition={{ duration: 0.6 }} >
@@ -97,7 +97,7 @@ const HowToUse = () => {
                                 <motion.div initial={{ opacity: 0, y: 100 }}
                                     animate={2 <= stepIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
                                     transition={{ duration: 0.6 }} >
-                                    <StepBox className={"mr-[1.5rem]"} number={3} title={"نمایش نتیجه در تلگرام"} >
+                                    <StepBox className={"rtl:mr-[1.5rem] ltr:ml-[1.5rem]"} number={3} title={"نمایش نتیجه در تلگرام"} >
                                         <div className='flex flex-col'>
                                             <div className='w-60 text-Neutral-500 text-base'>بعد از پردازش، نتیجه تحلیل مستقیم توی تلگرام کاربر ارسال می‌شه:</div>
                                             <div className='w-60 text-Neutral-500 text-base'>✔️ خلاصه خبر + تحلیل احساسات</div>
@@ -108,19 +108,10 @@ const HowToUse = () => {
                                     </StepBox>
                                 </motion.div>
                             </div>
-                            {/* <div className="relative w-[6rem] h-[40rem]">
-                            <div className="absolute left-1/2 top-0 w-[2px] h-full bg-gradient-to-b from-secondary-50 via-secondary-200 to-secondary-50 transform -translate-x-1/2" />
-                            {steps.map((_, i) => (
-                                <div
-                                    key={i}
-                                    className={`absolute w-4 h-4 rounded-full left-1/2 transform -translate-x-1/2`}
-                                    style={{ top: `${i * 10}rem`, backgroundColor: i <= stepIndex ? '#8B5CF6' : '#E0E7FF' }}
-                                />
-                            ))}
-                        </div> */}
+
                             <div className='w-[8rem] inline-flex justify-start'>
                                 <div className='relative'>
-                                    <div className="absolute top- right-[7px] w-[2px] h-[800px] mt-[6rem] opacity-80 bg-gradient-to-b from-secondary-50 via-secondary-200 to-secondary-50 z-10"></div>
+                                    <div className="absolute top-0 rtl:right-[7px] ltr:left-[7px] w-[2px] h-[800px] mt-[6rem] opacity-80 bg-gradient-to-b from-secondary-50 via-secondary-200 to-secondary-50 z-10"></div>
                                     <div className={`absolute top-0 inset-x-0 w-4 h-4 mt-[6rem] transition-all duration-700 ${stepIndex === 0 ? "bg-secondary-500" : "bg-secondary-200"}  rounded-full z-20`} />
                                     <div className={`absolute top-0 inset-x-0 w-4 h-4 mt-[20rem] transition-all duration-700 ${stepIndex === 1 ? "bg-secondary-500" : "bg-secondary-200"} rounded-full z-20`} />
                                     <div className={`absolute top-0 inset-x-0 w-4 h-4 mt-[35rem] transition-all duration-700 ${stepIndex === 2 ? "bg-secondary-500" : "bg-secondary-200"} rounded-full z-20`} />
@@ -179,7 +170,7 @@ const HowToUse = () => {
                     </div>
 
                     {/* circle */}
-                    <div className='absolute top-[15rem] right-[calc(50%-70rem)] z-30 pointer-events-none'>
+                    <div className='absolute top-[15rem] rtl:right-[calc(50%-70rem)] ltr:left-[calc(50%-35rem)] z-30 pointer-events-none'>
                         <div className='relative'>
                             <div className='absolute top-0 right-0 w-[31.25rem] h-[31.25rem] bg-white rounded-full blur-3xl'></div>
                             <div className="absolute top-0 right-0 w-[31.25rem] h-[31.25rem] opacity-20 bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(145,_118,_234,_0)_3%,_#9176EA_41%,_rgba(81.79,_66.56,_132,_0)_100%)] rounded-full blur-3xl" />
@@ -188,13 +179,13 @@ const HowToUse = () => {
 
                     {/* left table */}
 
-                    <div className='absolute -top-[23rem] -left-[115rem] z-10 opacity-30'>
+                    <div className='absolute -top-[23rem] rtl:-left-[115rem] ltr:-right-[115rem] z-10 opacity-30'>
                         <ChessBoard id={"table-work-left"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
                     </div>
 
                     {/* bottom table */}
 
-                    <div className='absolute top-[27rem] -right-[45rem]'>
+                    <div className='absolute top-[27rem] rtl:-right-[45rem] ltr:-left-[50rem]'>
                         <ChessBoard id={"table-work-bottom"} className={"rotate-[32deg] skew-x-[-32deg] skew-y-[-5deg]"} bordClassName={`grid-cols-16 grid-rows-16 w-[100rem] h-[100rem]`} backgroundColor={"bg-[#dadada]"} mosaicClassName={"border-[#dadada]"} />
                     </div>
                 </div>
