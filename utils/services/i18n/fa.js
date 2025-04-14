@@ -10,7 +10,6 @@ const fa = {
   prices: "قیمت ها",
   support: "پشتیبانی",
   login_telegram: "ورود به ربات تلگرام",
-  login_dashboard: "ورود به داشبورد",
 
   // welcome
   welcome_title: "تحلیل لحظه‌ای اخبار <0>{{financial_markets}}</0> و <1>{{cryptocurrencies}}</1>",
@@ -24,6 +23,15 @@ const fa = {
   free_test_aimoonex: "تست رایگان",
   why_aimoonhub_description: "آیمون هاب - تحلیل هوشمند اخبار ترید در لحظه",
   why_aimoonhub_slogan: "یک قدم جلوتر از بازار باشید! با تحلیل‌های هوشمند ایمون هاب، تأثیر اخبار بر معاملات خود را سریع‌تر از دیگران درک کنید و تصمیم‌های آگاهانه بگیرید",
+  login_dashboard: "ورود به داشبورد",
+  why_aimoonhub_title: "چرا ایمون هاب؟ ویژگی‌های منحصربه‌فرد ما",
+  feature_box_1_title: "تحلیل اخبار مبتنی بر AI",
+  feature_box_1_description: "جمع‌آوری اخبار از منابع معتبر و تحلیل تاثیر آن‌ها بر بازار کریپتو",
+  feature_box_2_title: "تحلیل خودکار کوین‌ها",
+  feature_box_2_description: "بررسی روندهای قیمتی و رفتار بازار با استفاده از الگوریتم‌های پیشرفته",
+  feature_box_3_title: "داشبورد هوشمند برای خبرنگاران",
+  feature_box_3_description: "ارائه داده‌های دقیق برای خبرنگاران و معامله‌گران حرفه‌ای",
+
 
   // how to work
   how_to_work_aimoonhub: "آیمون هاب چگونه کار میکند؟",

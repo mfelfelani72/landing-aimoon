@@ -18,13 +18,21 @@ const en = {
   welcome_description: "Using artificial intelligence, Aimoonhub analyzes news and market data in real time and provides you with accurate information for better decision-making",
   welcome_title_2: "Smart crypto news analysis tool!",
   welcome_description_2: "With superhuman accuracy, check out the latest news and developments in the world of cryptocurrencies. Real-time data, detailed analysis, and deep insight to make better decisions in the financial markets!",
-  
+  why_aimoonhub_description: "Real-time analysis of news and coins for professional traders Real-time analysis of news and coins for professional traders",
+
 
   // why aimoonhub
   free_test_aimoonex: "Free test Aimoonex",
   why_aimoonhub_description: "Aimoonhub - Smart analysis of real-time trading news",
   why_aimoonhub_slogan: "Stay one step ahead of the market! With EmonHub's smart analytics, understand the impact of news on your trades faster than others and make informed decisions",
   login_dashboard: "Login to dashboard",
+  why_aimoonhub_title: "Why Aimoonhub? Our Unique Features",
+  feature_box_1_title: "AI-based news analysis",
+  feature_box_1_description: "Gathering news from reliable sources and analyzing their impact on the crypto market",
+  feature_box_2_title: "Automatic analysis of coins",
+  feature_box_2_description: "Studying price trends and market behavior using advanced algorithms",
+  feature_box_3_title: "Smart dashboard for journalists",
+  feature_box_3_description: "Providing accurate data for journalists and professional traders",
 
   // how to work
   how_to_work_aimoonhub: "How does Aimoonhub work?",

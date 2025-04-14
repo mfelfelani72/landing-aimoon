@@ -28,10 +28,10 @@ const WhyAimoonhub = () => {
                 {/* title */}
 
                 <div className="text-center text-Neutral-500 text-3xl font-bold">
-                    {t("چرا ایمون هاب؟ ویژگی‌های منحصربه‌فرد ما")}
+                    {t("why_aimoonhub_title")}
                 </div>
-                <div className=" text-center text-Neutral-200 text-base font-normal leading-loose mt-6">
-                    {t("تحلیل لحظه‌ای اخبار و کوین‌ها برای تریدرهای حرفه‌ای تحلیل لحظه‌ای اخبار و کوین‌ها برای تریدرهای حرفه‌ای")}
+                <div className="text-Neutral-300 text-base font-normal leading-loose mt-6">
+                    {t("why_aimoonhub_description")}
 
                 </div>
                 <div className='relative w-[135rem] h-[82.5rem] z-20 pointer-events-none'>
@@ -41,18 +41,18 @@ const WhyAimoonhub = () => {
                             <Image src={vector} alt="plans-vevtor" className={"w-[135rem] h-full object-none"} />
                         </div>
                     </div>
-                    <div className='absolute top-[35rem] inset-x-0 width-theme mr-[20rem]'>
+                    <div className='absolute top-[35rem] inset-x-0 width-theme rtl:mr-[20rem] ltr:ml-[20rem]'>
                         <div className="flex flex-col items-center justify-center mx-default">
 
                             {/* content */}
                             <div className="relative w-full">
 
                                 {/* FeatureBoxes */}
-                                <div className='absolute -top-[25rem] inset-x-0 -mr-[5rem]'>
+                                <div className='absolute -top-[25rem] inset-x-0 rtl:-mr-[5rem] ltr:-ml-[5rem]'>
                                     <div className='flex flex-row w-full justify-center gap-6'>
-                                        <FeatureBox id={1} icon={stars} title={"تحلیل اخبار مبتنی بر AI"} description={"جمع‌آوری اخبار از منابع معتبر و تحلیل تاثیر آن‌ها بر بازار کریپتو"} />
-                                        <FeatureBox id={2} icon={auto} title={"تحلیل خودکار کوین‌ها"} description={"بررسی روندهای قیمتی و رفتار بازار با استفاده از الگوریتم‌های پیشرفته"} />
-                                        <FeatureBox id={3} icon={dashboard} title={" داشبورد هوشمند برای خبرنگاران"} description={"ارائه داده‌های دقیق برای خبرنگاران و معامله‌گران حرفه‌ای"} />
+                                        <FeatureBox id={1} icon={stars} title={t("feature_box_1_title")} description={t("feature_box_1_description")} />
+                                        <FeatureBox id={2} icon={auto} title={t("feature_box_2_title")} description={t("feature_box_2_description")} />
+                                        <FeatureBox id={3} icon={dashboard} title={t("feature_box_3_title")} description={t("feature_box_3_description")} />
                                     </div>
                                 </div>
 
