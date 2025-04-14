@@ -12,6 +12,14 @@ const fa = {
   login_telegram: "ورود به ربات تلگرام",
   login_dashboard: "ورود به داشبورد",
 
+  // welcome
+  welcome_title: "تحلیل لحظه‌ای اخبار <0>{{financial_markets}}</0> و <1>{{cryptocurrencies}}</1>",
+  financial_markets: "بازارهای مالی",
+  cryptocurrencies: "رمز ارزها",
+  welcome_description: "آیمون‌هاب با استفاده از هوش مصنوعی، اخبار و داده‌های بازار را در لحظه تحلیل کرده و اطلاعاتی دقیق برای تصمیم‌گیری بهتر به شما ارائه می‌دهد",
+  welcome_title_2: "ابزار هوشمند تحلیل اخبار کریپتو!",
+  welcome_description_2: " با دقتی فراتر از انسان، جدیدترین اخبار و تحولات دنیای رمزارزها را بررسی کن. داده‌های لحظه‌ای، تحلیل‌های دقیق و بینشی عمیق برای تصمیم‌گیری بهتر در بازارهای مالی!",
+
   // why aimoonhub
   free_test_aimoonex: "تست رایگان",
   why_aimoonhub_description: "آیمون هاب - تحلیل هوشمند اخبار ترید در لحظه",

@@ -11,6 +11,15 @@ const en = {
   support: "Support",
   login_telegram: "Login Telegram",
 
+  // welcome
+  welcome_title: "Breaking News Analysis <0>{{financial_markets}}</0> and <1>{{cryptocurrencies}}</1>",
+  financial_markets: "Financial Markets",
+  cryptocurrencies: "Cryptocurrencies",
+  welcome_description: "Using artificial intelligence, Aimoonhub analyzes news and market data in real time and provides you with accurate information for better decision-making",
+  welcome_title_2: "Smart crypto news analysis tool!",
+  welcome_description_2: "With superhuman accuracy, check out the latest news and developments in the world of cryptocurrencies. Real-time data, detailed analysis, and deep insight to make better decisions in the financial markets!",
+  
+
   // why aimoonhub
   free_test_aimoonex: "Free test Aimoonex",
   why_aimoonhub_description: "Aimoonhub - Smart analysis of real-time trading news",
