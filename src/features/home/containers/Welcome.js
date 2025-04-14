@@ -44,16 +44,24 @@ const Welcome = () => {
                 <div className='relative w-[50rem] z-20 mt-[4rem]  pointer-events-none'>
                     {/* coins-icon */}
                     <div className="absolute -top-[1rem] -right-[6rem]">
-                        <ImageLazy src={coin_1} alt={"coin_1"} className={"w-8 h-8"} />
+                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full'>
+                            <ImageLazy src={coin_1} alt={"coin_1"} className={"w-8 h-8"} />
+                        </div>
                     </div>
                     <div className="absolute top-[20rem] -right-[8rem]">
-                        <ImageLazy src={eth} alt={"eth"} className={"w-8 h-8"} />
+                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full'>
+                            <ImageLazy src={eth} alt={"eth"} className={"w-8 h-8"} />
+                        </div>
                     </div>
                     <div className="absolute top-[9rem] left-[15.5rem]">
-                        <ImageLazy src={usdt} alt={"usdt"} className={"w-10 h-10"} />
+                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full'>
+                            <ImageLazy src={usdt} alt={"usdt"} className={"w-10 h-10"} />
+                        </div>
                     </div>
                     <div className="absolute top-[34rem] left-[15rem]">
-                        <ImageLazy src={bitcoin} alt={"bitcoin"} className={"w-8 h-8"} />
+                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full'>
+                            <ImageLazy src={bitcoin} alt={"bitcoin"} className={"w-8 h-8"} />
+                        </div>
                     </div>
 
                     <div className='absolute top-0 inset-x-0 w-52 h-[27rem] bg-white rounded-3xl shadow-[100px_50px_200px_0px_rgba(10,10,15,0.10)] inline-flex items-center'>
