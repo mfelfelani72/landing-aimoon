@@ -35,6 +35,10 @@ const fa = {
 
   // how to work
   how_to_work_aimoonhub: "آیمون هاب چگونه کار میکند؟",
+  step_box_1_title: "جمع‌آوری لحظه‌ای خبر",
+  step_box_2_title: "پردازش و تحلیل با هوش مصنوعی",
+  step_box_3_title: "نمایش نتیجه در تلگرام",
+  step_box_4_title: "داشبورد حرفه‌ای برای کاربران پبشرفته",
 
   // aimoonhub statistics
   aimoonhub_statistics_slogan: "شفاف و دقیق | آمارهای ایمون هاب",

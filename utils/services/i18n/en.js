@@ -36,6 +36,10 @@ const en = {
 
   // how to work
   how_to_work_aimoonhub: "How does Aimoonhub work?",
+  step_box_1_title: "Instant news collection",
+  step_box_2_title: "Processing and analysis with artificial intelligence",
+  step_box_3_title: "Display the result in Telegram",
+  step_box_4_title: "Professional dashboard for advanced users",
 
   // aimoonhub statistics
   aimoonhub_statistics_slogan: "Transparent and Accurate | Aimoonhub Statistics",

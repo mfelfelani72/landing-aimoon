@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import StepBox from '../components/howToWork/StepBox.jsx';
 import ChessBoard from '../../core/components/ChessBoard.jsx';
 
-const HowToUse = () => {
+const HowToWork = () => {
     // hooks
     const { t } = useTranslation();
     const { ref: inViewRef, inView } = useInView({ threshold: 0.9 });
@@ -90,14 +90,14 @@ const HowToUse = () => {
                                 <motion.div initial={{ opacity: 0, y: 100 }}
                                     animate={0 <= stepIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
                                     transition={{ duration: 0.6 }} >
-                                    <StepBox className={"mt-[2rem]"} number={1} title={"جمع آوری لحظه ای خبر"} >
+                                    <StepBox className={"mt-[2rem]"} number={1} title={t("step_box_1_title")} >
                                         <div className="w-60 text-Neutral-500 text-base font-medium">بات به‌صورت خودکار از بیش لز 1000  منابع خبری معتبر داده‌ها رو دریافت می‌کنه.(مثلاً سایت‌های خبری کر یپتو، توییتر، ردیت و ...)</div>
                                     </StepBox>
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, y: 100 }}
                                     animate={2 <= stepIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
                                     transition={{ duration: 0.6 }} >
-                                    <StepBox className={"rtl:mr-[1.5rem] ltr:ml-[1.5rem]"} number={3} title={"نمایش نتیجه در تلگرام"} >
+                                    <StepBox className={"rtl:mr-[1.5rem] ltr:ml-[1.5rem]"} number={3} title={t("step_box_2_title")} >
                                         <div className='flex flex-col'>
                                             <div className='w-60 text-Neutral-500 text-base'>بعد از پردازش، نتیجه تحلیل مستقیم توی تلگرام کاربر ارسال می‌شه:</div>
                                             <div className='w-60 text-Neutral-500 text-base'>✔️ خلاصه خبر + تحلیل احساسات</div>
@@ -122,7 +122,7 @@ const HowToUse = () => {
                                 <motion.div initial={{ opacity: 0, y: 100 }}
                                     animate={1 <= stepIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
                                     transition={{ duration: 0.6 }} >
-                                    <StepBox className={"mt-[3.5rem]"} number={2} title={"پردازش و تحلیل با هوش مصنوعی"} >
+                                    <StepBox className={"mt-[3.5rem]"} number={2} title={t("step_box_3_title")} >
                                         <div className='w-60 text-Neutral-500 text-base'>
                                             با استفاده از مدل پیریخته زبانی و تحلیل احساس اخبار تحلیل می‌شود:
                                         </div>
@@ -143,7 +143,7 @@ const HowToUse = () => {
                                 <motion.div initial={{ opacity: 0, y: 100 }}
                                     animate={3 <= stepIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
                                     transition={{ duration: 0.6 }} >
-                                    <StepBox className={"mt-[0.75rem]"} number={4} title={" داشبورد حرفه‌ای برای کاربران پیشرفته"} >
+                                    <StepBox className={"mt-[0.75rem]"} number={4} title={t("step_box_4_title")} >
                                         <div className='w-60 text-Neutral-500 text-base'>
                                             کاربران پلن‌های پولی، می‌تونن توی داشبورد وب جزئیات بیشتری ببینن:
                                         </div>
@@ -195,4 +195,4 @@ const HowToUse = () => {
     )
 }
 
-export default HowToUse
+export default HowToWork
