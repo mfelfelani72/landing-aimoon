@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { Image } from "../../../core/components/Image.jsx";
+import { Image, ImageLazy } from "../../../core/components/Image.jsx";
 
 // Functions
 
@@ -24,7 +24,7 @@ const NewsBox = ({ className, ...props }) => {
         )}
       >
         <div>
-          <Image src={props?.image} alt="1" className={"w-full h-48"} />
+          <ImageLazy src={props?.image} alt="1" className={"w-full h-48"} />
         </div>
         <div className="text-center mt-9 text-white text-2xl font-medium">
           {props?.title}

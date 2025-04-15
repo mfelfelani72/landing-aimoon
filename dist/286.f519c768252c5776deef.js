@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbuiler=self.webpackChunkbuiler||[]).push([[286],{286:(e,r,t)=>{t.r(r),t.d(r,{default:()=>a});var u=t(540);const a=function(){return u.createElement("div",{className:"bg-Tertiary-100"},"Home")}}}]);

@@ -93,7 +93,7 @@ module.exports = merge(common, {
 
     new CopyWebpackPlugin({
       patterns: [
-        { from: "assets/images", to: "assets/images" }, // Copy images folder
+        { from: "assets", to: "assets" }, // Copy images folder
       ],
     }),
     new BundleAnalyzerPlugin({
