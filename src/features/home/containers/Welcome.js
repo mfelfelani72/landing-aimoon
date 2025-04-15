@@ -63,22 +63,22 @@ const Welcome = () => {
                 <div className='relative w-[50rem] z-20 mt-[4rem] pointer-events-none'>
                     {/* coins-icon */}
                     <div className="absolute -top-[1rem] rtl:-right-[6rem] ltr:-left-[6rem]">
-                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full'>
+                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full pointer-events-auto hover:animate-spin'>
                             <ImageLazy src={coin_1} alt={"coin_1"} className={"w-8 h-8"} />
                         </div>
                     </div>
                     <div className="absolute top-[20rem] rtl:-right-[8rem] ltr:-left-[8rem]">
-                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full'>
+                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full pointer-events-auto hover:animate-spin'>
                             <ImageLazy src={eth} alt={"eth"} className={"w-8 h-8"} />
                         </div>
                     </div>
                     <div className="absolute top-[9rem] rtl:left-[15.5rem] ltr:right-[15.5rem]">
-                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full'>
+                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full pointer-events-auto hover:animate-spin'>
                             <ImageLazy src={usdt} alt={"usdt"} className={"w-10 h-10"} />
                         </div>
                     </div>
                     <div className="absolute top-[34rem] rtl:left-[15rem] ltr:right-[15rem]">
-                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full'>
+                        <div className='inline-flex justify-center items-center bg-white w-16 h-16 rounded-full pointer-events-auto hover:animate-spin'>
                             <ImageLazy src={bitcoin} alt={"bitcoin"} className={"w-8 h-8"} />
                         </div>
                     </div>

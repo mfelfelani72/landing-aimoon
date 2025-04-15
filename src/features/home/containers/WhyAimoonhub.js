@@ -103,16 +103,16 @@ const WhyAimoonhub = () => {
                                     </div>
                                 </div>
                                 {/* coins-icon */}
-                                <div className="absolute top-[11rem] right-[13rem] mx-default">
+                                <div className="absolute top-[11rem] right-[13rem] mx-default pointer-events-auto hover:animate-spin z-20">
                                     <ImageLazy src={coin_1} alt={"coin_1"} className={"w-8 h-8"} />
                                 </div>
-                                <div className="absolute top-[22rem] right-[3rem] mx-default">
+                                <div className="absolute top-[22rem] right-[3rem] mx-default pointer-events-auto hover:animate-spin z-20">
                                     <ImageLazy src={eth} alt={"eth"} className={"w-8 h-8"} />
                                 </div>
-                                <div className="absolute top-[14rem] left-[8.5rem] mx-default">
+                                <div className="absolute top-[14rem] left-[8.5rem] mx-default pointer-events-auto hover:animate-spin z-20">
                                     <ImageLazy src={usdt} alt={"usdt"} className={"w-10 h-10"} />
                                 </div>
-                                <div className="absolute top-[24rem] left-[2rem] mx-default">
+                                <div className="absolute top-[24rem] left-[2rem] mx-default pointer-events-auto hover:animate-spin z-20">
                                     <ImageLazy src={bitcoin} alt={"bitcoin"} className={"w-8 h-8"} />
                                 </div>
                                 {/* text and input */}
