@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const SmoothTripleSlider = () => {
   const slides = [
@@ -15,7 +15,10 @@ const SmoothTripleSlider = () => {
 
   const [currentGroup, setCurrentGroup] = useState(0);
   const [transitionClass, setTransitionClass] = useState('');
-  
+  const [autoPlayPaused, setAutoPlayPaused] = useState(false);
+  const delay = 2000;
+  const timerRef = useRef(null);
+
   // تقسیم اسلایدها به گروه‌های سه‌تایی
   const groups = [];
   for (let i = 0; i < slides.length; i += 3) {
@@ -23,31 +26,46 @@ const SmoothTripleSlider = () => {
   }
 
   const nextGroup = () => {
-    if (currentGroup >= groups.length - 1) return;
-    
     setTransitionClass('slide-out-left');
     setTimeout(() => {
-      setCurrentGroup(prev => prev + 1);
+      setCurrentGroup(prev => (prev + 1) % groups.length);
       setTransitionClass('slide-in-right');
       setTimeout(() => setTransitionClass(''), 500);
     }, 500);
   };
 
   const prevGroup = () => {
-    if (currentGroup <= 0) return;
-    
     setTransitionClass('slide-out-right');
     setTimeout(() => {
-      setCurrentGroup(prev => prev - 1);
+      setCurrentGroup(prev => (prev - 1 + groups.length) % groups.length);
       setTransitionClass('slide-in-left');
       setTimeout(() => setTransitionClass(''), 500);
     }, 500);
   };
 
+  // تابع شروع اتوپلی
+  const startAutoPlay = () => {
+    if (!autoPlayPaused) {
+      timerRef.current = setTimeout(() => {
+        nextGroup();
+        startAutoPlay();
+      }, delay);
+    }
+  };
+
+  useEffect(() => {
+    startAutoPlay();
+    return () => clearTimeout(timerRef.current);
+  }, [autoPlayPaused]);
+
   return (
-    <div className="mt-[5rem] max-w-4xl mx-auto p-4 relative overflow-hidden">
+    <div
+      className="mt-[5rem] max-w-4xl mx-auto p-4 relative overflow-hidden"
+      onMouseEnter={() => setAutoPlayPaused(true)}
+      onMouseLeave={() => setAutoPlayPaused(false)}
+    >
       <div className={`flex justify-center items-center gap-4 h-64 ${transitionClass}`}>
-        {groups[currentGroup]?.map((slide, index) => (
+        {groups[currentGroup]?.map((slide) => (
           <div
             key={`${slide.id}-${currentGroup}`}
             className={`${slide.color} h-48 w-full rounded-lg shadow-lg flex items-center justify-center text-white text-2xl font-bold transition-transform duration-500`}
@@ -59,8 +77,11 @@ const SmoothTripleSlider = () => {
 
       <div className="flex justify-center items-center mt-6 gap-8">
         <button
-          onClick={prevGroup}
-          disabled={currentGroup === 0}
+          onClick={() => {
+            clearTimeout(timerRef.current);
+            prevGroup();
+            startAutoPlay();
+          }}
           className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md transition-colors disabled:opacity-50"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -73,8 +94,11 @@ const SmoothTripleSlider = () => {
         </span>
 
         <button
-          onClick={nextGroup}
-          disabled={currentGroup === groups.length - 1}
+          onClick={() => {
+            clearTimeout(timerRef.current);
+            nextGroup();
+            startAutoPlay();
+          }}
           className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md transition-colors disabled:opacity-50"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
