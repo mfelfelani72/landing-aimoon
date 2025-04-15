@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 
-const SmoothTripleSlider = () => {
+const InfiniteLoopSlider = () => {
   const slides = [
     { id: 1, color: 'bg-red-500' },
     { id: 2, color: 'bg-blue-500' },
@@ -13,76 +13,111 @@ const SmoothTripleSlider = () => {
     { id: 9, color: 'bg-orange-500' }
   ];
 
-  const [currentGroup, setCurrentGroup] = useState(0);
-  const [transitionClass, setTransitionClass] = useState('');
-  const [autoPlayPaused, setAutoPlayPaused] = useState(false);
-  const delay = 2000;
-  const timerRef = useRef(null);
+  const [currentPosition, setCurrentPosition] = useState(0);
+  const [slideWidth, setSlideWidth] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const containerRef = useRef(null);
+  const sliderRef = useRef(null);
+  const animationRef = useRef(null);
 
-  // تقسیم اسلایدها به گروه‌های سه‌تایی
-  const groups = [];
-  for (let i = 0; i < slides.length; i += 3) {
-    groups.push(slides.slice(i, i + 3));
-  }
+  // Initialize and handle resize
+  useLayoutEffect(() => {
+    const updateDimensions = () => {
+      if (containerRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        setSlideWidth(containerWidth / 3);
+      }
+    };
 
-  const nextGroup = () => {
-    setTransitionClass('slide-out-left');
-    setTimeout(() => {
-      setCurrentGroup(prev => (prev + 1) % groups.length);
-      setTransitionClass('slide-in-right');
-      setTimeout(() => setTransitionClass(''), 500);
-    }, 500);
-  };
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
 
-  const prevGroup = () => {
-    setTransitionClass('slide-out-right');
-    setTimeout(() => {
-      setCurrentGroup(prev => (prev - 1 + groups.length) % groups.length);
-      setTransitionClass('slide-in-left');
-      setTimeout(() => setTransitionClass(''), 500);
-    }, 500);
-  };
-
-  // تابع شروع اتوپلی
-  const startAutoPlay = () => {
-    if (!autoPlayPaused) {
-      timerRef.current = setTimeout(() => {
-        nextGroup();
-        startAutoPlay();
-      }, delay);
-    }
-  };
-
+  // Auto-play logic
   useEffect(() => {
-    startAutoPlay();
-    return () => clearTimeout(timerRef.current);
-  }, [autoPlayPaused]);
+    if (isAutoPlaying) {
+      animationRef.current = setInterval(() => {
+        setCurrentPosition(prev => (prev + 1) % slides.length);
+      }, 3000);
+    }
+    return () => clearInterval(animationRef.current);
+  }, [isAutoPlaying, slides.length]);
+
+  // Handle infinite loop seamlessly
+  const handleTransitionEnd = () => {
+  
+    if (currentPosition >= slides.length) {
+    
+      setCurrentPosition(3);
+    }
+    else if (currentPosition < 0) {
+      setCurrentPosition(slides.length - 1);
+    }
+    else if (currentPosition == 6) {
+      setTimeout(()=>{
+
+        setCurrentPosition(0);
+      },2000)
+    }
+
+  };
+
+  const goNext = () => {
+    setIsAutoPlaying(false);
+    setCurrentPosition(prev => (prev + 1) % slides.length);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
+  const goPrev = () => {
+    setIsAutoPlaying(false);
+    setCurrentPosition(prev => (prev - 1 + slides.length) % slides.length);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
+  // Calculate visible slides (3 at a time)
+  const getVisibleSlides = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentPosition + i) % slides.length;
+      visible.push(slides[index]);
+    }
+    return visible;
+  };
 
   return (
     <div
       className="mt-[5rem] max-w-4xl mx-auto p-4 relative overflow-hidden"
-      onMouseEnter={() => setAutoPlayPaused(true)}
-      onMouseLeave={() => setAutoPlayPaused(false)}
+      ref={containerRef}
+      onMouseEnter={() => setIsAutoPlaying(false)}
+      onMouseLeave={() => setIsAutoPlaying(true)}
     >
-      <div className={`flex justify-center items-center gap-4 h-64 ${transitionClass}`}>
-        {groups[currentGroup]?.map((slide) => (
-          <div
-            key={`${slide.id}-${currentGroup}`}
-            className={`${slide.color} h-48 w-full rounded-lg shadow-lg flex items-center justify-center text-white text-2xl font-bold transition-transform duration-500`}
-          >
-            اسلاید {slide.id}
-          </div>
-        ))}
+      <div className="relative h-64 overflow-hidden">
+        <div
+          ref={sliderRef}
+          className={`flex absolute h-full transition-transform duration-500 ease-in-out`}
+          style={{
+            transform: `translateX(${currentPosition * slideWidth}px)`,
+            width: `${slides.length * slideWidth}px`
+          }}
+          onTransitionEnd={handleTransitionEnd}
+        >
+          {slides.map((slide, index) => (
+            <div
+              key={`${slide.id}-${index}`}
+              className={`${slide.color} h-full flex-shrink-0 flex items-center justify-center text-white text-2xl font-bold`}
+              style={{ width: `${slideWidth}px` }}
+            >
+              اسلاید {slide.id}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="flex justify-center items-center mt-6 gap-8">
         <button
-          onClick={() => {
-            clearTimeout(timerRef.current);
-            prevGroup();
-            startAutoPlay();
-          }}
-          className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md transition-colors disabled:opacity-50"
+          onClick={goPrev}
+          className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -90,54 +125,23 @@ const SmoothTripleSlider = () => {
         </button>
 
         <span className="text-gray-600">
-          گروه {currentGroup + 1} از {groups.length}
+          نمایش اسلایدهای {(currentPosition % slides.length) + 1} تا
+          {(currentPosition % slides.length) + 3 > slides.length ?
+            (currentPosition % slides.length) + 3 - slides.length :
+            (currentPosition % slides.length) + 3}
         </span>
 
         <button
-          onClick={() => {
-            clearTimeout(timerRef.current);
-            nextGroup();
-            startAutoPlay();
-          }}
-          className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md transition-colors disabled:opacity-50"
+          onClick={goNext}
+          className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>
-
-      {/* استایل‌های انیمیشن */}
-      <style jsx global>{`
-        .slide-out-left {
-          animation: slideOutLeft 0.5s forwards;
-        }
-        .slide-in-right {
-          animation: slideInRight 0.5s forwards;
-        }
-        .slide-out-right {
-          animation: slideOutRight 0.5s forwards;
-        }
-        .slide-in-left {
-          animation: slideInLeft 0.5s forwards;
-        }
-        @keyframes slideOutLeft {
-          to { transform: translateX(-100%); opacity: 0; }
-        }
-        @keyframes slideInRight {
-          from { transform: translateX(100%); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideOutRight {
-          to { transform: translateX(100%); opacity: 0; }
-        }
-        @keyframes slideInLeft {
-          from { transform: translateX(-100%); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
-        }
-      `}</style>
     </div>
   );
 };
 
-export default SmoothTripleSlider;
+export default InfiniteLoopSlider;
