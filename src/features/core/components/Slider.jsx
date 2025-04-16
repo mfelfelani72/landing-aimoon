@@ -40,7 +40,7 @@ const Slider = () => {
 
 
     // Move forward one slide.
-    const nextSlide = (param = "") => {
+    const goLeft = (param = "") => {
         if (currentIndex >= slidesData.length) {
 
             if (param == "autoPlaying") {
@@ -56,37 +56,30 @@ const Slider = () => {
                 setTimeout(() => {
                     setTransitionEnabled(true);
                     setCurrentIndex(prev => prev + 1);
-                }, 50);
+                }, 0);
             }
         }
         setCurrentIndex(prev => prev + 1);
     };
 
-    const goPrev = () => {
-        console.log(currentIndex)
-        if (currentIndex == 0) {
-
-            setCurrentIndex(slidesData.length - 1);
-
-
-        }
-        else if (currentIndex >= slidesData.length) {
-
+    const goRight = () => {
+        if (currentIndex === 0) {
             setTransitionEnabled(false);
-            setCurrentIndex(currentIndex - slidesData.length - 1);
-
+            setCurrentIndex(slidesData.length);
             setTimeout(() => {
                 setTransitionEnabled(true);
+                setCurrentIndex(slidesData.length - 1);
             }, 0);
+        } else {
+            setCurrentIndex(prev => prev - 1);
         }
-        setCurrentIndex(prev => (prev - 1 + extendedSlides.length) % extendedSlides.length);
 
     };
     // Auto-play: move forward every 3 seconds.
     useEffect(() => {
         if (isAutoPlaying) {
             autoPlayRef.current = setInterval(() => {
-                nextSlide("autoPlaying");
+                goLeft("autoPlaying");
             }, 3000);
         }
         return () => clearInterval(autoPlayRef.current);
@@ -115,7 +108,7 @@ const Slider = () => {
                     <div
                         style={sliderStyle}
                         className="flex absolute h-full"
-                    // onTransitionEnd={handleTransitionEnd}
+
                     >
                         {extendedSlides.map((slide, index) => (
                             <div
@@ -134,7 +127,7 @@ const Slider = () => {
                     <button
                         onClick={() => {
                             setIsAutoPlaying(false);
-                            goPrev();
+                            goLeft();
                             setTimeout(() => setIsAutoPlaying(true), 5000);
                         }}
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md"
@@ -151,7 +144,7 @@ const Slider = () => {
                     <button
                         onClick={() => {
                             setIsAutoPlaying(false);
-                            nextSlide();
+                            goRight();
                             setTimeout(() => setIsAutoPlaying(true), 5000);
                         }}
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md"
