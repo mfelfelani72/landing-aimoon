@@ -20,23 +20,23 @@ const Home = () => {
 
       <div className="flex flex-col mt-[6rem]">
         {/* Welcome */}
-        <Welcome />
+        {/* <Welcome /> */}
         {/* WhyAimoonhub */}
-        <WhyAimoonhub />
+        {/* <WhyAimoonhub /> */}
         {/* HowToUse */}
-        <HowToWork />
+        {/* <HowToWork /> */}
         {/* Aimoonhub statistics */}
-        <AimoonhubStatistics />
+        {/* <AimoonhubStatistics /> */}
         {/* Customer review  */}
-        <CustomerReview />
+        {/* <CustomerReview /> */}
         {/* Plans */}
-        <Plans />
+        {/* <Plans /> */}
         {/* Latest news */}
         <LatestNews />
         {/* FAQ */}
-        <FAQ />
+        {/* <FAQ /> */}
         {/* Contact us */}
-        <ContactUs />
+        {/* <ContactUs /> */}
       </div>
     </>
   );

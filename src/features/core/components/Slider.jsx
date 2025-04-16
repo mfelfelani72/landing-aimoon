@@ -104,7 +104,7 @@ const Slider = ({ className, children, ...props }) => {
                 onMouseEnter={() => setIsAutoPlaying(false)}
                 onMouseLeave={() => autoPlay !== false && setIsAutoPlaying(true)}
             >
-                <div className="relative h-96 overflow-hidden">
+                <div className="relative h-full overflow-hidden">
                     <div
                         style={sliderStyle}
                         className="flex absolute h-full"
@@ -112,7 +112,7 @@ const Slider = ({ className, children, ...props }) => {
                         {extendedSlides.map((slide, index) => (
                             <div
                                 key={index}
-                                className="h-full flex-shrink-0 flex items-center justify-center"
+                                className="h-full flex-shrink-0 flex items-start justify-center"
                                 style={{ width: `${slideWidth}px` }}
                             >
                                 {slide}
@@ -122,7 +122,7 @@ const Slider = ({ className, children, ...props }) => {
                 </div>
 
                 {/* Optional navigation buttons */}
-                <div className="flex justify-center items-center mt-6 gap-8">
+                <div className="absolute inset-x-0 bottom-0 inline-flex justify-center items-center mb-6 gap-8">
                     <button
                         onClick={() => {
                             setIsAutoPlaying(false);
