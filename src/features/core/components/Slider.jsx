@@ -16,7 +16,7 @@ const Slider = ({ className, children, ...props }) => {
 
     // Used to temporarily disable animation when doing the instant reset.
     const [transitionEnabled, setTransitionEnabled] = useState(true);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
+    // const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
 
     const slides = Children.toArray(children);
     const extendedSlides = [...slides, ...slides];
@@ -52,9 +52,10 @@ const Slider = ({ className, children, ...props }) => {
                 props?.setCurrent(currentIndex);
                 setTimeout(() => {
                     setTransitionEnabled(true);
-                }, delay/2);
+                }, delay / 2);
             }
             else {
+                props?.setAutoPlay("false");
                 setTransitionEnabled(false);
                 setCurrentIndex(currentIndex - slides.length - 1);
                 props?.setCurrent(currentIndex);
@@ -71,6 +72,7 @@ const Slider = ({ className, children, ...props }) => {
 
     const goRight = () => {
         props?.setButton("right");
+        props?.setAutoPlay("false");
         if (currentIndex === 0) {
             setTransitionEnabled(false);
             setCurrentIndex(slides.length);
@@ -88,13 +90,13 @@ const Slider = ({ className, children, ...props }) => {
     };
     // Auto-play: move forward every 3 seconds.
     useEffect(() => {
-        if (isAutoPlaying) {
+        if (props?.autoPlay == "true") {
             autoPlayRef.current = setInterval(() => {
                 goLeft("autoPlaying");
             }, delay);
         }
         return () => clearInterval(autoPlayRef.current);
-    }, [isAutoPlaying, currentIndex]);
+    }, [props?.autoPlay, currentIndex]);
 
     // Calculate the slider container style.
     const sliderStyle = {
@@ -109,8 +111,16 @@ const Slider = ({ className, children, ...props }) => {
                 {...props}
                 className={cn("left-to-right mx-auto p-4 relative overflow-hidden", className)}
                 ref={containerRef}
-                onMouseEnter={() => setIsAutoPlaying(false)}
-                onMouseLeave={() => autoPlay !== false && setIsAutoPlaying(true)}
+                onMouseEnter={() => {
+                    props?.setAutoPlay("false")
+                    props?.setMouseEnter("true");
+                    props?.setMouseLeave("false");
+                }}
+                onMouseLeave={() => {
+                    autoPlay !== "false" && props?.setAutoPlay("true")
+                    props?.setMouseEnter("false");
+                    props?.setMouseLeave("true");
+                }}
             >
                 <div className="relative h-full overflow-hidden">
                     <div
@@ -135,9 +145,9 @@ const Slider = ({ className, children, ...props }) => {
                 <div className="absolute inset-x-0 bottom-0 inline-flex justify-center items-center mb-6 gap-8">
                     <button
                         onClick={() => {
-                            setIsAutoPlaying(false);
+                            props?.setAutoPlay("false");
                             goLeft();
-                            setTimeout(() => autoPlay !== false && setIsAutoPlaying(true), 5000);
+                            // setTimeout(() => autoPlay !== "false" && props?.setAutoPlay("true"), 5000);
                         }}
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md cursor-pointer"
                     >
@@ -152,9 +162,9 @@ const Slider = ({ className, children, ...props }) => {
                     </button>
                     <button
                         onClick={() => {
-                            setIsAutoPlaying(false);
+                            props?.setAutoPlay("false");
                             goRight();
-                            setTimeout(() => autoPlay !== false && setIsAutoPlaying(true), 5000);
+                            // setTimeout(() => autoPlay !== "false" && props?.setAutoPlay("true"), 5000);
                         }}
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md cursor-pointer"
                     >
