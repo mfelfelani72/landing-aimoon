@@ -1,28 +1,28 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 
-const Slider = () => {
+const Slider = ({ ...props }) => {
 
-    const slidesData = [
-        { id: 1, color: 'bg-red-500', content: 'Slide 1' },
-        { id: 2, color: 'bg-blue-500', content: 'Slide 2' },
-        { id: 3, color: 'bg-green-500', content: 'Slide 3' },
-        // { id: 4, color: 'bg-yellow-500', content: 'Slide 4' },
-        // { id: 5, color: 'bg-purple-500', content: 'Slide 5' }
-    ];
-    // How many slides are visible at a time.
-    const visibleCount = 3;
+    //    constants and states
+    const slidesData = props?.slidesData;
+    const visibleCount = props?.visibleCount || 3;
+    const delay = props?.delay || 3000;
+    const autoPlay = props?.autoPlay === false ? false : true;
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [slideWidth, setSlideWidth] = useState(0);
+
+    // Used to temporarily disable animation when doing the instant reset.
+    const [transitionEnabled, setTransitionEnabled] = useState(true);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
 
     // Create two copies of the slides so the transition is seamless.
     const extendedSlides = slidesData.concat(slidesData);
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [slideWidth, setSlideWidth] = useState(0);
-    // Used to temporarily disable animation when doing the instant reset.
-    const [transitionEnabled, setTransitionEnabled] = useState(true);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
+    // refs
     const containerRef = useRef(null);
     const autoPlayRef = useRef(null);
+
+    // functions
 
     // Calculate the width of each slide.
     useLayoutEffect(() => {
@@ -80,14 +80,10 @@ const Slider = () => {
         if (isAutoPlaying) {
             autoPlayRef.current = setInterval(() => {
                 goLeft("autoPlaying");
-            }, 3000);
+            }, delay);
         }
         return () => clearInterval(autoPlayRef.current);
     }, [isAutoPlaying, currentIndex]);
-
-
-
-
 
     // Calculate the slider container style.
     const sliderStyle = {
@@ -112,7 +108,7 @@ const Slider = () => {
                     >
                         {extendedSlides.map((slide, index) => (
                             <div
-                                key={`${slide.id}-${index}`}
+                                key={index}
                                 className={`${slide.color} h-full flex-shrink-0 flex items-center justify-center text-white text-2xl font-bold`}
                                 style={{ width: `${slideWidth}px` }}
                             >
@@ -130,7 +126,7 @@ const Slider = () => {
                             goLeft();
                             setTimeout(() => setIsAutoPlaying(true), 5000);
                         }}
-                        className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md"
+                        className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md cursor-pointer"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6" fill="none"
@@ -147,7 +143,7 @@ const Slider = () => {
                             goRight();
                             setTimeout(() => setIsAutoPlaying(true), 5000);
                         }}
-                        className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md"
+                        className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md cursor-pointer"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6"
