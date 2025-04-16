@@ -17,41 +17,106 @@ import Slider from "../../core/components/Slider.jsx";
 const LatestNews = () => {
   // hooks
   const { t } = useTranslation();
+  const delay = 2000;
+  const autoPlay = true;
 
   const [current, setCurrent] = useState();
+  const [button, setButton] = useState();
   useEffect(() => {
-    // const items = document.querySelectorAll(".slider-item");
-    // console.log(items)
-    // items.forEach((item) => {
-    // if (current == 1) {
-    // console.log(item)
+    console.log(button)
     console.log(current)
     document.getElementById("1").classList.add("mt-12");
-    if (current == 0) {
-      document.getElementById("0").classList.remove("mt-12");
-      document.getElementById("1").classList.remove("mt-12");
-      document.getElementById("2").classList.remove("mt-12");
-      document.getElementById("3").classList.add("mt-12");
-      document.getElementById("4").classList.remove("mt-12");
-      document.getElementById("5").classList.remove("mt-12");
+    if (button == "right") {
+      if (current == 0) {
+        document.getElementById("0").classList.remove("mt-12");
+        document.getElementById("1").classList.remove("mt-12");
+        document.getElementById("2").classList.remove("mt-12");
+        document.getElementById("3").classList.add("mt-12");
+        document.getElementById("4").classList.remove("mt-12");
+        document.getElementById("5").classList.remove("mt-12");
+      }
+      else if (current == 1) {
+        document.getElementById("0").classList.remove("mt-12");
+        document.getElementById("1").classList.add("mt-12");
+        document.getElementById("2").classList.remove("mt-12");
+        document.getElementById("3").classList.remove("mt-12");
+        document.getElementById("4").classList.remove("mt-12");
+        document.getElementById("5").classList.remove("mt-12");
+      }
+      else if (current == 2) {
+        document.getElementById("0").classList.remove("mt-12");
+        document.getElementById("1").classList.remove("mt-12");
+        document.getElementById("2").classList.add("mt-12");
+        document.getElementById("3").classList.remove("mt-12");
+        document.getElementById("4").classList.remove("mt-12");
+        document.getElementById("5").classList.remove("mt-12");
+      }
+      else if (current == 2) {
+        document.getElementById("0").classList.remove("mt-12");
+        document.getElementById("1").classList.remove("mt-12");
+        document.getElementById("2").classList.remove("mt-12");
+        document.getElementById("3").classList.add("mt-12");
+        document.getElementById("4").classList.remove("mt-12");
+        document.getElementById("5").classList.remove("mt-12");
+      }
     }
-    else if (current == 1) {
-      document.getElementById("0").classList.remove("mt-12");
-      document.getElementById("1").classList.add("mt-12");
-      document.getElementById("2").classList.remove("mt-12");
-      document.getElementById("3").classList.remove("mt-12");
-      document.getElementById("4").classList.remove("mt-12");
-      document.getElementById("5").classList.remove("mt-12");
+    else {
+      if (current == 0) {
+        document.getElementById("0").classList.remove("mt-12");
+        document.getElementById("1").classList.remove("mt-12");
+        document.getElementById("2").classList.add("mt-12");
+        document.getElementById("3").classList.remove("mt-12");
+        document.getElementById("4").classList.remove("mt-12");
+        document.getElementById("5").classList.remove("mt-12");
+      }
+      else if (current == 1) {
+        document.getElementById("0").classList.remove("mt-12");
+        document.getElementById("1").classList.remove("mt-12");
+        document.getElementById("2").classList.remove("mt-12");
+        document.getElementById("3").classList.add("mt-12");
+        document.getElementById("4").classList.remove("mt-12");
+        document.getElementById("5").classList.remove("mt-12");
+      }
+      else if (current == 2) {
+
+        document.getElementById("0").classList.remove("mt-12");
+        document.getElementById("1").classList.remove("mt-12");
+        document.getElementById("2").classList.remove("mt-12");
+        document.getElementById("3").classList.remove("mt-12");
+        document.getElementById("4").classList.add("mt-12");
+        document.getElementById("5").classList.remove("mt-12");
+
+
+      }
+      else if (current == 3) {
+
+        if (autoPlay === true) {
+          document.getElementById("0").classList.remove("mt-12");
+          document.getElementById("1").classList.add("mt-12");
+          document.getElementById("1").classList.remove("transition-all");
+          document.getElementById("1").classList.remove("duration-500");
+          setTimeout(() => {
+            document.getElementById("1").classList.add("transition-all");
+            document.getElementById("1").classList.add("duration-500");
+          }, delay - (delay / 1.5))
+          document.getElementById("2").classList.remove("mt-12");
+          document.getElementById("3").classList.remove("mt-12");
+          document.getElementById("4").classList.remove("mt-12");
+          document.getElementById("5").classList.remove("mt-12");
+        }
+        else {
+          console.log("Sdf")
+          document.getElementById("0").classList.remove("mt-12");
+          document.getElementById("1").classList.remove("mt-12");
+          document.getElementById("2").classList.add("mt-12");
+          document.getElementById("3").classList.remove("mt-12");
+          document.getElementById("4").classList.remove("mt-12");
+          document.getElementById("5").classList.remove("mt-12");
+        }
+
+      }
     }
-    else if (current == 2) {
-      document.getElementById("0").classList.remove("mt-12");
-      document.getElementById("1").classList.remove("mt-12");
-      document.getElementById("2").classList.add("mt-12");
-      document.getElementById("3").classList.remove("mt-12");
-      document.getElementById("4").classList.remove("mt-12");
-      document.getElementById("5").classList.remove("mt-12");
-    }
-  }, [current])
+  }, [current, button])
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
@@ -63,7 +128,7 @@ const LatestNews = () => {
           {/* content */}
           <div className="flex flex-col">
             {/* <div className="flex flex-row gap-8"> */}
-            <Slider id={""} delay={500} visibleCount={3} autoPlay={false} className={"w-[90rem] h-[40rem]"} setCurrent={setCurrent} >
+            <Slider id={""} delay={delay} visibleCount={3} autoPlay={autoPlay} className={"w-[90rem] h-[40rem]"} setCurrent={setCurrent} setButton={setButton} >
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_1} className={"right-to-left"} />
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_2} className={"right-to-left"} />
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_3} className={"right-to-left"} />

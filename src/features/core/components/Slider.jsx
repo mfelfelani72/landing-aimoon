@@ -44,15 +44,15 @@ const Slider = ({ className, children, ...props }) => {
 
     // Move forward one slide.
     const goLeft = (param = "") => {
+        props?.setButton("left");
         if (currentIndex >= slides.length) {
-
             if (param == "autoPlaying") {
                 setTransitionEnabled(false);
                 setCurrentIndex(currentIndex - slides.length - 1);
                 props?.setCurrent(currentIndex);
                 setTimeout(() => {
                     setTransitionEnabled(true);
-                }, 500);
+                }, delay/2);
             }
             else {
                 setTransitionEnabled(false);
@@ -70,6 +70,7 @@ const Slider = ({ className, children, ...props }) => {
     };
 
     const goRight = () => {
+        props?.setButton("right");
         if (currentIndex === 0) {
             setTransitionEnabled(false);
             setCurrentIndex(slides.length);
