@@ -14,16 +14,12 @@ const TestCode = () => {
   return (
     <div className='bg-white'>
 
-      <Slider delay={1000} visibleCount={2} slidesData={slidesData} autoPlay={true} >
-        <div className='bg-rose-300 h-10'>52454</div>
-        <div className='bg-rose-200 h-10'>52454</div>
-        <div className='bg-rose-100 h-10'>52454</div>
+      <Slider delay={1000} visibleCount={3} autoPlay={false}>
+        <div className='bg-rose-300 h-64 w-[10rem] flex items-center justify-center text-4xl'>Slide 1</div>
+        <div className='bg-rose-200 h-64 w-[10rem] flex items-center justify-center text-4xl'>Slide 2</div>
+        <div className='bg-rose-100 h-64 w-[10rem] flex items-center justify-center text-4xl'>Slide 3</div>
       </Slider>
-      {/* <Slider ref={ref} delay={1000} visibleCount={2} autoPlay={true} >
-        <div className='bg-rose-300 h-10'>52454</div>
-        <div className='bg-rose-200 h-10'>52454</div>
-        <div className='bg-rose-100 h-10'>52454</div>
-      </Slider> */}
+
     </div>
   );
 };

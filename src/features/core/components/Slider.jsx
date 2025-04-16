@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
+import React, { Children, useState, useEffect, useRef, useLayoutEffect } from 'react';
 
-const Slider = ({ ...props }) => {
+const Slider = ({ children, ...props }) => {
 
     //    constants and states
     const slidesData = props?.slidesData;
@@ -15,8 +15,8 @@ const Slider = ({ ...props }) => {
     const [transitionEnabled, setTransitionEnabled] = useState(true);
     const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
 
-    // Create two copies of the slides so the transition is seamless.
-    const extendedSlides = slidesData.concat(slidesData);
+    const slides = Children.toArray(children);
+    const extendedSlides = [...slides, ...slides];
 
     // refs
     const containerRef = useRef(null);
@@ -41,18 +41,18 @@ const Slider = ({ ...props }) => {
 
     // Move forward one slide.
     const goLeft = (param = "") => {
-        if (currentIndex >= slidesData.length) {
+        if (currentIndex >= slides.length) {
 
             if (param == "autoPlaying") {
                 setTransitionEnabled(false);
-                setCurrentIndex(currentIndex - slidesData.length - 1);
+                setCurrentIndex(currentIndex - slides.length - 1);
                 setTimeout(() => {
                     setTransitionEnabled(true);
                 }, 500);
             }
             else {
                 setTransitionEnabled(false);
-                setCurrentIndex(currentIndex - slidesData.length - 1);
+                setCurrentIndex(currentIndex - slides.length - 1);
                 setTimeout(() => {
                     setTransitionEnabled(true);
                     setCurrentIndex(prev => prev + 1);
@@ -65,10 +65,10 @@ const Slider = ({ ...props }) => {
     const goRight = () => {
         if (currentIndex === 0) {
             setTransitionEnabled(false);
-            setCurrentIndex(slidesData.length);
+            setCurrentIndex(slides.length);
             setTimeout(() => {
                 setTransitionEnabled(true);
-                setCurrentIndex(slidesData.length - 1);
+                setCurrentIndex(slides.length - 1);
             }, 0);
         } else {
             setCurrentIndex(prev => prev - 1);
@@ -95,7 +95,7 @@ const Slider = ({ ...props }) => {
     return (
         <>
             <div
-                className="left-to-right mt-20 max-w-4xl mx-auto p-4 relative overflow-hidden"
+                className="left-to-right mt-20 max-w-4xl mx-auto p-4 relative overflow-hidden bg-lime-300"
                 ref={containerRef}
                 onMouseEnter={() => setIsAutoPlaying(false)}
                 onMouseLeave={() => setIsAutoPlaying(true)}
@@ -104,15 +104,14 @@ const Slider = ({ ...props }) => {
                     <div
                         style={sliderStyle}
                         className="flex absolute h-full"
-
                     >
                         {extendedSlides.map((slide, index) => (
                             <div
                                 key={index}
-                                className={`${slide.color} h-full flex-shrink-0 flex items-center justify-center text-white text-2xl font-bold`}
+                                className="h-full flex-shrink-0 flex items-center justify-center"
                                 style={{ width: `${slideWidth}px` }}
                             >
-                                {slide.content}
+                                {slide}
                             </div>
                         ))}
                     </div>
