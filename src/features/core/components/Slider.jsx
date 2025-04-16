@@ -1,6 +1,10 @@
 import React, { Children, useState, useEffect, useRef, useLayoutEffect } from 'react';
 
-const Slider = ({ children, ...props }) => {
+// Functions
+
+import { cn } from "../../../../utils/lib/cn"
+
+const Slider = ({ className, children, ...props }) => {
 
     //    constants and states
     const slidesData = props?.slidesData;
@@ -95,12 +99,12 @@ const Slider = ({ children, ...props }) => {
     return (
         <>
             <div
-                className="left-to-right mt-20 max-w-4xl mx-auto p-4 relative overflow-hidden bg-lime-300"
+                className={cn("left-to-right mx-auto p-4 relative overflow-hidden", className)}
                 ref={containerRef}
                 onMouseEnter={() => setIsAutoPlaying(false)}
-                onMouseLeave={() => setIsAutoPlaying(true)}
+                onMouseLeave={() => autoPlay !== false && setIsAutoPlaying(true)}
             >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-96 overflow-hidden">
                     <div
                         style={sliderStyle}
                         className="flex absolute h-full"
@@ -123,7 +127,7 @@ const Slider = ({ children, ...props }) => {
                         onClick={() => {
                             setIsAutoPlaying(false);
                             goLeft();
-                            setTimeout(() => setIsAutoPlaying(true), 5000);
+                            setTimeout(() => autoPlay !== false && setIsAutoPlaying(true), 5000);
                         }}
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md cursor-pointer"
                     >
@@ -140,7 +144,7 @@ const Slider = ({ children, ...props }) => {
                         onClick={() => {
                             setIsAutoPlaying(false);
                             goRight();
-                            setTimeout(() => setIsAutoPlaying(true), 5000);
+                            setTimeout(() => autoPlay !== false && setIsAutoPlaying(true), 5000);
                         }}
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md cursor-pointer"
                     >
