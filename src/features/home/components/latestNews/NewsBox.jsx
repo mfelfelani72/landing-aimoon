@@ -18,6 +18,7 @@ const NewsBox = ({ className, ...props }) => {
   return (
     <>
       <div
+        {...props}
         className={cn(
           "flex flex-col p-6 w-96 items-center bg-theme rounded-[20px]",
           className

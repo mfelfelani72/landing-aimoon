@@ -99,6 +99,7 @@ const Slider = ({ className, children, ...props }) => {
     return (
         <>
             <div
+                {...props}
                 className={cn("left-to-right mx-auto p-4 relative overflow-hidden", className)}
                 ref={containerRef}
                 onMouseEnter={() => setIsAutoPlaying(false)}
@@ -112,7 +113,7 @@ const Slider = ({ className, children, ...props }) => {
                         {extendedSlides.map((slide, index) => (
                             <div
                                 key={index}
-                                className="h-full flex-shrink-0 flex items-start justify-center"
+                                className="h-full flex-shrink-0 flex items-start justify-center slider-item"
                                 style={{ width: `${slideWidth}px` }}
                             >
                                 {slide}

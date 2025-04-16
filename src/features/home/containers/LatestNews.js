@@ -28,7 +28,7 @@ const LatestNews = () => {
           {/* content */}
           <div className="flex flex-col">
             {/* <div className="flex flex-row gap-8"> */}
-            <Slider delay={1000} visibleCount={3} autoPlay={false} className={"w-[90rem] h-[40rem]"} >
+            <Slider delay={1000} visibleCount={3} autoPlay={true} className={"w-[90rem] h-[40rem]"} >
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_1} className={""}/>
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_2} className={"mt-12"} />
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_3} className={""}/>
