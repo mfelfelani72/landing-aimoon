@@ -6,8 +6,7 @@ import { cn } from "../../../../utils/lib/cn"
 
 const Slider = ({ className, children, ...props }) => {
 
-    //    constants and states
-    const slidesData = props?.slidesData;
+    // constants and states
     const visibleCount = props?.visibleCount || 3;
     const delay = props?.delay || 3000;
     const autoPlay = props?.autoPlay === false ? false : true;
@@ -50,6 +49,7 @@ const Slider = ({ className, children, ...props }) => {
             if (param == "autoPlaying") {
                 setTransitionEnabled(false);
                 setCurrentIndex(currentIndex - slides.length - 1);
+                props?.setCurrent(currentIndex);
                 setTimeout(() => {
                     setTransitionEnabled(true);
                 }, 500);
@@ -57,25 +57,31 @@ const Slider = ({ className, children, ...props }) => {
             else {
                 setTransitionEnabled(false);
                 setCurrentIndex(currentIndex - slides.length - 1);
+                props?.setCurrent(currentIndex);
                 setTimeout(() => {
                     setTransitionEnabled(true);
                     setCurrentIndex(prev => prev + 1);
+                    props?.setCurrent(currentIndex);
                 }, 0);
             }
         }
         setCurrentIndex(prev => prev + 1);
+        props?.setCurrent(currentIndex);
     };
 
     const goRight = () => {
         if (currentIndex === 0) {
             setTransitionEnabled(false);
             setCurrentIndex(slides.length);
+            props?.setCurrent(currentIndex);
             setTimeout(() => {
                 setTransitionEnabled(true);
                 setCurrentIndex(slides.length - 1);
+                props?.setCurrent(currentIndex);
             }, 0);
         } else {
             setCurrentIndex(prev => prev - 1);
+            props?.setCurrent(currentIndex);
         }
 
     };
@@ -113,7 +119,9 @@ const Slider = ({ className, children, ...props }) => {
                         {extendedSlides.map((slide, index) => (
                             <div
                                 key={index}
-                                className="h-full flex-shrink-0 flex items-start justify-center slider-item"
+                                // id={props?.id + "-" + index}
+                                id={index}
+                                className="h-full flex-shrink-0 flex items-start justify-center slider-item transition-all duration-500"
                                 style={{ width: `${slideWidth}px` }}
                             >
                                 {slide}

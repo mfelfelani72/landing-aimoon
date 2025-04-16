@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Components
@@ -17,6 +17,41 @@ import Slider from "../../core/components/Slider.jsx";
 const LatestNews = () => {
   // hooks
   const { t } = useTranslation();
+
+  const [current, setCurrent] = useState();
+  useEffect(() => {
+    // const items = document.querySelectorAll(".slider-item");
+    // console.log(items)
+    // items.forEach((item) => {
+    // if (current == 1) {
+    // console.log(item)
+    console.log(current)
+    document.getElementById("1").classList.add("mt-12");
+    if (current == 0) {
+      document.getElementById("0").classList.remove("mt-12");
+      document.getElementById("1").classList.remove("mt-12");
+      document.getElementById("2").classList.remove("mt-12");
+      document.getElementById("3").classList.add("mt-12");
+      document.getElementById("4").classList.remove("mt-12");
+      document.getElementById("5").classList.remove("mt-12");
+    }
+    else if (current == 1) {
+      document.getElementById("0").classList.remove("mt-12");
+      document.getElementById("1").classList.add("mt-12");
+      document.getElementById("2").classList.remove("mt-12");
+      document.getElementById("3").classList.remove("mt-12");
+      document.getElementById("4").classList.remove("mt-12");
+      document.getElementById("5").classList.remove("mt-12");
+    }
+    else if (current == 2) {
+      document.getElementById("0").classList.remove("mt-12");
+      document.getElementById("1").classList.remove("mt-12");
+      document.getElementById("2").classList.add("mt-12");
+      document.getElementById("3").classList.remove("mt-12");
+      document.getElementById("4").classList.remove("mt-12");
+      document.getElementById("5").classList.remove("mt-12");
+    }
+  }, [current])
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
@@ -28,10 +63,10 @@ const LatestNews = () => {
           {/* content */}
           <div className="flex flex-col">
             {/* <div className="flex flex-row gap-8"> */}
-            <Slider delay={1000} visibleCount={3} autoPlay={true} className={"w-[90rem] h-[40rem]"} >
-              <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_1} className={""}/>
-              <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_2} className={"mt-12"} />
-              <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_3} className={""}/>
+            <Slider id={""} delay={500} visibleCount={3} autoPlay={false} className={"w-[90rem] h-[40rem]"} setCurrent={setCurrent} >
+              <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_1} className={"right-to-left"} />
+              <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_2} className={"right-to-left"} />
+              <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_3} className={"right-to-left"} />
             </Slider>
             {/* </div> */}
 
