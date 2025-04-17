@@ -9,7 +9,7 @@ const Slider = ({ className, children, ...props }) => {
     // constants and states
     const visibleCount = props?.visibleCount || 3;
     const delay = props?.delay || 3000;
-    const autoPlay = props?.autoPlay === false ? false : true;
+    const autoPlay = props?.autoPlay === "false" ? "false" : "true";
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [slideWidth, setSlideWidth] = useState(0);
@@ -90,13 +90,13 @@ const Slider = ({ className, children, ...props }) => {
     };
     // Auto-play: move forward every 3 seconds.
     useEffect(() => {
-        if (props?.autoPlay == "true") {
+        if (autoPlay == "true") {
             autoPlayRef.current = setInterval(() => {
                 goLeft("autoPlaying");
             }, delay);
         }
         return () => clearInterval(autoPlayRef.current);
-    }, [props?.autoPlay, currentIndex]);
+    }, [props?.autoPlay, currentIndex, props?.setMouseEnter, props?.setMouseLeave]);
 
     // Calculate the slider container style.
     const sliderStyle = {
@@ -117,7 +117,12 @@ const Slider = ({ className, children, ...props }) => {
                     props?.setMouseLeave("false");
                 }}
                 onMouseLeave={() => {
-                    autoPlay !== "false" && props?.setAutoPlay("true")
+                    if (autoPlay !== "false") {
+                        props?.setAutoPlay("true");
+                    }
+                    else if (props?.defaultAutoPaly === "true") {
+                        props?.setAutoPlay("true");
+                    }
                     props?.setMouseEnter("false");
                     props?.setMouseLeave("true");
                 }}

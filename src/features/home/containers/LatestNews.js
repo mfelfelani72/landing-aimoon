@@ -18,16 +18,15 @@ const LatestNews = () => {
   // hooks
   const { t } = useTranslation();
   const delay = 2000;
+  const defaultAutoPaly = "false";
 
   const [current, setCurrent] = useState();
   const [button, setButton] = useState();
-  const [autoPlay, setAutoPlay] = useState("true");
+  const [autoPlay, setAutoPlay] = useState(defaultAutoPaly);
   const [mouseEnter, setMouseEnter] = useState();
   const [mouseLeave, setMouseLeave] = useState();
   useEffect(() => {
-    console.log(button)
-    console.log(current)
-    console.log(autoPlay)
+    if(!current)
     document.getElementById("1").classList.add("mt-12");
     if (button == "right") {
       if (current == 0) {
@@ -81,7 +80,6 @@ const LatestNews = () => {
         document.getElementById("5").classList.remove("mt-12");
       }
       else if (current == 2) {
-
         document.getElementById("0").classList.remove("mt-12");
         document.getElementById("1").classList.remove("mt-12");
         document.getElementById("2").classList.remove("mt-12");
@@ -92,24 +90,40 @@ const LatestNews = () => {
 
       }
       else if (current == 3) {
-
         if (autoPlay === "true" && mouseEnter == "true") {
-          console.log("true")
           document.getElementById("0").classList.remove("mt-12");
           document.getElementById("1").classList.add("mt-12");
-          document.getElementById("1").classList.remove("transition-all");
-          document.getElementById("1").classList.remove("duration-500");
-          setTimeout(() => {
-            document.getElementById("1").classList.add("transition-all");
-            document.getElementById("1").classList.add("duration-500");
-          }, delay - (delay / 1.5))
+          // document.getElementById("1").classList.remove("transition-all");
+          // document.getElementById("1").classList.remove("duration-500");
+          // setTimeout(() => {
+          //   document.getElementById("1").classList.add("transition-all");
+          //   document.getElementById("1").classList.add("duration-500");
+          // }, delay - (delay / 1.5))
           document.getElementById("2").classList.remove("mt-12");
           document.getElementById("3").classList.remove("mt-12");
           document.getElementById("4").classList.remove("mt-12");
           document.getElementById("5").classList.remove("mt-12");
         }
+        else if (autoPlay === "false" && mouseEnter == "false") {
+          console.log("leave-" + mouseLeave)
+          console.log("enter-" + mouseEnter)
+          console.log("auto-" + mouseEnter)
+          document.getElementById("0").classList.remove("mt-12");
+          document.getElementById("1").classList.remove("mt-12");
+          document.getElementById("2").classList.add("mt-12");
+          document.getElementById("3").classList.remove("mt-12");
+          document.getElementById("4").classList.remove("mt-12");
+          document.getElementById("5").classList.remove("mt-12");
+        }
+        else if (autoPlay === "false" && mouseLeave === "false") {
+          document.getElementById("0").classList.remove("mt-12");
+          document.getElementById("1").classList.remove("mt-12");
+          document.getElementById("2").classList.add("mt-12");
+          document.getElementById("3").classList.remove("mt-12");
+          document.getElementById("4").classList.remove("mt-12");
+          document.getElementById("5").classList.remove("mt-12");
+        }
         else if (autoPlay === "false" && mouseLeave === "true") {
-          console.log("false")
           document.getElementById("0").classList.remove("mt-12");
           document.getElementById("1").classList.remove("mt-12");
           document.getElementById("2").classList.add("mt-12");
@@ -120,7 +134,6 @@ const LatestNews = () => {
 
       }
     }
-    console.log(mouseLeave);
   }, [current, button, autoPlay, mouseEnter, mouseLeave])
   return (
     <>
@@ -133,7 +146,7 @@ const LatestNews = () => {
           {/* content */}
           <div className="flex flex-col">
             {/* <div className="flex flex-row gap-8"> */}
-            <Slider id={""} delay={delay} visibleCount={3} autoPlay={autoPlay} setAutoPlay={setAutoPlay} setMouseEnter={setMouseEnter} setMouseLeave={setMouseLeave} className={"w-[90rem] h-[40rem]"} setCurrent={setCurrent} setButton={setButton} >
+            <Slider id={""} delay={delay} visibleCount={3} defaultAutoPaly={defaultAutoPaly} autoPlay={autoPlay} setAutoPlay={setAutoPlay} setMouseEnter={setMouseEnter} setMouseLeave={setMouseLeave} className={"w-[90rem] h-[40rem]"} setCurrent={setCurrent} setButton={setButton} >
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_1} className={"right-to-left"} />
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_2} className={"right-to-left"} />
               <NewsBox title={"بیت‌کوین در آستانه سقوط یا جهش؟"} summary={"بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ..."} image={news_pic_3} className={"right-to-left"} />
