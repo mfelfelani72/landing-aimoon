@@ -1,7 +1,6 @@
 import React, { Children, useState, useEffect, useRef, useLayoutEffect } from 'react';
 
 // Functions
-
 import { cn } from "../../../../utils/lib/cn"
 
 const Slider = ({ className, children, ...props }) => {
@@ -40,33 +39,60 @@ const Slider = ({ className, children, ...props }) => {
         return () => window.removeEventListener('resize', updateDimensions);
     }, [visibleCount]);
 
-
     // Move forward one slide.
     const goLeft = (param = "") => {
+
         props?.setButton("left");
-        if (currentIndex >= slides.length) {
-            if (param == "autoPlaying") {
-                setTransitionEnabled(false);
-                setCurrentIndex(currentIndex - slides.length - 1);
+        setCurrentIndex(prev => prev - 1);
+        if (currentIndex === 0) {
+            setTransitionEnabled(false);
+            setCurrentIndex(slides.length);
+            props?.setCurrent(currentIndex);
+            setTimeout(() => {
+                setTransitionEnabled(true);
+                // setCurrentIndex(slides.length - 1);
                 props?.setCurrent(currentIndex);
-                setTimeout(() => {
-                    setTransitionEnabled(true);
-                }, delay / 2);
-            }
-            else {
-                props?.setAutoPlay("false");
-                setTransitionEnabled(false);
-                setCurrentIndex(currentIndex - slides.length - 1);
-                props?.setCurrent(currentIndex);
-                setTimeout(() => {
-                    setTransitionEnabled(true);
-                    setCurrentIndex(prev => prev + 1);
-                    props?.setCurrent(currentIndex);
-                }, 0);
-            }
+            }, 0);
         }
-        setCurrentIndex(prev => prev + 1);
-        props?.setCurrent(currentIndex);
+        console.log(currentIndex)
+        // props?.setButton("left");
+        // if (currentIndex >= slides.length) {
+        //     console.log("=" + currentIndex)
+        //     props?.setCurrent(2);
+        //     if (param === "autoPlaying") {
+        //         setTransitionEnabled(false);
+        //         setCurrentIndex(currentIndex - slides.length - 1);
+        //         setTimeout(() => {
+        //             setTransitionEnabled(true);
+        //         }, delay / 2);
+        //         // setTimeout(() => {
+        //         //     // setCurrentIndex(prev => prev + 1);
+        //         // }, 0)
+        //     } else {
+        //         props?.setAutoPlay("false");
+        //         setTransitionEnabled(false);
+        //         setCurrentIndex(currentIndex - slides.length - 1);
+        //         setTimeout(() => {
+        //             setTransitionEnabled(true);
+        //             setCurrentIndex(prev => prev + 1);
+        //         }, 0);
+        //     }
+        // }
+        // // else {
+        // //     props?.setCurrent(currentIndex+2);
+        // //     // props?.setCurrent(prev => prev + 1);
+        // // }
+        // setCurrentIndex(prev => prev + 1);
+        // console.log("aa-" + currentIndex)
+        // console.log(slides.length)
+        // if (currentIndex + 2 >= slides.length)
+        //     props?.setCurrent(0);
+        // props?.setCurrent(currentIndex + 2);
+
+        // // if (props?.current >= slides.length - 1) {
+        // //     props?.setCurrent(0);
+        // // }
+
     };
 
     const goRight = () => {
@@ -85,11 +111,11 @@ const Slider = ({ className, children, ...props }) => {
             setCurrentIndex(prev => prev - 1);
             props?.setCurrent(currentIndex);
         }
-
     };
+
     // Auto-play: move forward every 3 seconds.
     useEffect(() => {
-        if (autoPlay == "true") {
+        if (autoPlay === "true") {
             autoPlayRef.current = setInterval(() => {
                 goLeft("autoPlaying");
             }, delay);
@@ -134,7 +160,6 @@ const Slider = ({ className, children, ...props }) => {
                         {extendedSlides.map((slide, index) => (
                             <div
                                 key={index}
-                                // id={props?.id + "-" + index}
                                 id={index}
                                 className="h-full flex-shrink-0 flex items-start justify-center slider-item transition-all duration-500"
                                 style={{ width: `${slideWidth}px` }}
@@ -151,7 +176,6 @@ const Slider = ({ className, children, ...props }) => {
                         onClick={() => {
                             props?.setAutoPlay("false");
                             goLeft();
-                            // setTimeout(() => autoPlay !== "false" && props?.setAutoPlay("true"), 5000);
                         }}
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md cursor-pointer"
                     >
@@ -168,7 +192,6 @@ const Slider = ({ className, children, ...props }) => {
                         onClick={() => {
                             props?.setAutoPlay("false");
                             goRight();
-                            // setTimeout(() => autoPlay !== "false" && props?.setAutoPlay("true"), 5000);
                         }}
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-3 rounded-full shadow-md cursor-pointer"
                     >
@@ -189,4 +212,4 @@ const Slider = ({ className, children, ...props }) => {
     )
 }
 
-export default Slider
+export default Slider;
