@@ -16,7 +16,6 @@ const Slider = ({ className, children, ...props }) => {
 
     // Used to temporarily disable animation when doing the instant reset.
     const [transitionEnabled, setTransitionEnabled] = useState(true);
-    // const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
 
     const slides = Children.toArray(children);
     const extendedSlides = [...slides, ...slides];
