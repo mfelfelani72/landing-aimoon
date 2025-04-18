@@ -7,13 +7,15 @@ import news_pic_1 from "../../../../assets/images/png/news-pic-1.png";
 import news_pic_2 from "../../../../assets/images/png/news-pic-2.png";
 import news_pic_3 from "../../../../assets/images/png/news-pic-3.png";
 
-
 const LatestNews = () => {
   const { t } = useTranslation();
   const delay = 2000;
   const defaultAutoPlay = "true";
 
   const [current, setCurrent] = useState(1);
+  const [AutoPlay, setAutoPlay] = useState();
+  const [mouseEnter, setMouseEnter] = useState();
+  const [mouseLeave, setMouseLeave] = useState();
   const [button, setButton] = useState("left");
 
   const newsItems = [
@@ -23,18 +25,26 @@ const LatestNews = () => {
     { title: "خبر 4", summary: "...", image: news_pic_3 },
     { title: "خبر 5", summary: "...", image: news_pic_3 },
     { title: "خبر 6", summary: "...", image: news_pic_3 },
-    { title: "خبر 7", summary: "...", image: news_pic_3 },
-    { title: "خبر 8", summary: "...", image: news_pic_3 },
-    { title: "خبر 9", summary: "...", image: news_pic_3 },
-    { title: "خبر 10", summary: "...", image: news_pic_3 },
+    // { title: "خبر 7", summary: "...", image: news_pic_3 },
+    // { title: "خبر 8", summary: "...", image: news_pic_3 },
+    // { title: "خبر 9", summary: "...", image: news_pic_3 },
+    // { title: "خبر 10", summary: "...", image: news_pic_3 },
+    // { title: "خبر 11", summary: "...", image: news_pic_3 },
+    // { title: "خبر 12", summary: "...", image: news_pic_3 },
+    // { title: "خبر 145454", summary: "...", image: news_pic_3 },
+    // { title: "خبر 14", summary: "...", image: news_pic_3 },
+    // { title: "خبر 15", summary: "...", image: news_pic_3 },
+    // { title: "خبر 16", summary: "...", image: news_pic_3 },
     // در صورت نیاز بیشتر اضافه کن
   ];
 
   const visibleCount = 3; // تعداد اسلایدهای قابل‌نمایش
 
   useEffect(() => {
-    console.log("c" + current);
-  }, [current]);
+    console.log(mouseEnter);
+    console.log(mouseLeave);
+    console.log(AutoPlay);
+  }, [current, mouseEnter, mouseLeave]);
   return (
     <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
       <div className="width-theme px-default flex flex-col items-center justify-center my-28">
@@ -47,26 +57,40 @@ const LatestNews = () => {
           visibleCount={visibleCount}
           defaultAutoPaly={defaultAutoPlay}
           autoPlay={defaultAutoPlay}
-          setAutoPlay={() => { }}
-          setMouseEnter={() => { }}
-          setMouseLeave={() => { }}
+          setAutoPlay={setAutoPlay}
+          setMouseEnter={setMouseEnter}
+          setMouseLeave={setMouseLeave}
           setButton={setButton}
           className="w-[80rem] h-[40rem]"
           setCurrent={(index) => setCurrent(index)}
-          current={current}
         >
-          {button === "right" ? newsItems.map((item, idx) => (
-            <div key={idx} className={(idx === current) ? "mt-12 transition-all duration-500" : "mt-0 transition-all duration-500"}>
-              <NewsBox {...item} />
-            </div>
-          )) : newsItems.map((item, idx) => (
-            <div key={idx} className={(idx === current) ? "mt-12 transition-all duration-500" : "mt-0 transition-all duration-500"}>
-              <NewsBox {...item} />
-            </div>
-          ))}
-
+          {button === "right"
+            ? newsItems.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={
+                    idx === current
+                      ? "mt-12 transition-all duration-500"
+                      : "mt-0 transition-all duration-500"
+                  }
+                >
+                  <NewsBox {...item} />
+                </div>
+              ))
+            : newsItems.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={
+                    idx === current
+                      ? "mt-12 transition-all duration-500"
+                      : "mt-0 transition-all duration-500"
+                  }
+                >
+                  <NewsBox {...item} />
+                </div>
+              ))}
         </Slider>
-       
+
         <div className="mt-6 text-center text-primary-400 text-base font-bold leading-7">
           {t("all_news")}
         </div>

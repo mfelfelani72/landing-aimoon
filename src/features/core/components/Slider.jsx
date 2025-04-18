@@ -49,30 +49,24 @@ const Slider = ({ className, children, ...props }) => {
   const goLeft = (param = "") => {
     props?.setButton("left");
     props?.setCurrent?.(currentIndex + 2);
-
-    console.log(currentIndex);
     if (currentIndex + 1 >= slides.length) {
-      console.log("mohammad");
-      //   if (param === "autoPlaying") {
-      setTransitionEnabled(false);
-      setCurrentIndex(currentIndex - slides.length);
-      props?.setCurrent?.(1);
-      setTimeout(() => {
-        setTransitionEnabled(true);
-      }, 50);
-      // }, delay / 2);
-      //   }
-      //   else{
-      // props?.setAutoPlay?.("false");
-      // setTransitionEnabled(false);
-      // setCurrentIndex(currentIndex - slides.length);
-      // setTimeout(() => {
-      // //   setTransitionEnabled(true);
-      //   setCurrentIndex((prev) => prev + 1);
-      // }, 0);
-      //   }
+      if (param === "autoPlaying") {
+        setTransitionEnabled(false);
+        setCurrentIndex(currentIndex - slides.length);
+        props?.setCurrent?.(1);
+        setTimeout(() => {
+          setTransitionEnabled(true);
+        }, delay / 2);
+      } else {
+        props?.setAutoPlay?.("false");
+        setTransitionEnabled(false);
+        setCurrentIndex(currentIndex - slides.length);
+        setTimeout(() => {
+          setTransitionEnabled(true);
+          setCurrentIndex((prev) => prev + 1);
+        }, 0);
+      }
     } else if (currentIndex + 2 == slides.length) {
-      console.log("sadsa")
       props?.setCurrent?.(0);
     }
     setCurrentIndex((prev) => prev + 1);
@@ -98,14 +92,14 @@ const Slider = ({ className, children, ...props }) => {
 
   // Auto-play: move forward every 3 seconds.
   useEffect(() => {
-    if (autoPlay === "true") {
+    if (props?.autoPlay === "true") {
       autoPlayRef.current = setInterval(() => {
         goLeft("autoPlaying");
       }, delay);
     }
     return () => clearInterval(autoPlayRef.current);
   }, [
-    props?.autoPlay,
+
     currentIndex,
     props?.setMouseEnter,
     props?.setMouseLeave,
