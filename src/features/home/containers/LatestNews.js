@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+
 import Slider from "../../core/components/Slider.jsx";
 import NewsBox from "../components/latestNews/NewsBox.jsx";
 import news_pic_1 from "../../../../assets/images/png/news-pic-1.png";
 import news_pic_2 from "../../../../assets/images/png/news-pic-2.png";
 import news_pic_3 from "../../../../assets/images/png/news-pic-3.png";
 
+
 const LatestNews = () => {
   const { t } = useTranslation();
   const delay = 2000;
-  const defaultAutoPlay = "false";
+  const defaultAutoPlay = "true";
 
   const [current, setCurrent] = useState(1);
   const [button, setButton] = useState("left");
@@ -21,14 +23,18 @@ const LatestNews = () => {
     { title: "خبر 4", summary: "...", image: news_pic_3 },
     { title: "خبر 5", summary: "...", image: news_pic_3 },
     { title: "خبر 6", summary: "...", image: news_pic_3 },
+    { title: "خبر 7", summary: "...", image: news_pic_3 },
+    { title: "خبر 8", summary: "...", image: news_pic_3 },
+    { title: "خبر 9", summary: "...", image: news_pic_3 },
+    { title: "خبر 10", summary: "...", image: news_pic_3 },
     // در صورت نیاز بیشتر اضافه کن
   ];
 
-  const visibleCount = 3;  // تعداد اسلایدهای قابل‌نمایش
+  const visibleCount = 3; // تعداد اسلایدهای قابل‌نمایش
 
   useEffect(() => {
-    console.log("c" + current)
-  }, [current])
+    console.log("c" + current);
+  }, [current]);
   return (
     <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
       <div className="width-theme px-default flex flex-col items-center justify-center my-28">
@@ -45,7 +51,7 @@ const LatestNews = () => {
           setMouseEnter={() => { }}
           setMouseLeave={() => { }}
           setButton={setButton}
-          className="w-[90rem] h-[40rem]"
+          className="w-[80rem] h-[40rem]"
           setCurrent={(index) => setCurrent(index)}
           current={current}
         >
@@ -60,7 +66,7 @@ const LatestNews = () => {
           ))}
 
         </Slider>
-
+       
         <div className="mt-6 text-center text-primary-400 text-base font-bold leading-7">
           {t("all_news")}
         </div>
