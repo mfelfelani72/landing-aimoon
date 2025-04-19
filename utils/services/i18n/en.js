@@ -1,7 +1,7 @@
 const en = {
   // global
   aimoonhub: "Aimoonhub",
-  
+
 
   // header
   home: "Home",
@@ -102,6 +102,13 @@ const en = {
   address: "beheshti 47",
   phone: "Phone",
   copyright: "© 2025 Aimoon Hub. All rights reserved",
+
+
+  // dashboard
+
+  register: "Register",
+  login: "Login",
+  swipe_right: "Swipe right",
 
   // settings
   persion: "Persion",

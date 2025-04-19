@@ -103,6 +103,12 @@ const fa = {
   phone: "تلفن",
   copyright: "کلیه حقوق محفوظ است",
 
+   // dashboard
+
+   register: "ثبت نام",
+   login: "ورود",
+   swipe_right: "به راست بکشید",
+
   // settings
   persion: "فارسی",
   english: "انگلیسی",
