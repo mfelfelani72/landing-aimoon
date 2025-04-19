@@ -23,8 +23,8 @@ import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 
 const MarqueeSymbols = ({ className, ...props }) => {
   // hooks
-    const { t } = useTranslation();
-    
+  const { t } = useTranslation();
+
   // const and states
   const [statusMarquee, setStatusMarquee] = useState("pause");
   const [statusMarqueeFirst, setStatusMarqueeFirst] = useState(true);
@@ -165,7 +165,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
                           className="hover:text-color-theme dark:hover:text-D-color-theme text-[0.8rem] mx-1 mr-4"
                         >
                           <span className="relative text-[0.75rem] font-bold px-1 inline-flex">
-                            <span className="pt-1">{row?.name}</span>{" "}
+                            <span className="pt-1 !font-satoshi">{row?.name}</span>{" "}
                             {row?.latest_price_info.change_rate > 0 ? (
                               <Image
                                 src={arrow_up}
@@ -195,7 +195,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
                           {row?.latest_price_info.change_rate}
                         </span>
 
-                        <span className="border rounded-lg px-1 border-Neutral-400 mx-1">
+                        <span className="border rounded-lg px-1 border-Neutral-400 mx-1 flex flex-row-reverse justify-center items-center">
                           <span className="relative text-[0.75rem] font-bold text-Neutral-400">
                             {t("mood_day")}
                           </span>
@@ -215,7 +215,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
                           </span>
                         </span>
 
-                        <span className="border rounded-lg px-1 border-Neutral-400">
+                        <span className="border rounded-lg px-1 border-Neutral-400 flex flex-row-reverse justify-center items-center">
                           <span className="relative text-[0.75rem] font-bold text-Neutral-400">
                             {t("mood_week")}
                           </span>
@@ -275,7 +275,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
                             className="hover:text-color-theme dark:hover:text-D-color-theme text-[0.8rem] mx-1 mr-4"
                           >
                             <span className="relative text-[0.75rem] font-bold px-1 inline-flex">
-                              <span className="pt-1">{row?.name}</span>{" "}
+                              <span className="pt-1 !font-satoshi">{row?.name}</span>{" "}
                               {row?.latest_price_info.change_rate > 0 ? (
                                 <Image
                                   src={arrow_up}
@@ -305,7 +305,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
                             {row?.latest_price_info.change_rate}
                           </span>
 
-                          <span className="border rounded-lg px-1 border-Neutral-400 mx-1">
+                          <span className="border rounded-lg px-1 border-Neutral-400 mx-1 flex flex-row-reverse justify-center items-center">
                             <span className="relative text-[0.75rem] font-bold text-Neutral-400">
                               {t("mood_day")}
                             </span>
@@ -324,7 +324,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
                             </span>
                           </span>
 
-                          <span className="border rounded-lg px-1 border-Neutral-400">
+                          <span className="border rounded-lg px-1 border-Neutral-400 flex flex-row-reverse justify-center items-center">
                             <span className="relative text-[0.75rem] font-bold text-Neutral-400">
                               {t("mood_week")}
                             </span>
