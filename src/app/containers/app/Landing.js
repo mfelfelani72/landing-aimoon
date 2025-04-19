@@ -22,7 +22,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="!font-yekanBakh flex flex-col w-full h-full">
+    <div className="ltr:!font-satoshi rtl:!font-yekanBakh flex flex-col w-full h-full">
       <div className="flex flex-col">
         {certificate === "app" && <Content />}
         {certificate === "404" && <div>404</div>}
