@@ -31,7 +31,7 @@ const Slider = ({ className, children, ...props }) => {
 
   // functions
 
-  // Calculate the width of each slide.
+  // calculate the width of each slide.
   useLayoutEffect(() => {
     const updateDimensions = () => {
       if (containerRef.current) {

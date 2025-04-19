@@ -1,22 +1,54 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
+// Components
+
 import Slider from "../../core/components/Slider.jsx";
 import NewsBox from "../components/latestNews/NewsBox.jsx";
+
+// Functions
+
+import { cashImages } from "../../../../utils/lib/cashImages.js";
+import { getData } from "../../../../utils/services/api/getData";
+import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
+
+// Constants
+
+import { LATEST_NEWS } from "../constants/latestNews/EndPoints.js";
+
+// Svg
+
 import news_pic_1 from "../../../../assets/images/png/news-pic-1.png";
 import news_pic_2 from "../../../../assets/images/png/news-pic-2.png";
 import news_pic_3 from "../../../../assets/images/png/news-pic-3.png";
 
 const LatestNews = () => {
+  // hooks
   const { t } = useTranslation();
+
+  // consts and states
   const delay = 2000;
   const defaultAutoPlay = "true";
+  const visibleCount = 3;
+
+  const PAGE_NUMBER = 1;
+  let tempImages;
 
   const [current, setCurrent] = useState(1);
   const [AutoPlay, setAutoPlay] = useState();
   const [mouseEnter, setMouseEnter] = useState();
   const [mouseLeave, setMouseLeave] = useState();
   const [button, setButton] = useState("left");
+
+  const [newsData, setNewsData] = useState([]);
+  const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
+  const [newsSymbols, setNewsSymbols] = useState("all");
+  const [newsFrom, setNewsFrom] = useState("1716373411");
+  // const [newsTo, setNewsTo] = useState("1725633001");
+  const [newsPageLimit, setNewsPageLimit] = useState(5);
+  const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
+
+  const [cashedImages, setCashedImages] = useState([]);
 
   const newsItems = [
     { title: "خبر ۱", summary: "...", image: news_pic_1 },
@@ -25,25 +57,106 @@ const LatestNews = () => {
     { title: "خبر 4", summary: "...", image: news_pic_3 },
     { title: "خبر 5", summary: "...", image: news_pic_3 },
     { title: "خبر 6", summary: "...", image: news_pic_3 },
-    // { title: "خبر 7", summary: "...", image: news_pic_3 },
-    // { title: "خبر 8", summary: "...", image: news_pic_3 },
-    // { title: "خبر 9", summary: "...", image: news_pic_3 },
-    // { title: "خبر 10", summary: "...", image: news_pic_3 },
-    // { title: "خبر 11", summary: "...", image: news_pic_3 },
-    // { title: "خبر 12", summary: "...", image: news_pic_3 },
-    // { title: "خبر 145454", summary: "...", image: news_pic_3 },
-    // { title: "خبر 14", summary: "...", image: news_pic_3 },
-    // { title: "خبر 15", summary: "...", image: news_pic_3 },
-    // { title: "خبر 16", summary: "...", image: news_pic_3 },
-    // در صورت نیاز بیشتر اضافه کن
+    { title: "خبر 7", summary: "...", image: news_pic_3 },
+    { title: "خبر 8", summary: "...", image: news_pic_3 },
+    { title: "خبر 9", summary: "...", image: news_pic_3 },
+    { title: "خبر 10", summary: "...", image: news_pic_3 },
+    { title: "خبر 11", summary: "...", image: news_pic_3 },
+    { title: "خبر 12", summary: "...", image: news_pic_3 },
+    { title: "خبر 145454", summary: "...", image: news_pic_3 },
+    { title: "خبر 14", summary: "...", image: news_pic_3 },
+    { title: "خبر 15", summary: "...", image: news_pic_3 },
+    { title: "خبر 16", summary: "...", image: news_pic_3 },
+
   ];
 
-  const visibleCount = 3; // تعداد اسلایدهای قابل‌نمایش
+  // functions
+  const getNews = async () => {
+    // const parameter = {
+    //   category: newsCategory,
+    //   symbols: newsSymbols,
+    //   startDate: newsFrom,
+    //   // "endDate": newsTo,
+    //   page: newsPage,
+    //   pageLimit: newsPageLimit,
+    // };
+    const parameter = {
+      category: newsCategory,
+      symbols: newsSymbols,
+      startDate: newsFrom,
+      // "endDate": newsTo,
+      page: 1,
+      pageLimit: 5,
+      llmOnly: true,
+    };
+
+    await getData(LATEST_NEWS, parameter, "Latest News").then(
+      (response) => {
+        if (response) {
+          if ((response.status == 200) & response.data.return) {
+            // console.log(response.data.data.result);
+
+            // setLatestNewsData(response.data.data.result);
+
+            // for news image
+
+            tempImages = response.data.data.result.map((item) => item.local_image);
+            if (
+              !arraysEqual(
+                tempImages,
+                response.data.data.result.map((item) => item.local_image),
+                "data-latest-news-images"
+              ) ||
+              !localStorage.getItem("data-latest-news-images")
+            ) {
+              cashImages(
+                "data-latest-news-images",
+                response.data.data.result.map((item) => item.created_at),
+                response.data.data.result.map((item) => item.local_image)
+              );
+            }
+            // for news image
+
+            setNewsData((prev) => {
+              return [...prev, ...response.data.data.result];
+            });
+
+            setNewsPage((prev) => prev + 1);
+            // setLoading(false);
+            // setVisibleMoreButton(true);
+          } else {
+            console.log({
+              message:
+                "Maybe you mistake !!!!, this route is: --> Latest News <--",
+              error: response.data.message,
+            });
+          }
+        }
+      }
+    );
+  };
+
+  function getCashedImagesLocal() {
+    const cashedImagesLocal = localStorage.getItem(
+      "data-latest-news-images"
+    );
+
+    if (cashedImagesLocal) setCashedImages(JSON.parse(cashedImagesLocal));
+  }
 
   useEffect(() => {
-    console.log(mouseEnter);
-    console.log(mouseLeave);
-    console.log(AutoPlay);
+    if (newsData.length == 0) {
+      getNews();
+      getCashedImagesLocal();
+    }
+
+    console.log(newsData)
+
+    // setSidebarLink("news");
+  }, [newsData]);
+
+  useEffect(() => {
+
   }, [current, mouseEnter, mouseLeave]);
   return (
     <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
@@ -53,6 +166,7 @@ const LatestNews = () => {
         </div>
 
         <Slider
+          id={"latest-news-slider"}
           delay={delay}
           visibleCount={visibleCount}
           defaultAutoPaly={defaultAutoPlay}
@@ -61,34 +175,23 @@ const LatestNews = () => {
           setMouseEnter={setMouseEnter}
           setMouseLeave={setMouseLeave}
           setButton={setButton}
-          className="w-[80rem] h-[40rem]"
+          className="w-[85rem] h-[40rem]"
           setCurrent={(index) => setCurrent(index)}
         >
-          {button === "right"
-            ? newsItems.map((item, idx) => (
-                <div
-                  key={idx}
-                  className={
-                    idx === current
-                      ? "mt-12 transition-all duration-500"
-                      : "mt-0 transition-all duration-500"
-                  }
-                >
-                  <NewsBox {...item} />
-                </div>
-              ))
-            : newsItems.map((item, idx) => (
-                <div
-                  key={idx}
-                  className={
-                    idx === current
-                      ? "mt-12 transition-all duration-500"
-                      : "mt-0 transition-all duration-500"
-                  }
-                >
-                  <NewsBox {...item} />
-                </div>
-              ))}
+
+          {newsData?.map((item, idx) => (
+            <div
+              key={idx}
+              className={
+                idx === current
+                  ? "mt-12 transition-all duration-500"
+                  : "mt-0 transition-all duration-500"
+              }
+            >
+              <NewsBox id={"latest-news-NewsBos-" + idx} {...item} count_text_body={20} />
+            </div>
+          ))
+          }
         </Slider>
 
         <div className="mt-6 text-center text-primary-400 text-base font-bold leading-7">
