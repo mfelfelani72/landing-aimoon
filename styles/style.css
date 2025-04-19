@@ -122,6 +122,43 @@
     background: linear-gradient(90deg, #9175EA 33.33%, #CC6E3C 33.33%);
   }
 
+
+
+  .element-with-marquee {
+    animation: marquee 50s linear infinite;
+  }
+
+  .element-with-marquee2 {
+    animation: marquee2 50s linear infinite;
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  .animate-marquee2 {
+    animation: marquee2 25s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
 }
 
 @theme {

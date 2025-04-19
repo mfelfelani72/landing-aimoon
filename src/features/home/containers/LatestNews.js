@@ -14,7 +14,7 @@ import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
 // Constants
 
-import { LATEST_NEWS } from "../constants/latestNews/EndPoints.js";
+import { LATEST_NEWS } from "../utils/constants/latestNews/EndPoints.js";
 
 // Svg
 
@@ -104,7 +104,7 @@ const LatestNews = () => {
     );
   };
 
-  function getCashedImagesLocal() {
+  const getCashedImagesLocal = () => {
     const cashedImagesLocal = localStorage.getItem(
       "data-latest-news-images"
     );
