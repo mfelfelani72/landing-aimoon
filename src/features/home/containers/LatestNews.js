@@ -61,32 +61,32 @@ const LatestNews = () => {
     await getData(LATEST_NEWS, parameter, "Latest News").then(
       (response) => {
         if (response) {
-          if ((response.status == 200) & response.data.return) {
-            // console.log(response.data.data.result);
+          if ((response?.status == 200) & response?.data?.return) {
+            // console.log(response?.data?.data?.result);
 
-            // setLatestNewsData(response.data.data.result);
+            // setLatestNewsData(response?.data?.data?.result);
 
             // for news image
 
-            tempImages = response.data.data.result.map((item) => item.local_image);
+            tempImages = response?.data?.data?.result?.map((item) => item?.local_image);
             if (
               !arraysEqual(
                 tempImages,
-                response.data.data.result.map((item) => item.local_image),
+                response?.data?.data?.result?.map((item) => item?.local_image),
                 "data-latest-news-images"
               ) ||
               !localStorage.getItem("data-latest-news-images")
             ) {
               cashImages(
                 "data-latest-news-images",
-                response.data.data.result.map((item) => item.created_at),
-                response.data.data.result.map((item) => item.local_image)
+                response?.data?.data?.result?.map((item) => item?.created_at),
+                response?.data?.data?.result?.map((item) => item?.local_image)
               );
             }
             // for news image
 
             setNewsData((prev) => {
-              return [...prev, ...response.data.data.result];
+              return [...prev, ...response?.data?.data?.result];
             });
 
             setNewsPage((prev) => prev + 1);
@@ -96,7 +96,7 @@ const LatestNews = () => {
             console.log({
               message:
                 "Maybe you mistake !!!!, this route is: --> Latest News <--",
-              error: response.data.message,
+              error: response?.data?.message,
             });
           }
         }

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // Components
 
@@ -21,6 +22,9 @@ import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 
 const MarqueeSymbols = ({ className, ...props }) => {
+  // hooks
+    const { t } = useTranslation();
+    
   // const and states
   const [statusMarquee, setStatusMarquee] = useState("pause");
   const [statusMarqueeFirst, setStatusMarqueeFirst] = useState(true);
@@ -61,29 +65,29 @@ const MarqueeSymbols = ({ className, ...props }) => {
 
     await getData(SYMBOLS_NAMES, parameter, "Header").then((response) => {
       if (response) {
-        if ((response.status == 200) & response.data.return) {
-          // console.log(response.data.data);
-          setSymbols(response.data.data);
+        if ((response?.status == 200) & response?.data?.return) {
+          // console.log(response?.data?.data);
+          setSymbols(response?.data?.data);
 
-          tempImages = response.data.data.map((item) => item.logo);
+          tempImages = response?.data?.data?.map((item) => item?.logo);
           if (
             !arraysEqual(
               tempImages,
-              response.data.data.map((item) => item.logo),
+              response?.data?.data?.map((item) => item?.logo),
               "data-header-images"
             ) ||
             !localStorage.getItem("data-header-images")
           ) {
             cashImages(
               "data-header-images",
-              response.data.data.map((item) => item.name),
-              response.data.data.map((item) => item.logo)
+              response?.data?.data.map((item) => item?.name),
+              response?.data?.data.map((item) => item?.logo)
             );
           }
         } else {
           console.log({
             message: "Maybe you mistake !!!!, this route is: --> Header <--",
-            error: response.data.message,
+            error: response?.data?.message,
           });
         }
       }
@@ -99,7 +103,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
   };
 
   useEffect(() => {
-    if (symbols.length === 0) {
+    if (symbols?.length === 0) {
       getSymbols();
 
       getCashedImagesLocal();
@@ -112,7 +116,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
   }, []);
   return (
     <>
-      {symbols.length !== 0 && (
+      {symbols?.length !== 0 && (
         <div
           className={cn(
             "left-to-right w-full shadow-md h-[2.75rem] inline-flex items-center overflow-hidden cursor-pointer",
@@ -131,7 +135,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
                   "flex flex-row" + classNameMarquee + " whitespace-nowrap"
                 }
               >
-                {symbols.map(
+                {symbols?.map(
                   (row, index) =>
                     row?.latest_price_info.formatted_price && (
                       <span
@@ -143,7 +147,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
                           alt={row?.name}
                           // effect="blur"
                           src={
-                            cashedImages.length !== 0 &&
+                            cashedImages?.length !== 0 &&
                             cashedImages?.map((item) =>
                               item.hasOwnProperty(`${row?.name}`)
                             )[index]
@@ -193,7 +197,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
 
                         <span className="border rounded-lg px-1 border-Neutral-400 mx-1">
                           <span className="relative text-[0.75rem] font-bold text-Neutral-400">
-                            Mood Day
+                            {t("mood_day")}
                           </span>
 
                           <span
@@ -213,7 +217,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
 
                         <span className="border rounded-lg px-1 border-Neutral-400">
                           <span className="relative text-[0.75rem] font-bold text-Neutral-400">
-                            Mood week
+                            {t("mood_week")}
                           </span>
                           <span
                             className={`mx-2 ${
@@ -303,7 +307,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
 
                           <span className="border rounded-lg px-1 border-Neutral-400 mx-1">
                             <span className="relative text-[0.75rem] font-bold text-Neutral-400">
-                              Mood Day
+                              {t("mood_day")}
                             </span>
                             <span
                               className={`mx-2 ${
@@ -322,7 +326,7 @@ const MarqueeSymbols = ({ className, ...props }) => {
 
                           <span className="border rounded-lg px-1 border-Neutral-400">
                             <span className="relative text-[0.75rem] font-bold text-Neutral-400">
-                              Mood week
+                              {t("mood_week")}
                             </span>
                             <span
                               className={`mx-2 ${

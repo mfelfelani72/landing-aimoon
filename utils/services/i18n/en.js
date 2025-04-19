@@ -2,7 +2,6 @@ const en = {
   // global
   aimoonhub: "Aimoonhub",
 
-
   // header
   home: "Home",
   about_us: "About Us",
@@ -13,27 +12,35 @@ const en = {
   login_telegram: "Login Telegram",
 
   // welcome
-  welcome_title: "Breaking News Analysis <0>{{financial_markets}}</0> and <1>{{cryptocurrencies}}</1>",
+  welcome_title:
+    "Breaking News Analysis <0>{{financial_markets}}</0> and <1>{{cryptocurrencies}}</1>",
   financial_markets: "Financial Markets",
   cryptocurrencies: "Cryptocurrencies",
-  welcome_description: "Using artificial intelligence, Aimoonhub analyzes news and market data in real time and provides you with accurate information for better decision-making",
+  welcome_description:
+    "Using artificial intelligence, Aimoonhub analyzes news and market data in real time and provides you with accurate information for better decision-making",
   welcome_title_2: "Smart crypto news analysis tool!",
-  welcome_description_2: "With superhuman accuracy, check out the latest news and developments in the world of cryptocurrencies. Real-time data, detailed analysis, and deep insight to make better decisions in the financial markets!",
-  why_aimoonhub_description: "Real-time analysis of news and coins for professional traders Real-time analysis of news and coins for professional traders",
-
+  welcome_description_2:
+    "With superhuman accuracy, check out the latest news and developments in the world of cryptocurrencies. Real-time data, detailed analysis, and deep insight to make better decisions in the financial markets!",
+  why_aimoonhub_description:
+    "Real-time analysis of news and coins for professional traders Real-time analysis of news and coins for professional traders",
 
   // why aimoonhub
   free_test_aimoonex: "Free test Aimoonex",
-  why_aimoonhub_description: "Aimoonhub - Smart analysis of real-time trading news",
-  why_aimoonhub_slogan: "Stay one step ahead of the market! With EmonHub's smart analytics, understand the impact of news on your trades faster than others and make informed decisions",
+  why_aimoonhub_description:
+    "Aimoonhub - Smart analysis of real-time trading news",
+  why_aimoonhub_slogan:
+    "Stay one step ahead of the market! With EmonHub's smart analytics, understand the impact of news on your trades faster than others and make informed decisions",
   login_dashboard: "Login to dashboard",
   why_aimoonhub_title: "Why Aimoonhub? Our Unique Features",
   feature_box_1_title: "AI-based news analysis",
-  feature_box_1_description: "Gathering news from reliable sources and analyzing their impact on the crypto market",
+  feature_box_1_description:
+    "Gathering news from reliable sources and analyzing their impact on the crypto market",
   feature_box_2_title: "Automatic analysis of coins",
-  feature_box_2_description: "Studying price trends and market behavior using advanced algorithms",
+  feature_box_2_description:
+    "Studying price trends and market behavior using advanced algorithms",
   feature_box_3_title: "Smart dashboard for journalists",
-  feature_box_3_description: "Providing accurate data for journalists and professional traders",
+  feature_box_3_description:
+    "Providing accurate data for journalists and professional traders",
 
   // how to work
   how_to_work_aimoonhub: "How does Aimoonhub work?",
@@ -43,18 +50,21 @@ const en = {
   step_box_4_title: "Professional dashboard for advanced users",
 
   // aimoonhub statistics
-  aimoonhub_statistics_slogan: "Transparent and Accurate | Aimoonhub Statistics",
+  aimoonhub_statistics_slogan:
+    "Transparent and Accurate | Aimoonhub Statistics",
   count_agencies: "Count of news agencies",
   count_analyses: "Count of analyses",
   count_reporters: "Count of reporters",
   count_aimoonhub_users: "Count of aimoonhub users",
-  financial_chart_currency_pairs_prices: "Financial chart of currency pairs prices",
+  financial_chart_currency_pairs_prices:
+    "Financial chart of currency pairs prices",
   count_news: "Count of news items in the database",
 
   // customer reviews
   our_customer_reviews: "Our customer reviews",
   all_reviews: "All <0>{{count}}</0> comments",
-  count_reviews: "<0>{{count}}</0> people have given positive feedback on Aimoonhub",
+  count_reviews:
+    "<0>{{count}}</0> people have given positive feedback on Aimoonhub",
 
   // plans
   plans_title: "Subscription plans suitable for every trading style",
@@ -71,12 +81,16 @@ const en = {
   free_test: "Free test",
   buy: "Buy",
   free_description: "Make your trading decisions smarter – start now!",
-  professional_description: "One step ahead of the market! In-depth analysis and professional insights for smart traders",
-  vanguard_description: "All the professional tools at your fingertips! From news to detailed analysis, have everything on one platform",
+  professional_description:
+    "One step ahead of the market! In-depth analysis and professional insights for smart traders",
+  vanguard_description:
+    "All the professional tools at your fingertips! From news to detailed analysis, have everything on one platform",
   features: "Features",
-  plan_description: "By subscribing to the <0>{{aimoonex}}</0> panel, you can enjoy the leading Aimonhub package for free",
+  plan_description:
+    "By subscribing to the <0>{{aimoonex}}</0> panel, you can enjoy the leading Aimonhub package for free",
   aimoonex: "Aimoonex",
-  plan_slogan: "Stay one step ahead of the market! With EmonHub's smart analytics, understand the impact of news on your trades faster than others and make informed decisions",
+  plan_slogan:
+    "Stay one step ahead of the market! With EmonHub's smart analytics, understand the impact of news on your trades faster than others and make informed decisions",
   enter_email: "Enter your email address",
   register_aimoonex: "Register in Aimoonex",
 
@@ -103,9 +117,10 @@ const en = {
   phone: "Phone",
   copyright: "© 2025 Aimoon Hub. All rights reserved",
 
-
   // dashboard
 
+  mood_day: "Mood day",
+  mood_week: "Mood week",
   register: "Register",
   login: "Login",
   swipe_right: "Swipe right",
