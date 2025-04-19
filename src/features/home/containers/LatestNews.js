@@ -118,7 +118,7 @@ const LatestNews = () => {
       getCashedImagesLocal();
     }
 
-    console.log(newsData)
+    // console.log(newsData)
 
     // setSidebarLink("news");
   }, [newsData]);
@@ -136,15 +136,15 @@ const LatestNews = () => {
         <Slider
           id={"latest-news-slider"}
           delay={delay}
-          visibleCount={visibleCount}
-          defaultAutoPaly={defaultAutoPlay}
-          autoPlay={defaultAutoPlay}
-          setAutoPlay={setAutoPlay}
-          setMouseEnter={setMouseEnter}
-          setMouseLeave={setMouseLeave}
-          setButton={setButton}
+          visible_count={visibleCount}
+          default_auto_paly={defaultAutoPlay}
+          auto_play={defaultAutoPlay}
+          set_auto_play={setAutoPlay}
+          set_mouse_enter={setMouseEnter}
+          set_mouse_leave={setMouseLeave}
+          set_button={setButton}
           className="w-[85rem] h-[45rem]"
-          setCurrent={(index) => setCurrent(index)}
+          set_current={(index) => setCurrent(index)}
         >
 
           {newsData?.map((item, idx) => (
@@ -156,7 +156,7 @@ const LatestNews = () => {
                   : "mt-0 transition-all duration-500"
               }
             >
-              <NewsBox id={"latest-news-NewsBos-" + idx} {...item} count_text_body={20} cashedImages={cashedImages} />
+              <NewsBox id={"latest-news-NewsBos-" + idx} data={item} count_text_body={20} cashed_images={cashedImages} />
             </div>
           ))
           }

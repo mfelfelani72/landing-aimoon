@@ -35,14 +35,14 @@ const NewsBox = ({ className, ...props }) => {
             alt={props?.id}
             // src={props?.thImage}
             src={
-              props?.cashedImages.length !== 0 &&
-                props?.cashedImages.some((item) =>
+              props?.cashed_images.length !== 0 &&
+                props?.cashed_images.some((item) =>
                   item.hasOwnProperty(props?.created_at)
                 )
-                ? props?.cashedImages.filter(
+                ? props?.cashed_images.filter(
                   (item) => item[props?.created_at]
                 )[0][props?.created_at]?.base64data
-                : props?.thImage
+                : props?.data?.thImage
 
             }
             onError={(e) => {
@@ -50,10 +50,10 @@ const NewsBox = ({ className, ...props }) => {
             }} className={"w-[25rem] h-48"} />
         </div>
         <div className="ltr:text-left rtl:text-right mt-9 text-white text-2xl font-medium">
-          {props?.title}
+          {props?.data?.title}
         </div>
         <div className="w-80 opacity-90 ltr:text-left rtl:text-right text-white text-base font-normal mt-9">
-          {stringHelper(props?.summaryEn, props?.count_text_body)}
+          {stringHelper(props?.data?.summaryEn, props?.count_text_body)}
         </div>
 
         <div className="flex ltr:flex-row-reverse rtl:flex-row gap-2 items-center w-full px-4 mt-9 text-primary-400 text-base font-bold leading-none cursor-pointer">
