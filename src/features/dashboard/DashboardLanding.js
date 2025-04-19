@@ -34,7 +34,7 @@ const DashboardLanding = () => {
 
         {/* marquee */}
        
-        <MarqueeSymbols className={"mt-2"} />
+        <MarqueeSymbols className={"my-2"} />
 
       </div>
     </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 // Components
 
-import { ImageLazy } from '../../core/components/Image.jsx';
+import { Image, ImageLazy } from '../../core/components/Image.jsx';
 
 // Functions
 
@@ -14,6 +14,11 @@ import { cn } from '../../../../utils/lib/cn.js';
 // Constants
 
 import { SYMBOLS_NAMES } from "../utils/constants/EndPoints.js";
+
+// Svg
+
+import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg"
+import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg"
 
 const MarqueeSymbols = ({ className, ...props }) => {
 
@@ -50,36 +55,6 @@ const MarqueeSymbols = ({ className, ...props }) => {
             marquee2Ref.current.style.animationPlayState = "paused";
         }
     }
-
-    const setSign = (value) => {
-        let classNameDown = "border-t-[0.6rem] border-t-rose-500";
-        if (value > 0) classNameDown = "border-b-[0.6rem] border-b-green";
-        return (
-            <span
-                className={
-                    "absolute top-1 -right-3 border-l-[0.4rem] border-l-transparent border-r-[0.4rem] border-r-transparent  " +
-                    classNameDown
-                }
-            ></span>
-        );
-    }
-
-    const setRate = (value, text = "") => {
-        let classNameColor = "border border-rose-300 bg-rose-50 text-rose-800";
-
-        if (value > 0)
-            classNameColor = "border border-lime-300 bg-lime-50 text-lime-800";
-        return (
-            <span
-                className={
-                    "text-[0.7rem] rounded-sm px-2 mx-2 h-[1.1rem] " + classNameColor
-                }
-            >
-                {value}% {text}
-            </span>
-        );
-    }
-
     const getSymbols = async () => {
         const parameter = {
             priority: priority,
@@ -182,31 +157,32 @@ const MarqueeSymbols = ({ className, ...props }) => {
                                                     onClick={(event) => goToSymbolDashboard(navigate, event, row?.name, nav)}
                                                     className="hover:text-color-theme dark:hover:text-D-color-theme text-[0.8rem] mx-1 mr-4"
                                                 >
-                                                    <span className="relative text-[0.75rem] font-bold px-1">
+                                                    <span className="relative text-[0.75rem] font-bold px-1 inline-flex">
                                                         <span className="pt-1">{row?.name}</span>{" "}
-                                                        {setSign(row?.latest_price_info.change_rate)}
+                                                        {row?.latest_price_info.change_rate > 0 ? <Image src={arrow_up} alt="arrow_up" className={"w-6 h-6 mx-2"} /> : <Image src={arrow_down} alt="arrow_down" className={"w-6 h-6 mx-2"} />}
+
                                                     </span>
                                                 </a>
-                                                <span className="text-[0.75rem] ">
+                                                <span className={`text-[0.75rem]`}>
                                                     {row?.latest_price_info.formatted_price}
                                                 </span>
 
-                                                {setRate(row?.latest_price_info.change_rate)}
+                                                <span className={`mx-2 ${row?.latest_price_info.change_rate > 0 ? "text-Success-500" : "text-Error-500"}`}>{row?.latest_price_info.change_rate}</span>
 
-                                                <span className="relative text-[0.75rem] font-bold ">
-                                                    Mood Day
+                                                <span className='border rounded-lg px-1 border-Neutral-400 mx-1'>
+                                                    <span className="relative text-[0.75rem] font-bold text-Neutral-400">
+                                                        Mood Day
+                                                    </span>
+
+                                                    <span className={`mx-2 ${row?.change_stat?.damp_5_change?.percent_change_24h > 0 ? "text-Success-500" : "text-Error-500"}`}>{row?.change_stat?.damp_5_change?.percent_change_24h}</span>
                                                 </span>
 
-                                                {setRate(
-                                                    row?.change_stat?.damp_5_change?.percent_change_24h
-                                                )}
-
-                                                <span className="relative text-[0.75rem] font-bold ">
-                                                    Mood week
+                                                <span className='border rounded-lg px-1 border-Neutral-400'>
+                                                    <span className="relative text-[0.75rem] font-bold text-Neutral-400">
+                                                        Mood week
+                                                    </span>
+                                                    <span className={`mx-2 ${row?.change_stat?.damp_5_change?.percent_change_7d > 0 ? "text-Success-500" : "text-Error-500"}`}>{row?.change_stat?.damp_5_change?.percent_change_7d}</span>
                                                 </span>
-                                                {setRate(
-                                                    row?.change_stat?.damp_5_change?.percent_change_7d
-                                                )}
                                             </span>
                                         )
                                 )}
@@ -244,32 +220,32 @@ const MarqueeSymbols = ({ className, ...props }) => {
                                                         onClick={(event) => goToSymbolDashboard(navigate, event, row?.name, nav)}
                                                         className="hover:text-color-theme dark:hover:text-D-color-theme text-[0.8rem] mx-1 mr-4"
                                                     >
-                                                        <span className="relative text-[0.75rem] font-bold px-1">
-                                                            {row?.name}{" "}
-                                                            {setSign(row?.latest_price_info.change_rate)}
+                                                        <span className="relative text-[0.75rem] font-bold px-1 inline-flex">
+                                                            <span className="pt-1">{row?.name}</span>{" "}
+                                                            {row?.latest_price_info.change_rate > 0 ? <Image src={arrow_up} alt="arrow_up" className={"w-6 h-6 mx-2"} /> : <Image src={arrow_down} alt="arrow_down" className={"w-6 h-6 mx-2"} />}
                                                         </span>
                                                     </a>
-                                                    <span className="text-[0.75rem] ">
+                                                    <span className={`text-[0.75rem]`}>
                                                         {row?.latest_price_info.formatted_price}
                                                     </span>
 
-                                                    {setRate(row?.latest_price_info.change_rate)}
+                                                    <span className={`mx-2 ${row?.latest_price_info.change_rate > 0 ? "text-Success-500" : "text-Error-500"}`}>{row?.latest_price_info.change_rate}</span>
 
-                                                    <span className="relative text-[0.75rem] font-bold ">
-                                                        Mood Day
+                                                    <span className='border rounded-lg px-1 border-Neutral-400 mx-1'>
+                                                        <span className="relative text-[0.75rem] font-bold text-Neutral-400">
+                                                            Mood Day
+                                                        </span>
+                                                        <span className={`mx-2 ${row?.change_stat?.damp_5_change?.percent_change_24h > 0 ? "text-Success-500" : "text-Error-500"}`}>{row?.change_stat?.damp_5_change?.percent_change_24h}</span>
+
                                                     </span>
 
-                                                    {setRate(
-                                                        row?.change_stat?.damp_5_change
-                                                            ?.percent_change_24h
-                                                    )}
 
-                                                    <span className="relative text-[0.75rem] font-bold ">
-                                                        Mood week
+                                                    <span className='border rounded-lg px-1 border-Neutral-400'>
+                                                        <span className="relative text-[0.75rem] font-bold text-Neutral-400">
+                                                            Mood week
+                                                        </span>
+                                                        <span className={`mx-2 ${row?.change_stat?.damp_5_change?.percent_change_7d > 0 ? "text-Success-500" : "text-Error-500"}`}>{row?.change_stat?.damp_5_change?.percent_change_7d}</span>
                                                     </span>
-                                                    {setRate(
-                                                        row?.change_stat?.damp_5_change?.percent_change_7d
-                                                    )}
                                                 </span>
                                             )
                                     )}
