@@ -23,7 +23,7 @@ const LatestNews = () => {
   const { t } = useTranslation();
 
   // consts and states
-  const delay = 1000;
+  const delay = 3000;
   const defaultAutoPlay = "true";
   const visibleCount = 3;
 

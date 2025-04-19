@@ -1,6 +1,7 @@
 const en = {
   // global
-  aimoonhub: "AIMOONHUB",
+  aimoonhub: "Aimoonhub",
+  
 
   // header
   home: "Home",

@@ -1,42 +1,48 @@
-import React from 'react';
+import React, { lazy } from 'react';
 
 // Components
 
-import Welcome from "./containers/Welcome";
-import WhyAimoonhub from "./containers/WhyAimoonhub";
-import HowToWork from "./containers/HowToWork";
-import AimoonhubStatistics from "./containers/AimoonhubStatistics";
-import CustomerReview from "./containers/CustomerReview";
-import Plans from "./containers/Plans";
-import LatestNews from "./containers/LatestNews";
-import ContactUs from "./containers/ContactUs";
-import FAQ from "./containers/FAQ";
+const LazyHeader = lazy(() => import('../header/Header'));
+const LazyWelcome = lazy(() => import("./containers/Welcome"));
+const LazyWhyAimoonhub = lazy(() => import("./containers/WhyAimoonhub"));
+const LazyHowToWork = lazy(() => import("./containers/HowToWork"));
+const LazyAimoonhubStatistics = lazy(() => import("./containers/AimoonhubStatistics"));
+const LazyCustomerReview = lazy(() => import("./containers/CustomerReview"));
+const LazyPlans = lazy(() => import("./containers/Plans"));
+const LazyLatestNews = lazy(() => import("./containers/LatestNews"));
+const LazyContactUs = lazy(() => import("./containers/ContactUs"));
+const LazyFAQ = lazy(() => import("./containers/FAQ"));
+const LazyFooter = lazy(() => import('../footer/Footer'));
 
 const Home = () => {
   return (
     <>
+      {/* Header */}
+      <LazyHeader />
       <div className="fixed inset-y-0 left-0  w-[calc(50%-50rem)] bg-white z-[100]"></div>
       <div className="fixed inset-y-0 right-0 w-[calc(50%-50rem)] bg-white z-[100]"></div>
 
       <div className="flex flex-col mt-[6rem]">
         {/* Welcome */}
-        {/* <Welcome /> */}
+        <LazyWelcome />
         {/* WhyAimoonhub */}
-        {/* <WhyAimoonhub /> */}
+        <LazyWhyAimoonhub />
         {/* HowToUse */}
-        {/* <HowToWork /> */}
+        <LazyHowToWork />
         {/* Aimoonhub statistics */}
-        {/* <AimoonhubStatistics /> */}
+        <LazyAimoonhubStatistics />
         {/* Customer review  */}
-        {/* <CustomerReview /> */}
+        <LazyCustomerReview />
         {/* Plans */}
-        {/* <Plans /> */}
+        <LazyPlans />
         {/* Latest news */}
-        <LatestNews />
+        <LazyLatestNews />
         {/* FAQ */}
-        {/* <FAQ /> */}
+        <LazyFAQ />
         {/* Contact us */}
-        {/* <ContactUs /> */}
+        <LazyContactUs />
+        {/* Header */}
+        <LazyFooter />
       </div>
     </>
   );

@@ -1,12 +1,15 @@
-export const REDIRECT_ROUTES = ["/dashboard", "/landing"];
+// export const REDIRECT_ROUTES = ["/dashboard", "/landing"];
+export const REDIRECT_ROUTES = ["/landing"];
 
 export const ALL_ROUTES = [
   // test
   "/mohammad/test",
-  // Auth
+  // Landing
   "/",
   "/landing",
-  
+  // Dashbnoard
+  "/dashboard"
+
 ];
 
 export const NOT_RELOAD_ROUTES = [

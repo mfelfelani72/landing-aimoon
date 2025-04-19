@@ -12,7 +12,7 @@ import { stringHelper } from "../../../../../utils/helpers/stringHelper.js"
 
 // Constants
 
-import { DEFAULT_NEW_IMAGE } from "../../../../app/constants/Defaults.js"
+import { DEFAULT_NEW_IMAGE } from "../../../../app/utils/constant/Defaults.js"
 
 // SVG
 

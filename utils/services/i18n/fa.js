@@ -1,6 +1,6 @@
 const fa = {
   // global
-  aimoonhub: "AIMOONHUB",
+  aimoonhub: "آیمون‌هاب",
 
   // header
   home: "صفحه اصلی",

@@ -10,6 +10,10 @@ const Test = lazy(() => import("../../components/TestCode.jsx"));
 
 const LazyHomeLanding = lazy(() => import("../../../features/home/HomeLanding.js"));
 
+// Dashboard
+
+const LazyDashboardLanding = lazy(() => import("../../../features/dashboard/DashboardLanding.js"));
+
 const Content = () => {
   return (
     <>
@@ -18,9 +22,11 @@ const Content = () => {
         <Route path="/mohammad/test" element={<Test />}></Route>
         {/* just for test */}
 
-        {/* Auth */}
+        {/* Landing */}
         <Route path="*" element={<Landing />}></Route>
         <Route path="/landing" element={<LazyHomeLanding />}></Route>
+        {/* Dashboard */}
+        <Route path="/dashboard" element={<LazyDashboardLanding />}></Route>
       </Routes>
     </>
   );
