@@ -56,7 +56,7 @@ const Slider = ({ className, children, ...props }) => {
         props?.setCurrent?.(1);
         setTimeout(() => {
           setTransitionEnabled(true);
-        }, delay / 2);
+        }, 500);
       } else {
         props?.setAutoPlay?.("false");
         setTransitionEnabled(false);

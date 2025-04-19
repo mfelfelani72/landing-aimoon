@@ -18,16 +18,12 @@ import { LATEST_NEWS } from "../constants/latestNews/EndPoints.js";
 
 // Svg
 
-import news_pic_1 from "../../../../assets/images/png/news-pic-1.png";
-import news_pic_2 from "../../../../assets/images/png/news-pic-2.png";
-import news_pic_3 from "../../../../assets/images/png/news-pic-3.png";
-
 const LatestNews = () => {
   // hooks
   const { t } = useTranslation();
 
   // consts and states
-  const delay = 2000;
+  const delay = 1000;
   const defaultAutoPlay = "true";
   const visibleCount = 3;
 
@@ -45,48 +41,20 @@ const LatestNews = () => {
   const [newsSymbols, setNewsSymbols] = useState("all");
   const [newsFrom, setNewsFrom] = useState("1716373411");
   // const [newsTo, setNewsTo] = useState("1725633001");
-  const [newsPageLimit, setNewsPageLimit] = useState(5);
   const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
 
   const [cashedImages, setCashedImages] = useState([]);
 
-  const newsItems = [
-    { title: "خبر ۱", summary: "...", image: news_pic_1 },
-    { title: "خبر ۲", summary: "...", image: news_pic_2 },
-    { title: "خبر ۳", summary: "...", image: news_pic_3 },
-    { title: "خبر 4", summary: "...", image: news_pic_3 },
-    { title: "خبر 5", summary: "...", image: news_pic_3 },
-    { title: "خبر 6", summary: "...", image: news_pic_3 },
-    { title: "خبر 7", summary: "...", image: news_pic_3 },
-    { title: "خبر 8", summary: "...", image: news_pic_3 },
-    { title: "خبر 9", summary: "...", image: news_pic_3 },
-    { title: "خبر 10", summary: "...", image: news_pic_3 },
-    { title: "خبر 11", summary: "...", image: news_pic_3 },
-    { title: "خبر 12", summary: "...", image: news_pic_3 },
-    { title: "خبر 145454", summary: "...", image: news_pic_3 },
-    { title: "خبر 14", summary: "...", image: news_pic_3 },
-    { title: "خبر 15", summary: "...", image: news_pic_3 },
-    { title: "خبر 16", summary: "...", image: news_pic_3 },
-
-  ];
-
   // functions
   const getNews = async () => {
-    // const parameter = {
-    //   category: newsCategory,
-    //   symbols: newsSymbols,
-    //   startDate: newsFrom,
-    //   // "endDate": newsTo,
-    //   page: newsPage,
-    //   pageLimit: newsPageLimit,
-    // };
+
     const parameter = {
       category: newsCategory,
       symbols: newsSymbols,
       startDate: newsFrom,
       // "endDate": newsTo,
       page: 1,
-      pageLimit: 5,
+      pageLimit: 10,
       llmOnly: true,
     };
 
@@ -175,7 +143,7 @@ const LatestNews = () => {
           setMouseEnter={setMouseEnter}
           setMouseLeave={setMouseLeave}
           setButton={setButton}
-          className="w-[85rem] h-[40rem]"
+          className="w-[85rem] h-[45rem]"
           setCurrent={(index) => setCurrent(index)}
         >
 
@@ -188,7 +156,7 @@ const LatestNews = () => {
                   : "mt-0 transition-all duration-500"
               }
             >
-              <NewsBox id={"latest-news-NewsBos-" + idx} {...item} count_text_body={20} />
+              <NewsBox id={"latest-news-NewsBos-" + idx} {...item} count_text_body={20} cashedImages={cashedImages} />
             </div>
           ))
           }
