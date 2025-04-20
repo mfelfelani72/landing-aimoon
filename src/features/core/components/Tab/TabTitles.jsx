@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import TypoTextTitle from "../TypoTextTitle.jsx";
 import { BelowTitleDefault } from "../BelowTitle.jsx";
 
 // Functions
@@ -18,7 +17,7 @@ export const TabTitlesDefault = ({ className, ...props }) => {
   return (
     <>
       <div
-        className={cn("overflow-x-auto no-scrollbar w-full bg-white z-50", className)}
+        className={cn("overflow-x-auto no-scrollbar w-full bg-Neutral-500 z-50", className)}
         id={"scrollContainer-" + props?.parentId}
       >
         <div
@@ -39,14 +38,13 @@ export const TabTitlesDefault = ({ className, ...props }) => {
               }}
               className="flex flex-col justify-center items-center"
             >
-              <TypoTextTitle
+              <div
                 id={"tab-title-" + index + "-" + props?.parentId}
-                className={`bg-white text-base ${
-                  index !== 0 && "font-normal"
-                } cursor-pointer mb-1`}
+                className={`bg-Neutral-500 text-base font-bold ${index !== 0 && "font-normal text-Neutral-300"
+                  } cursor-pointer mb-1`}
               >
                 {t(item)}
-              </TypoTextTitle>
+              </div>
               <BelowTitleDefault
                 className={index === 0 ? "" : "hidden"}
                 id={"below-tab-title-" + index + "-" + props?.parentId}

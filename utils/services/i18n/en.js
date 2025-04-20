@@ -121,9 +121,16 @@ const en = {
 
   mood_day: "Mood day",
   mood_week: "Mood week",
+
   register: "Register",
   login: "Login",
   swipe_right: "Swipe right",
+  coins_dashboard: "Coins dashboard",
+  authors_dashboard: "Authors dashboard",
+  providers_dashboard: "Providers dashboard",
+  news_analysis: "News analysis",
+
+  analyzed_news: "Analyzed news",
 
   // settings
   persion: "Persion",

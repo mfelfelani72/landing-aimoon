@@ -113,12 +113,18 @@ const fa = {
   copyright: "کلیه حقوق محفوظ است",
 
   // dashboard
-
   mood_day: "مود روز",
   mood_week: "مود هفته",
+
   register: "ثبت نام",
   login: "ورود",
   swipe_right: "به راست بکشید",
+  coins_dashboard: "داشبورد کوین‌ها",
+  authors_dashboard: "داشبورد خبرنگاران",
+  providers_dashboard: "داشبورد خبرگزاری‌ها",
+  news_analysis: "تحلیل اخبار",
+
+  analyzed_news: "خبرهای تحلیل شده",
 
   // settings
   persion: "فارسی",

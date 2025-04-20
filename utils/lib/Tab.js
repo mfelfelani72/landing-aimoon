@@ -31,7 +31,10 @@ export const handleChangeTab = (value, parentId) => {
       element.classList.add("scale-0");
       document
         .getElementById("tab-title-" + index + "-" + parentId)
-        .classList.remove("font-bold");
+        .classList.add("text-Neutral-300");
+      document
+        .getElementById("tab-title-" + index + "-" + parentId)
+        .classList.remove("font-bold", "text-white");
       document
         .getElementById("below-tab-title-" + index + "-" + parentId)
         .classList.add("hidden");
@@ -45,7 +48,13 @@ export const handleChangeTab = (value, parentId) => {
         .classList.add("font-bold");
       document
         .getElementById("tab-title-" + index + "-" + parentId)
+        .classList.add("text-white");
+      document
+        .getElementById("tab-title-" + index + "-" + parentId)
         .classList.remove("font-normal");
+      document
+        .getElementById("tab-title-" + index + "-" + parentId)
+        .classList.remove("text-Neutral-300");
       document
         .getElementById("below-tab-title-" + index + "-" + parentId)
         .classList.remove("hidden");
@@ -57,7 +66,10 @@ export const handleChangeTab = (value, parentId) => {
       if (document.getElementById("tab-title-" + index + "-" + parentId)) {
         document
           .getElementById("tab-title-" + index + "-" + parentId)
-          .classList.remove("font-bold");
+          .classList.remove("font-bold", "text-white");
+        document
+          .getElementById("tab-title-" + index + "-" + parentId)
+          .classList.add("text-Neutral-300");
         document
           .getElementById("below-tab-title-" + index + "-" + parentId)
           .classList.add("hidden");
