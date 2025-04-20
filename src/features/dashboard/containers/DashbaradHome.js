@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { ButtonLink } from '../../core/components/Button.jsx';
 import { Image } from '../../core/components/Image.jsx';
 import { TabDefault } from "../../core/components/Tab/Tab.jsx"
+import AnalyzedNews from '../components/AnalyzedNews.jsx';
 
 // Svg
 
@@ -19,6 +20,12 @@ import icon_news_analysis from "../../../../assets/icons/svg/icon-news-analysis.
 const DashbaradHome = () => {
     // hooks
     const { t } = useTranslation();
+
+    // states
+
+    const [statePage, setStatePage] = useState({
+        pageName: "analyzed_news",
+    });
 
     return (
         <>
@@ -80,12 +87,10 @@ const DashbaradHome = () => {
                 titles={["analyzed_news", "latest_news"]}
                 classNameTitle=""
                 idTitle=""
-                // statePage={statePage}
-                // setStatePage={setStatePage}
+                statePage={statePage}
+                setStatePage={setStatePage}
                 contents={[
-                    <div>
-                        1
-                    </div>,
+                    <AnalyzedNews />,
                     <div>
                         2
                     </div>,
