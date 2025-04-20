@@ -4,17 +4,14 @@ import React from 'react'
 
 import NewsBox from '../../core/components/NewsBox.jsx'
 
-const AnalyzedNews = () => {
+const LatestNews = () => {
     return (
         <>
             <div className='flex flex-col gap-7 mt-8 px-6 bg-Neutral-500 pb-[3rem]'>
-                <NewsBox className={""} ></NewsBox>
-                <NewsBox className={""} ></NewsBox>
-                <NewsBox className={""} ></NewsBox>
                 <NewsBox className={""} ></NewsBox>
             </div>
         </>
     )
 }
 
-export default AnalyzedNews
+export default LatestNews

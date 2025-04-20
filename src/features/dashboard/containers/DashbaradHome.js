@@ -8,6 +8,7 @@ import { ButtonLink } from '../../core/components/Button.jsx';
 import { Image } from '../../core/components/Image.jsx';
 import { TabDefault } from "../../core/components/Tab/Tab.jsx"
 import AnalyzedNews from '../components/AnalyzedNews.jsx';
+import LatestNews from '../components/LatestNews.jsx';
 
 // Svg
 
@@ -92,9 +93,7 @@ const DashbaradHome = () => {
                     setStatePage={setStatePage}
                     contents={[
                         <AnalyzedNews />,
-                        <div>
-                            2
-                        </div>,
+                        <LatestNews />,
                     ]}
                 />
             </div>
