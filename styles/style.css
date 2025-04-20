@@ -195,6 +195,22 @@
     }
   }
 
+  /* scrollbar */
+
+  .scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #4c4b58;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+    border-radius: 5px;
+    height: 28px !important;
+  }
+
   /* remove scrollbar */
   .no-scrollbar::-webkit-scrollbar {
     display: none;

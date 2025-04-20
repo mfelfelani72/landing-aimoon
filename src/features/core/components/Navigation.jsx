@@ -26,7 +26,6 @@ const Navigation = ({ ...props }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(props?.text)
     switch (props?.text) {
       case "dashboard":
         document.getElementById("dashboard_nav").src = dashboard_nav_dark;
