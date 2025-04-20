@@ -7,6 +7,7 @@ import { Outlet } from 'react-router-dom';
 import TopButton from '../core/components/TopButton.jsx'
 import { Image } from "../../features/core/components/Image.jsx"
 import MarqueeSymbols from '../symbol/containers/MarqueeSymbols.jsx';
+import Navigation from "../core/components/Navigation.jsx"
 
 // Svg
 
@@ -43,6 +44,8 @@ const DashboardLanding = () => {
 
           <Outlet />
 
+          {/* navigation */}
+          <Navigation text={"aimoonhub"} />
         </div>
       </div>
     </>
