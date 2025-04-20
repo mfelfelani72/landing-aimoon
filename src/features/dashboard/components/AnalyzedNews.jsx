@@ -7,7 +7,7 @@ import NewsBox from '../../core/components/NewsBox.jsx'
 const AnalyzedNews = () => {
     return (
         <>
-            <div className='mt-8 bg-Neutral-500 overflow-ellipsis'>
+            <div className='mt-8 px-6 bg-Neutral-500 overflow-ellipsis'>
                 <NewsBox className={""} ></NewsBox>
                 <NewsBox className={""} ></NewsBox>
                 <NewsBox className={""} ></NewsBox>

@@ -29,7 +29,7 @@ const DashbaradHome = () => {
 
     return (
         <>
-            <div className='flex flex-col h-full overflow-y-auto overflow-x-clip bg-Neutral-500'>
+            <div className='flex flex-col h-full bg-Neutral-500'>
                 {/* login & register */}
 
                 <div className='flex flex-row gap-2 mx-6 my-8'>
@@ -84,9 +84,9 @@ const DashbaradHome = () => {
 
                 <TabDefault
                     id={"tab-0"}
-                    className={"pt-4 px-6"}
+                    className={"pt-4"}
                     titles={["analyzed_news", "latest_news"]}
-                    classNameTitle=""
+                    classNameTitle="px-6"
                     idTitle=""
                     statePage={statePage}
                     setStatePage={setStatePage}

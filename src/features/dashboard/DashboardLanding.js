@@ -19,28 +19,33 @@ const DashboardLanding = () => {
 
 
   return (
-    <div className='w-full h-screen inline-flex justify-center'>
-      <div className='mobile w-96 bg-Neutral-500 text-white'>
-        {/* top header */}
-        <div className='flex flex-row justify-between p-6'>
-          <TopButton >
-            <Image src={icon_notification} alt={"icon_notification"} className={"w-6 h-6"} />
-          </TopButton>
+    <>
+      <div className="fixed inset-y-0 left-0  w-[calc(50%-12rem)] bg-white z-[100]"></div>
+      <div className="fixed inset-y-0 right-0 w-[calc(50%-12rem)] bg-white z-[100]"></div>
 
-          <h2 className="text-sm font-bold">{t("aimoonhub")}</h2>
+      <div className='w-full h-screen inline-flex justify-center relative z-[10]'>
+        <div className='mobile w-96 bg-Neutral-500 text-white'>
+          {/* top header */}
+          <div className='flex flex-row justify-between p-6'>
+            <TopButton >
+              <Image src={icon_notification} alt={"icon_notification"} className={"w-6 h-6"} />
+            </TopButton>
 
-          <TopButton >
-            <Image src={icon_notification} alt={"icon_notification"} className={"w-6 h-6"} />
-          </TopButton>
+            <h2 className="text-sm font-bold">{t("aimoonhub")}</h2>
+
+            <TopButton >
+              <Image src={icon_notification} alt={"icon_notification"} className={"w-6 h-6"} />
+            </TopButton>
+          </div>
+
+          {/* marquee */}
+          <MarqueeSymbols className={"mt-2"} />
+
+          <Outlet />
+
         </div>
-
-        {/* marquee */}
-        <MarqueeSymbols className={"mt-2"} />
-
-        <Outlet />
-
       </div>
-    </div>
+    </>
   )
 }
 
