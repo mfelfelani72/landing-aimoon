@@ -29,7 +29,7 @@ const Content = () => {
         
         {/* Dashboard */}
         <Route path="/dashboard" element={<LazyDashboardLanding />}>
-          <Route index path="/dashboard/home" element={<LazyDashboardHome />} />
+          <Route path="/dashboard/home" element={<LazyDashboardHome />} />
         </Route>
       </Routes>
     </>

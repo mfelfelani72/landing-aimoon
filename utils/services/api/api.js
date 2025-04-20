@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://79.175.177.113:15800/",
+  baseURL: process.env.SERVER_ROOT_ROUTE,
 
   headers: {
     "Accept-Version": 1,

@@ -9,12 +9,12 @@ import NewsBox from "../components/latestNews/NewsBox.jsx";
 // Functions
 
 import { cashImages } from "../../../../utils/lib/cashImages.js";
-import { getData } from "../../../../utils/services/api/getData";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
+import { getData } from "../../../../utils/services/api/getData";
 
 // Constants
 
-import { LATEST_NEWS } from "../utils/constants/latestNews/EndPoints.js";
+import { LATEST_NEWS } from "../../../app/utils/constant/EndPoints.js";
 
 // Svg
 
