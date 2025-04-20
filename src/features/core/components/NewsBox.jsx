@@ -7,6 +7,7 @@ import { ImageLazy } from './Image.jsx'
 // Functions
 
 import { cn } from '../../../../utils/lib/cn'
+import { dateHelper } from "../../../../utils/helpers/dateHelper.js"
 
 // Constants
 
@@ -14,7 +15,7 @@ import { DEFAULT_NEW_IMAGE } from "../../../app/utils/constant/Defaults.js"
 
 // Svg
 
-import customer from "../../../../assets/images/png/customer.png"
+
 
 const NewsBox = ({ className, children, ...props }) => {
     return (
@@ -51,18 +52,27 @@ const NewsBox = ({ className, children, ...props }) => {
                             <div>O</div>
                             <div>70%</div>
                         </div>
-                        <div className='flex flex-col gap-1'>
-                            <div className="text-base font-medium">256/320</div>
+                        <div className='flex flex-col gap-1 justify-center items-center'>
+                            <div className="text-base font-medium">
+                                {props.row?.author_info["last_week_count"].toLocaleString() +
+                                    " / " +
+                                    props.row?.author_info["AvgNewsPERweek"].toLocaleString()}
+                            </div>
                             <div className="w-16 h-1.5 relative rounded-3xl">
                                 <div className="w-16 h-1.5 left-0 top-0 absolute bg-gray-500 rounded-3xl" />
                                 <div className="w-10 h-1.5 left-0 top-0 absolute bg-white rounded-3xl" />
                             </div>
                         </div>
-                        <div className='flex flex-col gap-1'>
-                            <div className="text-base font-medium">256/320</div>
-                            <div className="w-16 h-1.5 relative rounded-3xl">
-                                <div className="w-16 h-1.5 left-0 top-0 absolute bg-gray-500 rounded-3xl" />
-                                <div className="w-10 h-1.5 left-0 top-0 absolute bg-white rounded-3xl" />
+                        <div className='flex flex-col gap-1 justify-center items-center'>
+                            <div className="text-base font-medium">
+                                {props.row?.provider_info["last_week_count"].toLocaleString() +
+                                    " / " +
+                                    props.row?.provider_info["AvgNewsPERweek"].toLocaleString()}
+                            </div>
+                            <div className="left-to-right w-16 h-1.5 bg-gray-500 rounded-3xl">
+                                <div style={{
+                                    width: "20px"
+                                }} className='h-1.5 bg-white rounded-3xl transition-all duration-1000'></div>
                             </div>
                         </div>
                     </div>
@@ -74,10 +84,12 @@ const NewsBox = ({ className, children, ...props }) => {
                         {props?.row?.title}
                     </div>
 
-                    <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight mt-2">19:40:45</div>
+                    <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight my-2 left-to-right font-satoshi">
+                        {dateHelper(props?.row?.pubDate, "difference")}
+                    </div>
 
                     <div className="w-full max-h-36 text-sm text-Neutral-100 font-normal leading-relaxed tracking-tight scrollbar overflow-auto py-2 pl-4">
-                      {props?.row?.summaryEn}
+                        {props?.row?.summaryEn}
                     </div>
                 </div>
             </div>
