@@ -3,17 +3,17 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { ImageLazy } from "../core/components/Image.jsx";
+import { ImageLazy } from "../../core/components/Image.jsx";
 
 // Svg
 
-import vector from "../../../assets/images/vector/vector-footer.svg";
-import location from "../../../assets/icons/svg/location.svg";
-import call from "../../../assets/icons/svg/call.svg";
-import telegram from "../../../assets/icons/svg/telegram.svg";
-import instagram from "../../../assets/icons/svg/instagram.svg";
-import medium from "../../../assets/icons/svg/medium.svg";
-import logo from "../../../assets/icons/png/logo-dark.png";
+import vector from "../../../../assets/images/vector/vector-footer.svg";
+import location from "../../../../assets/icons/svg/location.svg";
+import call from "../../../../assets/icons/svg/call.svg";
+import telegram from "../../../../assets/icons/svg/telegram.svg";
+import instagram from "../../../../assets/icons/svg/instagram.svg";
+import medium from "../../../../assets/icons/svg/medium.svg";
+import logo from "../../../../assets/icons/png/logo-dark.png";
 
 const Footer = () => {
   // hooks

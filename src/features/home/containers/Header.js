@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { ImageLazy } from "../core/components/Image.jsx";
-import { ButtonLink } from "../core/components/Button.jsx";
+import { ImageLazy } from "../../core/components/Image.jsx";
+import { ButtonLink } from "../../core/components/Button.jsx";
 
 // png
 
-import logo from "../../../assets/icons/png/logo.png";
+import logo from "../../../../assets/icons/png/logo.png";
 
 const Header = () => {
   // hooks

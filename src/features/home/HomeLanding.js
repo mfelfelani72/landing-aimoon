@@ -2,7 +2,7 @@ import React, { lazy } from 'react';
 
 // Components
 
-const LazyHeader = lazy(() => import('../header/Header'));
+const LazyHeader = lazy(() => import('./containers/Header'));
 const LazyWelcome = lazy(() => import("./containers/Welcome"));
 const LazyWhyAimoonhub = lazy(() => import("./containers/WhyAimoonhub"));
 const LazyHowToWork = lazy(() => import("./containers/HowToWork"));
@@ -12,7 +12,7 @@ const LazyPlans = lazy(() => import("./containers/Plans"));
 const LazyLatestNews = lazy(() => import("./containers/LatestNews"));
 const LazyContactUs = lazy(() => import("./containers/ContactUs"));
 const LazyFAQ = lazy(() => import("./containers/FAQ"));
-const LazyFooter = lazy(() => import('../footer/Footer'));
+const LazyFooter = lazy(() => import('./containers/Footer'));
 
 const Home = () => {
   return (
