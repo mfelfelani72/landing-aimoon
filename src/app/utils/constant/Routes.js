@@ -9,7 +9,8 @@ export const ALL_ROUTES = [
   "/landing",
   // Dashbnoard
   "/dashboard/home",
-  "/dashboard/symbol"
+  "/dashboard/coin-list",
+  "/dashboard/coin"
 
 ];
 

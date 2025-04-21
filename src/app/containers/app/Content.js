@@ -15,9 +15,10 @@ const LazyHomeLanding = lazy(() => import("../../../features/home/HomeLanding.js
 const LazyDashboardLanding = lazy(() => import("../../../features/dashboard/DashboardLanding.js"));
 const LazyDashboardHome = lazy(() => import("../../../features/dashboard/containers/DashbaradHome.js"));
 
-// Symbol
+// Coin
 
-const LazySymbolLanding = lazy(() => import("../../../features/symbol/SymbolLanding.js"));
+const LazyCoinLanding = lazy(() => import("../../../features/coin/CoinLanding.js"));
+const LazyCoinDashboard = lazy(() => import("../../../features/coin/containers/CoinDashboard.jsx"));
 
 
 const Content = () => {
@@ -35,7 +36,8 @@ const Content = () => {
         {/* Dashboard */}
         <Route path="/dashboard" element={<LazyDashboardLanding />}>
           <Route path="/dashboard/home" element={<LazyDashboardHome />} />
-          <Route path="/dashboard/symbol" element={<LazySymbolLanding />} />
+          <Route path="/dashboard/coin-list" element={<LazyCoinLanding />} />
+          <Route path="/dashboard/coin" element={<LazyCoinDashboard />} />
         </Route>
       </Routes>
     </>

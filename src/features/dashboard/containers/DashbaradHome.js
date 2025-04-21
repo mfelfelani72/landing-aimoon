@@ -47,7 +47,7 @@ const DashbaradHome = () => {
                 <div className="px-6 pt-4 text-right justify-start text-Neutral-300 text-xs font-normal leading-tight">{t("swipe_right")}</div>
 
                 <div className='flex flex-row px-6 py-2 gap-5'>
-                    <Link className='flex flex-col gap-2 justify-center items-center'>
+                    <Link to={"/dashboard/coin-list"} className='flex flex-col gap-2 justify-center items-center'>
                         <div className='w-14 h-14 bg-[#11101A] inline-flex justify-center items-center rounded-full'>
                             <Image src={icon_coin_dashboard} alt="icon_coin_dashboard" className={"w-6 h-6"} />
                         </div>

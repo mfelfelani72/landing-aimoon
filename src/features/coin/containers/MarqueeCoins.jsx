@@ -21,7 +21,7 @@ import { SYMBOLS_NAMES } from "../utils/constants/EndPoints.js";
 import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 
-const MarqueeSymbols = ({ className, ...props }) => {
+const MarqueeCoins = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
 
@@ -355,4 +355,4 @@ const MarqueeSymbols = ({ className, ...props }) => {
   );
 };
 
-export default MarqueeSymbols;
+export default MarqueeCoins;

@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 
 import TopButton from '../core/components/TopButton.jsx'
 import { Image } from "../../features/core/components/Image.jsx"
-import MarqueeSymbols from '../symbol/containers/MarqueeSymbols.jsx';
+import MarqueeCoins from '../coin/containers/MarqueeCoins.jsx';
 import Navigation from "../core/components/Navigation.jsx"
 
 // Svg
@@ -40,7 +40,7 @@ const DashboardLanding = () => {
           </div>
 
           {/* marquee */}
-          <MarqueeSymbols className={"mt-2"} />
+          <MarqueeCoins className={"mt-2"} />
 
           <Outlet />
 

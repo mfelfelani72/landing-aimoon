@@ -132,6 +132,11 @@ const en = {
 
   analyzed_news: "Analyzed news",
 
+  // dashboard-symbol
+
+  coin_list_title: "Select your desired coin to enter the dashboard",
+  search_coin: "Search in coins",
+
   // settings
   persion: "Persion",
   english: "English",

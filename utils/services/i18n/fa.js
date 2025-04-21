@@ -126,6 +126,11 @@ const fa = {
 
   analyzed_news: "خبرهای تحلیل شده",
 
+  // dashboard-symbol
+
+  coin_list_title: "برای ورود به داشبورد کوین مورد نظر خود را انتخاب کنید",
+  search_coin: "جستجو در کوین‌ها",
+
   // settings
   persion: "فارسی",
   english: "انگلیسی",
