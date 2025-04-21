@@ -7,7 +7,7 @@ import TabInfoAnalysisNews from "../components/TabInfoAnalysisNews.jsx"
 const CoinDashboard = () => {
     return (
         <>
-            <div className='bg-background px-6 pb-[7rem]'>
+            <div className='bg-background pb-[7rem]'>
                 <TabInfoAnalysisNews />
             </div>
         </>
