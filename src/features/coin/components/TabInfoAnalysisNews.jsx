@@ -73,14 +73,35 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
           </label>
         </div>
 
-        <div className="tab1-content p-6 mt-6 w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
-          تب 1
+        <div className="tab1-content mt-6 w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
+          <div className="flex flex-col border rounded-2xl border-Neutral-300 px-6 pt-5 pb-7">
+            {/* header */}
+            <div className="flex flex-row gap-2">
+              <div className="w-12 h-12 bg-lime-500 rounded-full"></div>
+              <div className="flex flex-col">
+                <div className="text-white text-xl font-bold">Tether USDT</div>
+                <div className="text-Neutral-300 text-sm font-extrabold leading-relaxed tracking-wide">41,623,892,937</div>
+              </div>
+            </div>
+
+            {/* description */}
+            <div className="text-white text-base font-bold mt-2 leading-9">توضیحات</div>
+            <div className="text-Neutral-300 text-xs font-extrabold leading-none">www.ethereum.org</div>
+            <div className="w-72 text-white text-sm font-normal leading-tight mt-2 max-h-[6.5rem] overflow-auto scrollbar rtl:pl-3 ltr:pr-3">
+              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
+              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
+              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
+              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
+              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
+              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
+            </div>
+          </div>
         </div>
 
-        <div className="tab2-content p-6 mt-6 absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
+        <div className="tab2-content mt-6 absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
           تب 2
         </div>
-        <div className="tab3-content p-6 mt-6 absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
+        <div className="tab3-content mt-6 absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
           تب 3
         </div>
       </div>

@@ -132,10 +132,12 @@ const en = {
 
   analyzed_news: "Analyzed news",
 
-  // dashboard-symbol
+  // dashboard-coin
 
   coin_list_title: "Select your desired coin to enter the dashboard",
   search_coin: "Search in coins",
+
+  all_information: "All information",
 
   // settings
   persion: "Persion",
