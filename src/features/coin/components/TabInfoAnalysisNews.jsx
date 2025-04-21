@@ -9,14 +9,13 @@ import Accordion from "../../core/components/Accordion.jsx";
 
 import { cn } from "../../../../utils/lib/cn";
 
+// Svg
+
+import chart from "../../../../assets/icons/svg/chart-nav.svg";
+
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
-
-
-  // states
-
-
 
   // functions
 
@@ -91,8 +90,24 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             </div>
           </div>
 
-          <div className="mt-4">
-            <Accordion open={true} />
+          <div className="flex flex-col gap-4 mt-4">
+            <Accordion id="info" open={true} title={"نمودار ابر کلمات جفت ارز ETH- USDT"} icon={chart} >
+              children
+              children
+              children
+              children
+              children
+              children
+              children
+              children
+              children
+              children
+              children
+              children
+              children
+              children
+            </Accordion>
+
           </div>
         </div>
 
