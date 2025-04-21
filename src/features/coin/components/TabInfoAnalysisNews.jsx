@@ -21,7 +21,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
 
   return (
     <div className={cn("relative", className)}>
-      <div className="w-full h-12 px-1.5 bg-background-light rounded-2xl justify-between items-center gap-1.5 inline-flex">
+      <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl justify-between items-center gap-1.5 inline-flex mx-4">
         <input
           type="radio"
           id="tab1"
@@ -44,7 +44,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         <div className="basis-1/3 peer-checked/tab1:bg-Neutral-500 peer-checked/tab1:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab1:!text-white font-medium text-[0.9rem] leading-5">
           <label
             htmlFor="tab1"
-            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.2rem] xs:py-2 select-none"
+            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.15rem] xs:py-2 select-none"
           >
             {t("all_information")}
           </label>
@@ -52,7 +52,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         <div className="basis-1/3 peer-checked/tab2:bg-Neutral-500 peer-checked/tab2:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab2:!text-white font-medium text-[0.85rem] leading-5">
           <label
             htmlFor="tab2"
-            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.2rem] xs:py-2 select-none"
+            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.15rem] xs:py-2 select-none"
           >
             {t("news_analysis")}
           </label>
@@ -60,13 +60,13 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-white font-medium text-[0.85rem] leading-5">
           <label
             htmlFor="tab3"
-            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.2rem] xs:py-2 select-none"
+            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.15rem] xs:py-2 select-none"
           >
             {t("latest_news")}
           </label>
         </div>
 
-        <div className="tab1-content bg-background px-6 pb-[7rem] mt-6 w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
+        <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab2:block">
           <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
             {/* header */}
             <div className="flex flex-row gap-2">
@@ -99,22 +99,28 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               children
               children
               children
-              children
-              children
-              children
-              children
-              children
-              children
-              children
             </Accordion>
 
           </div>
         </div>
+        <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab1:block">
+          <div className="relative">
+            <div className="relative z-30">
+              <div className="flex flex-col gap-4 mt-4 px-4">
+                <Accordion id="analysis" open={true} title={"Aimoon Analysis"} icon={chart} className={"bg-background border border-Neutral-400"} circleLocation={"top-4 -left-20"} >
+                  <div className="flex flex-col">
+                    <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight">19:40:45</div>
+                    <div className="w-72 text-white text-sm font-normal leading-tight">Based on recent news and Ethereum’s price trend, the market appears to be forming a bullish triangle pattern. This suggests that Ethereum's price is consolidating and preparing for an upward breakout. Considering trading volume and transaction flows, the current market sentiment leans optimistic, signaling potential growth in the short term.</div>
+                  </div>
+                </Accordion>
+              </div>
+            </div>
+            <div className={"absolute top-14 left-6 transition-all duration-700 ease-in-out w-30 h-30 opacity-50 bg-violet-300/30 rounded-full blur-2xl z-30"} />
+            <div className="absolute top-0 bg-background left-0 w-[1rem] h-full z-40"></div>
+          </div>
 
-        <div className="tab2-content mt-6 absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
-          تب 2
         </div>
-        <div className="tab3-content mt-6 absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
+        <div className="tab3-content bg-background px-4 mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab3:block">
           تب 3
         </div>
       </div>

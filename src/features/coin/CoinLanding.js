@@ -11,7 +11,7 @@ const CoinLanding = () => {
     const { t } = useTranslation();
     return (
         <>
-            <div className='flex flex-col'>
+            <div className='flex flex-col mt-6'>
                 <div className="px-4 text-white text-base font-medium">
                     {t("coin_list_title")}
                 </div>
