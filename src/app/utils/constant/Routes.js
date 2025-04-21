@@ -8,7 +8,8 @@ export const ALL_ROUTES = [
   "/",
   "/landing",
   // Dashbnoard
-  "/dashboard/home"
+  "/dashboard/home",
+  "/dashboard/symbol"
 
 ];
 
