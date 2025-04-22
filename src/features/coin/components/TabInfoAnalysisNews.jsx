@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 // Components
 
 import Accordion from "../../core/components/Accordion.jsx";
+import InfoBox from "../../core/components/InfoBox.jsx";
 
 // Functions
 
@@ -12,6 +13,7 @@ import { cn } from "../../../../utils/lib/cn";
 // Svg
 
 import chart from "../../../../assets/icons/svg/chart-nav.svg";
+import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
@@ -104,19 +106,22 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
           </div>
         </div>
         <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab1:block">
-          <div className="relative">
-            <div className="relative z-30">
-              <div className="flex flex-col gap-4 mt-4 px-4">
-                <Accordion id="analysis" open={true} title={"Aimoon Analysis"} icon={chart} className={"bg-background border border-Neutral-400"} circleLocation={"top-4 -left-20"} >
-                  <div className="flex flex-col">
-                    <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight">19:40:45</div>
-                    <div className="w-72 text-white text-sm font-normal leading-tight">Based on recent news and Ethereum’s price trend, the market appears to be forming a bullish triangle pattern. This suggests that Ethereum's price is consolidating and preparing for an upward breakout. Considering trading volume and transaction flows, the current market sentiment leans optimistic, signaling potential growth in the short term.</div>
-                  </div>
-                </Accordion>
+
+          <div className="flex flex-col gap-4 mt-4 px-4">
+            <Accordion id="analysis" open={true} title={"Aimoon Analysis"} icon={chart} className={"bg-background border border-Neutral-400"} circleLocation={"top-4 left-2"} >
+              <div className="flex flex-col">
+                <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight">19:40:45</div>
+                <div className="w-72 text-white text-sm font-normal leading-tight">Based on recent news and Ethereum’s price trend, the market appears to be forming a bullish triangle pattern. This suggests that Ethereum's price is consolidating and preparing for an upward breakout. Considering trading volume and transaction flows, the current market sentiment leans optimistic, signaling potential growth in the short term.</div>
               </div>
-            </div>
-            <div className={"absolute top-14 left-6 transition-all duration-700 ease-in-out w-30 h-30 opacity-50 bg-violet-300/30 rounded-full blur-2xl z-30"} />
-            <div className="absolute top-0 bg-background left-0 w-[1rem] h-full z-40"></div>
+            </Accordion>
+            <Accordion id="analysis" open={true} title={"اخبار ETH_USDT براساس آمار"} className={"bg-background border border-Neutral-400/20"} >
+              <div className="grid grid-cols-2 gap-2.5">
+                <InfoBox icon={calender} icon_title="All" number={1756} title={"junhn ;g hofhv"} />
+                <InfoBox icon={calender} icon_title="1" number={1756} title={"junhn ;g hofhv"} />
+                <InfoBox icon={calender} icon_title="7" number={1756} title={"junhn ;g hofhv"} />
+                <InfoBox icon={calender} icon_title="30" number={1756} title={"junhn ;g hofhv"} />
+              </div>
+            </Accordion>
           </div>
 
         </div>

@@ -22,13 +22,14 @@ const Accordion = ({ className, circleLocation, children, ...props }) => {
     };
     return (
         <>
-            <div className='relative'>
-                <div onClick={toggleOpen} className={cn("flex flex-row w-full py-4 items-center items px-4 justify-between cursor-pointer bg-background-light rounded-2xl", className)}>
+            <div onClick={toggleOpen} className='relative cursor-pointer'>
+                <div className={cn("flex flex-row w-full py-4 items-center items px-4 justify-between bg-background-light rounded-2xl", className)}>
 
                     <div className="flex flex-col w-full">
                         <div className='flex flex-row justify-between items-center'>
+
                             <div className='flex flex-row gap-2'>
-                                <Image src={props?.icon} alt={props?.id + "-icon"} className={"w-6 h-6"} />
+                                {props?.icon && <Image src={props?.icon} alt={props?.id + "-icon"} className={"w-6 h-6"} />}
                                 <div className="text-white text-base font-medium">{props?.title} </div>
                             </div>
                             <Image src={arrow} alt="arrow" className={`w-4 h-4 rotate-[90deg] transition-all duration-300 ${isOpen ? "rotate-0" : "rotate-[90deg]"}`} />
@@ -41,7 +42,7 @@ const Accordion = ({ className, circleLocation, children, ...props }) => {
                         </div>
                     </div>
                 </div>
-                {/* {(circleLocation && isOpen) && <div className='w-full'><div className={cn("absolute transition-all duration-700 ease-in-out w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl", circleLocation)} /></div>} */}
+                {(circleLocation && isOpen) && <div className='w-full'><div className={cn("absolute transition-all duration-700 ease-in-out w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl", circleLocation)} /></div>}
 
             </div>
 
