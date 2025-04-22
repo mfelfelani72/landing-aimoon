@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import Accordion from "../../core/components/Accordion.jsx";
 import InfoBox from "../../core/components/InfoBox.jsx";
+import { Image } from "../../core/components/Image.jsx";
 
 // Functions
 
@@ -14,6 +15,9 @@ import { cn } from "../../../../utils/lib/cn";
 
 import chart from "../../../../assets/icons/svg/chart-nav.svg";
 import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
+import clock from "../../../../assets/icons/svg/icon-color-clock.svg"
+import star from "../../../../assets/icons/svg/icon-color-star.svg"
+import chart_chart from "../../../../assets/icons/svg/icon-color-chart.svg"
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
@@ -69,7 +73,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         </div>
 
         <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
-          {false && <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
+          <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
             {/* header */}
             <div className="flex flex-row gap-2">
               <div className="w-12 h-12 bg-lime-500 rounded-full"></div>
@@ -91,10 +95,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
             </div>
           </div>
-          }
+
 
           <div className="flex flex-col gap-4 mt-4">
-            {/* <Accordion id="info" open={false} title={"نمودار ابر کلمات جفت ارز ETH- USDT"} icon={chart} >
+            <Accordion id="info" open={false} title={"نمودار ابر کلمات جفت ارز ETH- USDT"} icon={chart} >
               children
               children
               children
@@ -102,7 +106,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               children
               children
               children
-            </Accordion> */}
+            </Accordion>
+
+
+          </div>
+        </div>
+        <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
+
+          <div className="flex flex-col gap-4 mt-4 px-4">
 
             <div className="relative">
               <div className="flex flex-col w-full bg-background-light p-[2px] rounded-2xl">
@@ -112,7 +123,31 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                     <span class="text-primary-400 text-xl font-bold">Tether</span>
                     <span class="text-white text-xl font-bold"> </span>
                     <span class="text-primary-400 text-xl font-medium ">USDT</span>
-                    <span class="text-white text-base font-bold "> </span></div>
+                    <span class="text-white text-base font-bold "> </span>
+                  </div>
+                  <div className="flex flex-row px-9 h-full items-center justify-between">
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="w-11 h-11 bg-background-light rounded-full inline-flex items-center justify-center">
+                        <Image src={chart_chart} alt={"chart_chart"} className={"w-6 h-6"} />
+                      </div>
+                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">الگوی چارت</div>
+                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1">صعودی مثلثی</div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="w-11 h-11 bg-background-light rounded-full inline-flex items-center justify-center">
+                        <Image src={star} alt={"star"} className={"w-6 h-6"} />
+                      </div>
+                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">الگوی چارت</div>
+                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1">صعودی مثلثی</div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="w-11 h-11 bg-background rounded-full inline-flex items-center justify-center z-20">
+                        <Image src={clock} alt={"clock"} className={"w-6 h-6"} />
+                      </div>
+                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">الگوی چارت</div>
+                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1">صعودی مثلثی</div>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex flex-col p-5 gap-2">
                   <div className="text-white text-base font-medium leading-snug">بیت‌کوین در آستانه سقوط یا جهش؟</div>
@@ -126,14 +161,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-0 -left-[0.5rem] w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
+              <div className="absolute z-10 top-0 -left-[0.5rem] w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
             </div>
-
-          </div>
-        </div>
-        <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
-
-          <div className="flex flex-col gap-4 mt-4 px-4">
             <Accordion id="analysis" open={true} title={"Aimoon Analysis"} icon={chart} className={"bg-background border border-Neutral-400"} circleLocation={"top-4 left-2"} >
               <div className="flex flex-col">
                 <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight">19:40:45</div>
