@@ -108,18 +108,60 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab1:block">
 
           <div className="flex flex-col gap-4 mt-4 px-4">
-            <Accordion id="analysis" open={true} title={"Aimoon Analysis"} icon={chart} className={"bg-background border border-Neutral-400"} circleLocation={"top-4 left-2"} >
+            {/* <Accordion id="analysis" open={false} title={"Aimoon Analysis"} icon={chart} className={"bg-background border border-Neutral-400"} circleLocation={"top-4 left-2"} >
               <div className="flex flex-col">
                 <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight">19:40:45</div>
                 <div className="w-72 text-white text-sm font-normal leading-tight">Based on recent news and Ethereum’s price trend, the market appears to be forming a bullish triangle pattern. This suggests that Ethereum's price is consolidating and preparing for an upward breakout. Considering trading volume and transaction flows, the current market sentiment leans optimistic, signaling potential growth in the short term.</div>
               </div>
-            </Accordion>
-            <Accordion id="analysis" open={true} title={"اخبار ETH_USDT براساس آمار"} className={"bg-background border border-Neutral-400/20"} >
+            </Accordion> */}
+            {/* <Accordion id="analysis" open={true} title={"اخبار ETH_USDT براساس آمار"} className={"bg-background border border-Neutral-400/20"} >
               <div className="grid grid-cols-2 gap-2.5">
                 <InfoBox icon={calender} icon_title="All" number={1756} title={"junhn ;g hofhv"} />
                 <InfoBox icon={calender} icon_title="1" number={1756} title={"junhn ;g hofhv"} />
                 <InfoBox icon={calender} icon_title="7" number={1756} title={"junhn ;g hofhv"} />
                 <InfoBox icon={calender} icon_title="30" number={1756} title={"junhn ;g hofhv"} />
+              </div>
+            </Accordion> */}
+            <Accordion id="analysis" open={true} icon={chart} title={"میزان تغییرات"} className={"bg-background border border-Neutral-400/20"} >
+              <div className="grid grid-cols-2 gap-2.5">
+                <div className="flex flex-col pl-4">
+                  <div className="text-Neutral-100 text-sm font-normal leading-9">تغییرات احساسات</div>
+                  <div className="flex flex-row w-full items-center justify-between">
+                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                  </div>
+                  <div className="flex flex-row w-full items-center justify-between">
+                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                  </div>
+                  <div className="flex flex-row w-full items-center justify-between">
+                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                  </div>
+                  <div className="flex flex-row w-full items-center justify-between">
+                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                  </div>
+                </div>
+                <div className="flex flex-col pr-4">
+                  <div className="text-Neutral-100 text-sm font-normal leading-9">تغییرات احساسات</div>
+                  <div className="flex flex-row w-full items-center justify-between">
+                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                  </div>
+                  <div className="flex flex-row w-full items-center justify-between">
+                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                  </div>
+                  <div className="flex flex-row w-full items-center justify-between">
+                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                  </div>
+                  <div className="flex flex-row w-full items-center justify-between">
+                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                  </div>
+                </div>
               </div>
             </Accordion>
           </div>
