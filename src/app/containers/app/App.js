@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <>
-      <Suspense fallback={<LoaderPage />}>
+      <Suspense fallback={<LoaderPage className={"h-screen"} />}>
         <Landing />
       </Suspense>
     </>

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import Slider from "../../core/components/Slider.jsx";
 import NewsBox from "../components/latestNews/NewsBox.jsx";
+import LoaderPage from "../../../app/components/LoaderPage.jsx"
 
 // Functions
 
@@ -124,46 +125,51 @@ const LatestNews = () => {
     setNewsData([]);
   }, [languageApp]);
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
-      <div className="width-theme px-default flex flex-col items-center justify-center my-28">
-        <div className="text-center text-Neutral-500 text-3xl font-bold mb-10">
-          {t("latest_news")}
-        </div>
+    <>
+      <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
+        <div className="width-theme px-default flex flex-col items-center justify-center my-28">
+          <div className="text-center text-Neutral-500 text-3xl font-bold mb-10">
+            {t("latest_news")}
+          </div>
+          {newsData.length == 0 ? <LoaderPage className={"h-full pt-[8rem]"} /> : <>
 
-        <Slider
-          id={"latest-news-slider"}
-          delay={delay}
-          visible_count={visibleCount}
-          default_auto_paly={defaultAutoPlay}
-          auto_play={defaultAutoPlay}
-          set_auto_play={setAutoPlay}
-          set_mouse_enter={setMouseEnter}
-          set_mouse_leave={setMouseLeave}
-          set_button={setButton}
-          className="w-[85rem] h-[45rem]"
-          set_current={(index) => setCurrent(index)}
-        >
-
-          {newsData?.map((item, idx) => (
-            <div
-              key={idx}
-              className={
-                idx === current
-                  ? "mt-12 transition-all duration-500"
-                  : "mt-0 transition-all duration-500"
-              }
+            <Slider
+              id={"latest-news-slider"}
+              delay={delay}
+              visible_count={visibleCount}
+              default_auto_paly={defaultAutoPlay}
+              auto_play={defaultAutoPlay}
+              set_auto_play={setAutoPlay}
+              set_mouse_enter={setMouseEnter}
+              set_mouse_leave={setMouseLeave}
+              set_button={setButton}
+              className="w-[85rem] h-[45rem]"
+              set_current={(index) => setCurrent(index)}
             >
-              <NewsBox id={"latest-news-NewsBos-" + idx} data={item} count_text_body={20} cashed_images={cashedImages} />
-            </div>
-          ))
-          }
-        </Slider>
 
-        <div className="mt-6 text-center text-primary-400 text-base font-bold leading-7">
-          {t("all_news")}
+              {newsData?.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={
+                    idx === current
+                      ? "mt-12 transition-all duration-500"
+                      : "mt-0 transition-all duration-500"
+                  }
+                >
+                  <NewsBox id={"latest-news-NewsBos-" + idx} data={item} count_text_body={20} cashed_images={cashedImages} />
+                </div>
+              ))
+              }
+            </Slider>
+
+            <div className="mt-6 text-center text-primary-400 text-base font-bold leading-7">
+              {t("all_news")}
+            </div>
+          </>
+          }
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

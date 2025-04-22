@@ -41,7 +41,7 @@ const Home = () => {
         <LazyFAQ />
         {/* Contact us */}
         <LazyContactUs />
-        {/* Header */}
+        {/* Footer */}
         <LazyFooter />
       </div>
     </>

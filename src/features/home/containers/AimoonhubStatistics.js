@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from "react-i18next";
 
 // Components
 
 import { Image } from '../../core/components/Image.jsx';
+import LoaderPage from "../../../app/components/LoaderPage.jsx"
+
+// Constants
+
+import { DB_STATICS } from "../../../app/utils/constant/EndPoints.js"
+
+// Functions
+
+import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.js';
+import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js"
 
 // Svg and Png
 
@@ -24,6 +34,34 @@ import news_agency_5 from "../../../../assets/images/png/image-168.png"
 const AimoonhubStatistics = () => {
     // hooks
     const { t } = useTranslation();
+
+    // states
+
+    const [dbStatics, setDbStatics] = useState([]);
+
+    // functions
+
+    const getDbStatics = () => {
+        const parameter = {
+        };
+        const header = {
+            headers: {
+                authorization: "48e07eef-d474-47a5-8da4-3e946331369a"
+            }
+        }
+        ConnectToServer("post", DB_STATICS, parameter, header, "aimoonhub-statics").then((response) => {
+            if (response?.data?.return) {
+                // console.log(response?.data?.data)
+                setDbStatics(response?.data?.data);
+            }
+        });
+    }
+
+    useEffect(() => {
+        if (dbStatics.length == 0) {
+            getDbStatics();
+        }
+    }, [dbStatics])
     return (
         <>
             <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden pb-40 pointer-events-none">
@@ -42,14 +80,14 @@ const AimoonhubStatistics = () => {
 
                         {/* content */}
 
-                        <div className='flex flex-col px-[9.5rem]'>
+                        {dbStatics?.length == 0 ? <LoaderPage className={"h-full bg-[#161521] pt-[13rem]"} /> : <div className='flex flex-col px-[9.5rem]'>
                             <div className='flex flex-row w-full h-[20rem] border-b-1 border-Neutral-300'>
                                 <div className='basis-1/3 flex flex-col items-center py-2 gap-8'>
                                     <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
                                         <Image src={acticity} alt="acticity" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_agencies")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+100</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.totalNewsGroups)}</div>
                                     <div className="relative w-44 h-12 bg-[#28263A] rounded-[20px]" >
                                         <Image src={news_agency_1} alt="news_agency_1" className={"w-9 h-9 absolute top-1.5 right-2 rounded-full"} />
                                         <Image src={news_agency_2} alt="news_agency_2" className={"w-9 h-9 absolute top-1.5 right-10 rounded-full"} />
@@ -63,14 +101,14 @@ const AimoonhubStatistics = () => {
                                         <Image src={chart} alt="chart" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_analyses")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+10,000</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.totalAnalyzed)}</div>
                                 </div>
                                 <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center py-2 gap-8'>
                                     <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
                                         <Image src={headphones} alt="headphones" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_reporters")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+300</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.totalNewsAuthors)}</div>
                                     <div className="relative w-44 h-12 bg-[#28263A] rounded-[20px] " >
                                         <Image src={news_agency_1} alt="news_agency_1" className={"w-9 h-9 absolute top-1.5 right-2 rounded-full"} />
                                         <Image src={news_agency_2} alt="news_agency_2" className={"w-9 h-9 absolute top-1.5 right-10 rounded-full"} />
@@ -86,7 +124,7 @@ const AimoonhubStatistics = () => {
                                         <Image src={graph} alt="graph" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_aimoonhub_users")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+1,000</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.TotalUsersCount)}</div>
                                 </div>
                                 <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center justify-center gap-8'>
                                     <Image src={baseChart} alt="baseChart" className={"w-80 h-44"} />
@@ -97,10 +135,11 @@ const AimoonhubStatistics = () => {
                                         <Image src={folder} alt="folder" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_news")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+55,000</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.totalNews)}</div>
                                 </div>
                             </div>
-                        </div>
+                        </div>}
+
 
                     </div>
                 </div>

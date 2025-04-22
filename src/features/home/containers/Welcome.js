@@ -44,7 +44,7 @@ const Welcome = () => {
 
                     <div className='flex flex-row mt-12 gap-2 pointer-events-auto'>
                         <ButtonLink className={"w-44 h-14"}>{t("free_test")}</ButtonLink>
-                        <ButtonLink to={"/dashboard/home"} className={"w-44 h-14 bg-white border border-primary-400 text-primary-400 text-base font-bold hover:bg-white"}>{t("login_dashboard")}</ButtonLink>
+                        <ButtonLink to={"/dashboard/home"} className={"w-52 h-14 bg-white border border-primary-400 text-primary-400 text-base font-bold hover:bg-white focus:bg-primary-50"}>{t("login_dashboard")}</ButtonLink>
                     </div>
 
                     <div className=''>
