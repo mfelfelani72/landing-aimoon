@@ -18,6 +18,8 @@ import { DEFAULT_NEW_IMAGE } from "../../../app/utils/constant/Defaults.js"
 
 
 const NewsBox = ({ className, children, ...props }) => {
+
+    console.log(props?.row)
     return (
         <>
             <div className={cn("w-full h-full flex flex-col", className)}>
@@ -81,7 +83,7 @@ const NewsBox = ({ className, children, ...props }) => {
                 {/* title */}
                 <div className='flex flex-col bg-[#28263a] rounded-b-[1.25rem] p-4'>
                     <div className="text-Neutral-100 text-base font-medium leading-snug">
-                        {props?.row?.title}
+                        {props?.row?.title_foreign ? props?.row?.title_foreign : props?.row?.title}
                     </div>
 
                     <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight my-2 left-to-right font-satoshi">
@@ -89,7 +91,8 @@ const NewsBox = ({ className, children, ...props }) => {
                     </div>
 
                     <div className="w-full max-h-36 text-sm text-Neutral-100 font-normal leading-relaxed tracking-tight scrollbar overflow-auto py-2 pl-4">
-                        {props?.row?.summaryEn}
+                        {props?.row?.summary_foreign ? props?.row?.summary_foreign : props?.row?.summaryEn}
+
                     </div>
                 </div>
             </div>

@@ -69,7 +69,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         </div>
 
         <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
-          <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
+          {false && <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
             {/* header */}
             <div className="flex flex-row gap-2">
               <div className="w-12 h-12 bg-lime-500 rounded-full"></div>
@@ -91,9 +91,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
             </div>
           </div>
+          }
 
           <div className="flex flex-col gap-4 mt-4">
-            <Accordion id="info" open={true} title={"نمودار ابر کلمات جفت ارز ETH- USDT"} icon={chart} >
+            {/* <Accordion id="info" open={false} title={"نمودار ابر کلمات جفت ارز ETH- USDT"} icon={chart} >
               children
               children
               children
@@ -101,7 +102,32 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               children
               children
               children
-            </Accordion>
+            </Accordion> */}
+
+            <div className="relative">
+              <div className="flex flex-col w-full bg-background-light p-[2px] rounded-2xl">
+                <div className="flex flex-col h-44 bg-background rounded-2xl">
+                  <div className="border-b-2 border-b-background-light pt-4 px-5 pb-2">
+                    <span class="text-white text-base font-bold ">خلاصه خبرهای</span>
+                    <span class="text-primary-400 text-xl font-bold">Tether</span>
+                    <span class="text-white text-xl font-bold"> </span>
+                    <span class="text-primary-400 text-xl font-medium ">USDT</span>
+                    <span class="text-white text-base font-bold "> </span></div>
+                </div>
+                <div className="flex flex-col p-5 gap-2">
+                  <div className="text-white text-base font-medium leading-snug">بیت‌کوین در آستانه سقوط یا جهش؟</div>
+                  <div className="text-Neutral-300 text-sm font-light leading-tight tracking-tight">19:40:45</div>
+                  <div className="text-white text-sm font-normal leading-tight mt-2 max-h-[6.5rem] overflow-auto scrollbar rtl:pl-3 ltr:pr-3">
+                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
+                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
+                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
+                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
+                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
+                  </div>
+                </div>
+              </div>
+              <div className="absolute top-0 -left-[0.5rem] w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
+            </div>
 
           </div>
         </div>

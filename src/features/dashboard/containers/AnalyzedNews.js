@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 // Components
 
 import NewsBox from '../../core/components/NewsBox.jsx'
+import LoaderPage from "../../../app/components/LoaderPage.jsx"
 
 // Functions
 
@@ -14,9 +15,15 @@ import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
 import { LATEST_NEWS } from "../../../app/utils/constant/EndPoints.js";
 
+// Zustand
+
+import useAppStore from "../../../app/stores/AppStore";
+
 const AnalyzedNews = () => {
 
     // states and consts
+    const { languageApp } = useAppStore();
+
     const PAGE_NUMBER = 1;
     let tempImages;
 
@@ -37,6 +44,7 @@ const AnalyzedNews = () => {
             startDate: newsFrom,
             // "endDate": newsTo,
             page: 1,
+            language: languageApp,
             pageLimit: 10,
             llmOnly: true,
         };
@@ -91,13 +99,16 @@ const AnalyzedNews = () => {
             getNews();
             getCashedImagesLocal();
         }
-        console.log(newsData)
     }, [newsData])
+
+    useEffect(() => {
+        setNewsData([]);
+    }, [languageApp])
     return (
         <>
             <div className='flex flex-col gap-7 mt-8 px-6 bg-Neutral-500 pb-[7rem]'>
 
-                {newsData?.length !== 0 &&
+                {newsData?.length == 0 ? <LoaderPage className={"bg-background mt-[1rem]"} /> :
 
                     newsData?.map((row, index) => (
                         <div key={index}>
