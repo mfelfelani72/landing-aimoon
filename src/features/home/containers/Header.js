@@ -44,7 +44,7 @@ const Header = () => {
             <ButtonLink className="p-4 h-[3rem]">
               {t("login_telegram")}
             </ButtonLink>
-            <Languages />
+            <Languages className={"mt-2.5"} />
           </div>
         </div>
       </div>

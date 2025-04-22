@@ -1,13 +1,16 @@
-// Languages.js
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import i18n from "../../../../utils/services/i18n";
+
+// Functions
+
+import { cn } from '../../../../utils/lib/cn';
 
 // Zustand
 
 import useAppStore from "../../../app/stores/AppStore";
 
-const Languages = () => {
+const Languages = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
 
@@ -40,7 +43,7 @@ const Languages = () => {
 
 
   return (
-    <div className="relative group mt-2.5">
+    <div className={cn("relative group", className)}>
       <button
         className="cursor-pointer px-3 py-1 rounded text-primary-400 font-bold uppercase"
         aria-label="Language selector"

@@ -6,8 +6,12 @@ import { Outlet } from 'react-router-dom';
 
 import TopButton from '../core/components/TopButton.jsx'
 import { Image } from "../../features/core/components/Image.jsx"
-import MarqueeCoins from '../coin/containers/MarqueeCoins.jsx';
 import Navigation from "../core/components/Navigation.jsx"
+import Languages from "../core/components/Languages.jsx"
+
+// Containers
+
+import MarqueeCoins from '../coin/containers/MarqueeCoins.jsx';
 
 // Svg
 
@@ -28,9 +32,11 @@ const DashboardLanding = () => {
         <div className='mobile w-96 bg-Neutral-500 text-white'>
           {/* top header */}
           <div className='flex flex-row justify-between p-6'>
-            <TopButton >
-              <Image src={icon_notification} alt={"icon_notification"} className={"w-6 h-6"} />
-            </TopButton>
+
+            <div className='text-Neutral-500'>
+              <Languages />
+            </div>
+
 
             <h2 className="text-sm font-bold">{t("aimoonhub")}</h2>
 
