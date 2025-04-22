@@ -9,6 +9,7 @@ import { ButtonLink } from "../../core/components/Button.jsx";
 // png
 
 import logo from "../../../../assets/icons/png/logo.png";
+import Languages from "../../core/components/Languages.jsx";
 
 const Header = () => {
   // hooks
@@ -43,6 +44,9 @@ const Header = () => {
             <ButtonLink className="p-4 h-[3rem]">
               {t("login_telegram")}
             </ButtonLink>
+          </div>
+          <div>
+            <Languages />
           </div>
         </div>
       </div>

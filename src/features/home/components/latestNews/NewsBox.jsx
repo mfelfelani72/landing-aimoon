@@ -50,10 +50,10 @@ const NewsBox = ({ className, ...props }) => {
             }} className={"w-[25rem] h-48"} />
         </div>
         <div className="ltr:text-left rtl:text-right mt-9 text-white text-2xl font-medium">
-          {props?.data?.title}
+          {props?.data?.title_foreign ? props?.data?.title_foreign : props?.data?.title}
         </div>
         <div className="w-80 opacity-90 ltr:text-left rtl:text-right text-white text-base font-normal mt-9">
-          {stringHelper(props?.data?.summaryEn, props?.count_text_body)}
+          {props?.data?.summary_foreign ? stringHelper(props?.data?.summary_foreign, props?.count_text_body) : stringHelper(props?.data?.summaryEn, props?.count_text_body)}
         </div>
 
         <div className="flex ltr:flex-row-reverse rtl:flex-row gap-2 items-center w-full px-4 mt-9 text-primary-400 text-base font-bold leading-none cursor-pointer">

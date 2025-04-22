@@ -11,6 +11,7 @@ import NewsBox from "../components/latestNews/NewsBox.jsx";
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 import { getData } from "../../../../utils/services/api/getData";
+import { ConnectToServer } from "../../../../utils/services/api/ConnectToServer.js";
 
 // Constants
 
@@ -18,11 +19,17 @@ import { LATEST_NEWS } from "../../../app/utils/constant/EndPoints.js";
 
 // Svg
 
+// Zustand
+
+import useAppStore from "../../../app/stores/AppStore";
+
 const LatestNews = () => {
   // hooks
   const { t } = useTranslation();
 
   // consts and states
+  const { languageApp } = useAppStore();
+
   const delay = 3000;
   const defaultAutoPlay = "true";
   const visibleCount = 3;
@@ -54,54 +61,47 @@ const LatestNews = () => {
       startDate: newsFrom,
       // "endDate": newsTo,
       page: 1,
+      language: languageApp,
       pageLimit: 10,
       llmOnly: true,
     };
 
-    await getData(LATEST_NEWS, parameter, "Latest News").then(
-      (response) => {
-        if (response) {
-          if ((response?.status == 200) & response?.data?.return) {
-            // console.log(response?.data?.data?.result);
-
-            // setLatestNewsData(response?.data?.data?.result);
-
-            // for news image
-
-            tempImages = response?.data?.data?.result?.map((item) => item?.local_image);
-            if (
-              !arraysEqual(
-                tempImages,
-                response?.data?.data?.result?.map((item) => item?.local_image),
-                "data-latest-news-images"
-              ) ||
-              !localStorage.getItem("data-latest-news-images")
-            ) {
-              cashImages(
-                "data-latest-news-images",
-                response?.data?.data?.result?.map((item) => item?.created_at),
-                response?.data?.data?.result?.map((item) => item?.local_image)
-              );
-            }
-            // for news image
-
-            setNewsData((prev) => {
-              return [...prev, ...response?.data?.data?.result];
-            });
-
-            setNewsPage((prev) => prev + 1);
-            // setLoading(false);
-            // setVisibleMoreButton(true);
-          } else {
-            console.log({
-              message:
-                "Maybe you mistake !!!!, this route is: --> Latest News <--",
-              error: response?.data?.message,
-            });
-          }
-        }
+    const header = {
+      headers: {
+        authorization: "48e07eef-d474-47a5-8da4-3e946331369a"
       }
-    );
+    }
+
+    ConnectToServer("post", LATEST_NEWS, parameter, header, "Letest-news").then((response) => {
+      if (response?.data?.return) {
+        // for news image
+
+        tempImages = response?.data?.data?.result?.map((item) => item?.local_image);
+        if (
+          !arraysEqual(
+            tempImages,
+            response?.data?.data?.result?.map((item) => item?.local_image),
+            "data-latest-news-images"
+          ) ||
+          !localStorage.getItem("data-latest-news-images")
+        ) {
+          cashImages(
+            "data-latest-news-images",
+            response?.data?.data?.result?.map((item) => item?.created_at),
+            response?.data?.data?.result?.map((item) => item?.local_image)
+          );
+        }
+        // for news image
+
+        setNewsData((prev) => {
+          return [...prev, ...response?.data?.data?.result];
+        });
+
+        setNewsPage((prev) => prev + 1);
+        // setLoading(false);
+        // setVisibleMoreButton(true);
+      }
+    })
   };
 
   const getCashedImagesLocal = () => {
@@ -118,14 +118,12 @@ const LatestNews = () => {
       getCashedImagesLocal();
     }
 
-    // console.log(newsData)
-
     // setSidebarLink("news");
   }, [newsData]);
 
   useEffect(() => {
-
-  }, [current, mouseEnter, mouseLeave]);
+    setNewsData([]);
+  }, [languageApp]);
   return (
     <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden">
       <div className="width-theme px-default flex flex-col items-center justify-center my-28">
