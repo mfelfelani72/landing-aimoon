@@ -40,20 +40,28 @@ const Languages = () => {
 
 
   return (
-    <div className='flex flex-row gap-2'>
-      {languageList.map((row) => (
-        <button
-          key={row.id}
-          onClick={() => changeLanguage(row.id, row.dir)}
-          className={`cursor-pointer px-2 py-1 rounded ${languageApp === row.id
-            ? 'bg-color-theme text-white'
-            : 'hover:bg-color-theme-light dark:hover:bg-D-color-theme-light hover:text-color-theme dark:hover:text-D-color-theme'
-            }`}
-          aria-label={`Change language to ${row.name}`}
-        >
-          {row.name}
-        </button>
-      ))}
+    <div className="relative group mt-2.5">
+      <button
+        className="cursor-pointer px-3 py-1 rounded text-primary-400 font-bold uppercase"
+        aria-label="Language selector"
+      >
+        {languageList.find(lang => lang.id === languageApp)?.id || 'Language'}
+
+      </button>
+
+      <div className="absolute hidden group-hover:block bg-white shadow-lg rounded mt-1 z-10 min-w-full">
+        {languageList.map((row) => (
+          <button
+            key={row.id}
+            onClick={() => changeLanguage(row.id, row.dir)}
+            className={`cursor-pointer w-full text-left px-3 py-2 hover:bg-primary-50  ${languageApp === row.id ? 'font-bold text-primary-400' : ''
+              }`}
+            aria-label={`Change language to ${row.name}`}
+          >
+            {row.name}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

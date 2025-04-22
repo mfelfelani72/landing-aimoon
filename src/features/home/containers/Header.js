@@ -40,12 +40,10 @@ const Header = () => {
               </ul>
             </nav>
           </header>
-          <div>
+          <div className="flex flex-row gap-2">
             <ButtonLink className="p-4 h-[3rem]">
               {t("login_telegram")}
             </ButtonLink>
-          </div>
-          <div>
             <Languages />
           </div>
         </div>
