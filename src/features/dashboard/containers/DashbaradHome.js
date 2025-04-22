@@ -7,8 +7,11 @@ import { Link } from 'react-router-dom';
 import { ButtonLink } from '../../core/components/Button.jsx';
 import { Image } from '../../core/components/Image.jsx';
 import { TabDefault } from "../../core/components/Tab/Tab.jsx"
-import AnalyzedNews from '../components/AnalyzedNews.jsx';
 import LatestNews from '../components/LatestNews.jsx';
+
+// Containers
+
+import AnalyzedNews from '../containers/AnalyzedNews.js';
 
 // Svg
 

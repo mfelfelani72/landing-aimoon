@@ -142,6 +142,7 @@ const en = {
   // settings
   persion: "Persion",
   english: "English",
+  arabic: "Arabic",
   light: "Light",
   dark: "Dark",
 };

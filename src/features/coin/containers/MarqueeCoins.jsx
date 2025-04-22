@@ -7,7 +7,6 @@ import { Image, ImageLazy } from "../../core/components/Image.jsx";
 
 // Functions
 
-import { getData } from "../../../../utils/services/api/getData.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { cn } from "../../../../utils/lib/cn.js";
@@ -20,6 +19,7 @@ import { SYMBOLS_NAMES } from "../utils/constants/EndPoints.js";
 
 import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
+import { ConnectToServer } from "../../../../utils/services/api/ConnectToServer.js";
 
 const MarqueeCoins = ({ className, ...props }) => {
   // hooks
@@ -63,35 +63,33 @@ const MarqueeCoins = ({ className, ...props }) => {
       priority: priority,
     };
 
-    await getData(SYMBOLS_NAMES, parameter, "Header").then((response) => {
-      if (response) {
-        if ((response?.status == 200) & response?.data?.return) {
-          // console.log(response?.data?.data);
-          setSymbols(response?.data?.data);
+    const header = {
+      headers: {
+        authorization: "48e07eef-d474-47a5-8da4-3e946331369a"
+      }
+    }
 
-          tempImages = response?.data?.data?.map((item) => item?.logo);
-          if (
-            !arraysEqual(
-              tempImages,
-              response?.data?.data?.map((item) => item?.logo),
-              "data-header-images"
-            ) ||
-            !localStorage.getItem("data-header-images")
-          ) {
-            cashImages(
-              "data-header-images",
-              response?.data?.data.map((item) => item?.name),
-              response?.data?.data.map((item) => item?.logo)
-            );
-          }
-        } else {
-          console.log({
-            message: "Maybe you mistake !!!!, this route is: --> Header <--",
-            error: response?.data?.message,
-          });
+    ConnectToServer("post", SYMBOLS_NAMES, parameter, header, "marquee-coin").then((response) => {
+      if (response?.data?.return) {
+        setSymbols(response?.data?.data);
+
+        tempImages = response?.data?.data?.map((item) => item?.logo);
+        if (
+          !arraysEqual(
+            tempImages,
+            response?.data?.data?.map((item) => item?.logo),
+            "data-header-images"
+          ) ||
+          !localStorage.getItem("data-header-images")
+        ) {
+          cashImages(
+            "data-header-images",
+            response?.data?.data.map((item) => item?.name),
+            response?.data?.data.map((item) => item?.logo)
+          );
         }
       }
-    });
+    })
   };
 
   // functions
@@ -148,12 +146,12 @@ const MarqueeCoins = ({ className, ...props }) => {
                           // effect="blur"
                           src={
                             cashedImages?.length !== 0 &&
-                            cashedImages?.map((item) =>
-                              item.hasOwnProperty(`${row?.name}`)
-                            )[index]
+                              cashedImages?.map((item) =>
+                                item.hasOwnProperty(`${row?.name}`)
+                              )[index]
                               ? cashedImages?.filter(
-                                  (item) => item[`${row?.name}`]
-                                )[0][`${row?.name}`]?.base64data
+                                (item) => item[`${row?.name}`]
+                              )[0][`${row?.name}`]?.base64data
                               : row?.logo
                           }
                         />
@@ -186,11 +184,10 @@ const MarqueeCoins = ({ className, ...props }) => {
                         </span>
 
                         <span
-                          className={`mx-2 ${
-                            row?.latest_price_info.change_rate > 0
-                              ? "text-Success-500"
-                              : "text-Error-500"
-                          }`}
+                          className={`mx-2 ${row?.latest_price_info.change_rate > 0
+                            ? "text-Success-500"
+                            : "text-Error-500"
+                            }`}
                         >
                           {row?.latest_price_info.change_rate}
                         </span>
@@ -201,12 +198,11 @@ const MarqueeCoins = ({ className, ...props }) => {
                           </span>
 
                           <span
-                            className={`mx-2 ${
-                              row?.change_stat?.damp_5_change
-                                ?.percent_change_24h > 0
-                                ? "text-Success-500"
-                                : "text-Error-500"
-                            }`}
+                            className={`mx-2 ${row?.change_stat?.damp_5_change
+                              ?.percent_change_24h > 0
+                              ? "text-Success-500"
+                              : "text-Error-500"
+                              }`}
                           >
                             {
                               row?.change_stat?.damp_5_change
@@ -220,12 +216,11 @@ const MarqueeCoins = ({ className, ...props }) => {
                             {t("mood_week")}
                           </span>
                           <span
-                            className={`mx-2 ${
-                              row?.change_stat?.damp_5_change
-                                ?.percent_change_7d > 0
-                                ? "text-Success-500"
-                                : "text-Error-500"
-                            }`}
+                            className={`mx-2 ${row?.change_stat?.damp_5_change
+                              ?.percent_change_7d > 0
+                              ? "text-Success-500"
+                              : "text-Error-500"
+                              }`}
                           >
                             {row?.change_stat?.damp_5_change?.percent_change_7d}
                           </span>
@@ -253,12 +248,12 @@ const MarqueeCoins = ({ className, ...props }) => {
                             alt={row?.name}
                             src={
                               cashedImages.length !== 0 &&
-                              cashedImages?.map((item) =>
-                                item.hasOwnProperty(`${row?.name}`)
-                              )[index2]
+                                cashedImages?.map((item) =>
+                                  item.hasOwnProperty(`${row?.name}`)
+                                )[index2]
                                 ? cashedImages?.filter(
-                                    (item) => item[`${row?.name}`]
-                                  )[0][`${row?.name}`]?.base64data
+                                  (item) => item[`${row?.name}`]
+                                )[0][`${row?.name}`]?.base64data
                                 : row?.logo
                             }
                           />
@@ -296,11 +291,10 @@ const MarqueeCoins = ({ className, ...props }) => {
                           </span>
 
                           <span
-                            className={`mx-2 ${
-                              row?.latest_price_info.change_rate > 0
-                                ? "text-Success-500"
-                                : "text-Error-500"
-                            }`}
+                            className={`mx-2 ${row?.latest_price_info.change_rate > 0
+                              ? "text-Success-500"
+                              : "text-Error-500"
+                              }`}
                           >
                             {row?.latest_price_info.change_rate}
                           </span>
@@ -310,12 +304,11 @@ const MarqueeCoins = ({ className, ...props }) => {
                               {t("mood_day")}
                             </span>
                             <span
-                              className={`mx-2 ${
-                                row?.change_stat?.damp_5_change
-                                  ?.percent_change_24h > 0
-                                  ? "text-Success-500"
-                                  : "text-Error-500"
-                              }`}
+                              className={`mx-2 ${row?.change_stat?.damp_5_change
+                                ?.percent_change_24h > 0
+                                ? "text-Success-500"
+                                : "text-Error-500"
+                                }`}
                             >
                               {
                                 row?.change_stat?.damp_5_change
@@ -329,12 +322,11 @@ const MarqueeCoins = ({ className, ...props }) => {
                               {t("mood_week")}
                             </span>
                             <span
-                              className={`mx-2 ${
-                                row?.change_stat?.damp_5_change
-                                  ?.percent_change_7d > 0
-                                  ? "text-Success-500"
-                                  : "text-Error-500"
-                              }`}
+                              className={`mx-2 ${row?.change_stat?.damp_5_change
+                                ?.percent_change_7d > 0
+                                ? "text-Success-500"
+                                : "text-Error-500"
+                                }`}
                             >
                               {
                                 row?.change_stat?.damp_5_change

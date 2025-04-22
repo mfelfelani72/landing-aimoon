@@ -10,7 +10,6 @@ import NewsBox from "../components/latestNews/NewsBox.jsx";
 
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
-import { getData } from "../../../../utils/services/api/getData";
 import { ConnectToServer } from "../../../../utils/services/api/ConnectToServer.js";
 
 // Constants

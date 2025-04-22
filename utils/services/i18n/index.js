@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import ar from "./ar";
 import en from "./en";
 import fa from "./fa";
 
@@ -17,6 +18,9 @@ i18n
       },
       fa: {
         translation: fa,
+      },
+      ar: {
+        translation: ar,
       },
     },
     keySeparotor: false,

@@ -136,6 +136,7 @@ const fa = {
   // settings
   persion: "فارسی",
   english: "انگلیسی",
+  arabic: "عربی",
   light: "روشن",
   dark: "تیره",
 };
