@@ -200,6 +200,9 @@ const en = {
   news_per_week: "News per week",
   news_per_month: "News per month",
   news_base_statistics: "News <0>{{name}}</0> based on statistics",
+  amount_changes: "The amount of changes",
+  changes_emotions: "Changes in emotions",
+  price_changes: "Price changes",
 
   all_information: "All information",
 

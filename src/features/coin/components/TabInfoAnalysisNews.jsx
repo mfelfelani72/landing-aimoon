@@ -25,6 +25,8 @@ import clock from "../../../../assets/icons/svg/icon-color-clock.svg"
 import star from "../../../../assets/icons/svg/icon-color-star.svg"
 import chart_chart from "../../../../assets/icons/svg/icon-color-chart.svg"
 import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
+import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
+import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
@@ -202,30 +204,44 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                 <InfoBox icon={calender} icon_title="30" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.avg_news_month))} title={t("news_per_month")} />
               </div>
             </Accordion>
-            <Accordion id="analysis" open={true} icon={chart} title={"میزان تغییرات"} className={"bg-background border border-Neutral-400/50"} >
+            <Accordion id="analysis" open={true} icon={chart} title={t("amount_changes")} className={"bg-background border border-Neutral-400/50"} >
               <div className="flex flex-row w-full">
-                <div className="basis-1/2 text-Neutral-100 text-sm font-normal leading-9 px-4">تغییرات احساسات</div>
-                <div className="basis-1/2 text-Neutral-100 text-sm font-normal leading-9 px-4">تغییرات احساسات</div>
+                <div className="basis-1/2 text-Neutral-100 text-sm font-normal leading-9 px-4">{t("changes_emotions")}</div>
+                <div className="basis-1/2 text-Neutral-100 text-sm font-normal leading-9 px-4">{t("price_changes")}</div>
               </div>
               <div className="grid grid-cols-2">
 
                 <div className="border-l-1 border-t-1  border-Neutral-400/50">
                   <div className="flex flex-col px-4">
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت روز</div>
+                      <div className={`${props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h == 0 ? "text-white" : props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h > 0 ? "text-Success-500" : "text-Error-500"} text-sm font-normal leading-tight tracking-tight left-to-right`}>
+                        <div className="flex flex-row gap-1 items-center">
+                          <div className="inline-flex items-center"> {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h}</div>
+                          <Image src={props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h > 0 ? arrow_up : arrow_down} alt="arrow-day" className={"w-4 h-4"} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت هفته</div>
+                      <div className={`${props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d == 0 ? "text-white" : props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d > 0 ? "text-Success-500" : "text-Error-500"} text-sm font-normal leading-tight tracking-tight left-to-right`}>
+                        <div className="flex flex-row gap-1 items-center">
+                          <div className="inline-flex items-center"> {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d}</div>
+                          <Image src={props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d > 0 ? arrow_up : arrow_down} alt="arrow-week" className={"w-4 h-4"} />
+                        </div>
+                      </div>
                     </div>
                     <div className="flex flex-row w-full items-center justify-between">
                       <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                      <div className={`${props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d == 0 ? "text-white" : props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d > 0 ? "text-Success-500" : "text-Error-500"} text-sm font-normal leading-tight tracking-tight left-to-right`}>
+                        <div className="flex flex-row gap-1 items-center">
+                          <div className="inline-flex items-center"> {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d}</div>
+                          <Image src={props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d > 0 ? arrow_up : arrow_down} alt="arrow-month" className={"w-4 h-4"} />
+                        </div>
+                      </div>
                     </div>
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
-                    </div>
-                    <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    <div className="text-secondary-400 text-sm font-normal leading-tight tracking-tight">{dateHelper(props?.symbol?.updatedAt, "difference")}</div>
                     </div>
                   </div>
                 </div>

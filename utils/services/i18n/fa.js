@@ -184,6 +184,9 @@ const fa = {
   news_per_week: "اخبار در هفته",
   news_per_month: "اخبار در ماه",
   news_base_statistics: "اخبار <0>{{name}}</0> بر اساس آمار",
+  amount_changes: "میزان تغییرات",
+  changes_emotions: "تغییرات احساسات",
+  price_changes: "تغییرات قیمت",
 
   analyzed_news: "خبرهای تحلیل شده",
 
