@@ -28,7 +28,7 @@ const Home = () => {
         {/* WhyAimoonhub */}
         {/* <LazyWhyAimoonhub /> */}
         {/* HowToUse */}
-        <LazyHowToWork />
+        {/* <LazyHowToWork /> */}
         {/* Aimoonhub statistics */}
         <LazyAimoonhubStatistics />
         {/* Customer review  */}

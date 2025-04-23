@@ -9,6 +9,7 @@ import LoaderPage from "../../../app/components/LoaderPage.jsx"
 // Constants
 
 import { DB_STATICS } from "../../../app/utils/constant/EndPoints.js"
+import { DEFAULT_PROVIDER_IMAGE } from "../../../app/utils/constant/Defaults.js"
 
 // Functions
 
@@ -87,13 +88,22 @@ const AimoonhubStatistics = () => {
                                         <Image src={acticity} alt="acticity" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_agencies")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.totalNewsGroups)}</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(parseInt(dbStatics?.totalNewsGroups))}</div>
                                     <div className="relative w-44 h-12 bg-[#28263A] rounded-[20px]" >
-                                        <Image src={news_agency_1} alt="news_agency_1" className={"w-9 h-9 absolute top-1.5 right-2 rounded-full"} />
-                                        <Image src={news_agency_2} alt="news_agency_2" className={"w-9 h-9 absolute top-1.5 right-10 rounded-full"} />
-                                        <Image src={news_agency_3} alt="news_agency_3" className={"w-9 h-9 absolute top-1.5 right-18 rounded-full"} />
-                                        <Image src={news_agency_4} alt="news_agency_4" className={"w-9 h-9 absolute top-1.5 right-26 rounded-full"} />
-                                        <Image src={news_agency_5} alt="news_agency_5" className={"w-9 h-9 absolute top-1.5 right-33 rounded-full"} />
+                                        {dbStatics?.providersList?.slice(0, 5).map((row, index) => (
+                                            <Image
+                                                key={index}
+                                                style={{
+                                                    right: `${index * 2 + 0.3}rem`,
+                                                }}
+                                                src={row?.local_image || row?.logoUrl || DEFAULT_PROVIDER_IMAGE}
+                                                onError={(e) => {
+                                                    e.target.src = DEFAULT_PROVIDER_IMAGE;
+                                                }}
+                                                alt={"news_agency-" + index}
+                                                className="w-9 h-9 absolute top-1.5 rounded-full"
+                                            />
+                                        ))}
                                     </div>
                                 </div>
                                 <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center py-2 gap-8'>
@@ -101,20 +111,29 @@ const AimoonhubStatistics = () => {
                                         <Image src={chart} alt="chart" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_analyses")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.totalAnalyzed)}</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(parseInt(dbStatics?.totalAnalyzed))}</div>
                                 </div>
                                 <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center py-2 gap-8'>
                                     <div className='w-14 h-14 rounded-full bg-[#28263A] inline-flex items-center justify-center'>
                                         <Image src={headphones} alt="headphones" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_reporters")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.totalNewsAuthors)}</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(parseInt(dbStatics?.totalNewsAuthors))}</div>
                                     <div className="relative w-44 h-12 bg-[#28263A] rounded-[20px] " >
-                                        <Image src={news_agency_1} alt="news_agency_1" className={"w-9 h-9 absolute top-1.5 right-2 rounded-full"} />
-                                        <Image src={news_agency_2} alt="news_agency_2" className={"w-9 h-9 absolute top-1.5 right-10 rounded-full"} />
-                                        <Image src={news_agency_3} alt="news_agency_3" className={"w-9 h-9 absolute top-1.5 right-18 rounded-full"} />
-                                        <Image src={news_agency_4} alt="news_agency_4" className={"w-9 h-9 absolute top-1.5 right-26 rounded-full"} />
-                                        <Image src={news_agency_5} alt="news_agency_5" className={"w-9 h-9 absolute top-1.5 right-33 rounded-full"} />
+                                        {dbStatics?.authorsList?.slice(0, 5).map((row, index) => (
+                                            <Image
+                                                key={index}
+                                                style={{
+                                                    right: `${index * 2 + 0.3}rem`,
+                                                }}
+                                                src={row?.local_image || row?.picUrl || DEFAULT_PROVIDER_IMAGE}
+                                                onError={(e) => {
+                                                    e.target.src = DEFAULT_PROVIDER_IMAGE;
+                                                }}
+                                                alt={"reporter-" + index}
+                                                className="w-9 h-9 absolute top-1.5 rounded-full"
+                                            />
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +143,7 @@ const AimoonhubStatistics = () => {
                                         <Image src={graph} alt="graph" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_aimoonhub_users")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.TotalUsersCount)}</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(parseInt(dbStatics?.totalUsersCount))}</div>
                                 </div>
                                 <div className='basis-1/3 rtl:border-r-1 ltr:border-l-1 border-Neutral-300 flex flex-col items-center justify-center gap-8'>
                                     <Image src={baseChart} alt="baseChart" className={"w-80 h-44"} />
@@ -135,7 +154,7 @@ const AimoonhubStatistics = () => {
                                         <Image src={folder} alt="folder" className={"w-10 h-10"} />
                                     </div>
                                     <div className="text-Neutral-200 text-xl font-bold">{t("count_news")}</div>
-                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(dbStatics?.totalNews)}</div>
+                                    <div className="text-5xl font-medium font-spaceGrotesk text-white left-to-right">+{dbStatics.length !== 0 && formatNumberHelper(parseInt(dbStatics?.totalNews))}</div>
                                 </div>
                             </div>
                         </div>}
