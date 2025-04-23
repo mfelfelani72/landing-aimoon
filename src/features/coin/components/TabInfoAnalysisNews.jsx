@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import WordCloud from 'react-d3-cloud';
 
 // Components
 
 import Accordion from "../../core/components/Accordion.jsx";
 import InfoBox from "../../core/components/InfoBox.jsx";
-import { Image } from "../../core/components/Image.jsx";
+import { Image, ImageLazy } from "../../core/components/Image.jsx";
 
 // Functions
 
 import { cn } from "../../../../utils/lib/cn";
+
+// Constants
+
+import { DEFAULT_COIN_IMAGE } from "../../../app/utils/constant/Defaults.js"
 
 // Svg
 
@@ -22,7 +27,7 @@ import chart_chart from "../../../../assets/icons/svg/icon-color-chart.svg"
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
-
+  console.log(props?.coin_analyze)
   // functions
 
   return (
@@ -47,26 +52,26 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
           name="tab"
           className="hidden peer/tab3 w-full"
         />
-        <div className="basis-1/3 peer-checked/tab1:bg-Neutral-500 peer-checked/tab1:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab1:!text-white font-medium text-[0.9rem] leading-5">
+        <div className="basis-1/3 peer-checked/tab1:bg-Neutral-500 peer-checked/tab1:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab1:!text-primary-500 font-medium text-[0.9rem] leading-5">
           <label
             htmlFor="tab1"
-            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.15rem] xs:py-2 select-none"
+            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
           >
             {t("all_information")}
           </label>
         </div>
-        <div className="basis-1/3 peer-checked/tab2:bg-Neutral-500 peer-checked/tab2:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab2:!text-white font-medium text-[0.85rem] leading-5">
+        <div className="basis-1/3 peer-checked/tab2:bg-Neutral-500 peer-checked/tab2:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab2:!text-primary-500 font-medium text-[0.85rem] leading-5">
           <label
             htmlFor="tab2"
-            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.15rem] xs:py-2 select-none"
+            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
           >
             {t("news_analysis")}
           </label>
         </div>
-        <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-white font-medium text-[0.85rem] leading-5">
+        <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
           <label
             htmlFor="tab3"
-            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[1.15rem] xs:py-2 select-none"
+            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
           >
             {t("latest_news")}
           </label>
@@ -75,41 +80,47 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
           <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
             {/* header */}
-            <div className="flex flex-row gap-2">
-              <div className="w-12 h-12 bg-lime-500 rounded-full"></div>
+            <div className="flex flex-row gap-2 items-center">
+              <ImageLazy alt={props?.symbol.description}
+                src={
+                  props?.symbol.local_image
+                    ? props?.symbol.local_image
+                    : props?.symbol.logo
+                      ? props?.symbol.logo
+                      : DEFAULT_COIN_IMAGE
+                }
+                onError={(e) => {
+                  e.target.src = DEFAULT_COIN_IMAGE;
+                }} className={"w-10 h-10 rounded-full"} />
               <div className="flex flex-col">
                 <div className="text-white text-xl font-bold">{props?.symbol?.name}</div>
-                <div className="text-Neutral-300 text-sm font-extrabold leading-relaxed tracking-wide">41,623,892,937</div>
+                <div className="text-Neutral-300 text-sm font-extrabold leading-relaxed tracking-wide">{props?.symbol?.latest_price_info?.formatted_price}</div>
               </div>
             </div>
 
             {/* description */}
-            <div className="text-white text-base font-bold mt-2 leading-9">توضیحات</div>
-            <div className="text-Neutral-300 text-xs font-extrabold leading-none">www.ethereum.org</div>
-            <div className="w-72 text-white text-sm font-normal leading-tight mt-2 max-h-[6.5rem] overflow-auto scrollbar rtl:pl-3 ltr:pr-3">
-              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
-              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
-              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
-              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
-              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
-              اتریوم (به انگلیسی: Ethereum) پلتفرمی عمومی، متن‌باز، زنجیره‌بلوک-محور با رایانش توزیع‌شده برای قرارداد هوشمند است.[۲] این پلتفرم ماشین مجازی تورینگ کامل اتریوم (EVM) را فراهم می‌آورد و اسکریپت‌ها را با استفاده، از شبکهٔ بین‌المللی گره‌های عمومی اجرا می‌کند...
+            <div className="text-white text-base font-bold mt-2 leading-9">{t("description")}</div>
+            <div className="text-Neutral-300 text-xs font-extrabold leading-none">{props?.symbol?.category}</div>
+            <div className="w-72 text-white text-sm font-normal leading-tight mt-2 max-h-[6.5rem] overflow-auto scrollbar rtl:pl-3 ltr:pr-3 text-left">
+              {props?.symbol?.description}
             </div>
           </div>
 
-
-          <div className="flex flex-col gap-4 mt-4">
-            <Accordion id="info" open={false} title={"نمودار ابر کلمات جفت ارز ETH- USDT"} icon={chart} >
-              children
-              children
-              children
-              children
-              children
-              children
-              children
+          {props?.coin_analyze && <div className="flex flex-col gap-4 mt-4">
+            <Accordion id="info" open={true} title={
+              <Trans
+                i18nKey="word_cloud_coin"
+                values={{
+                  name: props?.symbol?.name,
+                }}
+              >
+                <span className="text-primary-500"></span>
+              </Trans>
+            } icon={chart} >
+              <WordCloud data={props?.coin_analyze?.word_frequencies} />
             </Accordion>
+          </div>}
 
-
-          </div>
         </div>
         <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
 

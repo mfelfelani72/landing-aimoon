@@ -21,6 +21,7 @@
     "react": "^19.0.0",
     "react-cookie": "^8.0.1",
     "react-country-flag": "^3.1.0",
+    "react-d3-cloud": "^1.0.6",
     "react-date-object": "^2.1.9",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",

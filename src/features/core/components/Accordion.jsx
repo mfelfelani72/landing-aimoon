@@ -22,18 +22,15 @@ const Accordion = ({ className, circleLocation, children, ...props }) => {
     };
     return (
         <>
-            <div onClick={toggleOpen} className='relative cursor-pointer'>
+            <div className='relative'>
                 <div className={cn("flex flex-row w-full py-4 items-center items px-4 justify-between bg-background-light rounded-2xl", className)}>
-
                     <div className="flex flex-col w-full">
-                        <div className='flex flex-row justify-between items-center'>
-
+                        <div onClick={toggleOpen} className='flex flex-row justify-between items-center cursor-pointer'>
                             <div className='flex flex-row gap-2'>
                                 {props?.icon && <Image src={props?.icon} alt={props?.id + "-icon"} className={"w-6 h-6"} />}
                                 <div className="text-white text-base font-medium">{props?.title} </div>
                             </div>
                             <Image src={arrow} alt="arrow" className={`w-4 h-4 rotate-[90deg] transition-all duration-300 ${isOpen ? "rotate-0" : "rotate-[90deg]"}`} />
-
                         </div>
 
                         <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 mt-4' : 'max-h-0 opacity-0'

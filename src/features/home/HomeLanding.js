@@ -24,11 +24,11 @@ const Home = () => {
 
       <div className="flex flex-col mt-[6rem]">
         {/* Welcome */}
-        {/* <LazyWelcome /> */}
+        <LazyWelcome />
         {/* WhyAimoonhub */}
-        {/* <LazyWhyAimoonhub /> */}
+        <LazyWhyAimoonhub />
         {/* HowToUse */}
-        {/* <LazyHowToWork /> */}
+        <LazyHowToWork />
         {/* Aimoonhub statistics */}
         <LazyAimoonhubStatistics />
         {/* Customer review  */}

@@ -187,6 +187,8 @@ const en = {
   coin_list_title: "Select your desired coin to enter the dashboard",
   search_coin: "Search in coins",
   news_count: "News count",
+  description: "Description",
+  word_cloud_coin: "<0>{{name}}</0> currency pair word cloud chart",
 
   all_information: "All information",
 

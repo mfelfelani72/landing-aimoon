@@ -19,7 +19,6 @@ import { DEFAULT_NEW_IMAGE } from "../../../app/utils/constant/Defaults.js"
 
 const NewsBox = ({ className, children, ...props }) => {
 
-    console.log(props?.row)
     return (
         <>
             <div className={cn("w-full h-full flex flex-col", className)}>

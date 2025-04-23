@@ -103,15 +103,17 @@ const MarqueeCoins = ({ className, ...props }) => {
   useEffect(() => {
     if (symbols?.length === 0) {
       getSymbols();
-
       getCashedImagesLocal();
     }
+    else
+      setPlayOrPauseMarquee()
+
     setInterval(() => {
       getSymbols();
-
       getCashedImagesLocal();
     }, 25000);
-  }, []);
+
+  }, [symbols]);
   return (
     <>
       {symbols?.length !== 0 && (
