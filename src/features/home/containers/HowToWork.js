@@ -84,7 +84,7 @@ const HowToWork = () => {
                 </div>
 
                 {/* bottom section -> { content and bottom table } */}
-                <div className='relative w-full h-[73rem] overflow-hidden -bottom-[19rem]'>
+                <div className='relative w-full h-[78rem] overflow-hidden -bottom-[19rem]'>
 
                     {/* content */}
 

@@ -78,7 +78,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             <div className="flex flex-row gap-2">
               <div className="w-12 h-12 bg-lime-500 rounded-full"></div>
               <div className="flex flex-col">
-                <div className="text-white text-xl font-bold">Tether USDT</div>
+                <div className="text-white text-xl font-bold">{props?.symbol?.name}</div>
                 <div className="text-Neutral-300 text-sm font-extrabold leading-relaxed tracking-wide">41,623,892,937</div>
               </div>
             </div>
@@ -119,11 +119,11 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               <div className="flex flex-col w-full bg-background-light p-[2px] rounded-2xl">
                 <div className="flex flex-col h-44 bg-background rounded-2xl">
                   <div className="border-b-2 border-b-background-light pt-4 px-5 pb-2">
-                    <span class="text-white text-base font-bold ">خلاصه خبرهای</span>
-                    <span class="text-primary-400 text-xl font-bold">Tether</span>
-                    <span class="text-white text-xl font-bold"> </span>
-                    <span class="text-primary-400 text-xl font-medium ">USDT</span>
-                    <span class="text-white text-base font-bold "> </span>
+                    <span className="text-white text-base font-bold ">خلاصه خبرهای</span>
+                    <span className="text-primary-400 text-xl font-bold">Tether</span>
+                    <span className="text-white text-xl font-bold"> </span>
+                    <span className="text-primary-400 text-xl font-medium ">USDT</span>
+                    <span className="text-white text-base font-bold "> </span>
                   </div>
                   <div className="flex flex-row px-9 h-full items-center justify-between">
                     <div className="flex flex-col items-center justify-center">

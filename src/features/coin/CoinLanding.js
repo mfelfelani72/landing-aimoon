@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from "react-i18next";
+import { useNavigate } from 'react-router-dom';
 
 // Components
 
 import { InputSearch } from '../core/components/Input.jsx'
 import CoinList from './components/CoinList.jsx';
+import LoaderPage from '../../app/components/LoaderPage.jsx';
 
 // Functions
 
@@ -15,11 +17,11 @@ import { arraysEqual } from "../../../utils/lib/arraysEqual.js";
 // Constants
 
 import { SYMBOLS } from "./utils/constants/EndPoints.js";
-import LoaderPage from '../../app/components/LoaderPage.jsx';
 
 const CoinLanding = () => {
     // hooks
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     // states
     const [symbolsList, setSymbolsList] = useState([]);
@@ -45,7 +47,6 @@ const CoinLanding = () => {
         const parameter = {
             priority: priority,
         };
-
         const header = {
             headers: {
                 authorization: "a669836a04658498f5bc3a42a0ff4109" // this is admin token, dont forget change it
@@ -73,24 +74,20 @@ const CoinLanding = () => {
                 setSymbolsList(response?.data?.data);
                 setSymbolsListTemp(response?.data?.data);
             }
-
         })
-
     }
 
     const getCashedImagesLocal = () => {
         const cashedImagesLocal = localStorage.getItem("data-symbols-images");
-
         if (cashedImagesLocal) setCashedImages(JSON.parse(cashedImagesLocal));
     }
-
 
     useEffect(() => {
         if (symbolsList.length == 0) {
             getSymbolsList();
             getCashedImagesLocal();
         }
-        console.log(symbolsList)
+
     }, [symbolsList]);
     return (
         <>
@@ -106,7 +103,12 @@ const CoinLanding = () => {
                     {symbolsList?.length == 0 ? <LoaderPage className={"w-full bg-background mx-[6rem]"} /> :
                         <>
                             {symbolsList?.map((row, index) => (
-                                <div key={index}>
+                                <div className='cursor-pointer' onClick={(event) => {
+                                    event.preventDefault();
+                                    navigate("/dashboard/coin", {
+                                        state: { symbol: row },
+                                    });
+                                }} key={index}>
                                     <CoinList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />
                                 </div>
                             ))}

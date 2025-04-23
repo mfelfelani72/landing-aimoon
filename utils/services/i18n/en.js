@@ -43,11 +43,33 @@ const en = {
     "Providing accurate data for journalists and professional traders",
 
   // how to work
-  how_to_work_aimoonhub: "How does Aimoonhub work?",
-  step_box_1_title: "Instant news collection",
-  step_box_2_title: "Processing and analysis with artificial intelligence",
-  step_box_3_title: "Display the result in Telegram",
-  step_box_4_title: "Professional dashboard for advanced users",
+  how_to_work_aimoonhub: "How does Aimoon Hub work?",
+  step_box_1_title: "Real-time News Collection",
+  step_box_2_title: "Processing and Analysis with AI",
+  step_box_3_title: "Result Displayed in Telegram",
+  step_box_4_title: "Pro Dashboard for Advanced Users",
+
+  step_box_1_text: "The bot automatically fetches data from over 1000 reliable news sources (e.g., crypto news sites, Twitter, Reddit, etc.).",
+
+  step_box_2_text: "After processing, the analysis results are sent directly to the user's Telegram:",
+  step_box_2_text_check_1: "News summary + sentiment analysis",
+  step_box_2_text_check_2: "Alerts (e.g., sudden volatility on a specific coin)",
+  step_box_2_text_check_3: "News source link for full reading",
+  step_box_2_text_check_4: "Scheduled analysis of major forex news",
+
+  step_box_3_text: "Using a fine-tuned language model, news sentiment is analyzed:",
+  step_box_3_text_check_1: "Sentiment detection (positive, negative, neutral)",
+  step_box_3_text_check_2: "Fake news or rumor detection",
+  step_box_3_text_check_3: "Analysis of news relevance to key coins",
+  step_box_3_text_check_4: "Mood-based news analysis",
+
+  step_box_4_text: "Users on paid plans can access more details in the web dashboard:",
+  step_box_4_text_check_1: "Trend analysis charts of news",
+  step_box_4_text_check_2: "View history of analyses",
+  step_box_4_text_check_3: "Custom filters for specific news",
+  step_box_4_text_check_4: "News agency dashboard",
+  step_box_4_text_check_5: "Journalist dashboard",
+
 
   // aimoonhub statistics
   aimoonhub_statistics_slogan:
