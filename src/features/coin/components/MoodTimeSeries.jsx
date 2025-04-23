@@ -12,13 +12,13 @@ import {
 import { dateHelper } from "../../../../utils/helpers/dateHelper.js";
 
 function MoodTimeSeries(props) {
-  const data = props.data.timestamp.map((timestamp, index) => ({
+  const data = props?.data?.timestamp.map((timestamp, index) => ({
     name: dateHelper(timestamp, "chart"),
-    damp5: props.data.damp_5[index],
-    damp10: props.data.damp_10[index],
-    damp15: props.data.damp_15[index],
-    damp20: props.data.damp_20[index],
-    damp30: props.data.damp_30[index],
+    damp5: props?.data?.damp_5[index],
+    damp10: props?.data?.damp_10[index],
+    damp15: props?.data?.damp_15[index],
+    damp20: props?.data?.damp_20[index],
+    damp30: props?.data?.damp_30[index],
   }));
   return (
     <>
@@ -29,9 +29,9 @@ function MoodTimeSeries(props) {
           data={data}
           margin={{ top: 5, right: 5, left: 5, bottom: 5 }}
         >
-          <CartesianGrid  />
-          <XAxis dataKey="name" tick={{ fill: "rgba(0,0,0,0.5)" }} />
-          <YAxis tick={{ fill: "rgba(0,0,0,0.5)" }} />
+          {/* <CartesianGrid  /> */}
+          <XAxis dataKey="name" tick={{ fill: "#fff" }} />
+          <YAxis tick={{ fill: "#fff" }} />
           {/* <Tooltip /> */}
           {/* <Legend wrapperStyle={{ paddingTop: 10 }} /> */}
 
