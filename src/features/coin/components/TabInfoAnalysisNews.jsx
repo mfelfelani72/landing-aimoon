@@ -178,14 +178,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               <div className="absolute z-10 top-0 -left-[0.5rem] w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
             </div>
             <Accordion id="analysis" open={false} title={t("aimoon_analysis")} icon={chart} className={"bg-background border border-Neutral-400/50"} circleLocation={"top-4 left-2"} >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 px-4 pb-4">
                 <div className="text-secondary-400 text-sm font-normal leading-tight tracking-tight">{dateHelper(props?.symbol?.updatedAt, "difference")}</div>
                 <div className="text-white text-sm font-normal leading-tight">
                   {props?.coin_analyze?.response?.analysis}
                 </div>
               </div>
             </Accordion>
-            <Accordion id="analysis" open={true} title={
+            <Accordion id="analysis" open={false} title={
               <Trans
                 i18nKey="news_base_statistics"
                 values={{
@@ -195,51 +195,58 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                 <span className="text-primary-500"></span>
               </Trans>
             } className={"bg-background border border-Neutral-400/50"} >
-              <div className="grid grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-2 gap-2.5 px-4 pb-4">
                 <InfoBox icon={calender} icon_title="All" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.news_count))} title={t("news")} />
                 <InfoBox icon={calender} icon_title="1" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.avg_news_day))} title={t("news_per_day")} />
                 <InfoBox icon={calender} icon_title="7" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.avg_news_week))} title={t("news_per_week")} />
                 <InfoBox icon={calender} icon_title="30" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.avg_news_month))} title={t("news_per_month")} />
               </div>
             </Accordion>
-            <Accordion id="analysis" open={false} icon={chart} title={"میزان تغییرات"} className={"bg-background border border-Neutral-400/50"} >
-              <div className="grid grid-cols-2 gap-2.5">
-                <div className="flex flex-col pl-4">
-                  <div className="text-Neutral-100 text-sm font-normal leading-9">تغییرات احساسات</div>
-                  <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
-                  </div>
-                  <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
-                  </div>
-                  <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
-                  </div>
-                  <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+            <Accordion id="analysis" open={true} icon={chart} title={"میزان تغییرات"} className={"bg-background border border-Neutral-400/50"} >
+              <div className="flex flex-row w-full">
+                <div className="basis-1/2 text-Neutral-100 text-sm font-normal leading-9 px-4">تغییرات احساسات</div>
+                <div className="basis-1/2 text-Neutral-100 text-sm font-normal leading-9 px-4">تغییرات احساسات</div>
+              </div>
+              <div className="grid grid-cols-2">
+
+                <div className="border-l-1 border-t-1  border-Neutral-400/50">
+                  <div className="flex flex-col px-4">
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    </div>
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    </div>
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    </div>
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col pr-4">
-                  <div className="text-Neutral-100 text-sm font-normal leading-9">تغییرات احساسات</div>
-                  <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
-                  </div>
-                  <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
-                  </div>
-                  <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
-                  </div>
-                  <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                    <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                <div className="border-t-1 border-Neutral-400/50">
+                  <div className="flex flex-col px-4">
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    </div>
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    </div>
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    </div>
+                    <div className="flex flex-row w-full items-center justify-between">
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                    </div>
                   </div>
                 </div>
               </div>
