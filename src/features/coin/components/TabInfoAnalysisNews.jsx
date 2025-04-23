@@ -211,10 +211,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               </div>
               <div className="grid grid-cols-2">
 
-                <div className="border-l-1 border-t-1  border-Neutral-400/50">
-                  <div className="flex flex-col px-4">
+                <div className="ltr:border-r-1 rtl:border-l-1 border-t-1 border-Neutral-400/50">
+                  <div className="flex flex-col px-2">
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت روز</div>
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">{t("change_from_yesterday")}</div>
                       <div className={`${props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h == 0 ? "text-white" : props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h > 0 ? "text-Success-500" : "text-Error-500"} text-sm font-normal leading-tight tracking-tight left-to-right`}>
                         <div className="flex flex-row gap-1 items-center">
                           <div className="inline-flex items-center"> {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h}</div>
@@ -223,7 +223,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                       </div>
                     </div>
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت هفته</div>
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">{t("change_from_last_week")}</div>
                       <div className={`${props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d == 0 ? "text-white" : props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d > 0 ? "text-Success-500" : "text-Error-500"} text-sm font-normal leading-tight tracking-tight left-to-right`}>
                         <div className="flex flex-row gap-1 items-center">
                           <div className="inline-flex items-center"> {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d}</div>
@@ -232,7 +232,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                       </div>
                     </div>
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">{t("change_from_last_month")}</div>
                       <div className={`${props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d == 0 ? "text-white" : props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d > 0 ? "text-Success-500" : "text-Error-500"} text-sm font-normal leading-tight tracking-tight left-to-right`}>
                         <div className="flex flex-row gap-1 items-center">
                           <div className="inline-flex items-center"> {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d}</div>
@@ -241,27 +241,45 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                       </div>
                     </div>
                     <div className="flex flex-row w-full items-center justify-between">
-                    <div className="text-secondary-400 text-sm font-normal leading-tight tracking-tight">{dateHelper(props?.symbol?.updatedAt, "difference")}</div>
+                      <div className="text-secondary-400 text-xs pb-2 font-normal leading-tight tracking-tight">{dateHelper(props?.symbol?.updatedAt, "difference")}</div>
                     </div>
                   </div>
                 </div>
                 <div className="border-t-1 border-Neutral-400/50">
                   <div className="flex flex-col px-4">
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">{t("current_price")}</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">{props?.symbol?.latest_price_info?.formatted_price}</div>
                     </div>
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">{t("growth_last_day")}</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">
+                        <div className={`${props?.symbol?.latest_price_info?.change_rate == 0 ? "text-white" : props?.symbol?.latest_price_info?.change_rate > 0 ? "text-Success-500" : "text-Error-500"} text-sm font-normal leading-tight tracking-tight left-to-right`}>
+                          <div className="flex flex-row gap-1 items-center">
+                            <div className="inline-flex items-center"> {props?.symbol?.latest_price_info?.change_rate}</div>
+                            <Image src={props?.symbol?.latest_price_info?.change_rate > 0 ? arrow_up : arrow_down} alt="arrow-rate" className={"w-4 h-4"} />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">{t("price_last_day")}</div>
+                      <div className="text-white text-sm font-normal leading-tight tracking-tight">
+                        <div className={`${props?.symbol?.latest_price_info?.change_price == 0 ? "text-white" : props?.symbol?.latest_price_info?.change_price > 0 ? "text-Success-500" : "text-Error-500"} text-sm font-normal leading-tight tracking-tight left-to-right`}>
+                          <div className="flex flex-row gap-1 items-center">
+                            <div className="inline-flex items-center"> {props?.symbol?.latest_price_info?.change_price}</div>
+                            <Image src={props?.symbol?.latest_price_info?.change_price > 0 ? arrow_up : arrow_down} alt="arrow-price" className={"w-4 h-4"} />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div className="flex flex-row w-full items-center justify-between">
-                      <div className="text-Neutral-300 text-[10px] font-normal leading-9">قیمت فعلی</div>
-                      <div className="text-white text-sm font-normal leading-tight tracking-tight">1,840.76</div>
+                      <div className="text-secondary-400 text-xs pb-2 font-normal leading-tight tracking-tight">{dateHelper(
+                        new Date(
+                          props?.symbol?.latest_price_info?.market_at
+                        ).getTime() / 1000,
+                        "difference"
+                      )}</div>
                     </div>
                   </div>
                 </div>

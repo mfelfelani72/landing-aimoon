@@ -178,7 +178,7 @@ const fa = {
   authors_dashboard: "داشبورد خبرنگاران",
   providers_dashboard: "داشبورد خبرگزاری‌ها",
   news_analysis: "تحلیل اخبار",
-  aimoon_analysis:"تحلیل آیمون",
+  aimoon_analysis: "تحلیل آیمون",
   news: "اخبار",
   news_per_day: "اخبار در روز",
   news_per_week: "اخبار در هفته",
@@ -202,6 +202,12 @@ const fa = {
   aimoonhubs_suggestion: "پیشنهاد آیمون",
   duration: "مدت زمان",
   new_summary: "خلاصه خبر",
+  change_from_yesterday: "تغییر نسبت به روز گذشته",
+  change_from_last_week: "تغییر نسبت به هفته گذشته",
+  change_from_last_month: "تغییر نسبت به ماه گذشته",
+  current_price: "قیمت جاری",
+  growth_last_day: "رشد نسبت به روز گذشته",
+  price_last_day: "قیمت نسبت به روز گذشته",
 
 
   all_information: "اطلاعات کلی",

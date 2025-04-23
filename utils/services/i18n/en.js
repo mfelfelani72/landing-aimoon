@@ -203,6 +203,12 @@ const en = {
   amount_changes: "The amount of changes",
   changes_emotions: "Changes in emotions",
   price_changes: "Price changes",
+  change_from_yesterday: "Change from yesterday",
+  change_from_last_week: "Change from last week",
+  change_from_last_month: "Change from last month",
+  current_price: "Current price",
+  growth_last_day: "Growth compared to the previous day",
+  price_last_day: "Price compared to the previous day",
 
   all_information: "All information",
 
