@@ -188,6 +188,11 @@ const fa = {
   news_count: "تعداد اخبار",
   description: "توضیحات",
   word_cloud_coin: "نمودار ابر کلمات جفت ارز <0>{{name}} </0>",
+  news_summary: " خلاصه خبر‌های <0>{{name}} </0>",
+  chart_template: "الگوی چارت",
+  aimoonhubs_suggestion: "پیشنهاد آیمون",
+  duration: "مدت زمان",
+
 
   all_information: "اطلاعات کلی",
 

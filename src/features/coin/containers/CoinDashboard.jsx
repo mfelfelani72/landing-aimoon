@@ -13,6 +13,10 @@ import { OFFLINE_COIN_ANALYZE } from "../utils/constants/EndPoints.js"
 
 import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.js';
 
+// Zustand
+
+import useAppStore from "../../../app/stores/AppStore";
+
 const CoinDashboard = () => {
     // hooks
     const location = useLocation();
@@ -21,11 +25,14 @@ const CoinDashboard = () => {
 
     const [coinAnalyze, setCoinAnalyze] = useState();
 
+    const { languageApp } = useAppStore();
+
     // functions
 
     const getOfflineCoinAnalyze = async () => {
         const parameter = {
             symbol: location?.state?.symbol?.name,
+            language: languageApp,
         };
 
         const header = {
@@ -46,6 +53,10 @@ const CoinDashboard = () => {
             getOfflineCoinAnalyze();
         }
     })
+
+    useEffect(() => {
+        setCoinAnalyze();
+    }, [languageApp])
 
     return (
         <>

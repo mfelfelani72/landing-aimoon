@@ -189,6 +189,10 @@ const en = {
   news_count: "News count",
   description: "Description",
   word_cloud_coin: "<0>{{name}}</0> currency pair word cloud chart",
+  news_summary: "<0>{{name}}</0> news summary",
+  chart_template: "Chart template",
+  aimoonhubs_suggestion: "Aimoonhub's suggestion",
+  duration: "Duration",
 
   all_information: "All information",
 

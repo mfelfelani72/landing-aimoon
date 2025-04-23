@@ -29,7 +29,6 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
   const { t } = useTranslation();
   console.log(props?.coin_analyze)
   // functions
-
   return (
     <div className={cn("relative", className)}>
       <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl justify-between items-center gap-1.5 inline-flex mx-4">
@@ -77,7 +76,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
           </label>
         </div>
 
-        <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
+        <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab2:block">
           <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
             {/* header */}
             <div className="flex flex-row gap-2 items-center">
@@ -122,53 +121,54 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
           </div>}
 
         </div>
-        <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
+        <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab1:block">
 
           <div className="flex flex-col gap-4 mt-4 px-4">
 
             <div className="relative">
               <div className="flex flex-col w-full bg-background-light p-[2px] rounded-2xl">
-                <div className="flex flex-col h-44 bg-background rounded-2xl">
+                <div className="flex flex-col min-h-60 bg-background rounded-2xl">
                   <div className="border-b-2 border-b-background-light pt-4 px-5 pb-2">
-                    <span className="text-white text-base font-bold ">خلاصه خبرهای</span>
-                    <span className="text-primary-400 text-xl font-bold">Tether</span>
-                    <span className="text-white text-xl font-bold"> </span>
-                    <span className="text-primary-400 text-xl font-medium ">USDT</span>
-                    <span className="text-white text-base font-bold "> </span>
+                    <span className="text-white text-base font-bold">
+                      <Trans
+                        i18nKey="news_summary"
+                        values={{
+                          name: props?.symbol?.name,
+                        }}
+                      >
+                        <span className="text-primary-500 text-xl font-bold"></span>
+                      </Trans>
+                    </span>
                   </div>
-                  <div className="flex flex-row px-9 h-full items-center justify-between">
+                  <div className="flex flex-row gap-4 px-4 h-full items-start my-auto justify-between text-center">
                     <div className="flex flex-col items-center justify-center">
-                      <div className="w-11 h-11 bg-background-light rounded-full inline-flex items-center justify-center">
+                      <div className="w-11 h-11 rtl:bg-background-light ltr:bg-background rounded-full inline-flex items-center justify-center ltr:z-20">
                         <Image src={chart_chart} alt={"chart_chart"} className={"w-6 h-6"} />
                       </div>
-                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">الگوی چارت</div>
-                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1">صعودی مثلثی</div>
+                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">{t("chart_template")}</div>
+                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1 w-20">{props?.coin_analyze?.response?.chart_Pattern}</div>
                     </div>
                     <div className="flex flex-col items-center justify-center">
                       <div className="w-11 h-11 bg-background-light rounded-full inline-flex items-center justify-center">
                         <Image src={star} alt={"star"} className={"w-6 h-6"} />
                       </div>
-                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">الگوی چارت</div>
-                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1">صعودی مثلثی</div>
+                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">{t("aimoonhubs_suggestion")}</div>
+                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1 w-20">{props?.coin_analyze?.response?.rec_position}</div>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                      <div className="w-11 h-11 bg-background rounded-full inline-flex items-center justify-center z-20">
+                      <div className="w-11 h-11 ltr:bg-background-light rtl:bg-background rounded-full inline-flex items-center justify-center rtl:z-20">
                         <Image src={clock} alt={"clock"} className={"w-6 h-6"} />
                       </div>
-                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">الگوی چارت</div>
-                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1">صعودی مثلثی</div>
+                      <div className="text-Neutral-200 text-xs font-medium leading-none mt-3">{t("duration")}</div>
+                      <div className="text-primary-400 text-sm font-medium leading-tight mt-1 w-20">{props?.coin_analyze?.response?.duration}</div>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col p-5 gap-2">
-                  <div className="text-white text-base font-medium leading-snug">بیت‌کوین در آستانه سقوط یا جهش؟</div>
+                  {/* <div className="text-white text-base font-medium leading-snug">بیت‌کوین در آستانه سقوط یا جهش؟</div> */}
                   <div className="text-Neutral-300 text-sm font-light leading-tight tracking-tight">19:40:45</div>
                   <div className="text-white text-sm font-normal leading-tight mt-2 max-h-[6.5rem] overflow-auto scrollbar rtl:pl-3 ltr:pr-3">
-                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
-                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
-                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
-                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
-                    بازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که ... ازار ارزهای دیجیتال در روزهای اخیر نوسانات شدیدی را تجربه کرده است. برخی تحلیلگران معتقدند که .... برخی تحلیلگران معتقدند که ...
+                   {props?.coin_analyze?.response?.summary}
                   </div>
                 </div>
               </div>
