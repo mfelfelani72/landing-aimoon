@@ -285,6 +285,9 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                 </div>
               </div>
             </Accordion>
+            <Accordion id="mood" open={true} icon={chart} title={t("amount_changes")} className={"bg-background border border-Neutral-400/50"} >
+            sdfsdf
+            </Accordion>
           </div>
 
         </div>
