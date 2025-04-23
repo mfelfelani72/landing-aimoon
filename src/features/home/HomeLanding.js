@@ -28,15 +28,15 @@ const Home = () => {
         {/* WhyAimoonhub */}
         {/* <LazyWhyAimoonhub /> */}
         {/* HowToUse */}
-        {/* <LazyHowToWork /> */}
+        <LazyHowToWork />
         {/* Aimoonhub statistics */}
-        {/* <LazyAimoonhubStatistics /> */}
+        <LazyAimoonhubStatistics />
         {/* Customer review  */}
         <LazyCustomerReview />
         {/* Plans */}
-        {/* <LazyPlans /> */}
+        <LazyPlans />
         {/* Latest news */}
-        {/* <LazyLatestNews /> */}
+        <LazyLatestNews />
         {/* FAQ */}
         <LazyFAQ />
         {/* Contact us */}

@@ -9,10 +9,13 @@ import CoinList from './components/CoinList.jsx';
 // Functions
 
 import { ConnectToServer } from '../../../utils/services/api/ConnectToServer.js';
+import { cashImages } from "../../../utils/lib/cashImages.js";
+import { arraysEqual } from "../../../utils/lib/arraysEqual.js";
 
 // Constants
 
 import { SYMBOLS } from "./utils/constants/EndPoints.js";
+import LoaderPage from '../../app/components/LoaderPage.jsx';
 
 const CoinLanding = () => {
     // hooks
@@ -50,7 +53,27 @@ const CoinLanding = () => {
         }
 
         ConnectToServer("post", SYMBOLS, parameter, header, "coin-landing").then((response) => {
-            console.log(response);
+            if (response?.data?.return) {
+                tempImages = response?.data?.data.map((item) => item?.logo);
+                if (
+                    !arraysEqual(
+                        tempImages,
+                        response?.data?.data.map((item) => item?.logo),
+                        "data-symbols-images"
+                    ) ||
+                    !localStorage.getItem("data-symbols-images")
+                ) {
+                    cashImages(
+                        "data-symbols-images",
+                        response?.data?.data.map((item) => item?.name),
+                        response?.data?.data.map((item) => item?.logo)
+                    );
+                }
+                // for news image
+                setSymbolsList(response?.data?.data);
+                setSymbolsListTemp(response?.data?.data);
+            }
+
         })
 
     }
@@ -67,6 +90,7 @@ const CoinLanding = () => {
             getSymbolsList();
             getCashedImagesLocal();
         }
+        console.log(symbolsList)
     }, [symbolsList]);
     return (
         <>
@@ -75,45 +99,20 @@ const CoinLanding = () => {
                     {t("coin_list_title")}
                 </div>
                 <div className='px-4 mt-5'>
-                    <InputSearch id="coin-search" placeholder={t("search_coin")} className={""} />
+                    <InputSearch onChange={(e) => searchSymbols(e.target.value)} id="coin-search" placeholder={t("search_coin")} className={""} />
                 </div>
 
                 <div className='px-4 pb-[7rem] grid grid-cols-2 mt-9 gap-7 bg-background'>
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
-                    <CoinList />
+                    {symbolsList?.length == 0 ? <LoaderPage className={"w-full bg-background mx-[6rem]"} /> :
+                        <>
+                            {symbolsList?.map((row, index) => (
+                                <div key={index}>
+                                    <CoinList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />
+                                </div>
+                            ))}
+                        </>
+                    }
+
                 </div>
             </div>
         </>

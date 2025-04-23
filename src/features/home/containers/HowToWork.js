@@ -7,6 +7,11 @@ import { useTranslation } from "react-i18next";
 
 import StepBox from '../components/howToWork/StepBox.jsx';
 import ChessBoard from '../../core/components/ChessBoard.jsx';
+import { Image } from '../../core/components/Image.jsx';
+
+// Svg
+
+import arrow from "../../../../assets/icons/svg/icon-green-arrow.svg"
 
 const HowToWork = () => {
     // hooks
@@ -91,7 +96,7 @@ const HowToWork = () => {
                                     animate={0 <= stepIndex ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
                                     transition={{ duration: 0.6 }} >
                                     <StepBox className={"mt-[2rem]"} number={1} title={t("step_box_1_title")} >
-                                        <div className="w-60 text-Neutral-500 text-base font-medium">بات به‌صورت خودکار از بیش لز 1000  منابع خبری معتبر داده‌ها رو دریافت می‌کنه.(مثلاً سایت‌های خبری کر یپتو، توییتر، ردیت و ...)</div>
+                                        <div className="w-60 text-Neutral-500 text-base font-medium">{t("step_box_1_text")}</div>
                                     </StepBox>
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, y: 100 }}
@@ -99,11 +104,12 @@ const HowToWork = () => {
                                     transition={{ duration: 0.6 }} >
                                     <StepBox className={"rtl:mr-[1.5rem] ltr:ml-[1.5rem]"} number={3} title={t("step_box_2_title")} >
                                         <div className='flex flex-col'>
-                                            <div className='w-60 text-Neutral-500 text-base'>بعد از پردازش، نتیجه تحلیل مستقیم توی تلگرام کاربر ارسال می‌شه:</div>
-                                            <div className='w-60 text-Neutral-500 text-base'>✔️ خلاصه خبر + تحلیل احساسات</div>
-                                            <div className='w-60 text-Neutral-500 text-base'>✔️ هشدارها (مثلاً نوسان شدید روی یه کوین خاص)</div>
-                                            <div className='w-60 text-Neutral-500 text-base'>✔️ لینک منبع خبر برای مطالعه کام</div>
-                                            <div className='w-60 text-Neutral-500 text-base'>✔️تحلیل خبر جفت ارزهای مهم در ساعات تعریف شده</div>
+                                            <div className='w-60 text-Neutral-500 text-base'>{t("step_box_2_text")}</div>
+                                          
+                                            <div className='w-60 text-Neutral-500 text-base inline-flex items-center'><Image src={arrow} alt={"arrow-1"} className={"w-6 h-6"} /><span className='pt-1'>{t("step_box_2_text_check_1")}</span></div>
+                                            <div className='w-60 text-Neutral-500 text-base inline-flex items-center'><Image src={arrow} alt={"arrow-2"} className={"w-6 h-6"} /> <span className='pt-1'>{t("step_box_2_text_check_2")}</span></div>
+                                            <div className='w-60 text-Neutral-500 text-base inline-flex items-center'><Image src={arrow} alt={"arrow-3"} className={"w-6 h-6"} /> <span className='pt-1'>{t("step_box_2_text_check_3")}</span></div>
+                                            <div className='w-60 text-Neutral-500 text-base inline-flex items-center'><Image src={arrow} alt={"arrow-4"} className={"w-6 h-6"} /><span className='pt-1'>{t("step_box_2_text_check_4")}</span></div>
                                         </div>
                                     </StepBox>
                                 </motion.div>
@@ -124,19 +130,19 @@ const HowToWork = () => {
                                     transition={{ duration: 0.6 }} >
                                     <StepBox className={"mt-[3.5rem]"} number={2} title={t("step_box_3_title")} >
                                         <div className='w-60 text-Neutral-500 text-base'>
-                                            با استفاده از مدل پیریخته زبانی و تحلیل احساس اخبار تحلیل می‌شود:
+                                            {t("step_box_3_text")}
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ بررسی احساسات (مثبت، منفی، خنثی)
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center'>
+                                        <Image src={arrow} alt={"arrow-5"} className={"w-6 h-6"} /> <span className='pt-1'>{t("step_box_3_text_check_1")}</span>
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ تشخیص اخبار فیک یا شایعه
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center' >
+                                        <Image src={arrow} alt={"arrow-6"} className={"w-6 h-6"} /> <span className='pt-1'>{t("step_box_3_text_check_2")}</span>
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ تحلیل ارتباط خبر با کوین‌های مهم
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center'>
+                                        <Image src={arrow} alt={"arrow-7"} className={"w-6 h-6"} /> <span className='pt-1'>{t("step_box_3_text_check_3")}</span>
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ ارائه تحلیل مود خبر
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center'>
+                                        <Image src={arrow} alt={"arrow-8"} className={"w-6 h-6"} /> <span className='pt-1'>{t("step_box_3_text_check_4")}</span>
                                         </div>
                                     </StepBox>
                                 </motion.div>
@@ -145,22 +151,22 @@ const HowToWork = () => {
                                     transition={{ duration: 0.6 }} >
                                     <StepBox className={"mt-[0.75rem]"} number={4} title={t("step_box_4_title")} >
                                         <div className='w-60 text-Neutral-500 text-base'>
-                                            کاربران پلن‌های پولی، می‌تونن توی داشبورد وب جزئیات بیشتری ببینن:
+                                        {t("step_box_4_text")}
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ نمودارهای تحلیل روند خبرها
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center'>
+                                            <Image src={arrow} alt={"arrow-9"} className={"w-6 h-6"} /><span className='pt-1'>{t("step_box_4_text_check_1")}</span>
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ مشاهده سوابق تحلیل‌ها
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center'>
+                                            <Image src={arrow} alt={"arrow-10"} className={"w-6 h-6"} /><span className='pt-1'>{t("step_box_4_text_check_2")}</span>
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ فیلترهای سفارشی برای دریافت اخبار خاص
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center'>
+                                            <Image src={arrow} alt={"arrow-11"} className={"w-6 h-6"} /><span className='pt-1'>{t("step_box_4_text_check_3")}</span>
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ ارائه داشبورد خبرگزاری
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center'>
+                                            <Image src={arrow} alt={"arrow-12"} className={"w-6 h-6"} /><span className='pt-1'>{t("step_box_4_text_check_4")}</span>
                                         </div>
-                                        <div className='w-60 text-Neutral-500 text-base'>
-                                            ✔️ ارائه داشبورد خبرنگار
+                                        <div className='w-60 text-Neutral-500 text-base inline-flex items-center'>
+                                            <Image src={arrow} alt={"arrow-13"} className={"w-6 h-6"} /><span className='pt-1'>{t("step_box_4_text_check_5")}</span>
                                         </div>
 
                                     </StepBox>

@@ -164,6 +164,7 @@ const en = {
 
   coin_list_title: "Select your desired coin to enter the dashboard",
   search_coin: "Search in coins",
+  news_count: "News count",
 
   all_information: "All information",
 
