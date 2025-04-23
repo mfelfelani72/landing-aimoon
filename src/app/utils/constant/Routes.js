@@ -4,13 +4,21 @@ export const REDIRECT_ROUTES = ["/landing"];
 export const ALL_ROUTES = [
   // test
   "/mohammad/test",
+
   // Landing
   "/",
   "/landing",
+
   // Dashbnoard
+
   "/dashboard/home",
+
+  // dashboard-coin
   "/dashboard/coin-list",
-  "/dashboard/coin"
+  "/dashboard/coin",
+
+  // dashboard-author
+  "/dashboard/author-list",
 
 ];
 

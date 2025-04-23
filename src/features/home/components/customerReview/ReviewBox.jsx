@@ -7,10 +7,11 @@ import { ImageLazy } from '../../../core/components/Image.jsx'
 // Functions
 
 import { cn } from '../../../../../utils/lib/cn'
+import { stringHelper } from "../../../../../utils/helpers/stringHelper"
 
 // Svg
 
-import customer from "../../../../../assets/images/png/customer.png"
+import avatar from "../../../../../assets/images/png/avatar.png"
 
 const ReviewBox = ({ className, ...props }) => {
     return (
@@ -24,11 +25,11 @@ const ReviewBox = ({ className, ...props }) => {
                     "flex flex-col items-center w-96 h-72 bg-white rounded-[20px] pt-11 relative",
                     className
                 )}>
-                    <ImageLazy src={customer} alt="customer" className="w-11 h-11 rounded-full" />
+                    <ImageLazy src={avatar} alt="avatar" className="w-11 h-11 rounded-full" />
                     <div className="text-base font-bold leading-7 mt-2">{props?.name}</div>
                     <div className="text-Neutral-300 text-sm font-normal leading-snug">{props?.bio}</div>
-                    <div className="pt-4 px-6 text-center text-Neutral-400 text-base font-normal leading-7">
-                        {props?.review}
+                    <div className="pt-4 px-6 ltr:text-left rtl:text-right text-Neutral-400 text-base font-normal leading-7" >
+                        {stringHelper(props?.review,30)}
                     </div>
                 </div>
             </div>

@@ -20,6 +20,9 @@ const LazyDashboardHome = lazy(() => import("../../../features/dashboard/contain
 const LazyCoinLanding = lazy(() => import("../../../features/coin/CoinLanding.js"));
 const LazyCoinDashboard = lazy(() => import("../../../features/coin/containers/CoinDashboard.jsx"));
 
+// Author
+
+const LazyAuthorLanding = lazy(() => import("../../../features/author/AuthorLanding.js"));
 
 const Content = () => {
   return (
@@ -36,8 +39,13 @@ const Content = () => {
         {/* Dashboard */}
         <Route path="/dashboard" element={<LazyDashboardLanding />}>
           <Route path="/dashboard/home" element={<LazyDashboardHome />} />
+
+          {/* Coin */}
           <Route path="/dashboard/coin-list" element={<LazyCoinLanding />} />
           <Route path="/dashboard/coin" element={<LazyCoinDashboard />} />
+
+          {/* Author */}
+          <Route path="/dashboard/author-list" element={<LazyAuthorLanding />} />
         </Route>
       </Routes>
     </>

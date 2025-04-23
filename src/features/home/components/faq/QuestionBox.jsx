@@ -33,7 +33,7 @@ const QuestionBox = ({ ...props }) => {
                     </div>
                 </div>
 
-                <div className="basis-1/12 flex flex-row justify-end">
+                <div className="basis-1/12 flex flex-row justify-end select-none">
                     <Image src={plus} alt="plus" className={`w-12 h-12 transition-all duration-1000 ${isOpen ? "rotate-[765deg]" : "rotate-0"}`} />
                 </div>
             </div>

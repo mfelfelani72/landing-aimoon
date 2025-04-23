@@ -66,6 +66,21 @@ const en = {
   count_reviews:
     "<0>{{count}}</0> people have given positive feedback on Aimoonhub",
 
+  name_1: "Ali Nazari",
+  occupation_1: "Crypto Trader",
+  review_1: "Aimoon Hub is truly an essential tool for any trader. With fast and accurate news analysis, it has helped me make better trading decisions and increase my profits!",
+
+  name_2: "Sara Ahmadi",
+  occupation_2: "Long-Term Investor",
+  review_2: "Keeping up with major market news has always been a challenge for me, but Aimoon Hub has made everything easier. Now I can access critical information without stress and refine my investment strategies.",
+
+  name_3: "Mohammad Karimi",
+  occupation_3: "Technical Analyst",
+  review_3: "Technical analysis alone isn't enough; news has a huge impact on the market. Aimoon Hub has helped me better understand which news events could shift market trends!",
+
+
+
+
   // plans
   plans_title: "Subscription plans suitable for every trading style",
   free: "Free",
@@ -101,6 +116,19 @@ const en = {
 
   // faq
   faq: "FAQ",
+
+  question_1: "How exactly does Aimoon Hub work?",
+  answer_1: "Aimoon Hub is a smart crypto news analysis tool that uses AI to process market news and analyze its potential impact on prices. This information is delivered to you in real time via Telegram.",
+
+  question_2: "Is Aimoon Hub free to use?",
+  answer_2: "Aimoon Hub offers a free version with limited features. However, for access to advanced features like in-depth analysis and exclusive trading signals, users can purchase a professional or premium subscription.",
+
+  question_3: "How does Aimoon Hub analyze news?",
+  answer_3: "Aimoon Hub gathers news from reliable sources, processes them using machine learning algorithms, and evaluates their potential market impact. It then delivers summarized insights to users for faster decision-making.",
+
+  question_4: "How can I purchase a professional or premium subscription?",
+  answer_4: "You can purchase a professional or premium subscription by visiting the official website and selecting your preferred plan under the ‘Subscriptions’ section. You can also request a purchase through Telegram’s support channel.",
+
 
   // contact us
   contact_us: "Contact Us",

@@ -49,9 +49,9 @@ const CustomerReview = () => {
                             {/* content */}
                             <div className="flex flex-col mt-[4.5rem]">
                                 <div className='flex flex-row w-full items-center justify-center gap-16 right-to-left'>
-                                    <ReviewBox name={"سعید محمدی"} bio={"تحلیلگر بازارهای مالی"} review={"ایمون هاب بهم کمک کرد که سریع‌تر از رقبا به اخبار مهم دسترسی داشته باشم. حالا می‌تونم تحلیل‌هام رو با اطلاعات دقیق‌تری انجام بدم و تصمیمات بهتری بگیرم"} className={"shadow-[0px_42.444149017333984px_61.30821228027344px_0px_rgba(0,0,0,0.08)]"} />
-                                    <ReviewBox name={"سعید محمدی"} bio={"تحلیلگر بازارهای مالی"} review={"ایمون هاب بهم کمک کرد که سریع‌تر از رقبا به اخبار مهم دسترسی داشته باشم. حالا می‌تونم تحلیل‌هام رو با اطلاعات دقیق‌تری انجام بدم و تصمیمات بهتری بگیرم"} className={"mt-13"} colorShadow={true} />
-                                    <ReviewBox name={"سعید محمدی"} bio={"تحلیلگر بازارهای مالی"} review={"ایمون هاب بهم کمک کرد که سریع‌تر از رقبا به اخبار مهم دسترسی داشته باشم. حالا می‌تونم تحلیل‌هام رو با اطلاعات دقیق‌تری انجام بدم و تصمیمات بهتری بگیرم"} />
+                                    <ReviewBox name={t("name_1")} bio={t("occupation_1")} review={t("review_1")} className={"shadow-[0px_42.444149017333984px_61.30821228027344px_0px_rgba(0,0,0,0.08)]"} />
+                                    <ReviewBox name={t("name_2")} bio={t("occupation_2")} review={t("review_2")} className={"mt-13"} colorShadow={true} />
+                                    <ReviewBox name={t("name_3")} bio={t("occupation_3")} review={t("review_3")} />
                                 </div>
 
                             </div>

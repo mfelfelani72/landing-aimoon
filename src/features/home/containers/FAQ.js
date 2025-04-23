@@ -3,12 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { Image } from "../../core/components/Image.jsx";
 import QuestionBox from "../components/faq/QuestionBox.jsx";
-
-// Svg
-
-import plus from "../../../../assets/icons/svg/plus.svg";
 
 const FAQ = () => {
   // hooks
@@ -23,10 +18,10 @@ const FAQ = () => {
           </div>
           {/* content */}
           <div className="flex flex-col w-full">
-            <QuestionBox number={"01"} question={"آیمون هاب دقیقا چه کاری انجام می‌دهد؟"} answer={"آیمون هاب یک ابزار هوشمند تحلیل اخبار کریپتو است که با استفاده از هوش مصنوعی، آخرین اخبار بازار را پردازش و تأثیر احتمالی آن‌ها بر قیمت‌ها را تحلیل می‌کند. این اطلاعات به‌صورت لحظه‌ای از طریق تلگرام در اختیار شما قرار می‌گیرد."} />
-            <QuestionBox number={"02"} question={"آیا استفاده از ایمون هاب رایگان است؟"} answer={"آیمون هاب یک ابزار هوشمند تحلیل اخبار کریپتو است که با استفاده از هوش مصنوعی، آخرین اخبار بازار را پردازش و تأثیر احتمالی آن‌ها بر قیمت‌ها را تحلیل می‌کند. این اطلاعات به‌صورت لحظه‌ای از طریق تلگرام در اختیار شما قرار می‌گیرد."} />
-            <QuestionBox number={"03"} question={"آیمون هاب چطور اخبار را تحلیل می‌کند؟"} answer={"آیمون هاب یک ابزار هوشمند تحلیل اخبار کریپتو است که با استفاده از هوش مصنوعی، آخرین اخبار بازار را پردازش و تأثیر احتمالی آن‌ها بر قیمت‌ها را تحلیل می‌کند. این اطلاعات به‌صورت لحظه‌ای از طریق تلگرام در اختیار شما قرار می‌گیرد."} />
-            <QuestionBox number={"04"} question={"چطور می‌توانم اشتراک حرفه‌ای یا ویژه را بخرم؟"} answer={"آیمون هاب یک ابزار هوشمند تحلیل اخبار کریپتو است که با استفاده از هوش مصنوعی، آخرین اخبار بازار را پردازش و تأثیر احتمالی آن‌ها بر قیمت‌ها را تحلیل می‌کند. این اطلاعات به‌صورت لحظه‌ای از طریق تلگرام در اختیار شما قرار می‌گیرد."} />
+            <QuestionBox number={"01"} question={t("question_1")} answer={t("answer_1")} />
+            <QuestionBox number={"02"} question={t("question_2")} answer={t("answer_2")} />
+            <QuestionBox number={"03"} question={t("question_3")} answer={t("answer_3")} />
+            <QuestionBox number={"04"} question={t("question_4")} answer={t("answer_4")} />
 
           </div>
 
