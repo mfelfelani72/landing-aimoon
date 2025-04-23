@@ -18,8 +18,11 @@ const InfoBox = ({ className, ...props }) => {
                         {props?.icon_title}
                     </div>
                 </div>
-                <div className='flex flex-col gap-2 justify-center'>
-                    <div className="text-white text-base font-medium leading-3">{props?.number}+</div>
+                <div className='flex flex-col items-start gap-2 justify-center'>
+                    <div className="text-primary-500 text-base font-medium leading-3 flex rtl:flex-row ltr:flex-row-reverse">
+                        <div>{props?.number}</div>
+                        <div>+</div>
+                    </div>
                     <div className="text-Neutral-200 text-xs font-normal">{props?.title}</div>
                 </div>
             </div>

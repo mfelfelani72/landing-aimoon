@@ -11,6 +11,7 @@ import { Image, ImageLazy } from "../../core/components/Image.jsx";
 // Functions
 
 import { cn } from "../../../../utils/lib/cn";
+import { dateHelper } from "../../../../utils/helpers/dateHelper.js";
 
 // Constants
 
@@ -23,10 +24,12 @@ import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
 import clock from "../../../../assets/icons/svg/icon-color-clock.svg"
 import star from "../../../../assets/icons/svg/icon-color-star.svg"
 import chart_chart from "../../../../assets/icons/svg/icon-color-chart.svg"
+import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
+  console.log(props?.symbol)
   console.log(props?.coin_analyze)
   // functions
   return (
@@ -164,31 +167,42 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col p-5 gap-2">
-                  {/* <div className="text-white text-base font-medium leading-snug">بیت‌کوین در آستانه سقوط یا جهش؟</div> */}
-                  <div className="text-Neutral-300 text-sm font-light leading-tight tracking-tight">19:40:45</div>
+                <div className="flex flex-col p-5">
+                  <div className="text-white text-base font-medium leading-snug">{t("new_summary")}</div>
+                  <div className="text-Neutral-300 text-sm font-light leading-tight tracking-tight">{props?.symbol?.latest_price_info?.market_name}</div>
                   <div className="text-white text-sm font-normal leading-tight mt-2 max-h-[6.5rem] overflow-auto scrollbar rtl:pl-3 ltr:pr-3">
-                   {props?.coin_analyze?.response?.summary}
+                    {props?.coin_analyze?.response?.summary}
                   </div>
                 </div>
               </div>
               <div className="absolute z-10 top-0 -left-[0.5rem] w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
             </div>
-            <Accordion id="analysis" open={true} title={"Aimoon Analysis"} icon={chart} className={"bg-background border border-Neutral-400"} circleLocation={"top-4 left-2"} >
-              <div className="flex flex-col">
-                <div className="text-Neutral-300 text-sm font-normal leading-tight tracking-tight">19:40:45</div>
-                <div className="w-72 text-white text-sm font-normal leading-tight">Based on recent news and Ethereum’s price trend, the market appears to be forming a bullish triangle pattern. This suggests that Ethereum's price is consolidating and preparing for an upward breakout. Considering trading volume and transaction flows, the current market sentiment leans optimistic, signaling potential growth in the short term.</div>
+            <Accordion id="analysis" open={false} title={t("aimoon_analysis")} icon={chart} className={"bg-background border border-Neutral-400/50"} circleLocation={"top-4 left-2"} >
+              <div className="flex flex-col gap-2">
+                <div className="text-secondary-400 text-sm font-normal leading-tight tracking-tight">{dateHelper(props?.symbol?.updatedAt, "difference")}</div>
+                <div className="text-white text-sm font-normal leading-tight">
+                  {props?.coin_analyze?.response?.analysis}
+                </div>
               </div>
             </Accordion>
-            <Accordion id="analysis" open={false} title={"اخبار ETH_USDT براساس آمار"} className={"bg-background border border-Neutral-400/20"} >
+            <Accordion id="analysis" open={true} title={
+              <Trans
+                i18nKey="news_base_statistics"
+                values={{
+                  name: props?.symbol?.name,
+                }}
+              >
+                <span className="text-primary-500"></span>
+              </Trans>
+            } className={"bg-background border border-Neutral-400/50"} >
               <div className="grid grid-cols-2 gap-2.5">
-                <InfoBox icon={calender} icon_title="All" number={1756} title={"junhn ;g hofhv"} />
-                <InfoBox icon={calender} icon_title="1" number={1756} title={"junhn ;g hofhv"} />
-                <InfoBox icon={calender} icon_title="7" number={1756} title={"junhn ;g hofhv"} />
-                <InfoBox icon={calender} icon_title="30" number={1756} title={"junhn ;g hofhv"} />
+                <InfoBox icon={calender} icon_title="All" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.news_count))} title={t("news")} />
+                <InfoBox icon={calender} icon_title="1" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.avg_news_day))} title={t("news_per_day")} />
+                <InfoBox icon={calender} icon_title="7" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.avg_news_week))} title={t("news_per_week")} />
+                <InfoBox icon={calender} icon_title="30" number={formatNumberHelper(parseInt(props?.symbol?.latest_news_info.avg_news_month))} title={t("news_per_month")} />
               </div>
             </Accordion>
-            <Accordion id="analysis" open={false} icon={chart} title={"میزان تغییرات"} className={"bg-background border border-Neutral-400/20"} >
+            <Accordion id="analysis" open={false} icon={chart} title={"میزان تغییرات"} className={"bg-background border border-Neutral-400/50"} >
               <div className="grid grid-cols-2 gap-2.5">
                 <div className="flex flex-col pl-4">
                   <div className="text-Neutral-100 text-sm font-normal leading-9">تغییرات احساسات</div>

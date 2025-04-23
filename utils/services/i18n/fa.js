@@ -178,6 +178,12 @@ const fa = {
   authors_dashboard: "داشبورد خبرنگاران",
   providers_dashboard: "داشبورد خبرگزاری‌ها",
   news_analysis: "تحلیل اخبار",
+  aimoon_analysis:"تحلیل آیمون",
+  news: "اخبار",
+  news_per_day: "اخبار در روز",
+  news_per_week: "اخبار در هفته",
+  news_per_month: "اخبار در ماه",
+  news_base_statistics: "اخبار <0>{{name}}</0> بر اساس آمار",
 
   analyzed_news: "خبرهای تحلیل شده",
 
@@ -192,6 +198,7 @@ const fa = {
   chart_template: "الگوی چارت",
   aimoonhubs_suggestion: "پیشنهاد آیمون",
   duration: "مدت زمان",
+  new_summary: "خلاصه خبر",
 
 
   all_information: "اطلاعات کلی",

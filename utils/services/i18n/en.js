@@ -193,6 +193,13 @@ const en = {
   chart_template: "Chart template",
   aimoonhubs_suggestion: "Aimoonhub's suggestion",
   duration: "Duration",
+  new_summary: "New summary",
+  aimoon_analysis: "Aimoon analysis",
+  news: "News",
+  news_per_day: "News per day",
+  news_per_week: "News per week",
+  news_per_month: "News per month",
+  news_base_statistics: "News <0>{{name}}</0> based on statistics",
 
   all_information: "All information",
 
