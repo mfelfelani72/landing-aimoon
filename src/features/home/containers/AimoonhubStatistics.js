@@ -26,12 +26,6 @@ import graph from "../../../../assets/icons/svg/icon-graph.svg"
 import headphones from "../../../../assets/icons/svg/icon-headphones.svg"
 import baseChart from "../../../../assets/images/svg/base-chart.svg"
 
-import news_agency_1 from "../../../../assets/images/png/image-163.png"
-import news_agency_2 from "../../../../assets/images/png/image-164.png"
-import news_agency_3 from "../../../../assets/images/png/image-165.png"
-import news_agency_4 from "../../../../assets/images/png/image-166.png"
-import news_agency_5 from "../../../../assets/images/png/image-168.png"
-
 const AimoonhubStatistics = () => {
     // hooks
     const { t } = useTranslation();
