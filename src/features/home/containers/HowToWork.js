@@ -21,7 +21,7 @@ const HowToWork = () => {
     // states and consts
     const countStepBoxes = 4;
     const [scrollLocked, setScrollLocked] = useState(false);
-    const [stepIndex, setStepIndex] = useState(0);
+    const [stepIndex, setStepIndex] = useState(3);
 
     // refs
     const sectionRef = useRef(null);
@@ -50,23 +50,24 @@ const HowToWork = () => {
     };
 
     // Lock/unlock scrolling
-    useEffect(() => {
-        document.body.style.overflow = scrollLocked ? 'hidden' : 'auto';
-    }, [scrollLocked]);
+    // useEffect(() => {
+    //     document.body.style.overflow = scrollLocked ? 'hidden' : 'auto';
+    // }, [scrollLocked]);
 
-    useEffect(() => {
-        if (inView && stepIndex < countStepBoxes) {
-            setScrollLocked(true);
-        } else if (stepIndex >= countStepBoxes) {
-            setScrollLocked(false);
-        }
-    }, [inView, stepIndex]);
+    // useEffect(() => {
+    //     if (inView && stepIndex < countStepBoxes) {
+    //         setScrollLocked(true);
+    //     } else if (stepIndex >= countStepBoxes) {
+    //         setScrollLocked(false);
+    //     }
+    // }, [inView, stepIndex]);
 
 
 
     return (
         <>
-            <div className='w-[calc(100%-2rem)]' ref={setRefs} onWheel={handleWheel}>
+            {/* <div className='w-[calc(100%-2rem)]' ref={setRefs} onWheel={handleWheel}> */}
+            <div className='w-[calc(100%-2rem)]'>
                 {/* top section -> { top table and title } */}
                 <div className='relative w-full h-[26.5rem] overflow-hidden -bottom-[19rem] -mt-[35rem] z-10'>
                     {/* table top*/}
