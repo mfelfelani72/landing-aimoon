@@ -11,7 +11,8 @@ import {
 } from "recharts";
 import { dateHelper } from "../../../../utils/helpers/dateHelper.js";
 
-function MoodTimeSeries(props) {
+const MoodTimeSeries = (props) => {
+  // consts
   const data = props?.data?.timestamp.map((timestamp, index) => ({
     name: dateHelper(timestamp, "chart"),
     damp5: props?.data?.damp_5[index],
@@ -111,6 +112,6 @@ function MoodTimeSeries(props) {
       </div>
     </>
   );
-}
+};
 
 export default MoodTimeSeries;

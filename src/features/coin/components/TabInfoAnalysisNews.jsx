@@ -28,6 +28,7 @@ import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js"
 import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 import MoodTimeSeries from "./MoodTimeSeries.jsx";
+import NewsTimeSeries from "./NewsTimeSeries.jsx"
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
@@ -82,7 +83,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
           </label>
         </div>
 
-        <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab2:block">
+        <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
           <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
             {/* header */}
             <div className="flex flex-row gap-2 items-center">
@@ -144,9 +145,9 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             </div>
           )}
         </div>
-        <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab1:block">
+        <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
           <div className="flex flex-col gap-4 mt-4 px-4">
-            {/* <div className="relative">
+            <div className="relative">
               <div className="flex flex-col w-full bg-background-light p-[2px] rounded-2xl">
                 <div className="flex flex-col min-h-60 bg-background rounded-2xl">
                   <div className="border-b-2 border-b-background-light pt-4 px-5 pb-2">
@@ -218,8 +219,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                 </div>
               </div>
               <div className="absolute z-10 top-0 -left-[0.5rem] w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
-            </div> */}
-            {/* <Accordion
+            </div>
+            <Accordion
               id="analysis"
               open={false}
               title={t("aimoon_analysis")}
@@ -510,7 +511,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   </div>
                 </div>
               </div>
-            </Accordion> */}
+            </Accordion>
             <Accordion
               id="mood"
               open={true}
@@ -519,6 +520,15 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               className={"bg-background border border-Neutral-400/50"}
             >
               <MoodTimeSeries data={props?.symbol?.daily_timeseries} />
+            </Accordion>
+            <Accordion
+              id="news"
+              open={true}
+              icon={chart}
+              title={t("news_count")}
+              className={"bg-background border border-Neutral-400/50"}
+            >
+              <NewsTimeSeries data={props?.symbol?.daily_timeseries} />
             </Accordion>
           </div>
         </div>
