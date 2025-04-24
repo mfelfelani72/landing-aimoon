@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  dot
+  dot,
 } from "recharts";
 import { dateHelper } from "../../../../utils/helpers/dateHelper.js";
 
@@ -22,12 +22,12 @@ function MoodTimeSeries(props) {
   }));
   return (
     <>
-      <div className="w-full flex flex-row justify-center mx-[2rem]">
+      <div className="w-full flex flex-col jusify-start  left-to-right">
         <LineChart
-          width={352}
+          width={330}
           height={150}
           data={data}
-          margin={{ top: 5, right: 5, left: 5, bottom: 5 }}
+          margin={{ top: 0, left: -25, bottom: 10 }}
         >
           {/* <CartesianGrid  /> */}
           <XAxis dataKey="name" tick={{ fill: "#fff" }} />
@@ -39,43 +39,75 @@ function MoodTimeSeries(props) {
             type="monotone"
             dataKey="damp5"
             name="damp 05"
-            stroke="rgba(222, 49, 99, 1)"
-            strokeWidth={1}
+            stroke="rgba(115, 234, 105, 1)"
+            strokeWidth={2}
             dot={false}
           />
           <Line
             type="monotone"
             dataKey="damp10"
             name="damp 10"
-            stroke="rgba(255, 127, 80, 1)"
-            strokeWidth={1}
+            stroke="rgba(83, 145, 208, 1)"
+            strokeWidth={2}
             dot={false}
           />
           <Line
             type="monotone"
             dataKey="damp15"
             name="damp 15"
-            stroke="rgba(159, 226, 191, 1)"
-            strokeWidth={1}
+            stroke="rgba(158, 145, 83, 1)"
+            strokeWidth={2}
             dot={false}
           />
           <Line
             type="monotone"
             dataKey="damp20"
             name="damp 20"
-            stroke="rgba(100, 149, 237, 1)"
-            strokeWidth={1}
+            stroke="rgba(229, 124, 67, 1)"
+            strokeWidth={2}
             dot={false}
           />
           <Line
             type="monotone"
             dataKey="damp30"
             name="damp 30"
-            stroke="rgba(28, 40, 51, 1)"
-            strokeWidth={1}
+            stroke="rgba(180, 162, 241, 1)"
+            strokeWidth={2}
             dot={false}
           />
         </LineChart>
+        <div className="w-full flex flex-row pb-4 justify-center px-4 gap-2">
+          <div className="flex flex-row items-center gap-1">
+            <div className="bg-Success-300 w-2 h-2 rounded-full"></div>
+            <div className="text-white text-[10px] font-medium font-satoshi">
+              Damp 05
+            </div>
+          </div>
+          <div className="flex flex-row items-center gap-1">
+            <div className="bg-Tertiary-600 w-2 h-2 rounded-full"></div>
+            <div className="text-white text-[10px] font-medium font-satoshi">
+              Damp 10
+            </div>
+          </div>
+          <div className="flex flex-row items-center gap-1">
+            <div className="bg-Warning-300 w-2 h-2 rounded-full"></div>
+            <div className="text-white text-[10px] font-medium font-satoshi">
+              Damp 15
+            </div>
+          </div>
+          <div className="flex flex-row items-center gap-1">
+            <div className="bg-primary-400 w-2 h-2 rounded-full"></div>
+            <div className="text-white text-[10px] font-medium font-satoshi">
+              Damp 20
+            </div>
+          </div>
+          <div className="flex flex-row items-center gap-1">
+            <div className="bg-secondary-500 w-2 h-2 rounded-full"></div>
+            <div className="text-white text-[10px] font-medium font-satoshi">
+              Damp 30
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
