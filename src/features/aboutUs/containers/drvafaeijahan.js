@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "../../core/components/Slider.jsx";
 
 const drvafaeijahan = () => {
   return (
@@ -8,7 +9,13 @@ const drvafaeijahan = () => {
 
       <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden left-to-right font-satoshi">
         {/* slider */}
-        {/* <div className="w-full h-[710.89px] bg-zinc-700"></div> */}
+        <div className="width-theme h-[582px] bg-zinc-700">
+          <Slider className={"width-theme h-[582px]"} visible_count={1}>
+            <div className="width-theme h-full">dasd</div>
+            <div className="width-theme h-full">dasd</div>
+            <div className="width-theme h-full">dasd</div>
+          </Slider>
+        </div>
 
         {/* about and skills */}
 
@@ -286,7 +293,9 @@ const drvafaeijahan = () => {
           <div className="w-[461.12px] justify-start text-green-400 text-2xl font-normal leading-relaxed mt-[80px]">
             VafaeiJahanMajid@iau.ac.ir
           </div>
-          <div className="w-[461.12px] justify-start text-green-400 text-2xl font-normal leading-relaxed">VafaeiJahanMajid@gmail.com</div>
+          <div className="w-[461.12px] justify-start text-green-400 text-2xl font-normal leading-relaxed">
+            VafaeiJahanMajid@gmail.com
+          </div>
         </div>
       </div>
     </>
