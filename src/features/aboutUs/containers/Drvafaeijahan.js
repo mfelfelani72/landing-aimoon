@@ -181,52 +181,97 @@ const Drvafaeijahan = () => {
               </div>
             </div>
 
-            <div className="width-theme h-full">
-              <div className="h-[500px] bg-zinc-700"></div>
-              <div className="width-theme h-[450px] inline-flex bg-gray-800 px-[90px]">
-                <div className="basis-1/2 w-full h-full flex flex-col justify-center">
-                  <div className="flex flex-row gap-1 p1-2">
-                    <div className="w-3.5 h-1 bg-green-400 rounded-full" />
-                    <div className="w-1 h-1 bg-green-400 rounded-full" />
-                  </div>
-                  <div className="text-white text-4xl font-medium leading-10 mt-5">
-                    About Me
-                  </div>
-                  <div className="w-[461.12px] opacity-60 text-white text-2xl mt-5 font-medium leading-relaxed">
-                    Associate Professor, Ph.D. in Intelligent Systems and Big
-                    Data Analysis <br />
-                    Islamic Azad University, Mashhad
-                  </div>
+            <div className="h-full">
+              <div className="width-theme h-full relative bg-gray-800 overflow-hidden">
+                <div className="width-theme h-0 left-[0.07px] top-0 absolute outline-[5px] outline-offset-[-2.50px] outline-green-400" />
+                <div className="w-[600px] left-0 top-[300px] absolute justify-start px-[90px]">
+                  <span class="text-green-400 text-3xl font-semibold leading-9">
+                    1
+                  </span>
+                  <span class="text-white text-xl font-normal leading-9">
+                    . MinCache: A hybrid cache system for efficient chatbots
+                    with hierarchical embedding matching and LLM
+                  </span>
+                  <span class="text-white/50 text-xl font-normal leading-9">
+                    <br />
+                    - *Journal*: Future Generation Computer Systems
+                    <br /> - *Impact Factor*: 7.187 (2025)
+                  </span>
+
+                  <span class="text-green-400 text-xl font-semibold leading-9">
+                    <br />2
+                  </span>
+                  <span class="text-white text-xl font-normal leading-9">
+                    . An Adaptive Multimodal Learning Model for Financial Market
+                    Price Prediction
+                  </span>
+                  <span class="text-white/50 text-xl font-normal leading-9">
+                    {" "}
+                    - *Journal*: IEEE Access
+                    <br /> - *Impact Factor*: 3.367 (2024)
+                  </span>
+
+                  <span class="text-green-400 text-xl font-semibold leading-9">
+                    <br />3
+                  </span>
+                  <span class="text-white text-xl font-normal leading-9">
+                    . Investigating the informativeness of technical indicators
+                    and news sentiment in financial market price prediction
+                  </span>
+                  <span class="text-white/50 text-xl font-normal leading-9">
+                    <br />
+                    - *Journal*: Knowledge-Based Systems
+                    <br /> - *Impact Factor*: 8.139 (2022)
+                  </span>
                 </div>
-                <div className="basis-1/2 w-full h-full flex flex-col justify-center">
-                  <div className="text-white text-4xl font-medium leading-10">
-                    Skills & Expertise
-                  </div>
-                  <div className="flex flex-row gap-2 w-full items-center mt-5">
-                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                      Blockchain & Cryptocurrency Systems
-                    </div>
-                  </div>
-                  <div className="flex flex-row gap-2 w-full items-center mt-5">
-                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                      Advanced Data Analysis
-                    </div>
-                  </div>
-                  <div className="flex flex-row gap-2 w-full items-center mt-5">
-                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                      Machine Learning & Pattern Recognition
-                    </div>
-                  </div>
-                  <div className="flex flex-row gap-2 w-full items-center mt-5">
-                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                      Research Leadership & Collaboration
-                    </div>
-                  </div>
+                <div className="width-theme px-[90px] left-0 top-[83px] absolute text-white text-2xl font-bold leading-9">
+                  Dr. Majid Vafaei Jahan is a prominent researcher whose
+                  innovative contributions span financial market analysis,
+                  distributed systems, and data clustering, reflecting a
+                  profound impact on both academia and industry, some his latest
+                  industrial paper are:
                 </div>
+                <div className="w-[500px] left-[850px] top-[300px] absolute justify-start">
+                  <span class="text-green-400 text-xl font-semibold leading-9">
+                    4
+                  </span>
+                  <span class="text-white text-xl font-normal leading-9">
+                    . From Text Representation to Financial Market Prediction: A
+                    Literature Review
+                  </span>
+                  <span class="text-white/50 text-xl font-normal leading-9">
+                    <br />- *Journal*: Information
+                    <br />- *Impact Factor*: 2.419 (2022)
+                  </span>
+                  <span class="text-green-400 text-xl font-semibold leading-9">
+                    <br />5
+                  </span>
+                  <span class="text-white text-xl font-normal leading-9">
+                    . Leveraging Latent Economic Concepts and Sentiments in the
+                    News for Market Prediction
+                    <br />
+                  </span>
+                  <span class="text-white/50 text-xl font-normal leading-9">
+                    - *Conference*: IEEE DSAA (Data Science and Advanced
+                    Analytics)
+                    <br />
+                  </span>
+                  <span class="text-green-400 text-xl font-semibold leading-9">
+                    6
+                  </span>
+                  <span class="text-white text-xl font-normal leading-9">
+                    . A Density-Based Clustering Approach to Distinguish Between
+                    Web Robot and Human Requests to a Web Server
+                    <br />
+                  </span>
+                  <span class="text-white/50 text-xl font-normal leading-9">
+                    - *Journal*: ISC International Journal of Information
+                    Security
+                    <br />- *Impact Factor*: Not available
+                  </span>
+                </div>
+                <div className="w-[1916.50px] h-0 left-[11.50px] top-[238px] absolute outline-1 outline-offset-[-0.50px] outline-green-400" />
+                <div className="w-0 h-[847px] left-[750px] top-[238px] absolute outline-1 outline-offset-[-0.50px] outline-green-400" />
               </div>
             </div>
             <div className="width-theme h-full">
