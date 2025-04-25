@@ -71,7 +71,7 @@ const Content = () => {
         {/* AboutUs */}
 
         <Route
-          path="/about-us/drvafaeijahan"
+          path="/drvafaeijahan"
           element={<LazyAboutUsDrvafaeijahan />}
         ></Route>
       </Routes>
