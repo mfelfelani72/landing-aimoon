@@ -38,7 +38,7 @@ const LazyAuthorLanding = lazy(() =>
 
 // AboutUs
 const LazyAboutUsDrvafaeijahan = lazy(() =>
-  import("../../../features/aboutUs/containers/drvafaeijahan.js")
+  import("../../../features/aboutUs/containers/Drvafaeijahan.js")
 );
 
 const Content = () => {
