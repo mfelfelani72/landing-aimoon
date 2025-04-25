@@ -66,7 +66,7 @@ const drvafaeijahan = () => {
 
         {/* products */}
 
-        <div className="width-theme h-[4855px] bg-zinc-700 flex flex-col px-[150px] py-[110px]">
+        <div className="width-theme h-full bg-zinc-700 flex flex-col px-[150px] py-[110px]">
           <div className="text-white text-4xl font-medium leading-10">
             Products & Ventures
           </div>
@@ -76,6 +76,7 @@ const drvafaeijahan = () => {
             smarter, services faster, and lives bette
           </div>
 
+          {/* aimoonx */}
           <div className="flex flex-row mt-[90px]">
             <div className="basis-1/2 w-full h-full flex flex-col justify-start">
               <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
@@ -114,7 +115,7 @@ const drvafaeijahan = () => {
               </div>
             </div>
           </div>
-
+          {/* aimoonhub */}
           <div className="flex flex-row-reverse mt-[90px]">
             <div className="basis-1/2 w-full h-full flex flex-col justify-start items-end">
               <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
@@ -147,6 +148,123 @@ const drvafaeijahan = () => {
                 <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
                   <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
                     Cross-platform compatibility
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* noyab */}
+          <div className="flex flex-row mt-[90px]">
+            <div className="basis-1/2 w-full h-full flex flex-col justify-start">
+              <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
+            </div>
+            <div className="basis-1/2 w-full h-full flex flex-col justify-start">
+              <div className="text-white text-4xl font-medium leading-10">
+                Noyaab
+              </div>
+              <div className="opacity-40 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed mt-2">
+                AI-Driven Healthcare Management
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Predictive patient analytics
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Secure medical data sharing using blockchain
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Privacy-focused healthcare AI
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* noban */}
+          <div className="flex flex-row-reverse mt-[90px]">
+            <div className="basis-1/2 w-full h-full flex flex-col justify-start items-end">
+              <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
+            </div>
+            <div className="basis-1/2 w-full h-full flex flex-col justify-start">
+              <div className="text-white text-4xl font-medium leading-10">
+                Noban
+              </div>
+              <div className="opacity-40 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed mt-2">
+                LLM-Powered Trading News Platform
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Analyzes trading news from 60+ providers using AI
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Used by over +6,200 active users
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Cross-platform compatibility
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Sinapay */}
+          <div className="flex flex-row mt-[90px]">
+            <div className="basis-1/2 w-full h-full flex flex-col justify-start">
+              <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
+            </div>
+            <div className="basis-1/2 w-full h-full flex flex-col justify-start">
+              <div className="text-white text-4xl font-medium leading-10">
+                Sinapay
+              </div>
+              <div className="opacity-40 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed mt-2">
+                Focused on DeFi, smart contracts, and blockchain risk modeling
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Predictive tools for crypto trading
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Secure medical data sharing using blockchain
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-2 w-full items-center mt-5">
+                <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    Research-based design for secure financial system
                   </div>
                 </div>
               </div>
