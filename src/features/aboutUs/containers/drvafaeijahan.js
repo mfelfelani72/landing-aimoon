@@ -9,71 +9,176 @@ const drvafaeijahan = () => {
 
       <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden left-to-right font-satoshi">
         {/* slider */}
-        <div className="width-theme h-[582px] bg-zinc-700">
-          <Slider className={"width-theme h-[582px]"} visible_count={1}>
-            <div className="width-theme h-full">dasd</div>
-            <div className="width-theme h-full">dasd</div>
-            <div className="width-theme h-full">dasd</div>
+        <div className="width-theme bg-zinc-700">
+          <Slider className={"width-theme h-[950px] p-0"} visible_count={1}>
+            <div className="width-theme h-full">
+              <div className="h-[500px] bg-zinc-700"></div>
+              <div className="width-theme h-[450px] inline-flex bg-gray-800 px-[150px]">
+                <div className="basis-1/2 w-full h-full flex flex-col justify-center">
+                  <div className="flex flex-row gap-1 p1-2">
+                    <div className="w-3.5 h-1 bg-green-400 rounded-full" />
+                    <div className="w-1 h-1 bg-green-400 rounded-full" />
+                  </div>
+                  <div className="text-white text-4xl font-medium leading-10 mt-5">
+                    About Me
+                  </div>
+                  <div className="w-[461.12px] opacity-60 text-white text-2xl mt-5 font-medium leading-relaxed">
+                    Associate Professor, Ph.D. in Intelligent Systems and Big
+                    Data Analysis <br />
+                    Islamic Azad University, Mashhad
+                  </div>
+                </div>
+                <div className="basis-1/2 w-full h-full flex flex-col justify-center">
+                  <div className="text-white text-4xl font-medium leading-10">
+                    Skills & Expertise
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      Blockchain & Cryptocurrency Systems
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Advanced Data Analysis
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Machine Learning & Pattern Recognitio
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Research Leadership & Collaboration
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="width-theme h-full">
+              <div className="h-[500px] bg-zinc-700"></div>
+              <div className="width-theme h-[450px] inline-flex bg-gray-800 px-[150px]">
+                <div className="basis-1/2 w-full h-full flex flex-col justify-center">
+                  <div className="flex flex-row gap-1 p1-2">
+                    <div className="w-3.5 h-1 bg-green-400 rounded-full" />
+                    <div className="w-1 h-1 bg-green-400 rounded-full" />
+                  </div>
+                  <div className="text-white text-4xl font-medium leading-10 mt-5">
+                    About Me
+                  </div>
+                  <div className="w-[461.12px] opacity-60 text-white text-2xl mt-5 font-medium leading-relaxed">
+                    Associate Professor, Ph.D. in Intelligent Systems and Big
+                    Data Analysis <br />
+                    Islamic Azad University, Mashhad
+                  </div>
+                </div>
+                <div className="basis-1/2 w-full h-full flex flex-col justify-center">
+                  <div className="text-white text-4xl font-medium leading-10">
+                    Skills & Expertise
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      Blockchain & Cryptocurrency Systems
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Advanced Data Analysis
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Machine Learning & Pattern Recognitio
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Research Leadership & Collaboration
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="width-theme h-full">
+              <div className="h-[500px] bg-zinc-700"></div>
+              <div className="width-theme h-[450px] inline-flex bg-gray-800 px-[150px]">
+                <div className="basis-1/2 w-full h-full flex flex-col justify-center">
+                  <div className="flex flex-row gap-1 p1-2">
+                    <div className="w-3.5 h-1 bg-green-400 rounded-full" />
+                    <div className="w-1 h-1 bg-green-400 rounded-full" />
+                  </div>
+                  <div className="text-white text-4xl font-medium leading-10 mt-5">
+                    About Me
+                  </div>
+                  <div className="w-[461.12px] opacity-60 text-white text-2xl mt-5 font-medium leading-relaxed">
+                    Associate Professor, Ph.D. in Intelligent Systems and Big
+                    Data Analysis <br />
+                    Islamic Azad University, Mashhad
+                  </div>
+                </div>
+                <div className="basis-1/2 w-full h-full flex flex-col justify-center">
+                  <div className="text-white text-4xl font-medium leading-10">
+                    Skills & Expertise
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      Blockchain & Cryptocurrency Systems
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Advanced Data Analysis
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Machine Learning & Pattern Recognitio
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-2 w-full items-center mt-5">
+                    <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                      <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                        Research Leadership & Collaboration
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Slider>
         </div>
 
-        {/* about and skills */}
-
-        {/* <div className="width-theme h-[583px] inline-flex bg-gray-800 px-[150px]">
-          <div className="basis-1/2 w-full h-full flex flex-col justify-center">
-            <div className="flex flex-row gap-1 p1-2">
-              <div className="w-3.5 h-1 bg-green-400 rounded-full" />
-              <div className="w-1 h-1 bg-green-400 rounded-full" />
-            </div>
-            <div className="text-white text-4xl font-medium leading-10 mt-5">
-              About Me
-            </div>
-            <div className="w-[461.12px] opacity-60 text-white text-2xl mt-5 font-medium leading-relaxed">
-              Associate Professor, Ph.D. in Intelligent Systems and Big Data
-              Analysis <br />
-              Islamic Azad University, Mashhad
-            </div>
-          </div>
-          <div className="basis-1/2 w-full h-full flex flex-col justify-center">
-            <div className="text-white text-4xl font-medium leading-10">
-              Skills & Expertise
-            </div>
-            <div className="flex flex-row gap-2 w-full items-center mt-5">
-              <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-              <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                Blockchain & Cryptocurrency Systems
-              </div>
-            </div>
-            <div className="flex flex-row gap-2 w-full items-center mt-5">
-              <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-              <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                  Advanced Data Analysis
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row gap-2 w-full items-center mt-5">
-              <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-              <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                  Machine Learning & Pattern Recognitio
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row gap-2 w-full items-center mt-5">
-              <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-              <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
-                  Research Leadership & Collaboration
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         {/* products */}
 
-        {false && (
+        {true && (
           <div className="width-theme h-full bg-zinc-700 flex flex-col px-[150px] py-[110px]">
             <div className="text-white text-4xl font-medium leading-10">
               Products & Ventures
