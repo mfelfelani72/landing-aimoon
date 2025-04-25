@@ -8,21 +8,38 @@ const Test = lazy(() => import("../../components/TestCode.jsx"));
 
 // Landing
 
-const LazyHomeLanding = lazy(() => import("../../../features/home/HomeLanding.js"));
+const LazyHomeLanding = lazy(() =>
+  import("../../../features/home/HomeLanding.js")
+);
 
 // Dashboard
 
-const LazyDashboardLanding = lazy(() => import("../../../features/dashboard/DashboardLanding.js"));
-const LazyDashboardHome = lazy(() => import("../../../features/dashboard/containers/DashbaradHome.js"));
+const LazyDashboardLanding = lazy(() =>
+  import("../../../features/dashboard/DashboardLanding.js")
+);
+const LazyDashboardHome = lazy(() =>
+  import("../../../features/dashboard/containers/DashbaradHome.js")
+);
 
 // Coin
 
-const LazyCoinLanding = lazy(() => import("../../../features/coin/CoinLanding.js"));
-const LazyCoinDashboard = lazy(() => import("../../../features/coin/containers/CoinDashboard.jsx"));
+const LazyCoinLanding = lazy(() =>
+  import("../../../features/coin/CoinLanding.js")
+);
+const LazyCoinDashboard = lazy(() =>
+  import("../../../features/coin/containers/CoinDashboard.jsx")
+);
 
 // Author
 
-const LazyAuthorLanding = lazy(() => import("../../../features/author/AuthorLanding.js"));
+const LazyAuthorLanding = lazy(() =>
+  import("../../../features/author/AuthorLanding.js")
+);
+
+// AboutUs
+const LazyAboutUsDrvafaeijahan = lazy(() =>
+  import("../../../features/aboutUs/containers/drvafaeijahan.js")
+);
 
 const Content = () => {
   return (
@@ -35,7 +52,7 @@ const Content = () => {
         {/* Landing */}
         <Route path="*" element={<Landing />}></Route>
         <Route path="/landing" element={<LazyHomeLanding />}></Route>
-        
+
         {/* Dashboard */}
         <Route path="/dashboard" element={<LazyDashboardLanding />}>
           <Route path="/dashboard/home" element={<LazyDashboardHome />} />
@@ -45,8 +62,18 @@ const Content = () => {
           <Route path="/dashboard/coin" element={<LazyCoinDashboard />} />
 
           {/* Author */}
-          <Route path="/dashboard/author-list" element={<LazyAuthorLanding />} />
+          <Route
+            path="/dashboard/author-list"
+            element={<LazyAuthorLanding />}
+          />
         </Route>
+
+        {/* AboutUs */}
+
+        <Route
+          path="/about-us/drvafaeijahan"
+          element={<LazyAboutUsDrvafaeijahan />}
+        ></Route>
       </Routes>
     </>
   );
