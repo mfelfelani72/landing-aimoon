@@ -13,7 +13,11 @@ const Drvafaeijahan = () => {
       <div className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden left-to-right font-satoshi">
         {/* slider */}
         <div className="width-theme bg-zinc-700">
-          <Slider className={"width-theme h-[950px] p-0"} visible_count={1}>
+          <Slider
+            className={"width-theme h-[950px] p-0"}
+            visible_count={1}
+            set_button={() => {}}
+          >
             <div className="width-theme h-full">
               <div className="w-full h-[500px] bg-zinc-700 flex flex-row px-[90px]">
                 <div className="basis-4/10 w-full h-full flex flex-col justify-center">
