@@ -41,7 +41,7 @@ const Header = () => {
             </nav>
           </header>
           <div className="flex flex-row gap-2">
-            <ButtonLink className="p-4 h-[3rem]">
+            <ButtonLink to={"https://t.me/AimoonHub_bot"} target="_blank" className="p-4 h-[3rem]">
               {t("login_telegram")}
             </ButtonLink>
             <Languages className={"mt-2.5"} />

@@ -33,12 +33,13 @@ import NewsTimeSeries from "./NewsTimeSeries.jsx"
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
-  console.log(props?.symbol);
-  console.log(props?.coin_analyze);
+  // console.log(props?.symbol);
+  // console.log(props?.coin_analyze);
   // functions
   return (
     <div className={cn("relative", className)}>
-      <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl justify-between items-center gap-1.5 inline-flex mx-4">
+      {/* <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl justify-between items-center gap-1.5 inline-flex mx-4"> */}
+      <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl items-center gap-1.5 inline-flex mx-4">
         <input
           type="radio"
           id="tab1"
@@ -74,14 +75,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             {t("news_analysis")}
           </label>
         </div>
-        <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
+        {/* <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
           <label
             htmlFor="tab3"
             className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
           >
             {t("latest_news")}
           </label>
-        </div>
+        </div> */}
 
         <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
           <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
