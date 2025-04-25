@@ -1,8 +1,13 @@
 import React from "react";
 import Slider from "../../core/components/Slider.jsx";
-import { Image } from "../../core/components/Image.jsx";
+import { Image, ImageLazy } from "../../core/components/Image.jsx";
 
 import pic_dr from "../../../../assets/images/png/mvj-902.png";
+import pic_1 from "../../../../assets/images/png/pic-app (1).png";
+import pic_2 from "../../../../assets/images/png/pic-app (2).png";
+import pic_3 from "../../../../assets/images/png/pic-app (3).png";
+import pic_4 from "../../../../assets/images/png/pic-app (4).png";
+import pic_5 from "../../../../assets/images/png/pic-app (5).png";
 
 const Drvafaeijahan = () => {
   return (
@@ -72,25 +77,25 @@ const Drvafaeijahan = () => {
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Blockchain & Cryptocurrency Systems
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Advanced Data Analysis
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Machine Learning & Pattern Recognition
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Research Leadership & Collaboration
                     </div>
                   </div>
@@ -108,20 +113,20 @@ const Drvafaeijahan = () => {
 
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Focused on DeFi, smart contracts, and blockchain risk
                       modeling
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Predictive tools for crypto trading
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Research-based design for secure financial system
                     </div>
                   </div>
@@ -137,19 +142,19 @@ const Drvafaeijahan = () => {
 
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Analyzes trading news from +60 providers using AI
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Used by over +6,200 active users
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Cross-platform compatibility
                     </div>
                   </div>
@@ -165,19 +170,19 @@ const Drvafaeijahan = () => {
 
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Predictive patient analytics
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Secure medical data sharing using blockchain
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                       Privacy-focused healthcare AI
                     </div>
                   </div>
@@ -316,21 +321,21 @@ const Drvafaeijahan = () => {
 
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-lg font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-lg font-normal  leading-relaxed">
                       Hoshmand Sazan empowers healthcare with apps like Nobaan
                       for e-appointments and Noyaab, an AI medical assistant.
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-lg font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-lg font-normal  leading-relaxed">
                       With Sinapai, the company enhances physical health by
                       improving blood circulation through tech-driven wellness
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-lg font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-lg font-normal  leading-relaxed">
                       Hoshmand Sazan integrates Nobaan, Sinapai, and Noyaab to
                       drive digital healthcare transformation and accessibility.
                     </div>
@@ -347,14 +352,14 @@ const Drvafaeijahan = () => {
 
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-lg font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-lg font-normal  leading-relaxed">
                       Noavaran focuses on advancing artificial intelligence
                       technologies to drive transformative solutions.
                     </div>
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-lg font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-lg font-normal  leading-relaxed">
                       Diverse Platforms: Home to Aimoonhub, an LLM-powered news
                       platform, and Aimoonex, a cryptocurrency exchange and
                       trading platform.
@@ -362,7 +367,7 @@ const Drvafaeijahan = () => {
                   </div>
                   <div className="flex flex-row gap-2 w-full items-center mt-5">
                     <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                    <div className="opacity-70 justify-start text-white text-lg font-normal font-['Yekan_Bakh'] leading-relaxed">
+                    <div className="opacity-70 justify-start text-white text-lg font-normal  leading-relaxed">
                       Future-Forward Vision: Dedicated to leveraging
                       cutting-edge technology to shape dynamic, efficient, and
                       scalable digital ecosystems.
@@ -424,31 +429,35 @@ const Drvafaeijahan = () => {
             {/* aimoonx */}
             <div className="flex flex-row mt-[90px]">
               <div className="basis-1/2 w-full h-full flex flex-col justify-start">
-                <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
+                <ImageLazy
+                  src={pic_1}
+                  alt="pic_1"
+                  className={"w-[473.62px] h-[469.60px]"}
+                />
               </div>
               <div className="basis-1/2 w-full h-full flex flex-col justify-start">
                 <div className="text-white text-4xl font-medium leading-10">
                   Aimoonex
                 </div>
-                <div className="opacity-40 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed mt-2">
+                <div className="opacity-40 justify-start text-white text-2xl font-normal  leading-relaxed mt-2">
                   Cryptocurrency Exchange & Blockchain Security
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Focused on DeFi, smart contracts, and blockchain risk
                     modeling
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Predictive tools for crypto trading
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Research-based design for secure financial system
                   </div>
                 </div>
@@ -457,30 +466,34 @@ const Drvafaeijahan = () => {
             {/* aimoonhub */}
             <div className="flex flex-row-reverse mt-[90px]">
               <div className="basis-1/2 w-full h-full flex flex-col justify-start items-end">
-                <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
+                <ImageLazy
+                  src={pic_5}
+                  alt="pic_5"
+                  className={"w-[473.62px] h-[469.60px]"}
+                />
               </div>
               <div className="basis-1/2 w-full h-full flex flex-col justify-start">
                 <div className="text-white text-4xl font-medium leading-10">
                   Aimoonhub
                 </div>
-                <div className="opacity-40 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed mt-2">
+                <div className="opacity-40 justify-start text-white text-2xl font-normal  leading-relaxed mt-2">
                   LLM-Powered Trading News Platform
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Analyzes trading news from 60+ providers using AI
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Used by over +6,200 active users
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Cross-platform compatibility
                   </div>
                 </div>
@@ -490,30 +503,34 @@ const Drvafaeijahan = () => {
             {/* noyab */}
             <div className="flex flex-row mt-[90px]">
               <div className="basis-1/2 w-full h-full flex flex-col justify-start">
-                <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
+                <ImageLazy
+                  src={pic_4}
+                  alt="pic_4"
+                  className={"w-[473.62px] h-[469.60px]"}
+                />
               </div>
               <div className="basis-1/2 w-full h-full flex flex-col justify-start">
                 <div className="text-white text-4xl font-medium leading-10">
                   Noyaab
                 </div>
-                <div className="opacity-40 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed mt-2">
+                <div className="opacity-40 justify-start text-white text-2xl font-normal  leading-relaxed mt-2">
                   AI-Driven Healthcare Management
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Predictive patient analytics
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Secure medical data sharing using blockchain
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Privacy-focused healthcare AI
                   </div>
                 </div>
@@ -523,30 +540,34 @@ const Drvafaeijahan = () => {
             {/* noban */}
             <div className="flex flex-row-reverse mt-[90px]">
               <div className="basis-1/2 w-full h-full flex flex-col justify-start items-end">
-                <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
+                <ImageLazy
+                  src={pic_3}
+                  alt="pic_3"
+                  className={"w-[473.62px] h-[469.60px]"}
+                />
               </div>
               <div className="basis-1/2 w-full h-full flex flex-col justify-start">
                 <div className="text-white text-4xl font-medium leading-10">
                   Noban
                 </div>
-                <div className="opacity-40 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed mt-2">
+                <div className="opacity-40 justify-start text-white text-2xl font-normal  leading-relaxed mt-2">
                   LLM-Powered Trading News Platform
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Analyzes trading news from 60+ providers using AI
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Used by over +6,200 active users
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Cross-platform compatibility
                   </div>
                 </div>
@@ -556,30 +577,31 @@ const Drvafaeijahan = () => {
             {/* Sinapay */}
             <div className="flex flex-row mt-[90px]">
               <div className="basis-1/2 w-full h-full flex flex-col justify-start">
-                <div className="w-[473.62px] h-[469.60px] relative bg-gray-700 overflow-hidden"></div>
+                <ImageLazy
+                  src={pic_2}
+                  alt="pic_2"
+                  className={"w-[473.62px] h-[469.60px]"}
+                />
               </div>
               <div className="basis-1/2 w-full h-full flex flex-col justify-start">
-                <div className="text-white text-4xl font-medium leading-10">
-                  Sinapay
-                </div>
-                <div className="opacity-40 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed mt-2">
+                <div className="opacity-40 justify-start text-white text-2xl font-normal  leading-relaxed mt-2">
                   Focused on DeFi, smart contracts, and blockchain risk modeling
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Predictive tools for crypto trading
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Secure medical data sharing using blockchain
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 w-full items-center mt-5">
                   <div className="w-3.5 h-3.5 bg-green-400 rounded-full" />
-                  <div className="opacity-70 justify-start text-white text-2xl font-normal font-['Yekan_Bakh'] leading-relaxed">
+                  <div className="opacity-70 justify-start text-white text-2xl font-normal  leading-relaxed">
                     Research-based design for secure financial system
                   </div>
                 </div>
