@@ -2,7 +2,7 @@ import React from "react";
 
 import { Image } from "../../core/components/Image.jsx";
 
-import desktop from "../../../../assets/images/png/Desktop-1.png";
+import desktop from "../../../../assets/images/png/desktop.png";
 
 const Drvafaeijahan = () => {
   return (

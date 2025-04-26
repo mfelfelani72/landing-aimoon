@@ -52,18 +52,18 @@ module.exports = merge(common, {
 
     new RegisterServiceWorker(),
 
-    new CompressionPlugin({
-      filename: "[path][base].gz",
-      algorithm: "gzip",
-      deleteOriginalAssets: "keep-source-map",
-      // deleteOriginalAssets: true,
-      test: /\.(js|jsx|css|html|svg|gif)$/,
-      threshold: 10240,
-      minRatio: 0.8,
-      compressionOptions: {
-        level: zlib.constants.Z_BEST_COMPRESSION,
-      },
-    }),
+    // new CompressionPlugin({
+    //   filename: "[path][base].gz",
+    //   algorithm: "gzip",
+    //   deleteOriginalAssets: "keep-source-map",
+    //   // deleteOriginalAssets: true,
+    //   test: /\.(js|jsx|css|html|svg|gif)$/,
+    //   threshold: 10240,
+    //   minRatio: 0.8,
+    //   compressionOptions: {
+    //     level: zlib.constants.Z_BEST_COMPRESSION,
+    //   },
+    // }),
 
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
