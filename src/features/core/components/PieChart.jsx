@@ -85,7 +85,7 @@ const PieChart = ({ className, ...props }) => {
 
     return (
         <>
-            <div style={{ height: props?.height / 2 + 30, width: props?.width }} className='relative inline-block'>
+            <div style={{ height: props?.height / 2 + 30, width: props?.width }} className='relative'>
                 <div className="absolute z-20">
                     <HighchartsReact
                         highcharts={Highcharts}
@@ -104,7 +104,7 @@ const PieChart = ({ className, ...props }) => {
                 <div className={`absolute w-full h-full top-0 mt-4 inline-flex justify-center items-center text-2xl font-medium`}>
                     <div className='flex flex-col gap-1 justify-center items-center'>
                         <div style={{ color: findMaxData().color?.stops[0][1] }}>
-                            {findMaxData().max}%
+                            {findMaxData().max * 100}%
                         </div>
                         <div className='text-Neutral-200 text-sm font-normal leading-none text-center'>
                             {props?.title}

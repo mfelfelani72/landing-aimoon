@@ -37,10 +37,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
   console.log(props?.symbol);
   console.log(props?.coin_analyze);
 
-  const data = [
+  const data_today = [
     {
       name: 'Positive',
-      y: 10,
+      y:  props?.symbol?.latest_news_info.last_day_sentiment.positive,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -51,7 +51,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     },
     {
       name: 'Negative',
-      y: 90,
+      y: props?.symbol?.latest_news_info.last_day_sentiment.negative,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -62,7 +62,42 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     },
     {
       name: 'Neutral',
-      y: 80,
+      y: props?.symbol?.latest_news_info.last_day_sentiment.neutral,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#D2D2D5'],
+          [1, '#D2D2D500']
+        ]
+      }
+    }
+  ]
+  const data_week = [
+    {
+      name: 'Positive',
+      y:  props?.symbol?.latest_news_info.last_week_sentiment.positive,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#B4A2F1'],
+          [1, '#B4A2F150']
+        ]
+      }
+    },
+    {
+      name: 'Negative',
+      y: props?.symbol?.latest_news_info.last_week_sentiment.negative,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#E57C43'],
+          [1, '#CC6E3C']
+        ]
+      },
+    },
+    {
+      name: 'Neutral',
+      y: props?.symbol?.latest_news_info.last_week_sentiment.neutral,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -547,12 +582,24 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             </Accordion>
 
             <Accordion
-              id="sentiment"
+              id="today_sentiment"
               open={true}
 
               title={t("news_count")}
-              className={"bg-background border border-Neutral-400/50"}>
-              <PieChart height={300} width={300} data={data} name="Browser share" title="Out Of 69" />
+              className={"bg-background border border-Neutral-400/50 pb-4"}>
+              <div className="w-full flex flex-col items-center justify-center">
+                <PieChart height={300} width={300} data={data_today} name="Sentiment" title={"Out Of "+ props?.symbol.latest_news_info.last_day_count.toLocaleString()} />
+              </div>
+            </Accordion>
+            <Accordion
+              id="week_sentiment"
+              open={true}
+
+              title={t("news_count")}
+              className={"bg-background border border-Neutral-400/50 pb-4"}>
+              <div className="w-full flex flex-col items-center justify-center">
+                <PieChart height={300} width={300} data={data_week} name="Sentiment" title={"Out Of "+ props?.symbol.latest_news_info.last_day_count.toLocaleString()} />
+              </div>
             </Accordion>
             <Accordion
               id="mood"
