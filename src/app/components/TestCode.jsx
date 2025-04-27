@@ -9,7 +9,7 @@ const SemiCirclePieChart = () => {
   const data = [
     {
       name: 'Positive',
-      y: 58.9,
+      y: 10,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -20,7 +20,7 @@ const SemiCirclePieChart = () => {
     },
     {
       name: 'Negative',
-      y: 80,
+      y: 90,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -45,7 +45,7 @@ const SemiCirclePieChart = () => {
   return (
     <div className="bg-background">
 
-      <PieChart height={250} width={250} data={data} name="Browser share"  />
+      <PieChart height={300} width={300} data={data} name="Browser share" title="Out Of 69"  />
 
     </div>
   );
