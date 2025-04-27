@@ -2,30 +2,12 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
+// Functions
+
+import { cn } from "../../../../utils/lib/cn"
+
 const PieChart = ({ className, ...props }) => {
-    const customColors = [
-        {
-            linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
-            stops: [
-                [0, '#B4A2F1'],
-                [1, '#B4A2F150']
-            ]
-        },
-        {
-            linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
-            stops: [
-                [0, '#E57C43'],
-                [1, '#CC6E3C']
-            ]
-        },
-        {
-            linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
-            stops: [
-                [0, '#D2D2D500'],
-                [1, '#D2D2D5']
-            ]
-        }
-    ];
+
 
     const chartOptions = {
         chart: {
@@ -49,10 +31,9 @@ const PieChart = ({ className, ...props }) => {
         credits: {
             enabled: false
         },
-        colors: customColors,
         plotOptions: {
             pie: {
-               
+
                 cursor: 'pointer',
                 dataLabels: {
                     enabled: false,
@@ -68,7 +49,7 @@ const PieChart = ({ className, ...props }) => {
                 center: ['50%', '50%'],
                 size: '100%',
                 borderWidth: 0,
-                borderRadius: 5,
+                borderRadius: 2,
                 states: {
                     hover: {
                         brightness: 0.1
@@ -78,39 +59,35 @@ const PieChart = ({ className, ...props }) => {
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
-            innerSize: '85%',
+            name: props?.name,
+            innerSize: '88%',
             borderWidth: 0,
-            data: [
-                {
-                    name: 'Chrome',
-                    y: 58.9,
-                    borderRadius: 100, // روی هر نقطه
-                    color: customColors[0]
-                },
-                {
-                    name: 'Firefox',
-                    y: 13.29,
-                    borderRadius: 0,
-                    color: customColors[1]
-                },
-                {
-                    name: 'Internet Explorer',
-                    y: 36,
-                    borderRadius: 100,
-                    color: customColors[2]
-                }
-            ]
+            data: props?.data
         }]
     };
 
     return (
-        <div style={{ height: props?.height, width: props?.width }} className={`inline-block ${className}`}>
-            <HighchartsReact
-                highcharts={Highcharts}
-                options={chartOptions}
-            />
-        </div>
+        <>
+            <div style={{ height: props?.height / 2 + 30, width: props?.width }} className='relative inline-block'>
+                <div className="">
+                    <HighchartsReact
+                        highcharts={Highcharts}
+                        options={chartOptions}
+                    />
+                </div>
+                <div className='absolute bottom-0 inset-x-0 w-full grid grid-cols-3 px-2'>
+                    {props?.data?.map((item, index) => (
+
+                        <div className="inline-flex justify-center items-center gap-1">
+                            <div style={{ backgroundColor: item?.color?.stops[0][1] }} className={`w-2 h-2 rounded-full`}></div>
+                            <div className='text-Neutral-200 text-sm font-normal leading-tight'>{item?.name}</div>
+                        </div>
+                    ))}
+
+                </div>
+            </div>
+        </>
+
     )
 }
 

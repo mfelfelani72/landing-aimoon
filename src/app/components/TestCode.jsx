@@ -5,10 +5,47 @@ import PieChart from '../../features/core/components/PieChart.jsx';
 const SemiCirclePieChart = () => {
 
 
-  return (
-    <div className="">
 
-      <PieChart height={300} width={300} />
+  const data = [
+    {
+      name: 'Positive',
+      y: 58.9,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#B4A2F1'],
+          [1, '#B4A2F150']
+        ]
+      }
+    },
+    {
+      name: 'Negative',
+      y: 80,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#E57C43'],
+          [1, '#CC6E3C']
+        ]
+      },
+    },
+    {
+      name: 'Neutral',
+      y: 80,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#D2D2D5'],
+          [1, '#D2D2D500']
+        ]
+      }
+    }
+  ]
+
+  return (
+    <div className="bg-background">
+
+      <PieChart height={250} width={250} data={data} name="Browser share"  />
 
     </div>
   );
