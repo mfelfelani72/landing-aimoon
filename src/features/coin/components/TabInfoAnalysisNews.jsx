@@ -29,12 +29,49 @@ import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 import MoodTimeSeries from "./MoodTimeSeries.jsx";
 import NewsTimeSeries from "./NewsTimeSeries.jsx"
+import PieChart from "../../core/components/PieChart.jsx";
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
-  // console.log(props?.symbol);
-  // console.log(props?.coin_analyze);
+  console.log(props?.symbol);
+  console.log(props?.coin_analyze);
+
+  const data = [
+    {
+      name: 'Positive',
+      y: 10,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#B4A2F1'],
+          [1, '#B4A2F150']
+        ]
+      }
+    },
+    {
+      name: 'Negative',
+      y: 90,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#E57C43'],
+          [1, '#CC6E3C']
+        ]
+      },
+    },
+    {
+      name: 'Neutral',
+      y: 80,
+      color: {
+        linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
+        stops: [
+          [0, '#D2D2D5'],
+          [1, '#D2D2D500']
+        ]
+      }
+    }
+  ]
   // functions
   return (
     <div className={cn("relative", className)}>
@@ -94,8 +131,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   props?.symbol.local_image
                     ? props?.symbol.local_image
                     : props?.symbol.logo
-                    ? props?.symbol.logo
-                    : DEFAULT_COIN_IMAGE
+                      ? props?.symbol.logo
+                      : DEFAULT_COIN_IMAGE
                 }
                 onError={(e) => {
                   e.target.src = DEFAULT_COIN_IMAGE;
@@ -311,15 +348,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("change_from_yesterday")}
                       </div>
                       <div
-                        className={`${
-                          props?.symbol.latest_news_info?.change_stat
-                            ?.damp_5_change?.percent_change_24h == 0
-                            ? "text-white"
-                            : props?.symbol.latest_news_info?.change_stat
-                                ?.damp_5_change?.percent_change_24h > 0
+                        className={`${props?.symbol.latest_news_info?.change_stat
+                          ?.damp_5_change?.percent_change_24h == 0
+                          ? "text-white"
+                          : props?.symbol.latest_news_info?.change_stat
+                            ?.damp_5_change?.percent_change_24h > 0
                             ? "text-Success-500"
                             : "text-Error-500"
-                        } text-sm font-normal leading-tight tracking-tight left-to-right`}
+                          } text-sm font-normal leading-tight tracking-tight left-to-right`}
                       >
                         <div className="flex flex-row gap-1 items-center">
                           <div className="inline-flex items-center">
@@ -347,15 +383,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("change_from_last_week")}
                       </div>
                       <div
-                        className={`${
-                          props?.symbol.latest_news_info?.change_stat
-                            ?.damp_5_change?.percent_change_7d == 0
-                            ? "text-white"
-                            : props?.symbol.latest_news_info?.change_stat
-                                ?.damp_5_change?.percent_change_7d > 0
+                        className={`${props?.symbol.latest_news_info?.change_stat
+                          ?.damp_5_change?.percent_change_7d == 0
+                          ? "text-white"
+                          : props?.symbol.latest_news_info?.change_stat
+                            ?.damp_5_change?.percent_change_7d > 0
                             ? "text-Success-500"
                             : "text-Error-500"
-                        } text-sm font-normal leading-tight tracking-tight left-to-right`}
+                          } text-sm font-normal leading-tight tracking-tight left-to-right`}
                       >
                         <div className="flex flex-row gap-1 items-center">
                           <div className="inline-flex items-center">
@@ -383,15 +418,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("change_from_last_month")}
                       </div>
                       <div
-                        className={`${
-                          props?.symbol.latest_news_info?.change_stat
-                            ?.damp_5_change?.percent_change_30d == 0
-                            ? "text-white"
-                            : props?.symbol.latest_news_info?.change_stat
-                                ?.damp_5_change?.percent_change_30d > 0
+                        className={`${props?.symbol.latest_news_info?.change_stat
+                          ?.damp_5_change?.percent_change_30d == 0
+                          ? "text-white"
+                          : props?.symbol.latest_news_info?.change_stat
+                            ?.damp_5_change?.percent_change_30d > 0
                             ? "text-Success-500"
                             : "text-Error-500"
-                        } text-sm font-normal leading-tight tracking-tight left-to-right`}
+                          } text-sm font-normal leading-tight tracking-tight left-to-right`}
                       >
                         <div className="flex flex-row gap-1 items-center">
                           <div className="inline-flex items-center">
@@ -437,14 +471,13 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                       </div>
                       <div className="text-white text-sm font-normal leading-tight tracking-tight">
                         <div
-                          className={`${
-                            props?.symbol?.latest_price_info?.change_rate == 0
-                              ? "text-white"
-                              : props?.symbol?.latest_price_info?.change_rate >
-                                0
+                          className={`${props?.symbol?.latest_price_info?.change_rate == 0
+                            ? "text-white"
+                            : props?.symbol?.latest_price_info?.change_rate >
+                              0
                               ? "text-Success-500"
                               : "text-Error-500"
-                          } text-sm font-normal leading-tight tracking-tight left-to-right`}
+                            } text-sm font-normal leading-tight tracking-tight left-to-right`}
                         >
                           <div className="flex flex-row gap-1 items-center">
                             <div className="inline-flex items-center">
@@ -454,7 +487,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                             <Image
                               src={
                                 props?.symbol?.latest_price_info?.change_rate >
-                                0
+                                  0
                                   ? arrow_up
                                   : arrow_down
                               }
@@ -471,14 +504,13 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                       </div>
                       <div className="text-white text-sm font-normal leading-tight tracking-tight">
                         <div
-                          className={`${
-                            props?.symbol?.latest_price_info?.change_price == 0
-                              ? "text-white"
-                              : props?.symbol?.latest_price_info?.change_price >
-                                0
+                          className={`${props?.symbol?.latest_price_info?.change_price == 0
+                            ? "text-white"
+                            : props?.symbol?.latest_price_info?.change_price >
+                              0
                               ? "text-Success-500"
                               : "text-Error-500"
-                          } text-sm font-normal leading-tight tracking-tight left-to-right`}
+                            } text-sm font-normal leading-tight tracking-tight left-to-right`}
                         >
                           <div className="flex flex-row gap-1 items-center">
                             <div className="inline-flex items-center">
@@ -488,7 +520,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                             <Image
                               src={
                                 props?.symbol?.latest_price_info?.change_price >
-                                0
+                                  0
                                   ? arrow_up
                                   : arrow_down
                               }
@@ -512,6 +544,15 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   </div>
                 </div>
               </div>
+            </Accordion>
+
+            <Accordion
+              id="sentiment"
+              open={true}
+
+              title={t("news_count")}
+              className={"bg-background border border-Neutral-400/50"}>
+              <PieChart height={300} width={300} data={data} name="Browser share" title="Out Of 69" />
             </Accordion>
             <Accordion
               id="mood"
