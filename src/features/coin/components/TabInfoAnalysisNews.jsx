@@ -40,7 +40,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
   const data_today = [
     {
       name: 'Positive',
-      y:  props?.symbol?.latest_news_info.last_day_sentiment.positive,
+      y: props?.symbol?.latest_news_info?.last_day_sentiment.positive,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -51,7 +51,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     },
     {
       name: 'Negative',
-      y: props?.symbol?.latest_news_info.last_day_sentiment.negative,
+      y: props?.symbol?.latest_news_info?.last_day_sentiment.negative,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -62,7 +62,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     },
     {
       name: 'Neutral',
-      y: props?.symbol?.latest_news_info.last_day_sentiment.neutral,
+      y: props?.symbol?.latest_news_info?.last_day_sentiment.neutral,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -75,7 +75,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
   const data_week = [
     {
       name: 'Positive',
-      y:  props?.symbol?.latest_news_info.last_week_sentiment.positive,
+      y: props?.symbol?.latest_news_info?.last_week_sentiment.positive,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -86,7 +86,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     },
     {
       name: 'Negative',
-      y: props?.symbol?.latest_news_info.last_week_sentiment.negative,
+      y: props?.symbol?.latest_news_info?.last_week_sentiment.negative,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -97,7 +97,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     },
     {
       name: 'Neutral',
-      y: props?.symbol?.latest_news_info.last_week_sentiment.neutral,
+      y: props?.symbol?.latest_news_info?.last_week_sentiment.neutral,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
         stops: [
@@ -220,7 +220,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         </div>
         <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
           <div className="flex flex-col gap-4 mt-4 px-4">
-            <div className="relative">
+            {props?.coin_analyze && <div className="relative">
               <div className="flex flex-col w-full bg-background-light p-[2px] rounded-2xl">
                 <div className="flex flex-col min-h-60 bg-background rounded-2xl">
                   <div className="border-b-2 border-b-background-light pt-4 px-5 pb-2">
@@ -292,10 +292,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                 </div>
               </div>
               <div className="absolute z-10 top-0 -left-[0.5rem] w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
-            </div>
-            <Accordion
+            </div>}
+            {props?.coin_analyze && <Accordion
               id="analysis"
-              open={false}
+              open={true}
               title={t("aimoon_analysis")}
               icon={chart}
               className={"bg-background border border-Neutral-400/50"}
@@ -309,9 +309,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   {props?.coin_analyze?.response?.analysis}
                 </div>
               </div>
-            </Accordion>
+            </Accordion>}
+
             <Accordion
-              id="analysis"
+              id="analysis_news_base_statistics"
               open={false}
               title={
                 <Trans
@@ -361,8 +362,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               </div>
             </Accordion>
             <Accordion
-              id="analysis"
-              open={true}
+              id="analysis_amount_changes"
+              open={false}
               icon={chart}
               title={t("amount_changes")}
               className={"bg-background border border-Neutral-400/50"}
@@ -581,26 +582,46 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               </div>
             </Accordion>
 
-            <Accordion
+            {props?.symbol?.latest_news_info?.last_day_sentiment?.negative !== 0 && <Accordion
               id="today_sentiment"
               open={true}
 
-              title={t("news_count")}
+              title={
+                <Trans
+                  i18nKey="day_sentiments"
+                  values={{
+                    name: props?.symbol?.name,
+                  }}
+                >
+                  <span className="text-primary-500"></span>
+                </Trans>
+              }
               className={"bg-background border border-Neutral-400/50 pb-4"}>
               <div className="w-full flex flex-col items-center justify-center">
-                <PieChart height={300} width={300} data={data_today} name="Sentiment" title={"Out Of "+ props?.symbol.latest_news_info.last_day_count.toLocaleString()} />
+                <PieChart height={300} width={300} data={data_today} name="Sentiment" title={"Out Of " + props?.symbol.latest_news_info.last_day_count.toLocaleString()} />
               </div>
-            </Accordion>
-            <Accordion
+            </Accordion>}
+
+            {props?.symbol?.latest_news_info?.last_week_sentiment?.negative !== 0 && <Accordion
               id="week_sentiment"
               open={true}
 
-              title={t("news_count")}
+              title={
+                <Trans
+                  i18nKey="week_sentiments"
+                  values={{
+                    name: props?.symbol?.name,
+                  }}
+                >
+                  <span className="text-primary-500"></span>
+                </Trans>
+              }
               className={"bg-background border border-Neutral-400/50 pb-4"}>
               <div className="w-full flex flex-col items-center justify-center">
-                <PieChart height={300} width={300} data={data_week} name="Sentiment" title={"Out Of "+ props?.symbol.latest_news_info.last_day_count.toLocaleString()} />
+                <PieChart height={300} width={300} data={data_week} name="Sentiment" title={"Out Of " + props?.symbol.latest_news_info.last_day_count.toLocaleString()} />
               </div>
-            </Accordion>
+            </Accordion>}
+
             <Accordion
               id="mood"
               open={true}

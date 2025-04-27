@@ -209,6 +209,8 @@ const en = {
   current_price: "Current price",
   growth_last_day: "Growth compared to the previous day",
   price_last_day: "Price compared to the previous day",
+  day_sentiments: "This day <0>{{name}}</> sentiments",
+  week_sentiments: "This week <0>{{name}}</> sentiments",
 
   all_information: "All information",
 

@@ -208,6 +208,8 @@ const fa = {
   current_price: "قیمت جاری",
   growth_last_day: "رشد نسبت به روز گذشته",
   price_last_day: "قیمت نسبت به روز گذشته",
+  day_sentiments: "احساسات روزانه‌ی <0>{{name}}</>",
+  week_sentiments: "احساسات هفتگی <0>{{name}}</>",
 
 
   all_information: "اطلاعات کلی",
