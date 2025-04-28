@@ -59,8 +59,10 @@ const CleanSplineChart = () => {
         }
       },
       gridLineDashStyle: 'Dash', // خطوط گرید به صورت خط چین
-      endOnTick: false, // حذف خط گرید انتهایی
-      startOnTick: false // حذف خط گرید ابتدایی
+      min: 0,
+      max: seriesData[0].data.length - 1,
+      startOnTick: false,
+      endOnTick: false
     },
 
     yAxis: {
@@ -94,7 +96,11 @@ const CleanSplineChart = () => {
         }
       },
       series: {
-        cursor: 'pointer'
+        cursor: 'pointer',
+        pointPlacement: 'on',
+        pointStart: 0,
+        pointPadding: 0,
+        groupPadding: 0
       }
     },
     tooltip: {
