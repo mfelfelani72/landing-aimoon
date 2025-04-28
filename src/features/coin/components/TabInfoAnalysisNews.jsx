@@ -34,8 +34,8 @@ import { PieChart } from "../../core/components/Chart.jsx";
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
-  console.log(props?.symbol);
-  console.log(props?.coin_analyze);
+  // console.log(props?.symbol);
+  // console.log(props?.coin_analyze);
 
   const data_today = [
     {
