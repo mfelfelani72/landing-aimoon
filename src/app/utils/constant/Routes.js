@@ -19,9 +19,11 @@ export const ALL_ROUTES = [
 
   // dashboard-author
   "/dashboard/author-list",
+  "/dashboard/author",
 
   // aboutUs
   "/drvafaeijahan",
+
 ];
 
 export const NOT_RELOAD_ROUTES = [
