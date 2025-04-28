@@ -13,6 +13,11 @@ const CleanSplineChart = () => {
       name: 'Bergen',
       data: [1.6, 3.3, 5.9, 10.5, 13.5, 14.5, 14.4, 11.5, 8.7, 4.7, 2.6],
       color: '#10B981'
+    },
+    {
+      name: 'dsfsdf',
+      data: [1.6, 3.3, 5.9, 10.5, 13.5, 12, 154, 11.5, 8.7, 4.7, 2.6],
+      color: '#54dfd5'
     }
   ]);
 
@@ -35,6 +40,10 @@ const CleanSplineChart = () => {
     legend: {
       itemStyle: {
         color: '#000'
+      },
+      useHTML: true,
+      labelFormatter: function () {
+        return '<span style="display:inline-block; width:0px; height:0px; border-radius:50%; background:' + this.color + ';"></span> ' + this.name;
       }
     },
     xAxis: {
@@ -101,7 +110,8 @@ const CleanSplineChart = () => {
       type: 'spline',
       name: series.name,
       data: series.data,
-      color: series.color
+      color: series.color,
+      legendSymbol: ''
     }))
   };
 
