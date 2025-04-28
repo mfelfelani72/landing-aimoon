@@ -29,7 +29,7 @@ import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 import MoodTimeSeries from "./MoodTimeSeries.jsx";
 import NewsTimeSeries from "./NewsTimeSeries.jsx"
-import PieChart from "../../core/components/PieChart.jsx";
+import { PieChart } from "../../core/components/Chart.jsx";
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
