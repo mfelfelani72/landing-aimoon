@@ -92,7 +92,7 @@ const PieChart = ({ className, ...props }) => {
                         options={chartOptions}
                     />
                 </div>
-                <div className='absolute bottom-0 inset-x-0 w-full grid grid-cols-3 px-2'>
+                <div className='absolute bottom-0 inset-x-0 w-full grid grid-cols-3 px-2 left-to-right'>
                     {props?.data?.map((item, index) => (
 
                         <div key={index} className="inline-flex justify-center items-center gap-1">

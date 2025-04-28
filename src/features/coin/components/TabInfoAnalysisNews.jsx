@@ -12,6 +12,7 @@ import { Image, ImageLazy } from "../../core/components/Image.jsx";
 
 import { cn } from "../../../../utils/lib/cn";
 import { dateHelper } from "../../../../utils/helpers/dateHelper.js";
+import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
 
 // Constants
 
@@ -24,7 +25,6 @@ import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
 import clock from "../../../../assets/icons/svg/icon-color-clock.svg";
 import star from "../../../../assets/icons/svg/icon-color-star.svg";
 import chart_chart from "../../../../assets/icons/svg/icon-color-chart.svg";
-import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
 import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 import MoodTimeSeries from "./MoodTimeSeries.jsx";
@@ -39,7 +39,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
 
   const data_today = [
     {
-      name: 'Positive',
+      name: t("positive"),
       y: props?.symbol?.latest_news_info?.last_day_sentiment.positive,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
@@ -50,7 +50,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
       }
     },
     {
-      name: 'Negative',
+      name: t("negative"),
       y: props?.symbol?.latest_news_info?.last_day_sentiment.negative,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
@@ -61,7 +61,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
       },
     },
     {
-      name: 'Neutral',
+      name: t("neutral"),
       y: props?.symbol?.latest_news_info?.last_day_sentiment.neutral,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
@@ -74,7 +74,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
   ]
   const data_week = [
     {
-      name: 'Positive',
+      name: t("positive"),
       y: props?.symbol?.latest_news_info?.last_week_sentiment.positive,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
@@ -85,7 +85,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
       }
     },
     {
-      name: 'Negative',
+      name: t("negative"),
       y: props?.symbol?.latest_news_info?.last_week_sentiment.negative,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
@@ -96,7 +96,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
       },
     },
     {
-      name: 'Neutral',
+      name: t("neutral"),
       y: props?.symbol?.latest_news_info?.last_week_sentiment.neutral,
       color: {
         linearGradient: { x1: 0, y1: 0, x2: 0, x2: 1 },
@@ -598,7 +598,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               }
               className={"bg-background border border-Neutral-400/50 pb-4"}>
               <div className="w-full flex flex-col items-center justify-center">
-                <PieChart height={300} width={300} data={data_today} name="Sentiment" title={"Out Of " + props?.symbol.latest_news_info.last_day_count.toLocaleString()} />
+                <PieChart height={300} width={300} data={data_today} name="Sentiment" title={
+                  <Trans
+                    i18nKey="out_of"
+                    values={{
+                      count: formatNumberHelper(parseInt(props?.symbol?.latest_news_info.last_day_count)),
+                    }}
+                  >
+                    <span className=""></span>
+                  </Trans>
+                } />
               </div>
             </Accordion>}
 
@@ -618,7 +627,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               }
               className={"bg-background border border-Neutral-400/50 pb-4"}>
               <div className="w-full flex flex-col items-center justify-center">
-                <PieChart height={300} width={300} data={data_week} name="Sentiment" title={"Out Of " + props?.symbol.latest_news_info.last_day_count.toLocaleString()} />
+                <PieChart height={300} width={300} data={data_week} name="Sentiment" title={
+                  <Trans
+                    i18nKey="out_of"
+                    values={{
+                      count: formatNumberHelper(parseInt(props?.symbol?.latest_news_info.last_week_count)),
+                    }}
+                  >
+                    <span className=""></span>
+                  </Trans>
+                } />
               </div>
             </Accordion>}
 

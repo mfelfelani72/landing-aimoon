@@ -210,6 +210,10 @@ const fa = {
   price_last_day: "قیمت نسبت به روز گذشته",
   day_sentiments: "احساسات روزانه‌ی <0>{{name}}</>",
   week_sentiments: "احساسات هفتگی <0>{{name}}</>",
+  out_of: "از <0>{{count}}</>",
+  positive: "مثبت",
+  negative: "منفی",
+  neutral: "خنثی",
 
 
   all_information: "اطلاعات کلی",

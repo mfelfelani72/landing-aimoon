@@ -211,6 +211,10 @@ const en = {
   price_last_day: "Price compared to the previous day",
   day_sentiments: "This day <0>{{name}}</> sentiments",
   week_sentiments: "This week <0>{{name}}</> sentiments",
+  out_of: "Out of <0>{{count}}</0>",
+  positive: "Positive",
+  negative: "Negative",
+  neutral: "Neutral",
 
   all_information: "All information",
 
