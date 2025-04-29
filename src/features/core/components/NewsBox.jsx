@@ -17,8 +17,28 @@ import { DEFAULT_NEW_IMAGE } from "../../../app/utils/constant/Defaults.js";
 
 import avatar from "../../../../assets/images/png/avatar.png";
 import { DonutChart } from "./Chart.jsx";
+import { t } from "i18next";
 
 const NewsBox = ({ className, children, ...props }) => {
+  // functions
+  const findMaxData = () => {
+
+    let maxItem = props?.row?.Negative;
+    let colorItem = "#D80F0F";
+
+    if (props?.row?.Neutral > maxItem) {
+      maxItem = props?.row?.Neutral
+      colorItem = "#6A6783";
+    }
+    if (props?.row?.Positive > maxItem) {
+      maxItem = props?.row?.Positive
+      colorItem = "white";
+    }
+    return {
+      maxItem: maxItem,
+      colorItem: colorItem
+    };
+  };
   return (
     <>
       <div className={cn("w-full h-full flex flex-col", className)}>
@@ -62,23 +82,20 @@ const NewsBox = ({ className, children, ...props }) => {
           <div className="w-full h-36 left-0 bottom-0 absolute bg-gradient-to-b from-black/0 to-zinc-950 inline-flex items-end justify-between p-4">
             <div className="w-[4.5rem]">
               <div className='relative'>
-                <div className="absolute -top-[1.5rem] -left-[0rem] w-5 h-5">70%</div>
+                <div style={{ color: findMaxData()?.colorItem }} className="absolute -top-[1.5rem] -left-[0rem] w-5 h-5">{findMaxData()?.maxItem}%</div>
                 <div className="absolute -top-[3rem] -right-[0.85rem] w-[65px] h-[65px]">
                   <DonutChart width={65} height={65} data={[{
-                    name: 'Spain',
-                    y: 80,
-                    z: 80 / 3 * 100,
-                    color: "red",
+                    name: t("negative"),
+                    y: props?.row?.Negative,
+                    color: "#D80F0F",
                   }, {
-                    name: 'France',
-                    y: 26,
-                    z: 26 / 3 * 100,
+                    name: 'positive',
+                    y: props?.row?.Positive,
                     color: "white",
                   }, {
-                    name: 'Poland',
-                    y: 68,
-                    z: 68 / 3 * 100,
-                    color: "#2dd9db",
+                    name: 'neutral',
+                    y: props?.row?.Neutral,
+                    color: "#6A6783",
                   }]} />
                 </div>
 

@@ -245,6 +245,8 @@ export const LineChart = ({ className, ...props }) => {
 }
 
 export const DonutChart = ({ className, ...props }) => {
+
+    // const
     const chartOptions = {
         chart: {
             type: 'variablepie',
@@ -282,7 +284,7 @@ export const DonutChart = ({ className, ...props }) => {
             enabled: false
         },
         tooltip: {
-            enabled: false // غیرفعال کردن کامل تولتیپ
+            enabled: false
         },
         series: [{
             minPointSize: 5,
