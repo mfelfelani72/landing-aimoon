@@ -16,6 +16,7 @@ import { DEFAULT_NEW_IMAGE } from "../../../app/utils/constant/Defaults.js";
 // Svg
 
 import avatar from "../../../../assets/images/png/avatar.png";
+import { DonutChart } from "./Chart.jsx";
 
 const NewsBox = ({ className, children, ...props }) => {
   return (
@@ -59,9 +60,29 @@ const NewsBox = ({ className, children, ...props }) => {
             className={"w-full h-44 rounded-t-[1.25rem]"}
           />
           <div className="w-full h-36 left-0 bottom-0 absolute bg-gradient-to-b from-black/0 to-zinc-950 inline-flex items-end justify-between p-4">
-            <div className='flex flex-row items-center gap-2'>
-              <div>O</div>
-              <div>70%</div>
+            <div className="w-[4.5rem]">
+              <div className='relative'>
+                <div className="absolute -top-[1.5rem] -left-[0rem] w-5 h-5">70%</div>
+                <div className="absolute -top-[3rem] -right-[0.85rem] w-[65px] h-[65px]">
+                  <DonutChart width={65} height={65} data={[{
+                    name: 'Spain',
+                    y: 80,
+                    z: 80 / 3 * 100,
+                    color: "red",
+                  }, {
+                    name: 'France',
+                    y: 26,
+                    z: 26 / 3 * 100,
+                    color: "white",
+                  }, {
+                    name: 'Poland',
+                    y: 68,
+                    z: 68 / 3 * 100,
+                    color: "#2dd9db",
+                  }]} />
+                </div>
+
+              </div>
             </div>
             {props?.row?.author_info && <div className='flex flex-col gap-1 justify-center items-center'>
               <div className="text-base font-medium left-to-right">

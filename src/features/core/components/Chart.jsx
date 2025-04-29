@@ -1,6 +1,8 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import HighchartsMore from 'highcharts/highcharts-more';
+import VariablePie from 'highcharts/modules/variable-pie';
 
 // Functions
 
@@ -137,11 +139,11 @@ export const LineChart = ({ className, ...props }) => {
                 fontWeight: 'normal'
             },
             itemHoverStyle: {
-                color: '#E57C43' 
+                color: '#E57C43'
             },
             useHTML: true,
-            symbolWidth: 0, 
-            symbolHeight: 0, 
+            symbolWidth: 0,
+            symbolHeight: 0,
             symbolRadius: 0,
             labelFormatter: function () {
                 return `
@@ -240,4 +242,61 @@ export const LineChart = ({ className, ...props }) => {
             options={chartOptions}
         />
     </>);
+}
+
+export const DonutChart = ({ className, ...props }) => {
+    const chartOptions = {
+        chart: {
+            type: 'variablepie',
+            backgroundColor: 'transparent',
+            width: props?.width,
+            height: props?.height,
+            spacing: [0, 0, 0, 0],
+            margin: [0, 0, 0, 0],
+
+        },
+        title: {
+            text: ''
+        },
+        plotOptions: {
+            variablepie: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: false
+                },
+                borderWidth: 0,
+                borderRadius: 1,
+
+            },
+            series: {
+                cursor: 'pointer',
+                pointPlacement: 'on',
+                pointStart: 0,
+                pointPadding: 0,
+                groupPadding: 0
+            },
+
+        },
+
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            enabled: false // غیرفعال کردن کامل تولتیپ
+        },
+        series: [{
+            minPointSize: 5,
+            innerSize: '70%',
+            zMin: 0,
+            data: props?.data,
+        }]
+    };
+
+    return (
+        <HighchartsReact
+            highcharts={Highcharts}
+            options={chartOptions}
+
+        />
+    );
 }
