@@ -26,7 +26,7 @@ const AnalyzedNews = () => {
   const PAGE_NUMBER = 1;
   let tempImages;
 
-  const [newsData, setNewsData] = useState([]);
+  const [newsAnalyzedData, setNewsAnalyzedData] = useState([]);
   const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
   const [newsSymbols, setNewsSymbols] = useState("all");
   const [newsFrom, setNewsFrom] = useState("1716373411");
@@ -43,7 +43,7 @@ const AnalyzedNews = () => {
       symbols: newsSymbols,
       startDate: newsFrom,
       // "endDate": newsTo,
-      page: 1,
+      page: newsPage,
       language: languageApp,
       pageLimit: newsPageLimit,
       llmOnly: true,
@@ -72,52 +72,52 @@ const AnalyzedNews = () => {
           !arraysEqual(
             tempImages,
             response?.data?.data?.result?.map((item) => item?.local_image),
-            "data-dashboard-latest-news-images"
+            "data-dashboard-analyzed-news-images"
           ) ||
-          !localStorage.getItem("data-dashboard-latest-news-images")
+          !localStorage.getItem("data-dashboard-analyzed-news-images")
         ) {
           cashImages(
-            "data-dashboard-latest-news-images",
+            "data-dashboard-analyzed-news-images",
             response?.data?.data?.result?.map((item) => item?.created_at),
             response?.data?.data?.result?.map((item) => item?.local_image)
           );
         }
         // for news image
 
-        setNewsData((prev) => {
+        setNewsAnalyzedData((prev) => {
           return [...prev, ...response?.data?.data?.result];
         });
 
-        setNewsPage((prev) => prev + 1);
+        // setNewsPage((prev) => prev + 1);
       }
     });
   };
 
   const getCashedImagesLocal = () => {
     const cashedImagesLocal = localStorage.getItem(
-      "data-dashboard-latest-news-images"
+      "data-dashboard-analyzed-news-images"
     );
 
     if (cashedImagesLocal) setCashedImages(JSON.parse(cashedImagesLocal));
   };
 
   useEffect(() => {
-    if (newsData?.length == 0) {
+    if (newsAnalyzedData?.length == 0) {
       getNews();
       getCashedImagesLocal();
     }
-  }, [newsData]);
+  }, [newsAnalyzedData]);
 
   useEffect(() => {
-    if (newsData?.length > 0) setNewsData([]);
+    if (newsAnalyzedData?.length > 0) setNewsAnalyzedData([]);
   }, [languageApp]);
   return (
     <>
       <div className="flex flex-col gap-7 mt-8 px-6 bg-Neutral-500 pb-[7rem]">
-        {newsData?.length == 0 ? (
+        {newsAnalyzedData?.length == 0 ? (
           <LoaderPage className={"bg-background mt-[1rem]"} />
         ) : (
-          newsData?.map((row, index) => (
+          newsAnalyzedData?.map((row, index) => (
             <div key={index}>
               <NewsBox
                 row={row}

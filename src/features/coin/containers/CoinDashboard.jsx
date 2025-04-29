@@ -4,14 +4,19 @@ import { useLocation } from 'react-router-dom'
 // Components
 
 import TabInfoAnalysisNews from "../components/TabInfoAnalysisNews.jsx"
+import NewsBox from "../../core/components/NewsBox.jsx";
+import LoaderPage from "../../../app/components/LoaderPage.jsx";
 
 // Constants
 
 import { OFFLINE_COIN_ANALYZE } from "../utils/constants/EndPoints.js"
+import { LATEST_NEWS } from "../../../app/utils/constant/EndPoints.js";
 
 // Functions
 
 import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.js';
+import { cashImages } from "../../../../utils/lib/cashImages.js";
+import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
 // Zustand
 
@@ -22,13 +27,79 @@ const CoinDashboard = () => {
     const location = useLocation();
 
     // states
+    const PAGE_NUMBER = 1;
+    let tempImages;
+
+    const [newsData, setNewsData] = useState(["free"]);
+    const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
+    const [newsFrom, setNewsFrom] = useState("1716373411");
+    // const [newsTo, setNewsTo] = useState("1725633001");
+    const [newsPageLimit, setNewsPageLimit] = useState(10);
+    const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
+
+    const [cashedImages, setCashedImages] = useState([]);
+
 
     const [coinAnalyze, setCoinAnalyze] = useState();
 
     const { languageApp } = useAppStore();
 
     // functions
+    const getNews = () => {
+        const parameter = {
+            category: newsCategory,
+            symbols: location?.state?.symbol?.name,
+            startDate: newsFrom,
+            // "endDate": newsTo,
+            page: newsPage,
+            language: languageApp,
+            pageLimit: newsPageLimit,
+            llmOnly: true,
+        };
 
+        const header = {
+            headers: {
+                authorization: "48e07eef-d474-47a5-8da4-3e946331369a",
+            },
+        };
+
+        ConnectToServer(
+            "post",
+            LATEST_NEWS,
+            parameter,
+            header,
+            "AnalyzedNews"
+        ).then((response) => {
+            if (response?.data?.return) {
+                // for news image
+
+                tempImages = response?.data?.data?.result?.map(
+                    (item) => item?.local_image
+                );
+                if (
+                    !arraysEqual(
+                        tempImages,
+                        response?.data?.data?.result?.map((item) => item?.local_image),
+                        "data-dashboard-analyzed-news-images"
+                    ) ||
+                    !localStorage.getItem("data-dashboard-analyzed-news-images")
+                ) {
+                    cashImages(
+                        "data-dashboard-analyzed-news-images",
+                        response?.data?.data?.result?.map((item) => item?.created_at),
+                        response?.data?.data?.result?.map((item) => item?.local_image)
+                    );
+                }
+                // for news image
+
+                setNewsData((prev) => {
+                    return [...prev, ...response?.data?.data?.result];
+                });
+
+                // setNewsPage((prev) => prev + 1);
+            }
+        });
+    };
     const getOfflineCoinAnalyze = async () => {
         const parameter = {
             symbol: location?.state?.symbol?.name,
@@ -48,6 +119,21 @@ const CoinDashboard = () => {
         })
     };
 
+    function getCashedImagesLocal() {
+        const cashedImagesLocal = localStorage.getItem(
+            "data-symbol-dashboard-news-images"
+        );
+
+        if (cashedImagesLocal) setCashedImages(JSON.parse(cashedImagesLocal));
+    }
+
+    useEffect(() => {
+        if (newsData?.length == 0) {
+            getNews();
+            getCashedImagesLocal();
+        }
+    }, [newsData]);
+
     useEffect(() => {
         if (!coinAnalyze) {
             getOfflineCoinAnalyze();
@@ -56,12 +142,13 @@ const CoinDashboard = () => {
 
     useEffect(() => {
         setCoinAnalyze();
+        if (newsData?.length > 0) setNewsData([]);
     }, [languageApp])
 
     return (
         <>
             <div className='bg-background pb-[7rem] mt-6'>
-                <TabInfoAnalysisNews symbol={location?.state?.symbol} coin_analyze={coinAnalyze} />
+                <TabInfoAnalysisNews symbol={location?.state?.symbol} coin_analyze={coinAnalyze} news_data={newsData} cashed_images={cashedImages} />
             </div>
         </>
     )

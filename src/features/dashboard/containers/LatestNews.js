@@ -47,6 +47,7 @@ const LatestNews = () => {
             page: newsPage,
             language: languageApp,
             pageLimit: newsPageLimit,
+            llmOnly: true,
         };
 
         const header = {
@@ -88,7 +89,7 @@ const LatestNews = () => {
                     return [...prev, ...response?.data?.data?.result];
                 });
 
-                setNewsPage((prev) => prev + 1);
+                // setNewsPage((prev) => prev + 1);
             }
         });
     };

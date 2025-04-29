@@ -19,8 +19,8 @@ export const PieChart = ({ className, ...props }) => {
             }
         });
         return {
-            max: maxItem.y,        // مقدار بیشترین y
-            color: maxItem.color   // رنگ مربوطه
+            max: maxItem.y,
+            color: maxItem.color
         };
     };
 
@@ -104,7 +104,7 @@ export const PieChart = ({ className, ...props }) => {
                 <div className={`absolute w-full h-full top-0 mt-4 inline-flex justify-center items-center text-2xl font-medium`}>
                     <div className='flex flex-col gap-1 justify-center items-center'>
                         <div style={{ color: findMaxData().color?.stops[0][1] }}>
-                            {findMaxData().max * 100}%
+                            {parseInt(findMaxData().max * 100)}%
                         </div>
                         <div className='text-Neutral-200 text-sm font-normal leading-none text-center'>
                             {props?.title}

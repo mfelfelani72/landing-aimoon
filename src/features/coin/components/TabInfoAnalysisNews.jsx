@@ -7,6 +7,11 @@ import WordCloud from "react-d3-cloud";
 import Accordion from "../../core/components/Accordion.jsx";
 import InfoBox from "../../core/components/InfoBox.jsx";
 import { Image, ImageLazy } from "../../core/components/Image.jsx";
+import MoodTimeSeries from "./MoodTimeSeries.jsx";
+import NewsTimeSeries from "./NewsTimeSeries.jsx"
+import { PieChart } from "../../core/components/Chart.jsx";
+import NewsBox from "../../core/components/NewsBox.jsx";
+import LoaderPage from "../../../app/components/LoaderPage.jsx";
 
 // Functions
 
@@ -27,9 +32,6 @@ import star from "../../../../assets/icons/svg/icon-color-star.svg";
 import chart_chart from "../../../../assets/icons/svg/icon-color-chart.svg";
 import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
-import MoodTimeSeries from "./MoodTimeSeries.jsx";
-import NewsTimeSeries from "./NewsTimeSeries.jsx"
-import { PieChart } from "../../core/components/Chart.jsx";
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
@@ -110,8 +112,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
   // functions
   return (
     <div className={cn("relative", className)}>
-      {/* <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl justify-between items-center gap-1.5 inline-flex mx-4"> */}
-      <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl items-center gap-1.5 inline-flex mx-4">
+      <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl justify-between items-center gap-1.5 inline-flex mx-4">
         <input
           type="radio"
           id="tab1"
@@ -147,14 +148,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             {t("news_analysis")}
           </label>
         </div>
-        {/* <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
+        <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
           <label
             htmlFor="tab3"
             className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
           >
             {t("latest_news")}
           </label>
-        </div> */}
+        </div>
 
         <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
           <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
@@ -660,8 +661,22 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             </Accordion>
           </div>
         </div>
-        <div className="tab3-content bg-background px-4 mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab3:block">
-          تب 3
+        <div className="tab3-content bg-background mt-6 px-4 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab3:block">
+          <div className="flex flex-col gap-7 px-2 bg-Neutral-500 pb-[7rem]">
+            {props?.news_data?.length == 0 ? (
+              <LoaderPage className={"bg-background mt-[1rem]"} />
+            ) : (
+              props?.news_data?.map((row, index) => (
+                <div key={index}>
+                  <NewsBox
+                    row={row}
+                    cashed_images={props?.cashed_images}
+                    className={""}
+                  ></NewsBox>
+                </div>
+              ))
+            )}
+          </div>
         </div>
       </div>
     </div>
