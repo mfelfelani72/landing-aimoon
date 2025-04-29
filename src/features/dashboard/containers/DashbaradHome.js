@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { lazy, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -7,11 +7,16 @@ import { Link } from "react-router-dom";
 import { ButtonLink } from "../../core/components/Button.jsx";
 import { Image } from "../../core/components/Image.jsx";
 import { TabDefault } from "../../core/components/Tab/Tab.jsx";
-import LatestNews from "../components/LatestNews.jsx";
 
 // Containers
 
-import AnalyzedNews from "../containers/AnalyzedNews.js";
+
+const LazyAnalyzedNews = lazy(() =>
+  import("./AnalyzedNews.js")
+);
+const LazyLatestNews = lazy(() =>
+  import("./LatestNews.js")
+);
 
 // Svg
 
@@ -128,13 +133,12 @@ const DashbaradHome = () => {
         <TabDefault
           id={"tab-0"}
           className={"pt-4"}
-          // titles={["analyzed_news", "latest_news"]}
-          titles={["analyzed_news"]}
+          titles={["analyzed_news", "latest_news"]}
           classNameTitle="px-6"
           idTitle=""
           statePage={statePage}
           setStatePage={setStatePage}
-          contents={[<AnalyzedNews />, <LatestNews />]}
+          contents={[<LazyAnalyzedNews />, <LazyLatestNews />]}
         />
       </div>
     </>

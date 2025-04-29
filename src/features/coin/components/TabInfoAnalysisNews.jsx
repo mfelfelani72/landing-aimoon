@@ -161,12 +161,12 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             {/* header */}
             <div className="flex flex-row gap-2 items-center">
               <ImageLazy
-                alt={props?.symbol.description}
+                alt={props?.symbol?.description}
                 src={
-                  props?.symbol.local_image
-                    ? props?.symbol.local_image
-                    : props?.symbol.logo
-                      ? props?.symbol.logo
+                  props?.symbol?.local_image
+                    ? props?.symbol?.local_image
+                    : props?.symbol?.logo
+                      ? props?.symbol?.logo
                       : DEFAULT_COIN_IMAGE
                 }
                 onError={(e) => {
@@ -303,7 +303,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             >
               <div className="flex flex-col gap-2 px-4 pb-4">
                 <div className="text-secondary-400 text-sm font-normal leading-tight tracking-tight">
-                  {dateHelper(props?.symbol?.updatedAt, "difference")}
+                  {dateHelper(props?.coin_analyze?.response?.updatedAt, "difference", true)}
                 </div>
                 <div className="text-white text-sm font-normal leading-tight">
                   {props?.coin_analyze?.response?.analysis}

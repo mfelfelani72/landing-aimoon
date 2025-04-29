@@ -26,12 +26,12 @@ const AnalyzedNews = () => {
   const PAGE_NUMBER = 1;
   let tempImages;
 
-  const [countFetch, setCountFetch] = useState(0);
   const [newsData, setNewsData] = useState([]);
   const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
   const [newsSymbols, setNewsSymbols] = useState("all");
   const [newsFrom, setNewsFrom] = useState("1716373411");
   // const [newsTo, setNewsTo] = useState("1725633001");
+  const [newsPageLimit, setNewsPageLimit] = useState(10);
   const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
 
   const [cashedImages, setCashedImages] = useState([]);
@@ -45,7 +45,7 @@ const AnalyzedNews = () => {
       // "endDate": newsTo,
       page: 1,
       language: languageApp,
-      pageLimit: 10,
+      pageLimit: newsPageLimit,
       llmOnly: true,
     };
 
