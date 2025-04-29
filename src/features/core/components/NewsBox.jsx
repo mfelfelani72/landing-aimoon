@@ -82,8 +82,8 @@ const NewsBox = ({ className, children, ...props }) => {
           <div className="w-full h-36 left-0 bottom-0 absolute bg-gradient-to-b from-black/0 to-zinc-950 inline-flex items-end justify-between p-4">
             <div className="w-[4.5rem]">
               <div className='relative'>
-                <div style={{ color: findMaxData()?.colorItem }} className="absolute -top-[1.5rem] -left-[0rem] w-5 h-5">{findMaxData()?.maxItem}%</div>
-                <div className="absolute -top-[3rem] -right-[0.85rem] w-[65px] h-[65px]">
+                <div style={{ color: findMaxData()?.colorItem }} className="absolute -top-[1.5rem] rtl:left-0 ltr:right-0 w-5 h-5">{findMaxData()?.maxItem *100}%</div>
+                <div className="absolute -top-[3rem] rtl:-right-[0.85rem] ltr:-left-[0.85rem] w-[65px] h-[65px]">
                   <DonutChart width={65} height={65} data={[{
                     name: t("negative"),
                     y: props?.row?.Negative,
