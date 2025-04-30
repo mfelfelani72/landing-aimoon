@@ -11,7 +11,7 @@ import Languages from "../core/components/Languages.jsx"
 
 // Containers
 
-import MarqueeCoins from '../coin/containers/MarqueeCoins.jsx';
+import MarqueeCoins from '../coin/containers/MarqueeCoins.js';
 
 // Svg
 

@@ -20,7 +20,7 @@ import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
 // Zustand
 
-import useAppStore from "../../../app/stores/AppStore";
+import useAppStore from "../../../app/stores/AppStore.js";
 
 const CoinDashboard = () => {
     // hooks

@@ -27,7 +27,7 @@ const LazyCoinLanding = lazy(() =>
   import("../../../features/coin/CoinLanding.js")
 );
 const LazyCoinDashboard = lazy(() =>
-  import("../../../features/coin/containers/CoinDashboard.jsx")
+  import("../../../features/coin/containers/CoinDashboard.js")
 );
 
 // Author
