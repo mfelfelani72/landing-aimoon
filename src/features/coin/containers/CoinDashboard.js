@@ -131,6 +131,7 @@ const CoinDashboard = () => {
         if (newsData == "free") {
             getNews();
             getCashedImagesLocal();
+            newsData.shift();
         }
     }, [newsData]);
 
@@ -143,7 +144,7 @@ const CoinDashboard = () => {
 
     useEffect(() => {
         setCoinAnalyze("free");
-        if (newsData?.length > 0) setNewsData([]);
+        if (newsData.length > 0) setNewsData(["free"]);
     }, [languageApp])
 
     return (

@@ -595,7 +595,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             {/* today sentiment */}
             {props?.symbol?.latest_news_info?.last_day_sentiment?.negative + props?.symbol?.latest_news_info?.last_day_sentiment?.positive + props?.symbol?.latest_news_info?.last_day_sentiment?.neutral > 0.9 && <Accordion
               id="today_sentiment"
-              open={true}
+              open={false}
 
               title={
                 <Trans
@@ -607,8 +607,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   <span className="text-primary-500"></span>
                 </Trans>
               }
-              className={"bg-background border border-Neutral-400/50 pb-4"}>
-              <div className="w-full flex flex-col items-center justify-center">
+              className={"bg-background border border-Neutral-400/50"}>
+              <div className="w-full flex flex-col items-center justify-center pb-4">
                 <PieChart height={300} width={300} data={data_today} name={t("sentiment")} title={
                   <Trans
                     i18nKey="out_of"
@@ -625,7 +625,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             {/* week sentiment */}
             {props?.symbol?.latest_news_info?.last_week_sentiment?.negative + props?.symbol?.latest_news_info?.last_week_sentiment?.positive + props?.symbol?.latest_news_info?.last_week_sentiment?.neutral > 0.9 && <Accordion
               id="week_sentiment"
-              open={true}
+              open={false}
 
               title={
                 <Trans
@@ -637,8 +637,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   <span className="text-primary-500"></span>
                 </Trans>
               }
-              className={"bg-background border border-Neutral-400/50 pb-4"}>
-              <div className="w-full flex flex-col items-center justify-center">
+              className={"bg-background border border-Neutral-400/50"}>
+              <div className="w-full flex flex-col items-center justify-center pb-4">
                 <PieChart height={300} width={300} data={data_week} name={t("sentiment")} title={
                   <Trans
                     i18nKey="out_of"
@@ -655,7 +655,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             {/* mood time series */}
             {props?.symbol?.daily_timeseries && <Accordion
               id="mood"
-              open={true}
+              open={false}
               icon={chart}
               title={t("amount_changes")}
               className={"bg-background border border-Neutral-400/50"}
@@ -666,7 +666,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             {/* news count */}
             {props?.symbol?.daily_timeseries && <Accordion
               id="news"
-              open={true}
+              open={false}
               icon={chart}
               title={t("news_count")}
               className={"bg-background border border-Neutral-400/50"}
