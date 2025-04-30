@@ -395,10 +395,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("change_from_yesterday")}
                       </div>
                       <div
-                        className={`${props?.symbol.latest_news_info?.change_stat
+                        className={`${props?.symbol?.latest_news_info?.change_stat
                           ?.damp_5_change?.percent_change_24h == 0
                           ? "text-white"
-                          : props?.symbol.latest_news_info?.change_stat
+                          : props?.symbol?.latest_news_info?.change_stat
                             ?.damp_5_change?.percent_change_24h > 0
                             ? "text-Success-500"
                             : "text-Error-500"
@@ -408,16 +408,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                           <div className="inline-flex items-center">
 
                             {
-                              props?.symbol.latest_news_info?.change_stat
+                              props?.symbol?.latest_news_info?.change_stat
                                 ?.damp_5_change?.percent_change_24h
                             }
                           </div>
-                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h > 0 && <Image
+                          {props?.symbol?.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h > 0 && <Image
                             src={arrow_up}
                             alt="arrow-day-up"
                             className={"w-4 h-4"}
                           />}
-                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h < 0 && <Image
+                          {props?.symbol?.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h < 0 && <Image
                             src={arrow_down}
                             alt="arrow-day-down"
                             className={"w-4 h-4"}
@@ -430,10 +430,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("change_from_last_week")}
                       </div>
                       <div
-                        className={`${props?.symbol.latest_news_info?.change_stat
+                        className={`${props?.symbol?.latest_news_info?.change_stat
                           ?.damp_5_change?.percent_change_7d == 0
                           ? "text-white"
-                          : props?.symbol.latest_news_info?.change_stat
+                          : props?.symbol?.latest_news_info?.change_stat
                             ?.damp_5_change?.percent_change_7d > 0
                             ? "text-Success-500"
                             : "text-Error-500"
@@ -443,16 +443,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                           <div className="inline-flex items-center">
                             {" "}
                             {
-                              props?.symbol.latest_news_info?.change_stat
+                              props?.symbol?.latest_news_info?.change_stat
                                 ?.damp_5_change?.percent_change_7d
                             }
                           </div>
-                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d > 0 && <Image
+                          {props?.symbol?.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d > 0 && <Image
                             src={arrow_up}
                             alt="arrow-week-up"
                             className={"w-4 h-4"}
                           />}
-                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d < 0 && <Image
+                          {props?.symbol?.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d < 0 && <Image
                             src={arrow_down}
                             alt="arrow-week-down"
                             className={"w-4 h-4"}
@@ -465,10 +465,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("change_from_last_month")}
                       </div>
                       <div
-                        className={`${props?.symbol.latest_news_info?.change_stat
+                        className={`${props?.symbol?.latest_news_info?.change_stat
                           ?.damp_5_change?.percent_change_30d == 0
                           ? "text-white"
-                          : props?.symbol.latest_news_info?.change_stat
+                          : props?.symbol?.latest_news_info?.change_stat
                             ?.damp_5_change?.percent_change_30d > 0
                             ? "text-Success-500"
                             : "text-Error-500"
@@ -478,16 +478,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                           <div className="inline-flex items-center">
                             {" "}
                             {
-                              props?.symbol.latest_news_info?.change_stat
+                              props?.symbol?.latest_news_info?.change_stat
                                 ?.damp_5_change?.percent_change_30d
                             }
                           </div>
-                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d > 0 && <Image
+                          {props?.symbol?.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d > 0 && <Image
                             src={arrow_up}
                             alt="arrow-month-up"
                             className={"w-4 h-4"}
                           />}
-                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d < 0 && <Image
+                          {props?.symbol?.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d < 0 && <Image
                             src={arrow_down}
                             alt="arrow-month-down"
                             className={"w-4 h-4"}
