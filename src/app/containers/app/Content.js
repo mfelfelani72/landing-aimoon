@@ -35,6 +35,10 @@ const LazyCoinDashboard = lazy(() =>
 const LazyAuthorLanding = lazy(() =>
   import("../../../features/author/AuthorLanding.js")
 );
+const LazyAuthorDashboard = lazy(() =>
+  import("../../../features/author/containers/AuthorDashboard.js")
+);
+
 
 // AboutUs
 const LazyAboutUsDrvafaeijahan = lazy(() =>
@@ -66,7 +70,10 @@ const Content = () => {
             path="/dashboard/author-list"
             element={<LazyAuthorLanding />}
           />
+          <Route path="/dashboard/author" element={<LazyAuthorDashboard />} />
+
         </Route>
+
 
         {/* AboutUs */}
 
