@@ -19,7 +19,7 @@ const MoodTimeSeries = (props) => {
   // consts
   const [data] = useState([
     {
-      name: 'news count',
+      name: t("news_count"),
       data: props?.data?.newsCount,
       color: 'rgba(115, 234, 105, 1)'
     },

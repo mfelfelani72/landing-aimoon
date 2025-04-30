@@ -38,7 +38,7 @@ const CoinList = ({ className, ...props }) => {
 
                     <div className='flex flex-row w-full justify-between'>
                         <div className="text-Neutral-300 text-[8px] font-normal">{t("news_count")}</div>
-                        <div className="text-Neutral-300 text-xs font-normal leading-tight tracking-tight">{formatNumberHelper(parseInt(props?.row?.latest_news_info?.news_count))}</div>
+                        <div className="text-Neutral-300 text-xs font-normal leading-tight tracking-tight">{props?.row?.latest_news_info?.news_count ? formatNumberHelper(parseInt(props?.row?.latest_news_info?.news_count)) : 0}</div>
                     </div>
                 </div>
             </div>

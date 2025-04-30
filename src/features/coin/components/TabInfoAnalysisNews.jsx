@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import WordCloud from "react-d3-cloud";
 
@@ -36,9 +36,10 @@ import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
 const TabInfoAnalysisNews = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
-  // console.log(props?.symbol);
-  // console.log(props?.coin_analyze);
 
+  // const 
+
+  // consts for sentiments
   const data_today = [
     {
       name: t("positive"),
@@ -109,7 +110,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
       }
     }
   ]
-  // functions
+   
   return (
     <div className={cn("relative", className)}>
       <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl justify-between items-center gap-1.5 inline-flex mx-4">
@@ -197,7 +198,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             </div>
           </div>
 
-          {props?.coin_analyze && (
+          {/* word_cloud */}
+          {props?.coin_analyze !=="empty" && (
             <div className="flex flex-col gap-4 mt-4">
               <Accordion
                 id="info"
@@ -221,7 +223,9 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         </div>
         <div className="tab2-content bg-background mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab2:block">
           <div className="flex flex-col gap-4 mt-4 px-4">
-            {props?.coin_analyze && <div className="relative">
+
+            {/* news_summary */}
+            {props?.coin_analyze !=="empty" && <div className="relative">
               <div className="flex flex-col w-full bg-background-light p-[2px] rounded-2xl">
                 <div className="flex flex-col min-h-60 bg-background rounded-2xl">
                   <div className="border-b-2 border-b-background-light pt-4 px-5 pb-2">
@@ -294,7 +298,9 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               </div>
               <div className="absolute z-10 top-0 -left-[0.5rem] w-40 h-40 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
             </div>}
-            {props?.coin_analyze && <Accordion
+
+            {/* analysis */}
+            {props?.coin_analyze !=="empty" && <Accordion
               id="analysis"
               open={true}
               title={t("aimoon_analysis")}
@@ -312,7 +318,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               </div>
             </Accordion>}
 
-            <Accordion
+            {/* analysis news base statistics */}
+            {props?.symbol?.latest_news_info && <Accordion
               id="analysis_news_base_statistics"
               open={false}
               title={
@@ -332,7 +339,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   icon={calender}
                   icon_title="All"
                   number={formatNumberHelper(
-                    parseInt(props?.symbol?.latest_news_info.news_count)
+                    parseInt(props?.symbol?.latest_news_info?.news_count)
                   )}
                   title={t("news")}
                 />
@@ -340,7 +347,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   icon={calender}
                   icon_title="1"
                   number={formatNumberHelper(
-                    parseInt(props?.symbol?.latest_news_info.avg_news_day)
+                    parseInt(props?.symbol?.latest_news_info?.avg_news_day)
                   )}
                   title={t("news_per_day")}
                 />
@@ -348,7 +355,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   icon={calender}
                   icon_title="7"
                   number={formatNumberHelper(
-                    parseInt(props?.symbol?.latest_news_info.avg_news_week)
+                    parseInt(props?.symbol?.latest_news_info?.avg_news_week)
                   )}
                   title={t("news_per_week")}
                 />
@@ -356,12 +363,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   icon={calender}
                   icon_title="30"
                   number={formatNumberHelper(
-                    parseInt(props?.symbol?.latest_news_info.avg_news_month)
+                    parseInt(props?.symbol?.latest_news_info?.avg_news_month)
                   )}
                   title={t("news_per_month")}
                 />
               </div>
-            </Accordion>
+            </Accordion>}
+
+            {/* analysis amount changes */}
             <Accordion
               id="analysis_amount_changes"
               open={false}
@@ -583,7 +592,9 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               </div>
             </Accordion>
 
-            {props?.symbol?.latest_news_info?.last_day_sentiment?.negative !== 0 && <Accordion
+            {/* today sentiment */}
+           
+            {props?.symbol?.latest_news_info?.last_day_sentiment?.negative + props?.symbol?.latest_news_info?.last_day_sentiment?.positive + props?.symbol?.latest_news_info?.last_day_sentiment?.neutral > 0.9 && <Accordion
               id="today_sentiment"
               open={true}
 
@@ -603,7 +614,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   <Trans
                     i18nKey="out_of"
                     values={{
-                      count: formatNumberHelper(parseInt(props?.symbol?.latest_news_info.last_day_count)),
+                      count: formatNumberHelper(parseInt(props?.symbol?.latest_news_info?.last_day_count)),
                     }}
                   >
                     <span className=""></span>
@@ -612,7 +623,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               </div>
             </Accordion>}
 
-            {props?.symbol?.latest_news_info?.last_week_sentiment?.negative !== 0 && <Accordion
+            {/* week sentiment */}
+            {props?.symbol?.latest_news_info?.last_week_sentiment?.negative + props?.symbol?.latest_news_info?.last_week_sentiment?.positive + props?.symbol?.latest_news_info?.last_week_sentiment?.neutral > 0.9 && <Accordion
               id="week_sentiment"
               open={true}
 
@@ -632,7 +644,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                   <Trans
                     i18nKey="out_of"
                     values={{
-                      count: formatNumberHelper(parseInt(props?.symbol?.latest_news_info.last_week_count)),
+                      count: formatNumberHelper(parseInt(props?.symbol?.latest_news_info?.last_week_count)),
                     }}
                   >
                     <span className=""></span>
@@ -641,7 +653,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               </div>
             </Accordion>}
 
-            <Accordion
+            {/* mood time series */}
+            {props?.symbol?.daily_timeseries && <Accordion
               id="mood"
               open={true}
               icon={chart}
@@ -649,8 +662,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               className={"bg-background border border-Neutral-400/50"}
             >
               <MoodTimeSeries data={props?.symbol?.daily_timeseries} />
-            </Accordion>
-            <Accordion
+            </Accordion>}
+
+            {/* news count */}
+            {props?.symbol?.daily_timeseries && <Accordion
               id="news"
               open={true}
               icon={chart}
@@ -658,11 +673,13 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               className={"bg-background border border-Neutral-400/50"}
             >
               <NewsTimeSeries data={props?.symbol?.daily_timeseries} />
-            </Accordion>
+            </Accordion>}
+
           </div>
         </div>
         <div className="tab3-content bg-background mt-6 px-4 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab3:block">
           <div className="flex flex-col gap-7 px-2 bg-Neutral-500 pb-[7rem]">
+            {/* news */}
             {props?.news_data?.length == 0 ? (
               <LoaderPage className={"bg-background mt-[1rem]"} />
             ) : (

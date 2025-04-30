@@ -4,8 +4,6 @@ import { useLocation } from 'react-router-dom'
 // Components
 
 import TabInfoAnalysisNews from "../components/TabInfoAnalysisNews.jsx"
-import NewsBox from "../../core/components/NewsBox.jsx";
-import LoaderPage from "../../../app/components/LoaderPage.jsx";
 
 // Constants
 
@@ -39,8 +37,7 @@ const CoinDashboard = () => {
 
     const [cashedImages, setCashedImages] = useState([]);
 
-
-    const [coinAnalyze, setCoinAnalyze] = useState();
+    const [coinAnalyze, setCoinAnalyze] = useState("free");
 
     const { languageApp } = useAppStore();
 
@@ -114,7 +111,10 @@ const CoinDashboard = () => {
 
         ConnectToServer("post", OFFLINE_COIN_ANALYZE, parameter, header, "coin-dashboard").then((response) => {
             if (response?.data?.return) {
-                setCoinAnalyze(response.data.data);
+                setCoinAnalyze(response?.data?.data);
+            }
+            else {
+                setCoinAnalyze("empty");
             }
         })
     };
@@ -128,28 +128,29 @@ const CoinDashboard = () => {
     }
 
     useEffect(() => {
-        if (newsData?.length == 0) {
+        if (newsData == "free") {
             getNews();
             getCashedImagesLocal();
         }
     }, [newsData]);
 
     useEffect(() => {
-        if (!coinAnalyze) {
+        if (coinAnalyze == "free") {
             getOfflineCoinAnalyze();
         }
-    })
+
+    }, [coinAnalyze])
 
     useEffect(() => {
-        setCoinAnalyze();
+        setCoinAnalyze("free");
         if (newsData?.length > 0) setNewsData([]);
     }, [languageApp])
 
     return (
         <>
-            <div className='bg-background pb-[7rem] mt-6'>
+            {coinAnalyze !== "free" && <div className='bg-background pb-[7rem] mt-6'>
                 <TabInfoAnalysisNews symbol={location?.state?.symbol} coin_analyze={coinAnalyze} news_data={newsData} cashed_images={cashedImages} />
-            </div>
+            </div>}
         </>
     )
 }
