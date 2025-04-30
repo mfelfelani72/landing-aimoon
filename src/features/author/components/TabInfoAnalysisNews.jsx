@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-
 
 // components 
 
 import Accordion from "../../core/components/Accordion.jsx";
 import InfoBox from "../../core/components/InfoBox.jsx";
-import { Image, ImageLazy } from "../../core/components/Image.jsx";
+import { ImageLazy } from "../../core/components/Image.jsx";
 import { PieChart } from "../../core/components/Chart.jsx"
 
 // Functions
@@ -18,19 +17,10 @@ import { cn } from "../../../../utils/lib/cn";
 
 import { DEFAULT_AVATAR_IMAGE } from "../../../app/utils/constant/Defaults.js";
 
-
-
 // Svg
 
-import chart from "../../../../assets/icons/svg/chart-nav.svg";
 import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
-import clock from "../../../../assets/icons/svg/icon-color-clock.svg";
-import star from "../../../../assets/icons/svg/icon-color-star.svg";
-import chart_chart from "../../../../assets/icons/svg/icon-color-chart.svg";
 import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
-import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
-import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
-
 
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
@@ -165,11 +155,11 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {/* header */}
                         <div className="flex flex-row gap-2 items-center">
                             <ImageLazy
-                                alt={props?.author.description}
+                                alt={props?.author?.name}
                                 src={
-                                    props?.author.local_image
-                                        ? props?.author.local_image
-                                        : props?.author.picUrl
+                                    props?.author?.local_image
+                                        ? props?.author?.local_image
+                                        : props?.author?.picUrl
                                             ? props?.author.picUrl
                                             : DEFAULT_AVATAR_IMAGE
                                 }
@@ -273,7 +263,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                             }
                             className={"bg-background border border-Neutral-400/50"}>
                             <div className="w-full flex flex-col items-center justify-center pb-4">
-                                <PieChart height={300} width={300} data={data_today} name="Sentiment" title={"Out Of " + props?.author.last_day_count.toLocaleString()} />
+                                <PieChart height={300} width={300} data={data_today} name="Sentiment" title={"Out Of " + props?.author?.last_day_count?.toLocaleString()} />
                             </div>
                         </Accordion>}
 
@@ -293,7 +283,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                             }
                             className={"bg-background border border-Neutral-400/50 "}>
                             <div className="w-full flex flex-col items-center justify-center pb-4">
-                                <PieChart height={300} width={300} data={data_week} name="Sentiment" title={"Out Of " + props?.author.last_day_count.toLocaleString()} />
+                                <PieChart height={300} width={300} data={data_week} name="Sentiment" title={"Out Of " + props?.author?.last_day_count?.toLocaleString()} />
                             </div>
                         </Accordion>}
 
