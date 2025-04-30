@@ -38,11 +38,19 @@ export const NOT_RELOAD_ROUTES = [
       // "/profile/user-level-up",
     ],
   ],
-
+  // Coin
   [
-    "/",
+    "/dashboard/coin-list",
     [
-      // "/your-route",
+      "/dashboard/coin",
+    ],
+  ],
+
+   // Author
+   [
+    "/dashboard/author-list",
+    [
+      "/dashboard/author",
     ],
   ],
 ];
