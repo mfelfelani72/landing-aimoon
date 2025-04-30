@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbuiler=self.webpackChunkbuiler||[]).push([[7467],{7467:(e,u,l)=>{l.r(u),l.d(u,{default:()=>r});var n=l(6540);const r=function(){return n.createElement("div",null,"helooooo !!!")}}}]);
