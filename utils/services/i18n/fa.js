@@ -214,6 +214,7 @@ const fa = {
   positive: "مثبت",
   negative: "منفی",
   neutral: "خنثی",
+  sentiment: "احساس",
 
 
   all_information: "اطلاعات کلی",

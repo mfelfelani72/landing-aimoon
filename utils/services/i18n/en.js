@@ -215,6 +215,7 @@ const en = {
   positive: "Positive",
   negative: "Negative",
   neutral: "Neutral",
+  sentiment: "Sentiment",
 
   all_information: "All information",
 

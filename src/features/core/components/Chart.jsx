@@ -40,7 +40,7 @@ export const PieChart = ({ className, ...props }) => {
         },
         title: null,
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '<span>{series.name} <br>{point.percentage:.1f}%</b></span>'
         },
         accessibility: {
             point: {

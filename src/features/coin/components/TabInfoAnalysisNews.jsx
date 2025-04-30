@@ -593,7 +593,6 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             </Accordion>
 
             {/* today sentiment */}
-
             {props?.symbol?.latest_news_info?.last_day_sentiment?.negative + props?.symbol?.latest_news_info?.last_day_sentiment?.positive + props?.symbol?.latest_news_info?.last_day_sentiment?.neutral > 0.9 && <Accordion
               id="today_sentiment"
               open={true}
@@ -610,7 +609,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               }
               className={"bg-background border border-Neutral-400/50 pb-4"}>
               <div className="w-full flex flex-col items-center justify-center">
-                <PieChart height={300} width={300} data={data_today} name="Sentiment" title={
+                <PieChart height={300} width={300} data={data_today} name={t("sentiment")} title={
                   <Trans
                     i18nKey="out_of"
                     values={{
@@ -640,7 +639,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
               }
               className={"bg-background border border-Neutral-400/50 pb-4"}>
               <div className="w-full flex flex-col items-center justify-center">
-                <PieChart height={300} width={300} data={data_week} name="Sentiment" title={
+                <PieChart height={300} width={300} data={data_week} name={t("sentiment")} title={
                   <Trans
                     i18nKey="out_of"
                     values={{
