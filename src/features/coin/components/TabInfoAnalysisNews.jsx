@@ -132,6 +132,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
           name="tab"
           className="hidden peer/tab3 w-full"
         />
+
         <div className="basis-1/3 peer-checked/tab1:bg-Neutral-500 peer-checked/tab1:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab1:!text-primary-500 font-medium text-[0.9rem] leading-5">
           <label
             htmlFor="tab1"
@@ -157,8 +158,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
           </label>
         </div>}
 
-
         <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
+          {/* description */}
           <div className="flex flex-col border rounded-2xl border-Neutral-400 px-6 pt-5 pb-7">
             {/* header */}
             <div className="flex flex-row gap-2 items-center">
@@ -193,7 +194,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             <div className="text-Neutral-300 text-xs font-extrabold leading-none">
               {props?.symbol?.category}
             </div>
-            <div className="w-72 text-white text-sm font-normal leading-tight mt-2 max-h-[6.5rem] overflow-auto scrollbar rtl:pl-3 ltr:pr-3 text-left">
+            <div className="w-full text-white text-sm font-normal leading-tight mt-2 max-h-[6.5rem] overflow-auto scrollbar rtl:pl-3 ltr:pr-3">
               {props?.symbol?.description}
             </div>
           </div>
@@ -405,22 +406,22 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                       >
                         <div className="flex flex-row gap-1 items-center">
                           <div className="inline-flex items-center">
-                            {" "}
+
                             {
                               props?.symbol.latest_news_info?.change_stat
                                 ?.damp_5_change?.percent_change_24h
                             }
                           </div>
-                          <Image
-                            src={
-                              props?.symbol.latest_news_info?.change_stat
-                                ?.damp_5_change?.percent_change_24h > 0
-                                ? arrow_up
-                                : arrow_down
-                            }
-                            alt="arrow-day"
+                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h > 0 && <Image
+                            src={arrow_up}
+                            alt="arrow-day-up"
                             className={"w-4 h-4"}
-                          />
+                          />}
+                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_24h < 0 && <Image
+                            src={arrow_down}
+                            alt="arrow-day-down"
+                            className={"w-4 h-4"}
+                          />}
                         </div>
                       </div>
                     </div>
@@ -446,16 +447,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                                 ?.damp_5_change?.percent_change_7d
                             }
                           </div>
-                          <Image
-                            src={
-                              props?.symbol.latest_news_info?.change_stat
-                                ?.damp_5_change?.percent_change_7d > 0
-                                ? arrow_up
-                                : arrow_down
-                            }
-                            alt="arrow-week"
+                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d > 0 && <Image
+                            src={arrow_up}
+                            alt="arrow-week-up"
                             className={"w-4 h-4"}
-                          />
+                          />}
+                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_7d < 0 && <Image
+                            src={arrow_down}
+                            alt="arrow-week-down"
+                            className={"w-4 h-4"}
+                          />}
                         </div>
                       </div>
                     </div>
@@ -481,16 +482,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                                 ?.damp_5_change?.percent_change_30d
                             }
                           </div>
-                          <Image
-                            src={
-                              props?.symbol.latest_news_info?.change_stat
-                                ?.damp_5_change?.percent_change_30d > 0
-                                ? arrow_up
-                                : arrow_down
-                            }
-                            alt="arrow-month"
+                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d > 0 && <Image
+                            src={arrow_up}
+                            alt="arrow-month-up"
                             className={"w-4 h-4"}
-                          />
+                          />}
+                          {props?.symbol.latest_news_info?.change_stat?.damp_5_change?.percent_change_30d < 0 && <Image
+                            src={arrow_down}
+                            alt="arrow-month-down"
+                            className={"w-4 h-4"}
+                          />}
                         </div>
                       </div>
                     </div>
@@ -530,16 +531,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                               {" "}
                               {props?.symbol?.latest_price_info?.change_rate}
                             </div>
-                            <Image
-                              src={
-                                props?.symbol?.latest_price_info?.change_rate >
-                                  0
-                                  ? arrow_up
-                                  : arrow_down
-                              }
-                              alt="arrow-rate"
+                            {props?.symbol?.latest_price_info?.change_rate > 0 && <Image
+                              src={arrow_up}
+                              alt="arrow-rate-up"
                               className={"w-4 h-4"}
-                            />
+                            />}
+                            {props?.symbol?.latest_price_info?.change_rate < 0 && <Image
+                              src={arrow_down}
+                              alt="arrow-rate-down"
+                              className={"w-4 h-4"}
+                            />}
                           </div>
                         </div>
                       </div>
@@ -563,16 +564,16 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                               {" "}
                               {props?.symbol?.latest_price_info?.change_price}
                             </div>
-                            <Image
-                              src={
-                                props?.symbol?.latest_price_info?.change_price >
-                                  0
-                                  ? arrow_up
-                                  : arrow_down
-                              }
-                              alt="arrow-price"
+                            {props?.symbol?.latest_price_info?.change_price > 0 && <Image
+                              src={arrow_up}
+                              alt="arrow-price-up"
                               className={"w-4 h-4"}
-                            />
+                            />}
+                            {props?.symbol?.latest_price_info?.change_price < 0 && <Image
+                              src={arrow_down}
+                              alt="arrow-price-down"
+                              className={"w-4 h-4"}
+                            />}
                           </div>
                         </div>
                       </div>
