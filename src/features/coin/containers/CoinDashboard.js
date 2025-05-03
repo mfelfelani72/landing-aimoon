@@ -16,6 +16,10 @@ import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
+// Hooks
+
+import useScrollToBottom from '../../../../utils/hooks/useScrollToBottom.js';
+
 // Zustand
 
 import useAppStore from "../../../app/stores/AppStore.js";
@@ -24,9 +28,14 @@ const CoinDashboard = () => {
     // hooks
     const location = useLocation();
 
-    // states
+    // states and consts
+
     const PAGE_NUMBER = 1;
     let tempImages;
+
+    const isBottom = useScrollToBottom();
+
+    const [loading, setLoading] = useState("true");
 
     const [newsData, setNewsData] = useState(["free"]);
     const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
@@ -68,6 +77,11 @@ const CoinDashboard = () => {
             "AnalyzedNews"
         ).then((response) => {
             if (response?.data?.return) {
+
+
+                setLoading("false");
+
+
                 // for news image
 
                 tempImages = response?.data?.data?.result?.map(
@@ -92,11 +106,10 @@ const CoinDashboard = () => {
                 setNewsData((prev) => {
                     return [...prev, ...response?.data?.data?.result];
                 });
-
-                // setNewsPage((prev) => prev + 1);
             }
         });
     };
+
     const getOfflineCoinAnalyze = async () => {
         const parameter = {
             symbol: location?.state?.symbol?.name,
@@ -145,12 +158,24 @@ const CoinDashboard = () => {
     useEffect(() => {
         setCoinAnalyze("free");
         if (newsData.length > 0) setNewsData(["free"]);
+        setNewsPage(1);
     }, [languageApp])
 
+    useEffect(() => {
+        setNewsPage((prev) => prev + 1);
+
+    }, [isBottom])
+
+    useEffect(() => {
+        if (newsPage > 2 && loading == "false") {
+            setLoading("true");
+            getNews();
+        }
+    }, [newsPage])
     return (
         <>
             {coinAnalyze !== "free" && <div className='bg-background pb-[7rem] mt-6'>
-                <TabInfoAnalysisNews symbol={location?.state?.symbol} coin_analyze={coinAnalyze} news_data={newsData} cashed_images={cashedImages} />
+                <TabInfoAnalysisNews symbol={location?.state?.symbol} coin_analyze={coinAnalyze} news_data={newsData} cashed_images={cashedImages} loading={loading} />
             </div>}
         </>
     )
