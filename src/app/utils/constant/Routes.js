@@ -13,11 +13,11 @@ export const ALL_ROUTES = [
 
   "/dashboard/home",
 
-  // dashboard-coin      pouya
+  // dashboard-coin
   "/dashboard/coin-list",
   "/dashboard/coin",
 
-  // dashboard-author
+  // dashboard-author   mohammad
   "/dashboard/author-list",
   "/dashboard/author",
 
