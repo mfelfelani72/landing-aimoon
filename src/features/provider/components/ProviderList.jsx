@@ -7,13 +7,13 @@ import { ImageLazy } from '../../core/components/Image.jsx'
 
 // Functions
 
-import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper"
+import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js"
 
 // Constants
 
 import { DEFAULT_COIN_IMAGE } from "../../../app/utils/constant/Defaults.js";
 
-const CoinList = ({ className, ...props }) => {
+const ProviderList = ({ className, ...props }) => {
     // hooks
     const { t } = useTranslation();
 
@@ -28,17 +28,17 @@ const CoinList = ({ className, ...props }) => {
                         ? props?.cashed_images.filter(
                             (item) => item[props?.row?.name]
                         )[0][props?.row?.name]?.base64data
-                        : props?.row?.logo
+                        : props?.row?.logoUrl
                 }
                     onError={(e) => {
                         e.target.src = DEFAULT_COIN_IMAGE;
-                    }} alt={props?.item?.name + "-logo"} className={"w-8 h-8 rounded-full"} />
+                    }} alt={props?.item?.name + "-logo"} className={"w-10 h-10 rounded-full"} />
                 <div className='flex flex-col w-full gap-2 justify-center'>
-                    <div className="text-white text-sm font-medium  leading-none tracking-wide">{props?.row?.name}</div>
+                    <div className="text-white text-sm font-medium  leading-none tracking-wide capitalize">{props?.row?.name}</div>
 
                     <div className='flex flex-row w-full justify-between'>
                         <div className="text-Neutral-300 text-[8px] font-normal">{t("news_count")}</div>
-                        <div className="text-Neutral-300 text-xs font-normal leading-tight tracking-tight">{props?.row?.latest_news_info?.news_count ? formatNumberHelper(parseInt(props?.row?.latest_news_info?.news_count)) : 0}</div>
+                        <div className="text-Neutral-300 text-xs font-normal leading-tight tracking-tight">{props?.row?.newsCount ? formatNumberHelper(parseInt(props?.row?.newsCount)) : 0} +</div>
                     </div>
                 </div>
             </div>
@@ -46,4 +46,4 @@ const CoinList = ({ className, ...props }) => {
     )
 }
 
-export default CoinList
+export default ProviderList

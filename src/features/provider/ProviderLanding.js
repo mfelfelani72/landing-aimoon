@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 // Components
 
 import { InputSearch } from '../core/components/Input.jsx'
-import CoinList from './components/CoinList.jsx';
+import ProviderList from './components/ProviderList.jsx';
 import LoaderPage from '../../app/components/LoaderPage.jsx';
 
 // Functions
@@ -16,7 +16,7 @@ import { arraysEqual } from "../../../utils/lib/arraysEqual.js";
 
 // Constants
 
-import { SYMBOLS } from "./utils/constants/EndPoints.js";
+import { PROVIDER_NAMES } from "./utils/constants/EndPoints.js";
 
 const CoinLanding = () => {
     // hooks
@@ -24,17 +24,19 @@ const CoinLanding = () => {
     const navigate = useNavigate();
 
     // states
-    const [symbolsList, setSymbolsList] = useState([]);
-    const [symbolsListTemp, setSymbolsListTemp] = useState([]);
-    const [priority, setPriority] = useState(0);
+    const [providersList, setProvidersList] = useState([]);
+    const [providersListTemp, setProvidersListTemp] = useState([]);
     const [cashedImages, setCashedImages] = useState([]);
+    const [priority, setPriority] = useState(2);
+    const [category, setCategory] = useState("cryptocurrencies");
+
 
     let tempImages;
 
     // functions
-    const searchSymbols = (value) => {
-        setSymbolsList(
-            symbolsListTemp.filter((item) =>
+    const searchProviders = (value) => {
+        setProvidersList(
+            providersListTemp.filter((item) =>
                 item.name
                     .replace("-USDT", "")
                     .toLowerCase()
@@ -43,8 +45,9 @@ const CoinLanding = () => {
         );
     };
 
-    const getSymbolsList = () => {
+    const getProvidersList = () => {
         const parameter = {
+            category: category,
             priority: priority,
         };
         const header = {
@@ -53,63 +56,65 @@ const CoinLanding = () => {
             }
         }
 
-        ConnectToServer("post", SYMBOLS, parameter, header, "coin-landing").then((response) => {
+        ConnectToServer("post", PROVIDER_NAMES, parameter, header, "provider-landing").then((response) => {
             if (response?.data?.return) {
-                tempImages = response?.data?.data.map((item) => item?.logo);
+                tempImages = response?.data?.data?.provider_list.map((item) => item?.logoUrl);
                 if (
                     !arraysEqual(
                         tempImages,
-                        response?.data?.data.map((item) => item?.logo),
-                        "data-symbols-images"
+                        response?.data?.data?.provider_list.map((item) => item?.logoUrl),
+                        "data-providers-images"
                     ) ||
-                    !localStorage.getItem("data-symbols-images")
+                    !localStorage.getItem("data-providers-images")
                 ) {
                     cashImages(
-                        "data-symbols-images",
-                        response?.data?.data.map((item) => item?.name),
-                        response?.data?.data.map((item) => item?.logo)
+                        "data-providers-images",
+                        response?.data?.data?.provider_list.map((item) => item?.name),
+                        response?.data?.data?.provider_list.map((item) => item?.logoUrl)
                     );
                 }
                 // for news image
-                setSymbolsList(response?.data?.data);
-                setSymbolsListTemp(response?.data?.data);
+                // console.log(response?.data?.data?.provider_list);
+                
+                setProvidersList(response?.data?.data?.provider_list);
+                setProvidersListTemp(response?.data?.data?.provider_list);
             }
         })
     }
 
     const getCashedImagesLocal = () => {
-        const cashedImagesLocal = localStorage.getItem("data-symbols-images");
+        const cashedImagesLocal = localStorage.getItem("data-providers-images");
         if (cashedImagesLocal) setCashedImages(JSON.parse(cashedImagesLocal));
     }
 
     useEffect(() => {
-        if (symbolsList.length == 0) {
-            getSymbolsList();
+        if (providersList.length == 0) {
+            getProvidersList();
             getCashedImagesLocal();
         }
 
-    }, [symbolsList]);
+    }, [providersList]);
     return (
         <>
             <div className='flex flex-col mt-6'>
                 <div className="px-4 text-white text-base font-medium">
-                    {t("coin_list_title")}
+                    {t("provider_list_title")}
                 </div>
                 <div className='px-4 mt-5'>
-                    <InputSearch onChange={(e) => searchSymbols(e.target.value)} id="coin-search" placeholder={t("search_coin")} className={""} />
+                    <InputSearch onChange={(e) => searchProviders(e.target.value)} id="provider-search" placeholder={t("search_provider")} className={""} />
                 </div>
 
                 <div className='px-4 pb-[7rem] grid grid-cols-2 mt-9 gap-7 bg-background'>
-                    {symbolsList?.length == 0 ? <LoaderPage className={"w-full bg-background mx-[6rem]"} /> :
+                    {providersList?.length == 0 ? <LoaderPage className={"w-full bg-background mx-[6rem]"} /> :
                         <>
-                            {symbolsList?.map((row, index) => (
+                            {providersList?.map((row, index) => (
                                 <div className='cursor-pointer' onClick={(event) => {
                                     event.preventDefault();
-                                    navigate("/dashboard/coin", {
-                                        state: { symbol: row },
+                                    navigate("/dashboard/provider", {
+                                        state: { provider: row },
                                     });
                                 }} key={index}>
-                                    <CoinList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />
+                                    <ProviderList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />
                                 </div>
                             ))}
                         </>
