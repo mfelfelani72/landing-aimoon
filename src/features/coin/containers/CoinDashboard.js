@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 // Components
@@ -16,6 +16,10 @@ import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
+// Hooks
+
+import useScrollToBottom from '../../../../utils/hooks/useScrollToBottom.js';
+
 // Zustand
 
 import useAppStore from "../../../app/stores/AppStore.js";
@@ -24,7 +28,10 @@ const CoinDashboard = () => {
     // hooks
     const location = useLocation();
 
-    // states
+    // states and consts
+
+    const isBottom = useScrollToBottom();
+
     const PAGE_NUMBER = 1;
     let tempImages;
 
@@ -32,7 +39,7 @@ const CoinDashboard = () => {
     const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
     const [newsFrom, setNewsFrom] = useState("1716373411");
     // const [newsTo, setNewsTo] = useState("1725633001");
-    const [newsPageLimit, setNewsPageLimit] = useState(10);
+    const [newsPageLimit, setNewsPageLimit] = useState(5);
     const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
 
     const [cashedImages, setCashedImages] = useState([]);
@@ -147,6 +154,14 @@ const CoinDashboard = () => {
         if (newsData.length > 0) setNewsData(["free"]);
     }, [languageApp])
 
+    useEffect(() => {
+        setNewsPage((prev) => prev + 1);
+    }, [isBottom])
+
+    useEffect(() => {
+        if (newsPage > 2)
+            getNews();
+    }, [newsPage])
     return (
         <>
             {coinAnalyze !== "free" && <div className='bg-background pb-[7rem] mt-6'>
