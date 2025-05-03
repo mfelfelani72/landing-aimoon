@@ -40,6 +40,18 @@ const LazyAuthorDashboard = lazy(() =>
 );
 
 
+
+// Author
+
+const LazyProviderLanding = lazy(() =>
+  import("../../../features/provider/ProviderLanding.js")
+);
+const LazyProviderDashboard = lazy(() =>
+  import("../../../features/provider/containers/ProviderDashboard.js")
+);
+
+
+
 // AboutUs
 const LazyAboutUsDrvafaeijahan = lazy(() =>
   import("../../../features/aboutUs/containers/Drvafaeijahan.js")
@@ -71,6 +83,14 @@ const Content = () => {
             element={<LazyAuthorLanding />}
           />
           <Route path="/dashboard/author" element={<LazyAuthorDashboard />} />
+
+
+           {/* Provider */}
+           <Route
+            path="/dashboard/provider-list"
+            element={<LazyProviderLanding />}
+          />
+          <Route path="/dashboard/provider" element={<LazyProviderDashboard />} />
 
         </Route>
 

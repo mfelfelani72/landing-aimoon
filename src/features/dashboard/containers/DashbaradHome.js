@@ -100,7 +100,11 @@ const DashbaradHome = () => {
               {t("authors_dashboard")}
             </div>
           </Link>
-          <Link className="flex flex-col gap-2 justify-center items-center">
+          <Link
+            to={"/dashboard/provider-list"}
+            className="flex flex-col gap-2 justify-center items-center"
+          >
+          
             <div className="w-14 h-14 bg-[#11101A] inline-flex justify-center items-center rounded-full">
               <Image
                 src={icon_provider_dashboard}
