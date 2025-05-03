@@ -35,7 +35,7 @@ const CoinDashboard = () => {
 
     const isBottom = useScrollToBottom();
 
-    const [loading, setLoading] = useState();
+    const [loading, setLoading] = useState("true");
 
     const [newsData, setNewsData] = useState(["free"]);
     const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
@@ -78,7 +78,9 @@ const CoinDashboard = () => {
         ).then((response) => {
             if (response?.data?.return) {
 
+
                 setLoading("false");
+
 
                 // for news image
 
@@ -156,15 +158,17 @@ const CoinDashboard = () => {
     useEffect(() => {
         setCoinAnalyze("free");
         if (newsData.length > 0) setNewsData(["free"]);
+        setNewsPage(1);
     }, [languageApp])
 
     useEffect(() => {
         setNewsPage((prev) => prev + 1);
-        setLoading("true");
+
     }, [isBottom])
 
     useEffect(() => {
-        if (newsPage > 2) {
+        if (newsPage > 2 && loading == "false") {
+            setLoading("true");
             getNews();
         }
     }, [newsPage])
