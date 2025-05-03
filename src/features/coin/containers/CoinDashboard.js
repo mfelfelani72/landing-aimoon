@@ -78,9 +78,7 @@ const CoinDashboard = () => {
         ).then((response) => {
             if (response?.data?.return) {
 
-
                 setLoading("false");
-
 
                 // for news image
 
