@@ -21,6 +21,10 @@ export const ALL_ROUTES = [
   "/dashboard/author-list",
   "/dashboard/author",
 
+  // dashboard-providers
+  "/dashboard/provider-list",
+  "/dashboard/provider",
+
   // aboutUs
   "/drvafaeijahan",
 
@@ -51,6 +55,15 @@ export const NOT_RELOAD_ROUTES = [
     "/dashboard/author-list",
     [
       "/dashboard/author",
+    ],
+  ],
+
+
+   // Provider
+   [
+    "/dashboard/provider-list",
+    [
+      "/dashboard/provider",
     ],
   ],
 ];
