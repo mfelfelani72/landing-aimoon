@@ -11,6 +11,10 @@ import { ConnectToServer } from "../../../../utils/services/api/ConnectToServer.
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
+// Hooks
+
+import useScrollToBottom from '../../../../utils/hooks/useScrollToBottom.js';
+
 // Constants
 
 import { LATEST_NEWS } from "../../../app/utils/constant/EndPoints.js";
@@ -25,6 +29,10 @@ const AnalyzedNews = () => {
 
   const PAGE_NUMBER = 1;
   let tempImages;
+
+  const isBottom = useScrollToBottom();
+
+  const [loading, setLoading] = useState("true");
 
   const [newsAnalyzedData, setNewsAnalyzedData] = useState([]);
   const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
@@ -63,6 +71,9 @@ const AnalyzedNews = () => {
       "AnalyzedNews"
     ).then((response) => {
       if (response?.data?.return) {
+
+        setLoading("false");
+
         // for news image
 
         tempImages = response?.data?.data?.result?.map(
@@ -87,8 +98,6 @@ const AnalyzedNews = () => {
         setNewsAnalyzedData((prev) => {
           return [...prev, ...response?.data?.data?.result];
         });
-
-        // setNewsPage((prev) => prev + 1);
       }
     });
   };
@@ -110,22 +119,38 @@ const AnalyzedNews = () => {
 
   useEffect(() => {
     if (newsAnalyzedData?.length > 0) setNewsAnalyzedData([]);
+    setNewsPage(1);
   }, [languageApp]);
+
+  useEffect(() => {
+    setNewsPage((prev) => prev + 1);
+
+  }, [isBottom])
+
+  useEffect(() => {
+    if (newsPage > 2 && loading == "false") {
+      setLoading("true");
+      getNews();
+    }
+  }, [newsPage])
   return (
     <>
       <div className="flex flex-col gap-7 mt-8 px-6 bg-Neutral-500 pb-[7rem]">
         {newsAnalyzedData?.length == 0 ? (
           <LoaderPage className={"bg-background mt-[1rem]"} />
         ) : (
-          newsAnalyzedData?.map((row, index) => (
-            <div key={index}>
-              <NewsBox
-                row={row}
-                cashed_images={cashedImages}
-                className={""}
-              ></NewsBox>
-            </div>
-          ))
+          <>
+            {newsAnalyzedData?.map((row, index) => (
+              <div key={index}>
+                <NewsBox
+                  row={row}
+                  cashed_images={cashedImages}
+                  className={""}
+                ></NewsBox>
+              </div>
+            ))}
+            {loading == "true" && <LoaderPage className={"bg-background mt-[1rem]"} />}
+          </>
         )}
       </div>
     </>
