@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 // Components
@@ -32,6 +32,8 @@ const CoinDashboard = () => {
 
     const isBottom = useScrollToBottom();
 
+    const [loading, setLoading] = useState();
+
     const PAGE_NUMBER = 1;
     let tempImages;
 
@@ -39,7 +41,7 @@ const CoinDashboard = () => {
     const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
     const [newsFrom, setNewsFrom] = useState("1716373411");
     // const [newsTo, setNewsTo] = useState("1725633001");
-    const [newsPageLimit, setNewsPageLimit] = useState(5);
+    const [newsPageLimit, setNewsPageLimit] = useState(10);
     const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
 
     const [cashedImages, setCashedImages] = useState([]);
@@ -75,6 +77,9 @@ const CoinDashboard = () => {
             "AnalyzedNews"
         ).then((response) => {
             if (response?.data?.return) {
+
+                setLoading("false");
+
                 // for news image
 
                 tempImages = response?.data?.data?.result?.map(
@@ -99,6 +104,8 @@ const CoinDashboard = () => {
                 setNewsData((prev) => {
                     return [...prev, ...response?.data?.data?.result];
                 });
+
+
 
                 // setNewsPage((prev) => prev + 1);
             }
@@ -156,16 +163,18 @@ const CoinDashboard = () => {
 
     useEffect(() => {
         setNewsPage((prev) => prev + 1);
+        setLoading("true");
     }, [isBottom])
 
     useEffect(() => {
-        if (newsPage > 2)
+        if (newsPage > 2) {
             getNews();
+        }
     }, [newsPage])
     return (
         <>
             {coinAnalyze !== "free" && <div className='bg-background pb-[7rem] mt-6'>
-                <TabInfoAnalysisNews symbol={location?.state?.symbol} coin_analyze={coinAnalyze} news_data={newsData} cashed_images={cashedImages} />
+                <TabInfoAnalysisNews symbol={location?.state?.symbol} coin_analyze={coinAnalyze} news_data={newsData} cashed_images={cashedImages} loading={loading} />
             </div>}
         </>
     )

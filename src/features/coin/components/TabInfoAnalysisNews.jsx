@@ -683,15 +683,18 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
             {props?.news_data?.length == 0 ? (
               <LoaderPage className={"bg-background mt-[1rem]"} />
             ) : (
-              props?.news_data?.map((row, index) => (
-                <div key={index}>
-                  <NewsBox
-                    row={row}
-                    cashed_images={props?.cashed_images}
-                    className={""}
-                  ></NewsBox>
-                </div>
-              ))
+              <>
+                {props?.news_data?.map((row, index) => (
+                  <div key={index}>
+                    <NewsBox
+                      row={row}
+                      cashed_images={props?.cashed_images}
+                      className={""}
+                    ></NewsBox>
+                  </div>
+                ))}
+                {props?.loading == "true" && <LoaderPage className={"bg-background mt-[1rem]"} />}
+              </>
             )}
           </div>
         </div>
