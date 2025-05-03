@@ -13,7 +13,7 @@ export const ALL_ROUTES = [
 
   "/dashboard/home",
 
-  // dashboard-coin
+  // dashboard-coin      pouya
   "/dashboard/coin-list",
   "/dashboard/coin",
 
