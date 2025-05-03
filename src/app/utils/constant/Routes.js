@@ -42,7 +42,7 @@ export const NOT_RELOAD_ROUTES = [
   [
     "/dashboard/coin-list",
     [
-      // "/dashboard/coin",
+      "/dashboard/coin",
     ],
   ],
 

@@ -30,12 +30,12 @@ const CoinDashboard = () => {
 
     // states and consts
 
+    const PAGE_NUMBER = 1;
+    let tempImages;
+
     const isBottom = useScrollToBottom();
 
     const [loading, setLoading] = useState();
-
-    const PAGE_NUMBER = 1;
-    let tempImages;
 
     const [newsData, setNewsData] = useState(["free"]);
     const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
@@ -104,13 +104,10 @@ const CoinDashboard = () => {
                 setNewsData((prev) => {
                     return [...prev, ...response?.data?.data?.result];
                 });
-
-
-
-                // setNewsPage((prev) => prev + 1);
             }
         });
     };
+
     const getOfflineCoinAnalyze = async () => {
         const parameter = {
             symbol: location?.state?.symbol?.name,
