@@ -58,7 +58,8 @@ const MarqueeCoins = ({ className, ...props }) => {
       marquee2Ref.current.style.animationPlayState = "paused";
     }
   };
-  const getSymbols = async () => {
+  const getSymbols = () => {
+
     const parameter = {
       priority: priority,
     };
@@ -104,16 +105,22 @@ const MarqueeCoins = ({ className, ...props }) => {
     if (symbols?.length === 0) {
       getSymbols();
       getCashedImagesLocal();
+      // setPlayOrPauseMarquee();
     }
-    else
-      setPlayOrPauseMarquee()
+
 
     setInterval(() => {
       getSymbols();
       getCashedImagesLocal();
     }, 25000);
 
-  }, [symbols]);
+  }, []);
+
+  useEffect(() => {
+    if (symbols?.length !== 0) {
+      setPlayOrPauseMarquee();
+    }
+  }, [symbols])
   return (
     <>
       {symbols?.length !== 0 && (
