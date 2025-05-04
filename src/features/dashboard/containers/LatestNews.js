@@ -23,7 +23,7 @@ import useScrollToBottom from '../../../../utils/hooks/useScrollToBottom.js';
 
 import useAppStore from "../../../app/stores/AppStore";
 
-const LatestNews = () => {
+const LatestNews = ({ ...props }) => {
 
     // states and consts
     const { languageApp } = useAppStore();
@@ -40,13 +40,13 @@ const LatestNews = () => {
     const [newsSymbols, setNewsSymbols] = useState("all");
     const [newsFrom, setNewsFrom] = useState("1716373411");
     // const [newsTo, setNewsTo] = useState("1725633001");
-    const [newsPageLimit, setNewsPageLimit] = useState(10);
+    const [newsPageLimit, setNewsPageLimit] = useState(5);
     const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
 
     const [cashedImages, setCashedImages] = useState([]);
 
     // functions
-    const getNews = () => {
+    const getNews = (cash = "true") => {
         const parameter = {
             category: newsCategory,
             symbols: newsSymbols,
@@ -75,26 +75,30 @@ const LatestNews = () => {
 
                 setLoading("false");
 
-                // for news image
+                if (cash == "true") {
 
-                tempImages = response?.data?.data?.result?.map(
-                    (item) => item?.local_image
-                );
-                if (
-                    !arraysEqual(
-                        tempImages,
-                        response?.data?.data?.result?.map((item) => item?.local_image),
-                        "data-dashboard-latest-news-images"
-                    ) ||
-                    !localStorage.getItem("data-dashboard-latest-news-images")
-                ) {
-                    cashImages(
-                        "data-dashboard-latest-news-images",
-                        response?.data?.data?.result?.map((item) => item?.created_at),
-                        response?.data?.data?.result?.map((item) => item?.local_image)
+                    // for news image
+
+                    tempImages = response?.data?.data?.result?.map(
+                        (item) => item?.local_image
                     );
+                    if (
+                        !arraysEqual(
+                            tempImages,
+                            response?.data?.data?.result?.map((item) => item?.local_image),
+                            "data-dashboard-latest-news-images"
+                        ) ||
+                        !localStorage.getItem("data-dashboard-latest-news-images")
+                    ) {
+                        cashImages(
+                            "data-dashboard-latest-news-images",
+                            response?.data?.data?.result?.map((item) => item?.created_at),
+                            response?.data?.data?.result?.map((item) => item?.local_image)
+                        );
+                    }
+                    // for news image
+
                 }
-                // for news image
 
                 setNewsData((prev) => {
                     return [...prev, ...response?.data?.data?.result];
@@ -112,14 +116,15 @@ const LatestNews = () => {
     };
 
     useEffect(() => {
-        if (newsData?.length == 0) {
+
+        if (newsData?.length == 0 && props?.statePage?.pageName == "latest_news") {
             getNews();
             getCashedImagesLocal();
         }
-    }, [newsData]);
+    }, [newsData, props?.statePage]);
 
     useEffect(() => {
-        if (newsData?.length > 0) setNewsData([]);
+        if (newsData?.length > 0 && props?.statePage?.pageName == "latest_news") setNewsData([]);
         setNewsPage(1);
     }, [languageApp]);
 
@@ -129,9 +134,9 @@ const LatestNews = () => {
     }, [isBottom])
 
     useEffect(() => {
-        if (newsPage > 2 && loading == "false") {
+        if (newsPage > 2 && loading == "false" && props?.statePage?.pageName == "latest_news") {
             setLoading("true");
-            getNews();
+            getNews("false");
         }
     }, [newsPage])
 

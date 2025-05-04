@@ -104,7 +104,7 @@ const DashbaradHome = () => {
             to={"/dashboard/provider-list"}
             className="flex flex-col gap-2 justify-center items-center"
           >
-          
+
             <div className="w-14 h-14 bg-[#11101A] inline-flex justify-center items-center rounded-full">
               <Image
                 src={icon_provider_dashboard}
@@ -142,7 +142,7 @@ const DashbaradHome = () => {
           idTitle=""
           statePage={statePage}
           setStatePage={setStatePage}
-          contents={[<LazyAnalyzedNews />, <LazyLatestNews />]}
+          contents={[<LazyAnalyzedNews statePage={statePage} />, <LazyLatestNews statePage={statePage} />]}
         />
       </div>
     </>

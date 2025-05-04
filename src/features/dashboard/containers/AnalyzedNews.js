@@ -23,7 +23,7 @@ import { LATEST_NEWS } from "../../../app/utils/constant/EndPoints.js";
 
 import useAppStore from "../../../app/stores/AppStore";
 
-const AnalyzedNews = () => {
+const AnalyzedNews = ({ ...props }) => {
   // states and consts
   const { languageApp } = useAppStore();
 
@@ -39,13 +39,13 @@ const AnalyzedNews = () => {
   const [newsSymbols, setNewsSymbols] = useState("all");
   const [newsFrom, setNewsFrom] = useState("1716373411");
   // const [newsTo, setNewsTo] = useState("1725633001");
-  const [newsPageLimit, setNewsPageLimit] = useState(10);
+  const [newsPageLimit, setNewsPageLimit] = useState(5);
   const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
 
   const [cashedImages, setCashedImages] = useState([]);
 
   // function
-  const getNews = () => {
+  const getNews = (cash = "true") => {
     const parameter = {
       category: newsCategory,
       symbols: newsSymbols,
@@ -74,26 +74,29 @@ const AnalyzedNews = () => {
 
         setLoading("false");
 
-        // for news image
+        if (cash == "true") {
 
-        tempImages = response?.data?.data?.result?.map(
-          (item) => item?.local_image
-        );
-        if (
-          !arraysEqual(
-            tempImages,
-            response?.data?.data?.result?.map((item) => item?.local_image),
-            "data-dashboard-analyzed-news-images"
-          ) ||
-          !localStorage.getItem("data-dashboard-analyzed-news-images")
-        ) {
-          cashImages(
-            "data-dashboard-analyzed-news-images",
-            response?.data?.data?.result?.map((item) => item?.created_at),
-            response?.data?.data?.result?.map((item) => item?.local_image)
+          // for news image
+
+          tempImages = response?.data?.data?.result?.map(
+            (item) => item?.local_image
           );
+          if (
+            !arraysEqual(
+              tempImages,
+              response?.data?.data?.result?.map((item) => item?.local_image),
+              "data-dashboard-analyzed-news-images"
+            ) ||
+            !localStorage.getItem("data-dashboard-analyzed-news-images")
+          ) {
+            cashImages(
+              "data-dashboard-analyzed-news-images",
+              response?.data?.data?.result?.map((item) => item?.created_at),
+              response?.data?.data?.result?.map((item) => item?.local_image)
+            );
+          }
+          // for news image
         }
-        // for news image
 
         setNewsAnalyzedData((prev) => {
           return [...prev, ...response?.data?.data?.result];
@@ -111,14 +114,15 @@ const AnalyzedNews = () => {
   };
 
   useEffect(() => {
-    if (newsAnalyzedData?.length == 0) {
+
+    if (newsAnalyzedData?.length == 0 && props?.statePage?.pageName == "analyzed_news") {
       getNews();
       getCashedImagesLocal();
     }
   }, [newsAnalyzedData]);
 
   useEffect(() => {
-    if (newsAnalyzedData?.length > 0) setNewsAnalyzedData([]);
+    if (newsAnalyzedData?.length > 0 && props?.statePage?.pageName == "analyzed_news") setNewsAnalyzedData([]);
     setNewsPage(1);
   }, [languageApp]);
 
@@ -128,9 +132,9 @@ const AnalyzedNews = () => {
   }, [isBottom])
 
   useEffect(() => {
-    if (newsPage > 2 && loading == "false") {
+    if (newsPage > 2 && loading == "false" && props?.statePage?.pageName == "analyzed_news") {
       setLoading("true");
-      getNews();
+      getNews("false");
     }
   }, [newsPage])
   return (

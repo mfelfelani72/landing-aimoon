@@ -51,7 +51,7 @@ const CoinDashboard = () => {
     const { languageApp } = useAppStore();
 
     // functions
-    const getNews = () => {
+    const getNews = (cash = "true") => {
         const parameter = {
             category: newsCategory,
             symbols: location?.state?.symbol?.name,
@@ -80,27 +80,28 @@ const CoinDashboard = () => {
 
                 setLoading("false");
 
-                // for news image
+                if (cash == "true") {
+                    // for news image
 
-                tempImages = response?.data?.data?.result?.map(
-                    (item) => item?.local_image
-                );
-                if (
-                    !arraysEqual(
-                        tempImages,
-                        response?.data?.data?.result?.map((item) => item?.local_image),
-                        "data-dashboard-analyzed-news-images"
-                    ) ||
-                    !localStorage.getItem("data-dashboard-analyzed-news-images")
-                ) {
-                    cashImages(
-                        "data-dashboard-analyzed-news-images",
-                        response?.data?.data?.result?.map((item) => item?.created_at),
-                        response?.data?.data?.result?.map((item) => item?.local_image)
+                    tempImages = response?.data?.data?.result?.map(
+                        (item) => item?.local_image
                     );
+                    if (
+                        !arraysEqual(
+                            tempImages,
+                            response?.data?.data?.result?.map((item) => item?.local_image),
+                            "data-dashboard-analyzed-news-images"
+                        ) ||
+                        !localStorage.getItem("data-dashboard-analyzed-news-images")
+                    ) {
+                        cashImages(
+                            "data-dashboard-analyzed-news-images",
+                            response?.data?.data?.result?.map((item) => item?.created_at),
+                            response?.data?.data?.result?.map((item) => item?.local_image)
+                        );
+                    }
+                    // for news image
                 }
-                // for news image
-
                 setNewsData((prev) => {
                     return [...prev, ...response?.data?.data?.result];
                 });
@@ -167,7 +168,7 @@ const CoinDashboard = () => {
     useEffect(() => {
         if (newsPage > 2 && loading == "false") {
             setLoading("true");
-            getNews();
+            getNews("false");
         }
     }, [newsPage])
     return (
