@@ -24,8 +24,9 @@ const DashboardLanding = () => {
 
   // functions
   useEffect(() => {
+    // Set new background color
     document.body.style.backgroundColor = "#1f1e2e";
-  }, [])
+  }, []);
 
   return (
     <>
@@ -35,7 +36,7 @@ const DashboardLanding = () => {
       <div className='w-full h-screen inline-flex justify-center relative z-[10]'>
         <div className='mobile w-96 bg-Neutral-500 text-white'>
           {/* top header */}
-          <div className='fixed top-0 w-96 inline-flex bg-background justify-between p-6 z-[100]'>
+          <div className='fixed top-0 w-96 inline-flex z-[100] bg-background justify-between px-6 pt-6'>
 
             <div className='text-Neutral-500'>
               <Languages />
@@ -50,7 +51,7 @@ const DashboardLanding = () => {
           </div>
 
           {/* marquee */}
-          <MarqueeCoins className={"fixed top-[4rem] bg-background z-[100] mb-4"} />
+          <MarqueeCoins className={"fixed top-[4.5rem] bg-background z-[99] mb-4"} />
 
           <Outlet />
 
