@@ -92,10 +92,10 @@ const CoinLanding = () => {
     return (
         <>
             <div className='flex flex-col mt-[9.5rem]'>
-                <div className="fixed top-[7.25rem] z-[100] w-96 bg-background px-4 py-[1rem] text-white text-base font-medium">
+                <div className="fixed top-[7.25rem] z-50 w-96 bg-background px-4 py-[1rem] text-white text-base font-medium">
                     {t("coin_list_title")}
                 </div>
-                <div className='fixed top-[10rem] z-[100] w-96 bg-background px-4 py-[1rem]'>
+                <div className='fixed top-[10rem] z-50 w-96 bg-background px-4 py-[1rem]'>
                     <InputSearch onChange={(e) => searchSymbols(e.target.value)} id="coin-search" placeholder={t("search_coin")} className={""} />
                 </div>
 
