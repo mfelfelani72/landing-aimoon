@@ -220,6 +220,18 @@ const fa = {
 
   all_information: "اطلاعات کلی",
 
+  // date helper
+  day_singular: "روز",
+  day_plural: "روز",
+  hour_singular: "ساعت",
+  hour_plural: "ساعت",
+  minute_singular: "دقیقه",
+  minute_plural: "دقیقه",
+  second_singular: "ثانیه",
+  second_plural: "ثانیه",
+  exactly_now: "همین الان",
+  ago: "پیش",
+
   // settings
   persion: "فارسی",
   english: "انگلیسی",

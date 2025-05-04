@@ -220,6 +220,18 @@ const en = {
 
   all_information: "All information",
 
+  // date helper
+  day_singular: "Day",
+  day_plural: "Days",
+  hour_singular: "Hour",
+  hour_plural: "Hours",
+  minute_singular: "Minute",
+  minute_plural: "Minutes",
+  second_singular: "Secound",
+  second_plural: "Secounds",
+  exactly_now: "Exactly now",
+  ago: "ago",
+
   // settings
   persion: "Persion",
   english: "English",

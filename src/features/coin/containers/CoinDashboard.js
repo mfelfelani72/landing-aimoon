@@ -173,7 +173,7 @@ const CoinDashboard = () => {
     }, [newsPage])
     return (
         <>
-            {coinAnalyze !== "free" && <div className='bg-background pb-[7rem] mt-6'>
+            {coinAnalyze !== "free" && <div className='bg-background pb-[7rem] mt-[8rem]'>
                 <TabInfoAnalysisNews symbol={location?.state?.symbol} coin_analyze={coinAnalyze} news_data={newsData} cashed_images={cashedImages} loading={loading} />
             </div>}
         </>

@@ -192,6 +192,18 @@ const ar = {
 
   all_information: "جميع المعلومات",
 
+   // date helper
+  day_singular: "يوم",
+  day_plural: "أيام",
+  hour_singular: "ساعة",
+  hour_plural: "ساعات",
+  minute_singular: "دقيقة",
+  minute_plural: "دقائق",
+  second_singular: "ثانية",
+  second_plural: "ثوانٍ",
+  exactly_now: "الآن بالضبط",
+  ago: "منذ",
+
   // settings
   persion: "الفارسية",
   english: "الإنجليزية",

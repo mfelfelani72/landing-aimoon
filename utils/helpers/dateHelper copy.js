@@ -1,5 +1,3 @@
-import { useTranslation } from "react-i18next";
-
 export function dateHelper(
   stampDate,
   kind = "regular",
@@ -7,18 +5,14 @@ export function dateHelper(
   format = "full",
   type = "AD-date"
 ) {
-
-  // hooks
-  const { t } = useTranslation();
-  
   let location;
   let result;
 
-  // Determine locale
+  // for location of date
   if (type == "AD-date") location = "en-US";
   else if (type == "SH-date") location = "fa-IR";
 
-  // Create Date object
+  // for type of date
   var date = new Date(stampDate * 1000);
 
   if (kind == "regular" && format == "full")
@@ -48,10 +42,10 @@ export function dateHelper(
   else if (kind == "difference") {
     const currentDate = new Date();
 
-    // Calculate time difference
+    // Calculate the difference in milliseconds
     const diffInMs = currentDate - date;
 
-    // Convert to time units
+    // Convert milliseconds to days, hours, minutes, and seconds
     const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
     const diffInHours = Math.floor(
       (diffInMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -63,40 +57,25 @@ export function dateHelper(
 
     let stringTime = "";
 
-    // Days
-    if (diffInDays !== 0) {
-      stringTime += `${diffInDays} ${t(
-        diffInDays < 2 ? "day_singular" : "day_plural"
-      )} `;
-    }
+    if (diffInDays !== 0 && diffInDays < 2) stringTime += diffInDays + " Day ";
+    else if (diffInDays !== 0 && diffInDays > 1)
+      stringTime += diffInDays + " Days ";
+    if (diffInHours !== 0 && diffInHours < 2)
+      stringTime += diffInHours + " Hour ";
+    else if (diffInHours !== 0 && diffInHours > 1)
+      stringTime += diffInHours + " Hours ";
+    if (diffInMinutes !== 0 && diffInMinutes < 2)
+      stringTime += diffInMinutes + " Minute ";
+    else if (diffInMinutes !== 0 && diffInMinutes > 1)
+      stringTime += diffInMinutes + " Minutes ";
+    if (second && diffInSeconds !== 0 && diffInSeconds < 2)
+      stringTime += diffInSeconds + " Second ";
+    else if (second && diffInSeconds !== 0 && diffInSeconds > 1)
+      stringTime += diffInSeconds + " Seconds ";
 
-    // Hours
-    if (diffInHours !== 0) {
-      stringTime += `${diffInHours} ${t(
-        diffInHours < 2 ? "hour_singular" : "hour_plural"
-      )} `;
-    }
-
-    // Minutes
-    if (diffInMinutes !== 0) {
-      stringTime += `${diffInMinutes} ${t(
-        diffInMinutes < 2 ? "minute_singular" : "minute_plural"
-      )} `;
-    }
-
-    // Seconds (only if enabled)
-    if (second && diffInSeconds !== 0) {
-      stringTime += `${diffInSeconds} ${t(
-        diffInSeconds < 2 ? "second_singular" : "second_plural"
-      )} `;
-    }
-
-    // Final phrase
-    if (diffInDays === 0 && diffInHours === 0 && diffInMinutes === 0 && !second) {
-      result = `${stringTime}${t("exactly_now")}`;
-    } else {
-      result = `${stringTime}${t("ago")}`;
-    }
+    if (diffInDays == 0 && diffInHours == 0 && diffInMinutes == 0 && !second)
+      result = stringTime + "Exactly Now";
+    else result = stringTime + " ago";
   }
 
   return result;
