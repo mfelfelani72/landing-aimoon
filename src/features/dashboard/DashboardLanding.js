@@ -36,7 +36,7 @@ const DashboardLanding = () => {
       <div className='w-full h-screen inline-flex justify-center relative z-[10]'>
         <div className='mobile w-96 bg-Neutral-500 text-white'>
           {/* top header */}
-          <div className='fixed top-0 w-96 inline-flex z-[100] bg-background justify-between px-6 pt-6'>
+          <div className='fixed top-0 w-96 inline-flex z-[100] bg-background justify-between px-6 pt-6 pb-[0.75rem]'>
 
             <div className='text-Neutral-500'>
               <Languages />

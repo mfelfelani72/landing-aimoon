@@ -150,6 +150,7 @@ const ar = {
   register: "تسجيل",
   login: "تسجيل الدخول",
   swipe_right: "اسحب لليمين",
+  swipe_left: "اسحب لليسار",
   coins_dashboard: "لوحة العملات",
   authors_dashboard: "لوحة المؤلفين",
   providers_dashboard: "لوحة المزودين",

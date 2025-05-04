@@ -175,6 +175,7 @@ const en = {
   register: "Register",
   login: "Login",
   swipe_right: "Swipe right",
+  swipe_left: "Swipe left",
   coins_dashboard: "Coins dashboard",
   authors_dashboard: "Authors dashboard",
   providers_dashboard: "Providers dashboard",

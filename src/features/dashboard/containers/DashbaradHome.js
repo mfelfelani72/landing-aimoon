@@ -56,8 +56,13 @@ const DashbaradHome = () => {
 
         {/* shortcuts */}
 
-        <div className="fixed top-[12.5rem] w-96 bg-background z-50 px-6 pt-4 pb-2 text-right justify-start text-Neutral-300 text-xs font-normal leading-tight">
-          {t("swipe_right")}
+        <div className="fixed top-[12.5rem] w-96 bg-background z-50 px-6 pt-4 pb-2 rtl:text-right ltr:text-left justify-start text-Neutral-300 text-xs font-normal leading-tight">
+          <span className="ltr:hidden">
+            {t("swipe_right")}
+          </span>
+          <span className="rtl:hidden">
+            {t("swipe_left")}
+          </span>
         </div>
 
         <div className="fixed top-[14.5rem] bg-background z-50 inline-flex px-6 py-3 pb-10 gap-5">
