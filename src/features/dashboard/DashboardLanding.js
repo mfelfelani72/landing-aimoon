@@ -51,7 +51,7 @@ const DashboardLanding = () => {
           </div>
 
           {/* marquee */}
-          <MarqueeCoins className={"fixed top-[4.5rem] bg-background z-[99] mb-4"} />
+          <MarqueeCoins className={"fixed top-[4.5rem] right-0 bg-background z-[99] mb-4"} />
 
           <Outlet />
 
