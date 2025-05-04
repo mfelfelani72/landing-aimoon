@@ -60,12 +60,12 @@ const CoinLanding = () => {
                     !arraysEqual(
                         tempImages,
                         response?.data?.data.map((item) => item?.logo),
-                        "data-symbols-images"
+                        "data-dashboard-coins-images"
                     ) ||
-                    !localStorage.getItem("data-symbols-images")
+                    !localStorage.getItem("data-dashboard-coins-images")
                 ) {
                     cashImages(
-                        "data-symbols-images",
+                        "data-dashboard-coins-images",
                         response?.data?.data.map((item) => item?.name),
                         response?.data?.data.map((item) => item?.logo)
                     );
@@ -78,7 +78,7 @@ const CoinLanding = () => {
     }
 
     const getCashedImagesLocal = () => {
-        const cashedImagesLocal = localStorage.getItem("data-symbols-images");
+        const cashedImagesLocal = localStorage.getItem("data-dashboard-coins-images");
         if (cashedImagesLocal) setCashedImages(JSON.parse(cashedImagesLocal));
     }
 
@@ -91,15 +91,15 @@ const CoinLanding = () => {
     }, [symbolsList]);
     return (
         <>
-            <div className='flex flex-col mt-6'>
-                <div className="px-4 text-white text-base font-medium">
+            <div className='flex flex-col mt-[9.5rem]'>
+                <div className="fixed top-[7.25rem] z-[100] w-96 bg-background px-4 py-[1rem] text-white text-base font-medium">
                     {t("coin_list_title")}
                 </div>
-                <div className='px-4 mt-5'>
+                <div className='fixed top-[10rem] z-[100] w-96 bg-background px-4 py-[1rem]'>
                     <InputSearch onChange={(e) => searchSymbols(e.target.value)} id="coin-search" placeholder={t("search_coin")} className={""} />
                 </div>
 
-                <div className='px-4 pb-[7rem] grid grid-cols-2 mt-9 gap-7 bg-background'>
+                <div className='px-4 mt-[6rem] pb-[7rem] grid grid-cols-2 gap-7 bg-background'>
                     {symbolsList?.length == 0 ? <LoaderPage className={"w-full bg-background mx-[6rem]"} /> :
                         <>
                             {symbolsList?.map((row, index) => (

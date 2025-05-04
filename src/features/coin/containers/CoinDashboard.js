@@ -90,12 +90,12 @@ const CoinDashboard = () => {
                         !arraysEqual(
                             tempImages,
                             response?.data?.data?.result?.map((item) => item?.local_image),
-                            "data-dashboard-analyzed-news-images"
+                            "data-dashboard-coin-news-images"
                         ) ||
-                        !localStorage.getItem("data-dashboard-analyzed-news-images")
+                        !localStorage.getItem("data-dashboard-coin-news-images")
                     ) {
                         cashImages(
-                            "data-dashboard-analyzed-news-images",
+                            "data-dashboard-coin-news-images",
                             response?.data?.data?.result?.map((item) => item?.created_at),
                             response?.data?.data?.result?.map((item) => item?.local_image)
                         );
@@ -133,7 +133,7 @@ const CoinDashboard = () => {
 
     function getCashedImagesLocal() {
         const cashedImagesLocal = localStorage.getItem(
-            "data-symbol-dashboard-news-images"
+            "data-dashboard-coin-news-images"
         );
 
         if (cashedImagesLocal) setCashedImages(JSON.parse(cashedImagesLocal));
