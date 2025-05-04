@@ -201,10 +201,10 @@ export const LineChart = ({ className, ...props }) => {
         },
         plotOptions: {
             spline: {
-                lineWidth: 3,
+                lineWidth: 1,
                 states: {
                     hover: {
-                        lineWidth: 3
+                        lineWidth: 2
                     }
                 },
                 marker: {
