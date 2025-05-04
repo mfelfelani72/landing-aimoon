@@ -111,7 +111,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     }
   ]
   return (
-    <div className={cn("relative", className)}>
+    <div className={cn("relative overflow-hidden", className)}>
       <div className="w-[352px] px-2 h-12 bg-background-light rounded-2xl items-center gap-1.5 inline-flex mx-4">
         <input
           type="radio"
