@@ -41,10 +41,10 @@ const DashbaradHome = () => {
       <div className="flex flex-col h-full bg-Neutral-500">
         {/* login & register */}
 
-        <div className="flex flex-row gap-2 mx-6 my-8">
+        <div className="fixed w-96 top-[6.7rem] bg-background z-[100] inline-flex gap-2 px-3 py-6">
           <ButtonLink className={"w-44 h-10"}>{t("register")}</ButtonLink>
           <ButtonLink
-            className={"w-44 h-10 bg-[#28263A] hover:bg-gray-800 focus:"}
+            className={"w-44 h-10 bg-[#28263A] hover:bg-gray-800"}
           >
             {t("login")}
           </ButtonLink>
@@ -52,15 +52,15 @@ const DashbaradHome = () => {
 
         {/* seprator */}
 
-        <div className="self-stretch h-0 opacity-20 outline-[0.61px] outline-offset-[-0.31px] outline-Neutral-300" />
+        <div className="fixed top-[12rem]  w-96 z-[100] self-stretch h-0 opacity-20 outline-[0.61px] outline-offset-[-0.31px] outline-Neutral-300" />
 
         {/* shortcuts */}
 
-        <div className="px-6 pt-4 text-right justify-start text-Neutral-300 text-xs font-normal leading-tight">
-          {/* {t("swipe_right")} */}
+        <div className="fixed top-[12rem] w-96 bg-background z-[100] px-6 pt-4 pb-2 text-right justify-start text-Neutral-300 text-xs font-normal leading-tight">
+          {t("swipe_right")}
         </div>
 
-        <div className="flex flex-row px-6 py-2 gap-5">
+        <div className="fixed top-[14rem] bg-background z-[100] inline-flex px-6 py-3 pb-10 gap-5">
           <Link
             to={"/dashboard/coin-list"}
             className="flex flex-col gap-2 justify-center items-center"
@@ -132,13 +132,13 @@ const DashbaradHome = () => {
 
         {/* seprator */}
 
-        <div className="self-stretch h-0 opacity-20 mt-8 outline-[0.61px] outline-offset-[-0.31px] outline-Neutral-300" />
+        <div className="fixed top-[20rem] w-96 z-[100] self-stretch h-0 opacity-20 mt-8 outline-[0.61px] outline-offset-[-0.31px] outline-Neutral-300" />
 
         <TabDefault
           id={"tab-0"}
-          className={"pt-4"}
+          className={"mt-[23rem]"}
           titles={["analyzed_news", "latest_news"]}
-          classNameTitle="px-6"
+          classNameTitle="px-6 fixed"
           idTitle=""
           statePage={statePage}
           setStatePage={setStatePage}
