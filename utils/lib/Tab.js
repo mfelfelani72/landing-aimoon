@@ -76,4 +76,6 @@ export const handleChangeTab = (value, parentId) => {
       }
     }
   });
+
+  window.scrollTo(0, 0);
 };

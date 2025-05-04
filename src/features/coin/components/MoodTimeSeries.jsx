@@ -32,7 +32,7 @@ const MoodTimeSeries = ({ className, ...props }) => {
       color: 'rgba(229, 124, 67, 1)'
     },
     {
-      name: 'damp20',
+      name: 'damp30',
       data: props?.data?.damp_30,
       color: 'rgba(180, 162, 241, 1)'
     },

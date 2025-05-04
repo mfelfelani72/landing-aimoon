@@ -174,6 +174,7 @@ const fa = {
   register: "ثبت نام",
   login: "ورود",
   swipe_right: "به راست بکشید",
+  swipe_left: "به چپ بکشید",
   coins_dashboard: "داشبورد کوین‌ها",
   authors_dashboard: "داشبورد خبرنگاران",
   providers_dashboard: "داشبورد خبرگزاری‌ها",

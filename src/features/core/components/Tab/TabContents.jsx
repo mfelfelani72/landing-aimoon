@@ -4,7 +4,7 @@ export const TabContentsDefault = ({ className, ...props }) => {
   return (
     <>
       {/* tab content */}
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-5">
         <div className="relative">
           {props?.contents.map((item, index) => (
             <div

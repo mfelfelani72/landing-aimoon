@@ -105,19 +105,19 @@ const MarqueeCoins = ({ className, ...props }) => {
     if (symbols?.length === 0) {
       getSymbols();
       getCashedImagesLocal();
-      // setPlayOrPauseMarquee();
     }
 
 
     setInterval(() => {
       getSymbols();
       getCashedImagesLocal();
+      setPlayOrPauseMarquee();
     }, 25000);
 
   }, []);
 
   useEffect(() => {
-    if (symbols?.length !== 0) {
+    if (symbols?.length !== 0 && statusMarquee == "pause") {
       setPlayOrPauseMarquee();
     }
   }, [symbols])
