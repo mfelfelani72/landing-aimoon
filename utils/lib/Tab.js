@@ -4,8 +4,6 @@ export const handleChangeTab = (value, parentId) => {
   );
   const tabsContent = document.querySelectorAll(".tab-content-" + parentId);
 
-  console.log(tabsContent)
-
   // for focus tab title
   const containerRect = scrollContainer.getBoundingClientRect();
   const tabTitle = document.getElementById(
@@ -78,4 +76,6 @@ export const handleChangeTab = (value, parentId) => {
       }
     }
   });
+
+  window.scrollTo(0, 0);
 };
