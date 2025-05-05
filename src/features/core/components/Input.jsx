@@ -35,36 +35,14 @@ const handleClear = (id, first_id, secound_id, afterFunction) => {
 import search from "../../../../assets/icons/svg/icon-light-search.svg"
 import { CloseSquare } from "./Icon.jsx";
 
+
 export const InputText = ({ className, ...props }) => {
-  return (
-    <>
-      <div className="flex flex-col">
-        <label
-          htmlFor={props?.id}
-          className="block text-base font-medium text-black px-6 mb-1"
-        >
-          {props?.label}
-        </label>
-        <input
-          {...props}
-          type="text"
-          id={props?.id}
-          className={cn(
-            "px-4 rounded-[20px] h-20 border-2 border-Neutral-50",
-            className
-          )}
-        />
-      </div>
-    </>
-  );
-};
-export const InputTextLogin = ({ className, ...props }) => {
   return (
     <>
       <div className="flex flex-col w-full">
         <label
           htmlFor={props?.id}
-          className="text-base font-medium text-Neutral-300 px-6 mb-1"
+          className="text-base font-medium text-Neutral-300 px-3 mb-1"
         >
           {props?.label}
         </label>
@@ -78,10 +56,10 @@ export const InputTextLogin = ({ className, ...props }) => {
             )}
           />
           {props?.disabled !== "disabled" && (
-            <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center">
+            <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 flex items-center">
               <div className="p-2">
-                <div className="flex cursor-pointer" onClick={() => handleClear(props?.id)}>
-                  <CloseSquare width={"20"} height={"20"} color={"white"} />
+                <div className="flex cursor-pointer px-1" onClick={() => handleClear(props?.id)}>
+                  <CloseSquare width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import Languages from '../../core/components/Languages.jsx'
 import TopButton from '../../core/components/TopButton.jsx'
 import { Image } from '../../core/components/Image.jsx'
-import { InputTextLogin } from '../../core/components/Input.jsx';
+import { InputText } from '../../core/components/Input.jsx';
 
 // Svg
 
@@ -31,7 +31,7 @@ const Login = () => {
                         </div>
 
                         <TopButton onClick={() => navigate("/dashboard/home")}>
-                            <Image src={arrow} alt={"arrow"} className={"w-6 h-6 rotate-90"} />
+                            <Image src={arrow} alt={"arrow"} className={"w-6 h-6 rtl:rotate-90 ltr:-rotate-90"} />
                         </TopButton>
                     </div>
                     {/* Content */}
@@ -39,7 +39,7 @@ const Login = () => {
                         <div className="text-xl font-bold ">{t("login")}</div>
                         <div className="text-Neutral-300 text-base font-normal mt-3">{t("input_info_login")}</div>
                         <div className="flex mt-3">
-                            <InputTextLogin id="username" label="asdas" placeholder="aimoonhub@gmail.com" />
+                            <InputText id="username" label={t("email")} placeholder="aimoonhub@gmail.com" />
                         </div>
                     </div>
                 </div>

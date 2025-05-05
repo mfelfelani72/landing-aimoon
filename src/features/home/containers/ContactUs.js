@@ -29,10 +29,10 @@ const ContactUs = () => {
               {/* name and last name */}
               <div className="flex flex-row w-full gap-4">
                 <div className="basis-1/2">
-                  <InputText id="name" label={t("name")} />
+                  <InputText theme="light" id="name" label={t("name")} className={"h-20 border-2 border-Neutral-50 bg-white"} />
                 </div>
                 <div className="basis-1/2">
-                  <InputText id="last_name" label={t("last_name")} />
+                  <InputText theme="light" id="last_name" label={t("last_name")} className={"h-20 border-2 border-Neutral-50 bg-white"} />
                 </div>
               </div>
               {/* email */}
