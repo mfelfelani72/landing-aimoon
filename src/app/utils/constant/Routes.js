@@ -9,6 +9,10 @@ export const ALL_ROUTES = [
   "/",
   "/landing",
 
+  // Auth
+
+  "/login",
+
   // Dashbnoard
 
   "/dashboard/home",

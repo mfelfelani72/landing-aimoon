@@ -43,11 +43,11 @@ const DashbaradHome = () => {
 
         <div className="fixed w-96 top-[7.2rem] bg-background z-50 inline-flex gap-2 px-3 py-6">
           <ButtonLink className={"w-44 h-10"}>{t("register")}</ButtonLink>
-          <ButtonLink
+          <ButtonLink to={"/login"}
             className={"w-44 h-10 bg-[#28263A] hover:bg-gray-800"}
           >
             {t("login")}
-          </ButtonLink>
+          </ButtonLink> 
         </div>
 
         {/* seprator */}

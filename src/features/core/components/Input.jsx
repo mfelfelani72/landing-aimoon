@@ -1,3 +1,7 @@
+// Svg
+
+import closeSquare from "../../../../assets/icons/svg/CloseSquare.svg"
+
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -36,6 +40,35 @@ export const InputText = ({ className, ...props }) => {
     </>
   );
 };
+export const InputTextLogin = ({ className, ...props }) => {
+  return (
+    <>
+      <div className="w-full relative">
+        <input
+          {...props}
+          type="text"
+          className={cn(
+            "placeholder-Neutral/200 w-full px-[1rem] py-3 rounded-2xl bg-secondary/50 border border-secondary/100 focus:outline-none focus:ring-0 focus:border-secondary/400 justify-between items-center relative",
+            className
+          )}
+        />
+        {props?.disabled !== "disabled" && (
+          <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center">
+            <div className="p-2">
+              <div className="flex" onClick={() => handleClear(props?.id)}>
+                <Image
+                  alt="closeSquare"
+                  src={closeSquare}
+                  className="cursor-pointer"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
 export const InputEmail = ({ className, ...props }) => {
   return (
     <>

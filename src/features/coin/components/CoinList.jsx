@@ -16,8 +16,7 @@ import { DEFAULT_COIN_IMAGE } from "../../../app/utils/constant/Defaults.js";
 const CoinList = ({ className, ...props }) => {
     // hooks
     const { t } = useTranslation();
-    console.log(props?.row?.logo);
-
+    
     return (
         <>
             <div className='flex flex-row gap-2 items-center'>
@@ -27,7 +26,7 @@ const CoinList = ({ className, ...props }) => {
                             const imageData = item?.[props?.row?.name]?.base64data;
                             return imageData ? imageData : null;
                         }).filter(Boolean) : props?.row?.logo}
-                        
+ 
                     onError={(e) => {
                         e.target.src = DEFAULT_COIN_IMAGE;
                     }}

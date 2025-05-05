@@ -26,6 +26,10 @@ const DashboardLanding = () => {
   useEffect(() => {
     // Set new background color
     document.body.style.backgroundColor = "#1f1e2e";
+
+    return ()=>{
+      document.body.style.backgroundColor = "white";
+    }
   }, []);
 
   return (
