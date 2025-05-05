@@ -7,9 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 import Accordion from "../../core/components/Accordion.jsx";
 import InfoBox from "../../core/components/InfoBox.jsx";
-import {  ImageLazy } from "../../core/components/Image.jsx";
-// import MoodTimeSeries from "./MoodTimeSeries.jsx";
-// import NewsTimeSeries from "./NewsTimeSeries.jsx"
+import { ImageLazy } from "../../core/components/Image.jsx";
+import NewsBox from "../../core/components/NewsBox.jsx";
 import { PieChart } from "../../core/components/Chart.jsx";
 import LoaderPage from "../../../app/components/LoaderPage.jsx";
 import AuthorList from './AuthorList.jsx';
@@ -51,7 +50,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
 
 
     // const 
-    console.log('test', props.provider);
+    // console.log('test', props.provider);
 
     // states
     const [authorList, setProvidersList] = useState([]);
@@ -150,23 +149,23 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
 
         ConnectToServer("post", PROVIDER_AUTHORS, parameter, header, "provider-table").then((response) => {
             if (response?.data?.return) {
-                tempImages = response?.data?.data.map((item) => item?.logoUrl);
+                tempImages = response?.data?.data?.slice(0, 9);
+
                 if (
                     !arraysEqual(
                         tempImages,
-                        response?.data?.data.map((item) => item?.logoUrl),
+                        response?.data?.data.slice(0, 9).map((item, index) => item?.logoUrl),
                         "data-authors-images"
                     ) ||
                     !localStorage.getItem("data-authors-images")
                 ) {
                     cashImages(
                         "data-authors-images",
-                        response?.data?.data.map((item) => item?.name),
-                        response?.data?.data.map((item) => item?.logoUrl)
+                        response?.data?.data?.slice(0, 9).map((item, index) => item?.name),
+                        response?.data?.data?.slice(0, 9).map((item, index) => item?.logoUrl)
                     );
                 }
                 // for news image
-                // console.log(response?.data?.data);
 
                 setProvidersList(response?.data?.data);
                 setProvidersListTemp(response?.data?.data);
@@ -223,7 +222,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("news_analysis")}
                     </label>
                 </div>
-                {props?.provider?.news_count && <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
+                {props?.provider?.newsCount && <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
                     <label
                         htmlFor="tab3"
                         className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
@@ -277,9 +276,9 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                                             navigate("/dashboard/author", {
                                                 state: { author: row },
                                             });
-                                        }} key={index}> 
-                                        {index <= 8 && <AuthorList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />}
-                                            
+                                        }} key={index}>
+                                            {index <= 8 && <AuthorList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />}
+
                                         </div>
                                     ))}
                                 </>
@@ -409,7 +408,25 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                     </div>
                 </div>
                 <div className="tab3-content bg-background mt-6 px-4 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab3:block">
-                    news
+                    <div className="flex flex-col gap-7 px-2 bg-Neutral-500 pb-[7rem]">
+                        {/* news */}
+                        {props?.news_data?.length == 0 ? (
+                            <LoaderPage className={"bg-background mt-[1rem]"} />
+                        ) : (
+                            <>
+                                {props?.news_data?.map((row, index) => (
+                                    <div key={index}>
+                                        <NewsBox
+                                            row={row}
+                                            cashed_images={props?.cashed_images}
+                                            className={""}
+                                        ></NewsBox>
+                                    </div>
+                                ))}
+                                {props?.loading == "true" && <LoaderPage className={"bg-background mt-[1rem]"} />}
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

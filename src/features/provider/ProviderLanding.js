@@ -96,7 +96,7 @@ const CoinLanding = () => {
     }, [providersList]);
     return (
         <>
-            <div className='flex flex-col mt-6'>
+            <div className='flex flex-col mt-[8rem]'>
                 <div className="px-4 text-white text-base font-medium">
                     {t("provider_list_title")}
                 </div>
