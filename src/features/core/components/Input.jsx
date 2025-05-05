@@ -13,9 +13,27 @@ import { Image } from "../../core/components/Image.jsx"
 
 import { cn } from "../../../../utils/lib/cn";
 
+//  --> for remove value input and disable submit Button
+const handleClear = (id, first_id, secound_id, afterFunction) => {
+  const Button1 = document.getElementById(first_id);
+  const Button2 = document.getElementById(secound_id);
+  if (Button1 && Button2) {
+    Button1.classList.add("hidden");
+    Button1.classList.remove("flex");
+    Button2.classList.add("flex");
+    Button2.classList.remove("hidden");
+  }
+  document.getElementById(id).value = "";
+
+  if (afterFunction) {
+    afterFunction();
+  }
+};
+
 // Svg
 
 import search from "../../../../assets/icons/svg/icon-light-search.svg"
+import { CloseSquare } from "./Icon.jsx";
 
 export const InputText = ({ className, ...props }) => {
   return (
@@ -43,28 +61,32 @@ export const InputText = ({ className, ...props }) => {
 export const InputTextLogin = ({ className, ...props }) => {
   return (
     <>
-      <div className="w-full relative">
-        <input
-          {...props}
-          type="text"
-          className={cn(
-            "placeholder-Neutral/200 w-full px-[1rem] py-3 rounded-2xl bg-secondary/50 border border-secondary/100 focus:outline-none focus:ring-0 focus:border-secondary/400 justify-between items-center relative",
-            className
-          )}
-        />
-        {props?.disabled !== "disabled" && (
-          <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center">
-            <div className="p-2">
-              <div className="flex" onClick={() => handleClear(props?.id)}>
-                <Image
-                  alt="closeSquare"
-                  src={closeSquare}
-                  className="cursor-pointer"
-                />
+      <div className="flex flex-col w-full">
+        <label
+          htmlFor={props?.id}
+          className="text-base font-medium text-Neutral-300 px-6 mb-1"
+        >
+          {props?.label}
+        </label>
+        <div className="relative">
+          <input
+            {...props}
+            type="text"
+            className={cn(
+              "placeholder-Neutral-200 w-full px-[1rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 justify-between items-center relative",
+              className
+            )}
+          />
+          {props?.disabled !== "disabled" && (
+            <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center">
+              <div className="p-2">
+                <div className="flex cursor-pointer" onClick={() => handleClear(props?.id)}>
+                  <CloseSquare width={"20"} height={"20"} color={"white"} />
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   );

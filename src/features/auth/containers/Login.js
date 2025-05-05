@@ -37,9 +37,9 @@ const Login = () => {
                     {/* Content */}
                     <div className='pt-8 px-6'>
                         <div className="text-xl font-bold ">{t("login")}</div>
-                        <div className="text-Neutral-300 text-base font-normal mt-3">{t("input_info_register")}</div>
+                        <div className="text-Neutral-300 text-base font-normal mt-3">{t("input_info_login")}</div>
                         <div className="flex mt-3">
-                            <InputTextLogin id="username" placeholder="aimoonx@gmail.com" />
+                            <InputTextLogin id="username" label="asdas" placeholder="aimoonhub@gmail.com" />
                         </div>
                     </div>
                 </div>
