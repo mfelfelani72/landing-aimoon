@@ -85,8 +85,8 @@ const MarqueeCoins = ({ className, ...props }) => {
         ) {
           cashImages(
             "data-header-images",
-            response?.data?.data.map((item) => item?.name),
-            response?.data?.data.map((item) => item?.logo)
+            response?.data?.data?.map((item) => item?.name),
+            response?.data?.data?.map((item) => item?.logo)
           );
         }
       }

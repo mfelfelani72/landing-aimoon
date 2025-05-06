@@ -55,19 +55,20 @@ const CoinLanding = () => {
 
         ConnectToServer("post", SYMBOLS, parameter, header, "coin-landing").then((response) => {
             if (response?.data?.return) {
-                tempImages = response?.data?.data.map((item) => item?.logo);
+                
+                tempImages = response?.data?.data?.map((item) => item?.logo);
                 if (
                     !arraysEqual(
                         tempImages,
-                        response?.data?.data.map((item) => item?.logo),
+                        response?.data?.data?.map((item) => item?.logo),
                         "data-dashboard-coins-images"
                     ) ||
                     !localStorage.getItem("data-dashboard-coins-images")
                 ) {
                     cashImages(
                         "data-dashboard-coins-images",
-                        response?.data?.data.map((item) => item?.name),
-                        response?.data?.data.map((item) => item?.logo)
+                        response?.data?.data?.map((item) => item?.name),
+                        response?.data?.data?.map((item) => item?.logo)
                     );
                 }
                 // for news image
