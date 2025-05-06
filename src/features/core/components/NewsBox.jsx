@@ -64,15 +64,13 @@ const NewsBox = ({ className, children, ...props }) => {
         <div className="relative mt-2">
           <ImageLazy
             src={
-              props?.cashedImages?.length !== 0 &&
-                props?.cashedImages?.some((item) =>
-                  item.hasOwnProperty(props?.row?.created_at)
-                )
-                ? props?.cashedImages?.filter(
-                  (item) => item[props?.row?.created_at]
-                )[0][props?.row?.created_at]?.base64data
+              props?.cashed_images?.length > 0
+                ? props.cashed_images.find(item =>
+                  item[props?.row?.created_at]?.url === props?.row?.thImage || item[props?.row?.created_at]?.url === props?.row?.local_image
+                )?.[props?.row?.name]?.base64data || props?.row?.thImage
                 : props?.row?.thImage
             }
+
             onError={(e) => {
               e.target.src = DEFAULT_NEW_IMAGE;
             }}
@@ -82,7 +80,7 @@ const NewsBox = ({ className, children, ...props }) => {
           <div className="w-full h-36 left-0 bottom-0 absolute bg-gradient-to-b from-black/0 to-zinc-950 inline-flex items-end justify-between p-4">
             <div className="w-[4.5rem]">
               <div className='relative'>
-                <div style={{ color: findMaxData()?.colorItem }} className="absolute -top-[1.5rem] rtl:left-0 ltr:right-0 w-5 h-5">{findMaxData()?.maxItem *100}%</div>
+                <div style={{ color: findMaxData()?.colorItem }} className="absolute -top-[1.5rem] rtl:left-0 ltr:right-0 w-5 h-5">{findMaxData()?.maxItem * 100}%</div>
                 <div className="absolute -top-[3rem] rtl:-right-[0.85rem] ltr:-left-[0.85rem] w-[65px] h-[65px]">
                   <DonutChart width={65} height={65} data={[{
                     name: t("negative"),
