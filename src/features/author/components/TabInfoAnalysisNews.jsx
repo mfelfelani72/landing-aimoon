@@ -2,16 +2,21 @@ import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-// components 
+
+
+// Components
 
 import Accordion from "../../core/components/Accordion.jsx";
 import InfoBox from "../../core/components/InfoBox.jsx";
 import { ImageLazy } from "../../core/components/Image.jsx";
-import { PieChart } from "../../core/components/Chart.jsx"
+import NewsBox from "../../core/components/NewsBox.jsx";
+import { PieChart } from "../../core/components/Chart.jsx";
+import LoaderPage from "../../../app/components/LoaderPage.jsx";
 
 // Functions
 
 import { cn } from "../../../../utils/lib/cn";
+import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
 
 // Constants
 
@@ -19,8 +24,14 @@ import { DEFAULT_AVATAR_IMAGE } from "../../../app/utils/constant/Defaults.js";
 
 // Svg
 
+
 import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
-import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
+
+
+
+
+
+
 
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
@@ -140,14 +151,14 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("news_analysis")}
                     </label>
                 </div>
-                {/* <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
-          <label
-            htmlFor="tab3"
-            className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
-          >
-            {t("latest_news")}
-          </label>
-        </div> */}
+                {props?.author?.newsCount && <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
+                    <label
+                        htmlFor="tab3"
+                        className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
+                    >
+                        {t("latest_news")}
+                    </label>
+                </div>}
 
                 <div className="tab1-content bg-background px-4 mt-6 pb-[7rem] w-full absolute right-0 top-10 hidden peer-checked/tab1:block">
 
@@ -290,7 +301,25 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                     </div>
                 </div>
                 <div className="tab3-content bg-background px-4 mt-6 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab3:block">
-                    تب 3
+                    <div className="flex flex-col gap-7 px-2 bg-Neutral-500 pb-[7rem]">
+                        {/* news */}
+                        {props?.news_data?.length == 0 ? (
+                            <LoaderPage className={"bg-background mt-[1rem]"} />
+                        ) : (
+                            <>
+                                {props?.news_data?.map((row, index) => (
+                                    <div key={index}>
+                                        <NewsBox
+                                            row={row}
+                                            cashed_images={props?.cashed_images}
+                                            className={""}
+                                        ></NewsBox>
+                                    </div>
+                                ))}
+                                {props?.loading == "true" && <LoaderPage className={"bg-background mt-[1rem]"} />}
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

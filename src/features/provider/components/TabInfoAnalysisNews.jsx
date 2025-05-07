@@ -7,57 +7,38 @@ import { useNavigate } from 'react-router-dom';
 
 import Accordion from "../../core/components/Accordion.jsx";
 import InfoBox from "../../core/components/InfoBox.jsx";
-import {  ImageLazy } from "../../core/components/Image.jsx";
-// import MoodTimeSeries from "./MoodTimeSeries.jsx";
-// import NewsTimeSeries from "./NewsTimeSeries.jsx"
+import { ImageLazy } from "../../core/components/Image.jsx";
+import NewsBox from "../../core/components/NewsBox.jsx";
 import { PieChart } from "../../core/components/Chart.jsx";
 import LoaderPage from "../../../app/components/LoaderPage.jsx";
 import AuthorList from './AuthorList.jsx';
 
-
 // Functions
 
 import { cn } from "../../../../utils/lib/cn";
-
 import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
 import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.js';
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
-
-
-
 // Constants
 
-import { DEFAULT_COIN_IMAGE } from "../../../app/utils/constant/Defaults.js";
+import { DEFAULT_AVATAR_IMAGE } from "../../../app/utils/constant/Defaults.js";
 import { PROVIDER_AUTHORS } from "../utils/constants/EndPoints.js";
-
-
-
 
 // Svg
 
 import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
-
-
-
-
-
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
     // hooks
     const { t } = useTranslation();
     const navigate = useNavigate();
 
-
-    // const 
-    console.log('test', props.provider);
-
     // states
-    const [authorList, setProvidersList] = useState([]);
-    const [authorListTemp, setProvidersListTemp] = useState([]);
+    const [authorList, setAuthorList] = useState([]);
     const [cashedImages, setCashedImages] = useState([]);
-    const [name_provider, setName_provider] = useState(props?.provider?.name);
+    const [nameProvider, setNameProvider] = useState(props?.provider?.name);
 
 
     let tempImages;
@@ -140,7 +121,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     }
     const getAuthorssList = () => {
         const parameter = {
-            name: name_provider,
+            name: nameProvider,
         };
         const header = {
             headers: {
@@ -149,27 +130,30 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         }
 
         ConnectToServer("post", PROVIDER_AUTHORS, parameter, header, "provider-table").then((response) => {
+
+             // for news image
+
             if (response?.data?.return) {
-                tempImages = response?.data?.data.map((item) => item?.logoUrl);
+                tempImages = response?.data?.data?.slice(0, 9);
+
                 if (
                     !arraysEqual(
                         tempImages,
-                        response?.data?.data.map((item) => item?.logoUrl),
+                        response?.data?.data.slice(0, 9).map((item, index) => item?.logoUrl),
                         "data-authors-images"
                     ) ||
                     !localStorage.getItem("data-authors-images")
                 ) {
                     cashImages(
                         "data-authors-images",
-                        response?.data?.data.map((item) => item?.name),
-                        response?.data?.data.map((item) => item?.logoUrl)
+                        response?.data?.data?.slice(0, 9).map((item, index) => item?.name),
+                        response?.data?.data?.slice(0, 9).map((item, index) => item?.logoUrl)
                     );
                 }
                 // for news image
-                // console.log(response?.data?.data);
 
-                setProvidersList(response?.data?.data);
-                setProvidersListTemp(response?.data?.data);
+                setAuthorList(response?.data?.data);
+                
             }
         })
     }
@@ -223,7 +207,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         {t("news_analysis")}
                     </label>
                 </div>
-                {props?.provider?.news_count && <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
+                {props?.provider?.newsCount && <div className="basis-1/3 peer-checked/tab3:bg-Neutral-500 peer-checked/tab3:border border-Neutral-400 py-1.5 rounded-xl text-center text-Neutral-300 peer-checked/tab3:!text-primary-500 font-medium text-[0.85rem] leading-5">
                     <label
                         htmlFor="tab3"
                         className="tab-button cursor-pointer px-[calc(10.2vw)] py-1.5 xs:px-[0.3rem] xs:py-2 select-none"
@@ -244,10 +228,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                                         ? props?.provider?.local_image
                                         : props?.provider?.logoUrl
                                             ? props?.provider?.logoUrl
-                                            : DEFAULT_COIN_IMAGE
+                                            : DEFAULT_AVATAR_IMAGE
                                 }
                                 onError={(e) => {
-                                    e.target.src = DEFAULT_COIN_IMAGE;
+                                    e.target.src = DEFAULT_AVATAR_IMAGE;
                                 }}
                                 className={"w-10 h-10 rounded-full"}
                             />
@@ -262,24 +246,23 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         </div>
 
                         {/* description */}
-                        <div className="text-white text-base font-bold mt-2 leading-9 capitalize">
-                            {t("provider_dec")} {props?.provider?.name}
+                        <div className="text-white text-base font-bold mt-2 leading-9 ">
+                            {t("provider_dec")} <span className="capitalize">{props?.provider?.name}</span>
                         </div>
                         <div className="text-Neutral-300 text-xs font-extrabold leading-none">
                             {props?.provider?.scrapedlinks}
                         </div>
-                        <div className="w-full text-white text-sm font-normal leading-tight mt-2 grid grid-cols-3 gap-10 max-h-80 ">
-                            {authorList?.length == 0 ? <LoaderPage className={"w-full bg-background mx-[6rem]"} /> :
+                        <div className="w-full text-white text-sm font-normal leading-tight mt-2 grid grid-cols-3 gap-10">
+                            {authorList?.length !== 0 ? <LoaderPage className={"w-full mt-5 bg-background mx-[7.5rem]"} /> :
                                 <>
-                                    {authorList?.map((row, index) => (
-                                        <div className='cursor-pointer' onClick={(event) => {
-                                            event.preventDefault();
+                                    {authorList?.slice(0,9).map((row, index) => (
+                                        <div className='cursor-pointer' onClick={() => {
                                             navigate("/dashboard/author", {
                                                 state: { author: row },
                                             });
-                                        }} key={index}> 
-                                        {index <= 8 && <AuthorList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />}
-                                            
+                                        }} key={index}>
+                                            { <AuthorList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />}
+
                                         </div>
                                     ))}
                                 </>
@@ -409,7 +392,25 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                     </div>
                 </div>
                 <div className="tab3-content bg-background mt-6 px-4 pb-[7rem] absolute w-full top-10 right-0 hidden peer-checked/tab3:block">
-                    news
+                    <div className="flex flex-col gap-7 px-2 bg-Neutral-500 pb-[7rem]">
+                        {/* news */}
+                        {props?.news_data?.length == 0 ? (
+                            <LoaderPage className={"bg-background mt-[1rem]"} />
+                        ) : (
+                            <>
+                                {props?.news_data?.map((row, index) => (
+                                    <div key={index}>
+                                        <NewsBox
+                                            row={row}
+                                            cashed_images={props?.cashed_images}
+                                            className={""}
+                                        ></NewsBox>
+                                    </div>
+                                ))}
+                                {props?.loading == "true" && <LoaderPage className={"bg-background mt-[1rem]"} />}
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

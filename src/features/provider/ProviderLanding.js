@@ -18,7 +18,7 @@ import { arraysEqual } from "../../../utils/lib/arraysEqual.js";
 
 import { PROVIDER_NAMES } from "./utils/constants/EndPoints.js";
 
-const CoinLanding = () => {
+const ProviderLanding = () => {
     // hooks
     const { t } = useTranslation();
     const navigate = useNavigate();
@@ -38,7 +38,6 @@ const CoinLanding = () => {
         setProvidersList(
             providersListTemp.filter((item) =>
                 item.name
-                    .replace("-USDT", "")
                     .toLowerCase()
                     .includes(value.toLowerCase())
             )
@@ -69,12 +68,12 @@ const CoinLanding = () => {
                 ) {
                     cashImages(
                         "data-providers-images",
-                        response?.data?.data?.provider_list.map((item) => item?.name),
-                        response?.data?.data?.provider_list.map((item) => item?.logoUrl)
+                        response?.data?.data?.provider_list.slice(0,9).map((item) => item?.name),
+                        response?.data?.data?.provider_list.slice(0,9).map((item) => item?.logoUrl)
                     );
                 }
                 // for news image
-                // console.log(response?.data?.data?.provider_list);
+
                 
                 setProvidersList(response?.data?.data?.provider_list);
                 setProvidersListTemp(response?.data?.data?.provider_list);
@@ -96,7 +95,7 @@ const CoinLanding = () => {
     }, [providersList]);
     return (
         <>
-            <div className='flex flex-col mt-6'>
+            <div className='flex flex-col mt-[8rem]'>
                 <div className="px-4 text-white text-base font-medium">
                     {t("provider_list_title")}
                 </div>
@@ -126,4 +125,4 @@ const CoinLanding = () => {
     )
 }
 
-export default CoinLanding
+export default ProviderLanding
