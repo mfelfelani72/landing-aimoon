@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Components
 
@@ -20,6 +20,9 @@ import { DonutChart } from "./Chart.jsx";
 import { t } from "i18next";
 
 const NewsBox = ({ className, children, ...props }) => {
+  // states
+  const [cashedImage, setCashedImage] = useState();
+
   // functions
   const findMaxData = () => {
 
@@ -39,6 +42,11 @@ const NewsBox = ({ className, children, ...props }) => {
       colorItem: colorItem
     };
   };
+
+  useEffect(() => {
+    const foundItem = props?.cashed_images?.find(item => item[props?.row?.created_at]);
+    setCashedImage(foundItem?.[props.row?.created_at]?.base64data);
+  }, [])
   return (
     <>
       <div className={cn("w-full h-full flex flex-col", className)}>
@@ -64,17 +72,18 @@ const NewsBox = ({ className, children, ...props }) => {
         <div className="relative mt-2">
           <ImageLazy
             src={
-              props?.cashed_images?.length > 0
-                ? props.cashed_images.find(item =>
-                  item[props?.row?.created_at]?.url === props?.row?.thImage || item[props?.row?.created_at]?.url === props?.row?.local_image
-                )?.[props?.row?.name]?.base64data || props?.row?.thImage
-                : props?.row?.thImage
+              cashedImage ?
+                cashedImage :
+                props?.row?.local_image ?
+                  props?.row?.local_image :
+                  props?.row?.thImage ?
+                    props?.row?.thImage :
+                    DEFAULT_NEW_IMAGE
             }
-
+            alt={props?.row?.title}
             onError={(e) => {
               e.target.src = DEFAULT_NEW_IMAGE;
             }}
-            alt={props?.row?.title}
             className={"w-full h-44 rounded-t-[1.25rem]"}
           />
           <div className="w-full h-36 left-0 bottom-0 absolute bg-gradient-to-b from-black/0 to-zinc-950 inline-flex items-end justify-between p-4">
