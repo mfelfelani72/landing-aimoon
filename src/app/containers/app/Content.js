@@ -12,6 +12,12 @@ const LazyHomeLanding = lazy(() =>
   import("../../../features/home/HomeLanding.js")
 );
 
+// Auth
+
+const LazyLogin = lazy(() =>
+  import("../../../features/auth/containers/Login.js")
+);
+
 // Dashboard
 
 const LazyDashboardLanding = lazy(() =>
@@ -39,9 +45,7 @@ const LazyAuthorDashboard = lazy(() =>
   import("../../../features/author/containers/AuthorDashboard.js")
 );
 
-
-
-// Author
+// Provider
 
 const LazyProviderLanding = lazy(() =>
   import("../../../features/provider/ProviderLanding.js")
@@ -49,8 +53,6 @@ const LazyProviderLanding = lazy(() =>
 const LazyProviderDashboard = lazy(() =>
   import("../../../features/provider/containers/ProviderDashboard.js")
 );
-
-
 
 // AboutUs
 const LazyAboutUsDrvafaeijahan = lazy(() =>
@@ -69,6 +71,9 @@ const Content = () => {
         <Route path="*" element={<Landing />}></Route>
         <Route path="/landing" element={<LazyHomeLanding />}></Route>
 
+        {/* Auth */}
+        <Route path="/login" element={<LazyLogin />}></Route>
+
         {/* Dashboard */}
         <Route path="/dashboard" element={<LazyDashboardLanding />}>
           <Route path="/dashboard/home" element={<LazyDashboardHome />} />
@@ -85,8 +90,8 @@ const Content = () => {
           <Route path="/dashboard/author" element={<LazyAuthorDashboard />} />
 
 
-           {/* Provider */}
-           <Route
+          {/* Provider */}
+          <Route
             path="/dashboard/provider-list"
             element={<LazyProviderLanding />}
           />

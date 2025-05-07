@@ -1,64 +1,53 @@
+// React core imports
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
-// Components
-
+// Component imports
 import TabInfoAnalysisNews from "../components/TabInfoAnalysisNews.jsx"
 
 // Constants
-
-// import { OFFLINE_provider_ANALYZE } from "../utils/constants/EndPoints.js"
 import { LATEST_NEWS } from "../utils/constants/EndPoints.js";
 
-// Functions
-
+// Utility functions
 import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.js';
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
-// Hooks
-
+// Custom hooks
 import useScrollToBottom from '../../../../utils/hooks/useScrollToBottom.js';
 
-// Zustand
-
+// Zustand state management
 import useAppStore from "../../../app/stores/AppStore.js";
 
 const ProviderDashboard = () => {
-  // hooks
+  // Get location object to access route state (e.g. selected provider)
   const location = useLocation();
 
+  // Constants and initializations
+  const PAGE_NUMBER = 1; // Default starting page
+  let tempImages; // Temporary holder for images to be cached
 
-  // states and consts
-
-  const PAGE_NUMBER = 1;
-  let tempImages;
-
+  // Custom hook to detect scroll position
   const isBottom = useScrollToBottom();
 
-  const [loading, setLoading] = useState("true");
+  // Local states
+  const [loading, setLoading] = useState("true"); // Loading flag
+  const [newsData, setNewsData] = useState(["free"]); // Initial news data, placeholder "free" will be removed on mount
+  const [newsCategory, setNewsCategory] = useState("cryptocurrencies"); // News category filter
+  const [newsFrom, setNewsFrom] = useState("1716373411"); // Starting timestamp for news (UNIX time)
+  const [newsPageLimit, setNewsPageLimit] = useState(10); // Number of items per page
+  const [newsPage, setNewsPage] = useState(PAGE_NUMBER); // Current page number
+  const [cashedImages, setCashedImages] = useState([]); // Cached news images from localStorage
 
-  const [newsData, setNewsData] = useState(["free"]);
-  const [newsCategory, setNewsCategory] = useState("cryptocurrencies");
-  const [newsFrom, setNewsFrom] = useState("1716373411");
-  // const [newsTo, setNewsTo] = useState("1725633001");
-  const [newsPageLimit, setNewsPageLimit] = useState(10);
-  const [newsPage, setNewsPage] = useState(PAGE_NUMBER);
-
-  const [cashedImages, setCashedImages] = useState([]);
-
-  // const [providerAnalyze, setproviderAnalyze] = useState("free");
-
+  // Global state (e.g. app-wide language setting)
   const { languageApp } = useAppStore();
 
-  // functions
+  // Function to fetch news
   const getNews = (cash = "true") => {
-
-
+    // Create request payload
     const parameter = {
       category: newsCategory,
       provider: location?.state?.provider?.name,
-
       startDate: newsFrom,
       page: newsPage,
       language: languageApp,
@@ -66,12 +55,14 @@ const ProviderDashboard = () => {
       llmOnly: false,
     };
 
+    // Set request headers (API key)
     const header = {
       headers: {
         authorization: "48e07eef-d474-47a5-8da4-3e946331369a",
       },
     };
 
+    // API call
     ConnectToServer(
       "post",
       LATEST_NEWS,
@@ -79,34 +70,34 @@ const ProviderDashboard = () => {
       header,
       "AnalyzedNews"
     ).then((response) => {
-
       if (response?.data?.return) {
-
         setLoading("false");
 
-        if (cash == "true") {
-          // for news image
-
-
-          tempImages = response?.data?.data?.result?.map(
-            (item, index) => index < 9 && item?.local_image
+        if (cash === "true") {
+          // Extract top 9 image URLs
+          tempImages = response?.data?.data?.result?.slice(0,9).map(
+            (item, index) => item?.local_image
           );
+
+          // Cache images only if they're new or not cached already
           if (
             !arraysEqual(
               tempImages,
-              response?.data?.data?.result?.map((item, index) => index < 9 && item?.local_image),
+              response?.data?.data?.result?.slice(0,9).map((item) => item?.local_image),
               "data-dashboard-provider-news-images"
             ) ||
             !localStorage.getItem("data-dashboard-provider-news-images")
           ) {
+            // Save timestamps and image URLs to localStorage
             cashImages(
               "data-dashboard-provider-news-images",
-              response?.data?.data?.result?.map((item, index) => index < 9 && item?.created_at),
-              response?.data?.data?.result?.map((item, index) => index < 9 && item?.local_image)
+              response?.data?.data?.result?.slice(0,9).map((item) => item?.created_at),
+              response?.data?.data?.result?.slice(0,9).map((item) => item?.local_image)
             );
           }
-          // for news image
         }
+
+        // Append new data to current state
         setNewsData((prev) => {
           return [...prev, ...response?.data?.data?.result];
         });
@@ -114,76 +105,52 @@ const ProviderDashboard = () => {
     });
   };
 
-  // const getOfflineproviderAnalyze = async () => {
-  //   const parameter = {
-  //     symbol: location?.state?.symbol?.name,
-  //     language: languageApp,
-  //   };
-
-  //   const header = {
-  //     headers: {
-  //       authorization: "a669836a04658498f5bc3a42a0ff4109" // this is admin token, dont forget change it
-  //     }
-  //   }
-
-  //   ConnectToServer("post", OFFLINE_provider_ANALYZE, parameter, header, "provider-dashboard").then((response) => {
-  //     if (response?.data?.return) {
-  //       setproviderAnalyze(response?.data?.data);
-  //     }
-  //     else {
-  //       setproviderAnalyze("empty");
-  //     }
-  //   })
-  // };
-
+  // Function to read cached images from localStorage
   function getCashedImagesLocal() {
-    const cashedImagesLocal = localStorage.getItem(
-      "data-dashboard-provider-news-images"
-    );
-
+    const cashedImagesLocal = localStorage.getItem("data-dashboard-provider-news-images");
     if (cashedImagesLocal) setCashedImages(JSON.parse(cashedImagesLocal));
   }
 
+  // On initial render: fetch news and load cached images
   useEffect(() => {
     if (newsData == "free") {
-      getNews();
-      getCashedImagesLocal();
-      newsData.shift();
+      getNews(); // Fetch initial news
+      getCashedImagesLocal(); // Load cached images
+      newsData.shift(); // Remove placeholder "free"
     }
   }, [newsData]);
 
-  // useEffect(() => {
-  //   if (providerAnalyze == "free") {
-  //     getOfflineproviderAnalyze();
-  //   }
-
-  // }, [providerAnalyze])
-
+  // When language changes: reset news and page
   useEffect(() => {
-    // setproviderAnalyze("free");
-    if (newsData.length > 0) setNewsData(["free"]);
-    setNewsPage(1);
-  }, [languageApp])
+    if (newsData.length > 0) setNewsData(["free"]); // Reset to placeholder
+    setNewsPage(1); // Reset to first page
+  }, [languageApp]);
 
+  // When user scrolls to bottom: increment page
   useEffect(() => {
     setNewsPage((prev) => prev + 1);
+  }, [isBottom]);
 
-  }, [isBottom])
-
+  // When page number increases and not initially loading, fetch new page
   useEffect(() => {
-    if (newsPage > 2 && loading == "false") {
+    if (newsPage > 2 && loading === "false") {
       setLoading("true");
       getNews("false");
     }
-  }, [newsPage])
+  }, [newsPage]);
 
   return (
     <>
       <div className='bg-background pb-[7rem] mt-32'>
-        <TabInfoAnalysisNews provider={location?.state?.provider} news_data={newsData} cashed_images={cashedImages} loading={loading} />
+        <TabInfoAnalysisNews 
+          provider={location?.state?.provider} 
+          news_data={newsData} 
+          cashed_images={cashedImages} 
+          loading={loading} 
+        />
       </div>
     </>
   )
 }
 
-export default ProviderDashboard
+export default ProviderDashboard;

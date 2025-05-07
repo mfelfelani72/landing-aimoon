@@ -13,50 +13,32 @@ import { PieChart } from "../../core/components/Chart.jsx";
 import LoaderPage from "../../../app/components/LoaderPage.jsx";
 import AuthorList from './AuthorList.jsx';
 
-
 // Functions
 
 import { cn } from "../../../../utils/lib/cn";
-
 import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js";
 import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.js';
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
-
-
-
 // Constants
 
-import { DEFAULT_COIN_IMAGE } from "../../../app/utils/constant/Defaults.js";
+import { DEFAULT_AVATAR_IMAGE } from "../../../app/utils/constant/Defaults.js";
 import { PROVIDER_AUTHORS } from "../utils/constants/EndPoints.js";
-
-
-
 
 // Svg
 
 import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
-
-
-
-
-
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
     // hooks
     const { t } = useTranslation();
     const navigate = useNavigate();
 
-
-    // const 
-    // console.log('test', props.provider);
-
     // states
-    const [authorList, setProvidersList] = useState([]);
-    const [authorListTemp, setProvidersListTemp] = useState([]);
+    const [authorList, setAuthorList] = useState([]);
     const [cashedImages, setCashedImages] = useState([]);
-    const [name_provider, setName_provider] = useState(props?.provider?.name);
+    const [nameProvider, setNameProvider] = useState(props?.provider?.name);
 
 
     let tempImages;
@@ -139,7 +121,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
     }
     const getAuthorssList = () => {
         const parameter = {
-            name: name_provider,
+            name: nameProvider,
         };
         const header = {
             headers: {
@@ -148,6 +130,9 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         }
 
         ConnectToServer("post", PROVIDER_AUTHORS, parameter, header, "provider-table").then((response) => {
+
+             // for news image
+
             if (response?.data?.return) {
                 tempImages = response?.data?.data?.slice(0, 9);
 
@@ -167,8 +152,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                 }
                 // for news image
 
-                setProvidersList(response?.data?.data);
-                setProvidersListTemp(response?.data?.data);
+                setAuthorList(response?.data?.data);
+                
             }
         })
     }
@@ -243,10 +228,10 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                                         ? props?.provider?.local_image
                                         : props?.provider?.logoUrl
                                             ? props?.provider?.logoUrl
-                                            : DEFAULT_COIN_IMAGE
+                                            : DEFAULT_AVATAR_IMAGE
                                 }
                                 onError={(e) => {
-                                    e.target.src = DEFAULT_COIN_IMAGE;
+                                    e.target.src = DEFAULT_AVATAR_IMAGE;
                                 }}
                                 className={"w-10 h-10 rounded-full"}
                             />
@@ -261,23 +246,22 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                         </div>
 
                         {/* description */}
-                        <div className="text-white text-base font-bold mt-2 leading-9 capitalize">
-                            {t("provider_dec")} {props?.provider?.name}
+                        <div className="text-white text-base font-bold mt-2 leading-9 ">
+                            {t("provider_dec")} <span className="capitalize">{props?.provider?.name}</span>
                         </div>
                         <div className="text-Neutral-300 text-xs font-extrabold leading-none">
                             {props?.provider?.scrapedlinks}
                         </div>
-                        <div className="w-full text-white text-sm font-normal leading-tight mt-2 grid grid-cols-3 gap-10 max-h-80 ">
-                            {authorList?.length == 0 ? <LoaderPage className={"w-full bg-background mx-[6rem]"} /> :
+                        <div className="w-full text-white text-sm font-normal leading-tight mt-2 grid grid-cols-3 gap-10">
+                            {authorList?.length !== 0 ? <LoaderPage className={"w-full mt-5 bg-background mx-[7.5rem]"} /> :
                                 <>
-                                    {authorList?.map((row, index) => (
-                                        <div className='cursor-pointer' onClick={(event) => {
-                                            event.preventDefault();
+                                    {authorList?.slice(0,9).map((row, index) => (
+                                        <div className='cursor-pointer' onClick={() => {
                                             navigate("/dashboard/author", {
                                                 state: { author: row },
                                             });
                                         }} key={index}>
-                                            {index <= 8 && <AuthorList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />}
+                                            { <AuthorList cashed_images={cashedImages} id={index + "-" + row?.name} row={row} />}
 
                                         </div>
                                     ))}

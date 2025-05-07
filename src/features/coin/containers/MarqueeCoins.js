@@ -85,8 +85,8 @@ const MarqueeCoins = ({ className, ...props }) => {
         ) {
           cashImages(
             "data-header-images",
-            response?.data?.data.map((item) => item?.name),
-            response?.data?.data.map((item) => item?.logo)
+            response?.data?.data?.map((item) => item?.name),
+            response?.data?.data?.map((item) => item?.logo)
           );
         }
       }
@@ -111,7 +111,9 @@ const MarqueeCoins = ({ className, ...props }) => {
     setInterval(() => {
       getSymbols();
       getCashedImagesLocal();
-      setPlayOrPauseMarquee();
+      if (symbols?.length !== 0 && statusMarquee == "pause") {
+        setPlayOrPauseMarquee();
+      }
     }, 25000);
 
   }, []);

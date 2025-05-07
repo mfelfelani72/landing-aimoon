@@ -26,6 +26,10 @@ const DashboardLanding = () => {
   useEffect(() => {
     // Set new background color
     document.body.style.backgroundColor = "#1f1e2e";
+
+    return ()=>{
+      document.body.style.backgroundColor = "white";
+    }
   }, []);
 
   return (
@@ -45,7 +49,7 @@ const DashboardLanding = () => {
 
             <h2 className="text-sm font-bold">{t("aimoonhub")}</h2>
 
-            <TopButton>
+            <TopButton> 
               <Image src={icon_notification} alt={"icon_notification"} className={"w-6 h-6"} />
             </TopButton>
           </div>
