@@ -40,7 +40,7 @@ export const PieChart = ({ className, ...props }) => {
         },
         title: null,
         tooltip: {
-            pointFormat: '<span>{series.name} <br>{point.percentage:.1f}%</b></span>'
+            pointFormat: '<span>{series.name}   <br>{point.percentage:.1f}%</b></span>'
         },
         accessibility: {
             point: {
@@ -245,8 +245,6 @@ export const LineChart = ({ className, ...props }) => {
 }
 
 export const DonutChart = ({ className, ...props }) => {
-
-    // const
     const chartOptions = {
         chart: {
             type: 'variablepie',
@@ -255,7 +253,6 @@ export const DonutChart = ({ className, ...props }) => {
             height: props?.height,
             spacing: [0, 0, 0, 0],
             margin: [0, 0, 0, 0],
-
         },
         title: {
             text: ''
@@ -268,23 +265,40 @@ export const DonutChart = ({ className, ...props }) => {
                 },
                 borderWidth: 0,
                 borderRadius: 1,
-
             },
             series: {
                 cursor: 'pointer',
                 pointPlacement: 'on',
                 pointStart: 0,
                 pointPadding: 0,
-                groupPadding: 0
+                groupPadding: 0,
+                stickyTracking: false
             },
-
         },
-
         credits: {
             enabled: false
         },
         tooltip: {
-            enabled: false
+            enabled: true,
+            followPointer: true,
+            followTouchMove: true,
+            outside: true,
+            distance: 10,
+            formatter: function() {
+                return `<div class="bg-black/80 backdrop-blur-sm text-white text-sm rounded-lg p-3" style="z-index: 9999;">
+                    <strong class="text-sm font-medium">${this.point.name}</strong><br/>
+                    <span class="text-xs text-gray-200/90">${(this.point.y * 100).toFixed(1)}%</span><br/>
+                   
+                </div>`;
+            },
+            useHTML: true,
+            backgroundColor: 'transparent',
+            borderWidth: 0,
+            shadow: false,
+            style: {
+                color: 'white',
+                zIndex: 9999
+            }
         },
         series: [{
             minPointSize: 5,
@@ -295,10 +309,11 @@ export const DonutChart = ({ className, ...props }) => {
     };
 
     return (
-        <HighchartsReact
-            highcharts={Highcharts}
-            options={chartOptions}
-
-        />
+        <div style={{ position: 'relative' }}>
+            <HighchartsReact
+                highcharts={Highcharts}
+                options={chartOptions}
+            />
+        </div>
     );
 }

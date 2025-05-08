@@ -16,6 +16,7 @@ import { DEFAULT_AVATAR_IMAGE } from "../../../app/utils/constant/Defaults.js";
 const AuthorList = ({ className, ...props }) => {
     // hooks
     const { t } = useTranslation();
+    
 
     return (
         <>
@@ -54,8 +55,6 @@ const AuthorList = ({ className, ...props }) => {
                                 </span>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
