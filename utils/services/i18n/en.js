@@ -168,7 +168,7 @@ const en = {
   // authors 
   author_list_title: "Author list",
   search_authors: "Search authors",
-  some_text: "worked",
+  author_worked: "Worked",
   
   // providers
   provider_list_title: "Provider list",

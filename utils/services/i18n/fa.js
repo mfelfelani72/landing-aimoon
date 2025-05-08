@@ -225,7 +225,7 @@ const fa = {
   // authors
   author_list_title: "لیست نویسندگان",
   search_authors: "جستجوی نویسندگان",
-  some_text: "کار کرده",
+  author_worked: "کار کرده",
 
   // providers
   provider_list_title: "لیست خبرگزاری‌ها",
