@@ -220,6 +220,19 @@ const fa = {
 
   all_information: "اطلاعات کلی",
 
+
+
+  // authors
+  author_list_title: "لیست نویسندگان",
+  search_authors: "جستجوی نویسندگان",
+  some_text: "کار کرده",
+
+  // providers
+  provider_list_title: "لیست خبرگزاری‌ها",
+  search_providers: "جستجوی خبرگزاری‌ها",
+  provider_dec: "نویسندگان خبرگزاری",
+
+
   // date helper
   day_singular: "روز",
   day_plural: "روز",

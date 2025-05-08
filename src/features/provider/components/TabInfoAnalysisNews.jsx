@@ -253,7 +253,7 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
                             {props?.provider?.scrapedlinks}
                         </div>
                         <div className="w-full text-white text-sm font-normal leading-tight mt-2 grid grid-cols-3 gap-10">
-                            {authorList?.length !== 0 ? <LoaderPage className={"w-full mt-5 bg-background mx-[7.5rem]"} /> :
+                            {authorList?.length == 0 ? <LoaderPage className={"w-full mt-5 bg-background mx-[7.5rem]"} /> :
                                 <>
                                     {authorList?.slice(0,9).map((row, index) => (
                                         <div className='cursor-pointer' onClick={() => {
