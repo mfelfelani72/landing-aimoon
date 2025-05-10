@@ -162,6 +162,21 @@ const en = {
   write_here_message: "Write your message in the box below",
   send: "Send",
 
+
+
+
+  // authors 
+  author_list_title: "Author list",
+  search_authors: "Search authors",
+  author_worked: "Worked",
+  
+  // providers
+  provider_list_title: "Provider list",
+  search_providers: "Search providers",
+  provider_dec: "Provider authors",
+
+
+
   // footer
   address: "beheshti 47",
   phone: "Phone",

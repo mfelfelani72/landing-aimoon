@@ -59,7 +59,7 @@ const AuthorDashboard = () => {
     // Set request headers (API key)
     const header = {
       headers: {
-        authorization: "48e07eef-d474-47a5-8da4-3e946331369a",
+        authorization: "e19ad04e557b1cc1fee6b60b4d421fef",
       },
     };
 

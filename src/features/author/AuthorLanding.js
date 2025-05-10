@@ -94,7 +94,7 @@ const AuthorLanding = () => {
     }, [authorsList]);
     return (
         <>
-            <div className='flex flex-col mt-6  '>
+            <div className='flex flex-col mt-32  '>
                 <div className="px-4 text-white text-base font-medium">
                     {t("author_list_title")}
                 </div>
