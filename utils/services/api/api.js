@@ -8,6 +8,7 @@ export default axios.create({
     Accept: "application/json",
     "Access-Control-Allow-Origin": "*",
     "Content-Type": "application/json; charset=utf-8",
+    Authorization: "d4735e3a265e16ee2393953",
   },
 
   withCredentials: true,

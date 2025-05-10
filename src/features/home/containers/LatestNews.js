@@ -66,13 +66,13 @@ const LatestNews = () => {
       llmOnly: true,
     };
 
-    const header = {
-      headers: {
-        authorization: "48e07eef-d474-47a5-8da4-3e946331369a"
-      }
-    }
+    // const header = {
+    //   headers: {
+    //     authorization: "48e07eef-d474-47a5-8da4-3e946331369a"
+    //   }
+    // }
 
-    ConnectToServer("post", LATEST_NEWS, parameter, header, "Letest-news").then((response) => {
+    ConnectToServer("post", LATEST_NEWS, parameter, "", "Letest-news").then((response) => {
       if (response?.data?.return) {
         // for news image
 
