@@ -29,7 +29,7 @@ const AuthorList = ({ className, ...props }) => {
                                 props?.row?.local_image :
                                 props?.row?.thImage ?
                                     props?.row?.thImage :
-                                    DEFAULT_NEW_IMAGE
+                                    DEFAULT_AVATAR_IMAGE
                         // src={
                         //     props?.cashed_images.length !== 0 &&
                         //         props?.cashed_images?.some((item) =>
