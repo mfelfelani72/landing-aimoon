@@ -9,10 +9,12 @@ import TopButton from '../../core/components/TopButton.jsx'
 import { Image } from '../../core/components/Image.jsx'
 import { InputText, InputPassword } from '../../core/components/Input.jsx';
 import { ButtonNoLink } from '../../core/components/Button.jsx';
+import LoaderDotSpinner from '../../core/components/LoaderDotSpinner.jsx';
 
 // Functions
 
 import EnableButtonControl from '../../../../utils/lib/EnableButtonControl.js';
+import LoginUser from "../utils/lib/LoginUser.js";
 
 // Svg
 
@@ -35,8 +37,7 @@ const Login = () => {
 
     const handleClick = () => {
         if (!sendRequest)
-            //   LoginUser(navigate, "password", setErrors, cookies, setSendRequest);
-            console.log("asdas")
+            LoginUser(navigate, "password", setErrors, setSendRequest);
         setSendRequest(true);
     };
 
