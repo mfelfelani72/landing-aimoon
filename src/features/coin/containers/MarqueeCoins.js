@@ -64,13 +64,7 @@ const MarqueeCoins = ({ className, ...props }) => {
       priority: priority,
     };
 
-    const header = {
-      headers: {
-        authorization: "48e07eef-d474-47a5-8da4-3e946331369a"
-      }
-    }
-
-    ConnectToServer("post", SYMBOLS_NAMES, parameter, header, "marquee-coin").then((response) => {
+    ConnectToServer("post", SYMBOLS_NAMES, parameter, '', "marquee-coin").then((response) => {
       if (response?.data?.return) {
         setSymbols(response?.data?.data);
 

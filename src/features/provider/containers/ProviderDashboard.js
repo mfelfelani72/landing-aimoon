@@ -55,19 +55,14 @@ const ProviderDashboard = () => {
       llmOnly: false,
     };
 
-    // Set request headers (API key)
-    const header = {
-      headers: {
-        authorization: "48e07eef-d474-47a5-8da4-3e946331369a",
-      },
-    };
-
+   
+  
     // API call
     ConnectToServer(
       "post",
       LATEST_NEWS,
       parameter,
-      header,
+      '',
       "AnalyzedNews"
     ).then((response) => {
       if (response?.data?.return) {

@@ -19,7 +19,8 @@ const AuthorList = ({ className, ...props }) => {
 
     // states
     const [cashedImage, setCashedImage] = useState();
-
+    
+    // functions
     useEffect(() => {
       
             const authorName = safeSentenceHelper(props?.row?.name);
@@ -42,19 +43,6 @@ const AuthorList = ({ className, ...props }) => {
                                 props?.row?.picUrl ?
                                     props?.row?.picUrl :
                                     DEFAULT_AVATAR_IMAGE
-                        // src={
-                        //     props?.cashed_images.length !== 0 &&
-                        //         props?.cashed_images?.some((item) =>
-                        //             item.hasOwnProperty(props?.row?.name)
-                        //         )
-                        //         ? props?.cashed_images.filter(
-                        //             (item) => item[props?.row?.name]
-                        //         )[0][props?.row?.name]?.base64data
-                        //         : props?.row?.picUrl
-                        // }
-                        //     onError={(e) => {
-                        //         e.target.src = DEFAULT_AVATAR_IMAGE;
-                        //     }
                     }
                     onError={(e) => {
                         e.target.src = DEFAULT_AVATAR_IMAGE;

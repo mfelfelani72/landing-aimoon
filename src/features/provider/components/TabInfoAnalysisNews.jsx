@@ -21,6 +21,7 @@ import { ConnectToServer } from '../../../../utils/services/api/ConnectToServer.
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 
+
 // Constants
 
 import { DEFAULT_AVATAR_IMAGE } from "../../../app/utils/constant/Defaults.js";
@@ -29,6 +30,7 @@ import { PROVIDER_AUTHORS } from "../utils/constants/EndPoints.js";
 // Svg
 
 import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
+import { safeSentenceHelper } from "../../../../utils/helpers/stringHelper.js";
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
     // hooks
@@ -123,13 +125,8 @@ const TabInfoAnalysisNews = ({ className, ...props }) => {
         const parameter = {
             name: nameProvider,
         };
-        const header = {
-            headers: {
-                authorization: "a669836a04658498f5bc3a42a0ff4109" // this is admin token, dont forget change it
-            }
-        }
-
-        ConnectToServer("post", PROVIDER_AUTHORS, parameter, header, "provider-table").then((response) => {
+   
+        ConnectToServer("post", PROVIDER_AUTHORS, parameter, '', "provider-table").then((response) => {
 
              // for news image
 

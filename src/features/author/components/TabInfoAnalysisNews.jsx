@@ -24,15 +24,7 @@ import { DEFAULT_AVATAR_IMAGE } from "../../../app/utils/constant/Defaults.js";
 
 // Svg
 
-
 import calender from "../../../../assets/icons/svg/icon-light-calender.svg";
-
-
-
-
-
-
-
 
 const TabInfoAnalysisNews = ({ className, ...props }) => {
     // hooks

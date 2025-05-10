@@ -13,6 +13,7 @@ import LoaderPage from '../../app/components/LoaderPage.jsx';
 import { ConnectToServer } from '../../../utils/services/api/ConnectToServer.js';
 import { cashImages } from "../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../utils/lib/arraysEqual.js";
+import { safeSentenceHelper } from "../../../utils/helpers/stringHelper.js";
 
 // Constants
 
@@ -49,13 +50,9 @@ const ProviderLanding = () => {
             category: category,
             priority: priority,
         };
-        const header = {
-            headers: {
-                authorization: "a669836a04658498f5bc3a42a0ff4109" // this is admin token, dont forget change it
-            }
-        }
+        
 
-        ConnectToServer("post", PROVIDER_NAMES, parameter, header, "provider-landing").then((response) => {
+        ConnectToServer("post", PROVIDER_NAMES, parameter, '', "provider-landing").then((response) => {
             if (response?.data?.return) {
                 tempImages = response?.data?.data?.provider_list.map((item) => item?.logoUrl);
                 if (
@@ -68,7 +65,7 @@ const ProviderLanding = () => {
                 ) {
                     cashImages(
                         "data-providers-images",
-                        response?.data?.data?.provider_list.slice(0,9).map((item) => item?.name),
+                        response?.data?.data?.provider_list.slice(0,9).map((item) => safeSentenceHelper(item?.name)),
                         response?.data?.data?.provider_list.slice(0,9).map((item) => item?.logoUrl)
                     );
                     getCashedImagesLocal();

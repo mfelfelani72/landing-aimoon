@@ -63,17 +63,12 @@ const CoinDashboard = () => {
             llmOnly: true,
         };
 
-        const header = {
-            headers: {
-                authorization: "48e07eef-d474-47a5-8da4-3e946331369a",
-            },
-        };
-
+        
         ConnectToServer(
             "post",
             LATEST_NEWS,
             parameter,
-            header,
+            '',
             "AnalyzedNews"
         ).then((response) => {
             if (response?.data?.return) {
@@ -117,7 +112,7 @@ const CoinDashboard = () => {
 
         const header = {
             headers: {
-                authorization: "a669836a04658498f5bc3a42a0ff4109" // this is admin token, dont forget change it
+                authorization: sessionStorage.getItem("session_id")
             }
         }
 
@@ -142,7 +137,7 @@ const CoinDashboard = () => {
     useEffect(() => {
         if (newsData == "free") {
             getNews();
-            // getCashedImagesLocal();
+           
             newsData.shift();
         }
     }, [newsData]);

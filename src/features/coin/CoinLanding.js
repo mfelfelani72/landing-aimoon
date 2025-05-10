@@ -49,7 +49,7 @@ const CoinLanding = () => {
         };
         const header = {
             headers: {
-                authorization: "a669836a04658498f5bc3a42a0ff4109" // this is admin token, dont forget change it
+                authorization: sessionStorage.getItem("session_id")
             }
         }
 
