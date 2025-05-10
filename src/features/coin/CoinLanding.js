@@ -55,7 +55,6 @@ const CoinLanding = () => {
 
         ConnectToServer("post", SYMBOLS, parameter, header, "coin-landing").then((response) => {
             if (response?.data?.return) {
-                
                 tempImages = response?.data?.data?.map((item) => item?.logo);
                 if (
                     !arraysEqual(
@@ -70,8 +69,8 @@ const CoinLanding = () => {
                         response?.data?.data?.map((item) => item?.name),
                         response?.data?.data?.map((item) => item?.logo)
                     );
+                    getCashedImagesLocal();
                 }
-                // for news image
                 setSymbolsList(response?.data?.data);
                 setSymbolsListTemp(response?.data?.data);
             }

@@ -57,18 +57,18 @@ const AuthorDashboard = () => {
     };
 
     // Set request headers (API key)
-    const header = {
-      headers: {
-        authorization: "e19ad04e557b1cc1fee6b60b4d421fef",
-      },
-    };
+    // const header = {
+    //   headers: {
+    //     authorization: "e19ad04e557b1cc1fee6b60b4d421fef",
+    //   },
+    // };
 
     // API call
     ConnectToServer(
       "post",
       LATEST_NEWS,
       parameter,
-      header,
+      "",
       "AnalyzedNews"
     ).then((response) => {
       if (response?.data?.return) {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from "react-i18next";
 
 // Components
@@ -8,7 +8,7 @@ import { ImageLazy } from '../../core/components/Image.jsx'
 // Functions
 
 import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper.js"
-
+import { safeSentenceHelper } from "../../../../utils/helpers/stringHelper.js"
 // Constants
 
 import { DEFAULT_AVATAR_IMAGE } from "../../../app/utils/constant/Defaults.js";
@@ -17,6 +17,18 @@ const AuthorList = ({ className, ...props }) => {
     // hooks
     const { t } = useTranslation();
 
+    // states
+    const [cashedImage, setCashedImage] = useState();
+
+    useEffect(() => {
+      
+            const authorName = safeSentenceHelper(props?.row?.name);
+            const foundItem = props?.cashed_images?.find(item => item[authorName]);
+            if (foundItem) {
+                setCashedImage(foundItem[authorName]?.base64data);
+            }
+       
+    }, []);
 
     return (
         <>
@@ -27,8 +39,8 @@ const AuthorList = ({ className, ...props }) => {
                             cashedImage :
                             props?.row?.local_image ?
                                 props?.row?.local_image :
-                                props?.row?.thImage ?
-                                    props?.row?.thImage :
+                                props?.row?.picUrl ?
+                                    props?.row?.picUrl :
                                     DEFAULT_AVATAR_IMAGE
                         // src={
                         //     props?.cashed_images.length !== 0 &&
@@ -43,7 +55,11 @@ const AuthorList = ({ className, ...props }) => {
                         //     onError={(e) => {
                         //         e.target.src = DEFAULT_AVATAR_IMAGE;
                         //     }
-                    } alt={props?.item?.name + "-logo"} className={"w-8 h-8 rounded-full"} />
+                    }
+                    onError={(e) => {
+                        e.target.src = DEFAULT_AVATAR_IMAGE;
+                    }}
+                    alt={props?.item?.name + "-logo"} className={"w-8 h-8 rounded-full"} />
                 <div className='flex flex-col w-full gap-2 justify-center'>
                     <div className="self-stretch text-white text-sm font-medium leading-none tracking-wide" >{props?.row?.name}</div>
 

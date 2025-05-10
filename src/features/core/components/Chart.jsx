@@ -285,7 +285,7 @@ export const DonutChart = ({ className, ...props }) => {
             outside: true,
             distance: 10,
             formatter: function() {
-                return `<div class="bg-black/80 backdrop-blur-sm text-white text-sm rounded-lg p-3" style="z-index: 9999;">
+                return `<div class="bg-black opacity-80 backdrop-blur-sm text-white text-sm rounded-lg p-3" style="z-index: 9999;">
                     <strong class="text-sm font-medium">${this.point.name}</strong><br/>
                     <span class="text-xs text-gray-200/90">${(this.point.y * 100).toFixed(1)}%</span><br/>
                    

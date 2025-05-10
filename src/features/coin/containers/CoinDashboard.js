@@ -77,7 +77,6 @@ const CoinDashboard = () => {
             "AnalyzedNews"
         ).then((response) => {
             if (response?.data?.return) {
-
                 setLoading("false");
 
                 if (cash == "true") {
@@ -99,6 +98,7 @@ const CoinDashboard = () => {
                             response?.data?.data?.result?.map((item) => item?.created_at),
                             response?.data?.data?.result?.map((item) => item?.local_image)
                         );
+                        getCashedImagesLocal();
                     }
                     // for news image
                 }
@@ -142,7 +142,7 @@ const CoinDashboard = () => {
     useEffect(() => {
         if (newsData == "free") {
             getNews();
-            getCashedImagesLocal();
+            // getCashedImagesLocal();
             newsData.shift();
         }
     }, [newsData]);

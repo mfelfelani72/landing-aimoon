@@ -75,8 +75,8 @@ const ProviderDashboard = () => {
 
         if (cash === "true") {
           // Extract top 9 image URLs
-          tempImages = response?.data?.data?.result?.slice(0,9).map(
-            (item, index) => item?.local_image
+          tempImages = response?.data?.data?.result?.slice(0, 9).map(
+            (item) => item?.local_image
           );
 
           // Cache images only if they're new or not cached already
@@ -91,9 +91,10 @@ const ProviderDashboard = () => {
             // Save timestamps and image URLs to localStorage
             cashImages(
               "data-dashboard-provider-news-images",
-              response?.data?.data?.result?.slice(0,9).map((item) => item?.created_at),
-              response?.data?.data?.result?.slice(0,9).map((item) => item?.local_image)
+              response?.data?.data?.result?.slice(0, 9).map((item) => item?.created_at),
+              response?.data?.data?.result?.slice(0, 9).map((item) => item?.local_image)
             );
+            getCashedImagesLocal();
           }
         }
 
@@ -115,7 +116,7 @@ const ProviderDashboard = () => {
   useEffect(() => {
     if (newsData == "free") {
       getNews(); // Fetch initial news
-      getCashedImagesLocal(); // Load cached images
+      // getCashedImagesLocal(); // Load cached images
       newsData.shift(); // Remove placeholder "free"
     }
   }, [newsData]);

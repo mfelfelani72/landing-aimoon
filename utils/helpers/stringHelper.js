@@ -9,3 +9,11 @@ export function stringHelper(string, count, start = 0, type = "word") {
 
   return result;
 }
+
+
+
+export function safeSentenceHelper(sentence) {
+  if (!sentence) return '';
+  
+  return sentence.replace(/[^a-zA-Z0-9]/g, '');
+}

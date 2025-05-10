@@ -1,7 +1,7 @@
 import axios from "axios";
 
 async function addUrl(names, urls) {
-
+  
   return new Promise(resolve => {
 
     let data = [];
@@ -68,6 +68,9 @@ async function sort(data, imagesArray, names) {
 export const cashImages = async (localName, names, urls) => {
   try {
 
+    console.log("waiting for 10 seconds");
+    await new Promise(resolve => setTimeout(resolve, 10000));
+
     if (!names || !urls || names.length !== urls.length) {
       throw new Error('Invalid input: names and urls must be arrays of the same length');
     }
@@ -80,7 +83,11 @@ export const cashImages = async (localName, names, urls) => {
       localStorage.setItem(localName, JSON.stringify(sortedImagesArray));
     }
 
+
   } catch (error) {
+
+
+   
     console.error('Failed to cache images:', error);
     throw error;
   }

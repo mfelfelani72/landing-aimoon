@@ -71,6 +71,7 @@ const ProviderLanding = () => {
                         response?.data?.data?.provider_list.slice(0,9).map((item) => item?.name),
                         response?.data?.data?.provider_list.slice(0,9).map((item) => item?.logoUrl)
                     );
+                    getCashedImagesLocal();
                 }
                 // for news image
 

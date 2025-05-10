@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +13,7 @@ import LoaderPage from '../../app/components/LoaderPage.jsx';
 import { ConnectToServer } from '../../../utils/services/api/ConnectToServer.js';
 import { cashImages } from "../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../utils/lib/arraysEqual.js";
+import { safeSentenceHelper } from "../../../utils/helpers/stringHelper.js";
 
 // Constants
 
@@ -43,41 +43,41 @@ const AuthorLanding = () => {
         );
     };
 
-    const getAuthorsList = () => {
+    const getAuthorsList = async () => {
         const parameter = {
             category: category,
             priority: priority,
         };
-        const header = {
-            headers: {
-                authorization: "a669836a04658498f5bc3a42a0ff4109" // this is admin token, dont forget to change it
-            }
-        }
-
-        ConnectToServer("post", AUTHORS_NAMES, parameter, header, "coin-landing").then((response) => {
+       
+        try {
+            const response = await ConnectToServer("post", AUTHORS_NAMES, parameter, "", "coin-landing");
             if (response?.data?.return) {
-                tempImages = response?.data?.data.author_list.map((item) => item?.picUrl);
-
+                const authorList = response?.data?.data.author_list;
+                tempImages = authorList?.map((item) => item?.picUrl);
 
                 if (
                     !arraysEqual(
                         tempImages,
-                        response?.data?.data.author_list.map((item) => item?.picUrl),
+                        authorList?.map((item) => item?.picUrl),
                         "data-authors-images"
                     ) ||
                     !localStorage.getItem("data-authors-images")
                 ) {
-                    cashImages(
+                    await cashImages(
                         "data-authors-images",
-                        response?.data?.data.author_list.map((item) => item?.name),
-                        response?.data?.data.author_list.map((item) => item?.picUrl)
+                        authorList?.map((item) => safeSentenceHelper(item?.name)),
+                        authorList?.map((item) => item?.picUrl)
                     );
+                    getCashedImagesLocal();
+                    console.log("cashedImages");
                 }
-                // for news image
-                setAuthorsList(response?.data?.data.author_list);
-                setAuthorsListTemp(response?.data?.data.author_list);
+                
+                setAuthorsList(authorList);
+                setAuthorsListTemp(authorList);
             }
-        })
+        } catch (error) {
+            console.error("Error fetching authors:", error);
+        }
     }
 
     const getCashedImagesLocal = () => {
@@ -86,12 +86,12 @@ const AuthorLanding = () => {
     }
 
     useEffect(() => {
-        if (authorsList.length == 0) {
+        if (authorsList.length === 0) {
             getAuthorsList();
-            getCashedImagesLocal();
+             
         }
+    }, []);
 
-    }, [authorsList]);
     return (
         <>
             <div className='flex flex-col mt-32  '>
