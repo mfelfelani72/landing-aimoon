@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
 
@@ -30,10 +30,15 @@ const Login = () => {
     // states
     const [errors, setErrors] = useState([]);
 
-    const { sendRequest, setSendRequest } = useAppStore((state) => ({
-        sendRequest: state.sendRequest,
-        setSendRequest: state.setSendRequest,
-    }));
+    const sendRequest = useAppStore((state) => state.sendRequest);
+    const setSendRequest = useAppStore((state) => state.setSendRequest);
+
+    const handleClick = () => {
+        if (!sendRequest)
+            //   LoginUser(navigate, "password", setErrors, cookies, setSendRequest);
+            console.log("asdas")
+        setSendRequest(true);
+    };
 
     return (
         <>
@@ -52,9 +57,9 @@ const Login = () => {
                             <Image src={arrow} alt={"arrow"} className={"w-6 h-6 rtl:rotate-90 ltr:-rotate-90"} />
                         </TopButton>
                     </div>
-                    {/* Content */}
+
                     <div className='pt-8 px-6'>
-                        {/* header */}
+                        {/* titles */}
                         <div className="text-xl font-bold ">{t("login")}</div>
                         <div className="text-Neutral-300 text-base font-normal mt-3">{t("input_info_login")}</div>
                         {/* inputs */}
@@ -76,7 +81,7 @@ const Login = () => {
                         </div>
 
                         {/* buttons */}
-                        <div className="fixed bottom-4">
+                        <div className="fixed bottom-4 w-84">
                             <ButtonNoLink
                                 id="sign_in"
                                 type="no_link"
@@ -92,7 +97,7 @@ const Login = () => {
                             </ButtonNoLink>
                             <ButtonNoLink
                                 id="sign_in_disable"
-                                className="flex bg-Neutral/100 hover:bg-Neutral/100 focus:bg-Neutral/100 pointer-events-none cursor-default"
+                                className="flex bg-Neutral-100 hover:bg-Neutral-100 focus:bg-Neutral-100 pointer-events-none cursor-default"
                             >
                                 <div className="text-white">{t("sign_in")}</div>
                             </ButtonNoLink>
