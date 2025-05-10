@@ -48,9 +48,9 @@ const AuthorLanding = () => {
             category: category,
             priority: priority,
         };
-       
-        try {
-            const response = await ConnectToServer("post", AUTHORS_NAMES, parameter, "", "coin-landing");
+
+
+        ConnectToServer("post", AUTHORS_NAMES, parameter, "", "author-landing").then((response) => {
             if (response?.data?.return) {
                 const authorList = response?.data?.data.author_list;
                 tempImages = authorList?.map((item) => item?.picUrl);
@@ -63,21 +63,18 @@ const AuthorLanding = () => {
                     ) ||
                     !localStorage.getItem("data-authors-images")
                 ) {
-                    await cashImages(
+                    cashImages(
                         "data-authors-images",
                         authorList?.map((item) => safeSentenceHelper(item?.name)),
                         authorList?.map((item) => item?.picUrl)
                     );
-                    getCashedImagesLocal();
-                    console.log("cashedImages");
+
                 }
-                
+
                 setAuthorsList(authorList);
                 setAuthorsListTemp(authorList);
             }
-        } catch (error) {
-            console.error("Error fetching authors:", error);
-        }
+        });
     }
 
     const getCashedImagesLocal = () => {
@@ -88,7 +85,8 @@ const AuthorLanding = () => {
     useEffect(() => {
         if (authorsList.length === 0) {
             getAuthorsList();
-             
+            getCashedImagesLocal();
+
         }
     }, []);
 
