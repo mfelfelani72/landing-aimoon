@@ -1,4 +1,4 @@
-// export const REDIRECT_ROUTES = ["/dashboard", "/landing"];
+// export const REDIRECT_ROUTES = ["/dashboard/home", "/landing"];
 export const REDIRECT_ROUTES = ["/landing"];
 
 export const ALL_ROUTES = [
@@ -37,7 +37,7 @@ export const ALL_ROUTES = [
 ];
 
 export const NOT_RELOAD_ROUTES = [
-  ["is_login", ["/login", "/sign-up"]],
+  ["is_login", ["/login", "/register"]],
   [
     "from_location",
     [

@@ -21,8 +21,10 @@ const Middleware = (location, navigate) => {
   // for prevent reload page
   for (let index = 0; index < NOT_RELOAD_ROUTES.length; index++)
     if (NOT_RELOAD_ROUTES[index][1].includes(location.pathname)) {
+      console.log(NOT_RELOAD_ROUTES[index][0])
+      console.log(IsLogin())
       if (NOT_RELOAD_ROUTES[index][0] === "is_login" && IsLogin() == true)
-        navigate("/");
+        navigate("/landing");
       else if (NOT_RELOAD_ROUTES[index][0] === "is_login" && IsLogin() == false)
         navigate(location.pathname);
       else if (NOT_RELOAD_ROUTES[index][0] === "from_location")
@@ -38,14 +40,15 @@ const Middleware = (location, navigate) => {
   }
 
   // redirect dashboard
-  else if (REDIRECT_ROUTES.includes(location.pathname) && IsLogin() === true) {
-    navigate("/dashboard", { state: { from_location: "redirect" } });
-  }
+  // else if (REDIRECT_ROUTES.includes(location.pathname) && IsLogin() === true) {
+  //   navigate("/dashboard", { state: { from_location: "redirect" } });
+  // }
 
   // show landing page
   else if (location.pathname === "/") {
-    if (IsLogin() === true) navigate("/dashboard");
-    else navigate("/landing");
+    // if (IsLogin() === true) navigate("/dashboard");
+    // else
+     navigate("/landing");
   }
 
   return "app";

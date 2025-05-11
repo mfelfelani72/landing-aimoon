@@ -10,13 +10,16 @@ import { TabDefault } from "../../core/components/Tab/Tab.jsx";
 
 // Containers
 
-
 const LazyAnalyzedNews = lazy(() =>
   import("./AnalyzedNews.js")
 );
 const LazyLatestNews = lazy(() =>
   import("./LatestNews.js")
 );
+
+// Functions
+
+import IsLogin from "../../auth/utils/lib/IsLogin.js"
 
 // Svg
 
@@ -31,32 +34,40 @@ const DashbaradHome = () => {
   const { t } = useTranslation();
 
   // states
-
   const [statePage, setStatePage] = useState({
     pageName: "analyzed_news",
   });
 
+  const [topSpace, setTopSpace] = useState(0);
+
+  useEffect(() => {
+    if (!IsLogin() === false)
+      setTopSpace(4)
+  }, [topSpace])
   return (
     <>
       <div className="flex flex-col h-full bg-Neutral-500">
         {/* login & register */}
 
         <div className="fixed w-96 top-[7.2rem] bg-background z-50 inline-flex gap-2 px-3 py-6">
-          <ButtonLink className={"w-44 h-10"}>{t("register")}</ButtonLink>
-          <ButtonLink to={"/login"}
-            className={"w-44 h-10 bg-[#28263A] hover:bg-gray-800"}
-          >
-            {t("login")}
-          </ButtonLink> 
+          {!IsLogin() && <>
+            <ButtonLink className={"w-44 h-10"}>{t("register")}</ButtonLink>
+            <ButtonLink to={"/login"}
+              className={"w-44 h-10 bg-[#28263A] hover:bg-gray-800"}
+            >
+              {t("login")}
+            </ButtonLink>
+          </>}
         </div>
+
 
         {/* seprator */}
 
-        <div className="fixed top-[12.5rem]  w-96 z-50 self-stretch h-0 opacity-20 outline-[0.61px] outline-offset-[-0.31px] outline-Neutral-300" />
+        <div style={{ top: `calc(12.5rem - ${topSpace}rem)` }} className="fixed w-96 z-50 self-stretch h-0 opacity-20 outline-[0.61px] outline-offset-[-0.31px] outline-Neutral-300" />
 
         {/* shortcuts */}
 
-        <div className="fixed top-[12.5rem] w-96 bg-background z-50 px-6 pt-4 pb-2 rtl:text-right ltr:text-left justify-start text-Neutral-300 text-xs font-normal leading-tight">
+        <div style={{ top: `calc(12.5rem - ${topSpace}rem)` }} className="fixed w-96 bg-background z-50 px-6 pt-4 pb-2 rtl:text-right ltr:text-left justify-start text-Neutral-300 text-xs font-normal leading-tight">
           <span className="ltr:hidden">
             {t("swipe_right")}
           </span>
@@ -65,7 +76,7 @@ const DashbaradHome = () => {
           </span>
         </div>
 
-        <div className="fixed top-[14.5rem] bg-background z-50 inline-flex px-6 py-3 pb-10 gap-5">
+        <div style={{ top: `calc(14.5rem - ${topSpace}rem)` }} className="fixed bg-background z-50 inline-flex px-6 py-3 pb-10 gap-5">
           <Link
             to={"/dashboard/coin-list"}
             className="flex flex-col gap-2 justify-center items-center"
@@ -137,11 +148,12 @@ const DashbaradHome = () => {
 
         {/* seprator */}
 
-        <div className="fixed top-[20.5rem] w-96 z-50 self-stretch h-0 opacity-20 mt-8 outline-[0.61px] outline-offset-[-0.31px] outline-Neutral-300" />
+        <div style={{ top: `calc(20.5rem - ${topSpace}rem)` }} className="fixed w-96 z-50 self-stretch h-0 opacity-20 mt-8 outline-[0.61px] outline-offset-[-0.31px] outline-Neutral-300" />
 
         <TabDefault
           id={"tab-0"}
-          className={"mt-[23.5rem]"}
+          style={{ marginTop: `calc(23.5rem - ${topSpace}rem)` }}
+          // className={"mt-[23.5rem]"}
           titles={["analyzed_news", "latest_news"]}
           classNameTitle="px-6 fixed"
           idTitle=""

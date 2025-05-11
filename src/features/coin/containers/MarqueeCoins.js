@@ -10,6 +10,7 @@ import { Image, ImageLazy } from "../../core/components/Image.jsx";
 import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 import { cashImages } from "../../../../utils/lib/cashImages.js";
 import { cn } from "../../../../utils/lib/cn.js";
+import { ConnectToServer } from "../../../../utils/services/api/ConnectToServer.js";
 
 // Constants
 
@@ -19,7 +20,6 @@ import { SYMBOLS_NAMES } from "../utils/constants/EndPoints.js";
 
 import arrow_down from "../../../../assets/icons/svg/icon-red-arrow-down.svg";
 import arrow_up from "../../../../assets/icons/svg/icon-green-arrow-up.svg";
-import { ConnectToServer } from "../../../../utils/services/api/ConnectToServer.js";
 
 const MarqueeCoins = ({ className, ...props }) => {
   // hooks
