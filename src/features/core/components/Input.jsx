@@ -174,7 +174,7 @@ export const InputPassword = ({ className, ...props }) => {
             />
             <div
               id="close_password"
-              className="absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center "
+              className="absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center"
             >
 
               <div
@@ -193,11 +193,11 @@ export const InputPassword = ({ className, ...props }) => {
             </div>
             <div
               id="danger_password"
-              className="hidden absolute top-[6px] rtl:left-[1px] ltr:right-[1px] rtl:pl-3 ltr:pr-3 items-center "
+              className="hidden absolute top-[6px] rtl:left-0 ltr:right-0 items-center "
             >
               <div className="p-2">
                 <div className="flex">
-                  <Danger width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+                  <Danger width={"24"} height={"24"} color={"#d71e1e"} />
                 </div>
               </div>
             </div>

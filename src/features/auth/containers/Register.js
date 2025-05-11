@@ -71,7 +71,7 @@ const Register = () => {
                             <div className="text-Neutral-300 text-base font-normal mt-6 mb-3">لطفا رمز عبور خود را وارد نمایید.</div>
                             <InputPassword
                                 id="password"
-                                type="password"
+                                type="change_password"
                                 label={t("password")}
                                 theme={"dark"}
                                 button_first_id="sign_in"
@@ -81,6 +81,18 @@ const Register = () => {
                                 }}
                                 error={errors["password"]}
                             />
+                            {/* <InputRePassword
+                                id="password"
+                                type="password"
+                                label={t("password")}
+                                theme={"dark"}
+                                button_first_id="sign_in"
+                                button_secound_id="sign_in_disable"
+                                onChange={(event) => {
+                                    EnableButtonControl(event, "sign_in", "sign_in_disable");
+                                }}
+                                error={errors["password"]}
+                            /> */}
                         </div>
 
                         {/* buttons */}
