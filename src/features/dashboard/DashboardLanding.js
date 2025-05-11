@@ -53,7 +53,7 @@ const DashboardLanding = () => {
 
             <h2 className="text-sm font-bold">{t(titlePage)}</h2>
 
-            <TopButton onClick={() => {
+            <TopButton className={"ltr:rotate-180"} onClick={() => {
               navigate(backAddress)
             }}>
               <Back width={"30"} height={"30"} color={`${"dark" == "light" ? "#797882" : "white"}`} />
