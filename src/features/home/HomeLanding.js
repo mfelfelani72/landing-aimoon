@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React, { lazy, useEffect } from 'react';
 
 // Components
 
@@ -15,6 +15,11 @@ const LazyFAQ = lazy(() => import("./containers/FAQ"));
 const LazyFooter = lazy(() => import('./containers/Footer'));
 
 const Home = () => {
+  // funcrions
+  useEffect(() => {
+    // Set new background color
+    document.body.style.backgroundColor = "white";
+  })
   return (
     <>
       {/* Header */}

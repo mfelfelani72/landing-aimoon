@@ -19,7 +19,7 @@ import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 // Hooks
 
 import useScrollToBottom from '../../../../utils/hooks/useScrollToBottom.js';
-import useSetTitle from '../../../../utils/hooks/useSetTitle.js';
+import useSetHeaderConfigure from '../../../../utils/hooks/useSetHeaderConfigure.js';
 
 // Zustand
 
@@ -28,7 +28,7 @@ import useAppStore from "../../../app/stores/AppStore.js";
 const CoinDashboard = () => {
     // hooks
     const location = useLocation();
-    useSetTitle("coin_dashboard")
+    useSetHeaderConfigure("coin_dashboard","/dashboard/coin-list")
 
     // states and consts
 

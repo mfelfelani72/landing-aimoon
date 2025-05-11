@@ -1,21 +1,17 @@
 import React, { useEffect } from 'react'
 import { useTranslation } from "react-i18next";
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 // Components
 
 import TopButton from '../core/components/TopButton.jsx'
-import { Image } from "../../features/core/components/Image.jsx"
+import { Back } from "../../features/core/components/Icon.jsx"
 import Navigation from "../core/components/Navigation.jsx"
 import Languages from "../core/components/Languages.jsx"
 
 // Containers
 
 import MarqueeCoins from '../coin/containers/MarqueeCoins.js';
-
-// Svg
-
-import icon_notification from "../../../assets/icons/svg/icon-light-notification.svg";
 
 // Zustand
 
@@ -25,8 +21,10 @@ import useAppStore from "../../app/stores/AppStore.js";
 const DashboardLanding = () => {
   // hooks
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const titlePage = useAppStore((state) => state.titlePage);
+  const backAddress = useAppStore((state) => state.backAddress);
 
   // functions
   useEffect(() => {
@@ -55,8 +53,10 @@ const DashboardLanding = () => {
 
             <h2 className="text-sm font-bold">{t(titlePage)}</h2>
 
-            <TopButton>
-              <Image src={icon_notification} alt={"icon_notification"} className={"w-6 h-6"} />
+            <TopButton onClick={() => {
+              navigate(backAddress)
+            }}>
+              <Back width={"30"} height={"30"} color={`${"dark" == "light" ? "#797882" : "white"}`} />
             </TopButton>
           </div>
 
