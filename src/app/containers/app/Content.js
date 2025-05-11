@@ -17,6 +17,9 @@ const LazyHomeLanding = lazy(() =>
 const LazyLogin = lazy(() =>
   import("../../../features/auth/containers/Login.js")
 );
+const LazyRegister = lazy(() =>
+  import("../../../features/auth/containers/Register.js")
+);
 
 // Dashboard
 
@@ -73,6 +76,7 @@ const Content = () => {
 
         {/* Auth */}
         <Route path="/login" element={<LazyLogin />}></Route>
+        <Route path="/register" element={<LazyRegister />}></Route>
 
         {/* Dashboard */}
         <Route path="/dashboard" element={<LazyDashboardLanding />}>

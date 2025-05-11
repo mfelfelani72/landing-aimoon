@@ -12,6 +12,7 @@ export const ALL_ROUTES = [
   // Auth
 
   "/login",
+  "/register",
 
   // Dashbnoard
 

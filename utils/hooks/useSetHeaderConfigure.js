@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 import useAppStore from "../../src/app/stores/AppStore.js";
 
-const useSetTitle = (title, backAddress) => {
+const useSetHeaderConfigure = (title, backAddress) => {
     // states
     const setTitlePage = useAppStore((state) => state.setTitlePage);
     const setBackAddress = useAppStore((state) => state.setBackAddress);
@@ -21,4 +21,4 @@ const useSetTitle = (title, backAddress) => {
     }, [setTitlePage, setBackAddress])
 };
 
-export default useSetTitle;
+export default useSetHeaderConfigure;

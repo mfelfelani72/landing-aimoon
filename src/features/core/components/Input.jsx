@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 // Components
 
 import { Image } from "../../core/components/Image.jsx"
-import { CloseSquare, Show, Danger, Lock } from "./Icon.jsx";
+import { CloseSquare, Danger, Lock } from "./Icon.jsx";
 
 // Functions
 
@@ -30,8 +30,6 @@ const handleClear = (id, first_id, secound_id, afterFunction) => {
 // Svg
 
 import search from "../../../../assets/icons/svg/icon-light-search.svg"
-import closeSquare from "../../../../assets/icons/svg/CloseSquare.svg"
-
 
 export const InputText = ({ className, ...props }) => {
   return (

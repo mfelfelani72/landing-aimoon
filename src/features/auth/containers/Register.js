@@ -21,11 +21,11 @@ import LoginUser from "../utils/lib/LoginUser.js";
 import useAppStore from "../../../app/stores/AppStore.js";
 import useSetHeaderConfigure from '../../../../utils/hooks/useSetHeaderConfigure.js';
 
-const Login = () => {
+const Register = () => {
     // hooks
     const { t } = useTranslation();
     const navigate = useNavigate();
-    useSetHeaderConfigure("login","/dashboard/home")
+    useSetHeaderConfigure("register","/dashboard/home")
 
     // states
     const [errors, setErrors] = useState([]);
@@ -112,4 +112,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Register
