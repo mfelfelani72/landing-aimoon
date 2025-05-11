@@ -41,7 +41,7 @@ const AimoonhubStatistics = () => {
         };
         const header = {
             headers: {
-                authorization: "48e07eef-d474-47a5-8da4-3e946331369a"
+                authorization: "d4735e3a265e16ee2393953"
             }
         }
         ConnectToServer("post", DB_STATICS, parameter, header, "aimoonhub-statics").then((response) => {
