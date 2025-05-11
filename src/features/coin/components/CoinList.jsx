@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from "react-i18next";
 
 // Components
@@ -8,6 +8,7 @@ import { ImageLazy } from '../../core/components/Image.jsx'
 // Functions
 
 import formatNumberHelper from "../../../../utils/helpers/formatNumberHelper"
+import { safeSentenceHelper } from '../../../../utils/helpers/stringHelper.js';
 
 // Constants
 
@@ -17,22 +18,36 @@ const CoinList = ({ className, ...props }) => {
     // hooks
     const { t } = useTranslation();
 
+    // states
+    const [cashedImage, setCashedImage] = useState();
+
+    // functions
+    useEffect(() => {
+        const coinName = safeSentenceHelper(props?.row?.name);
+        const foundItem = props?.cashed_images?.find(item => item[coinName]);
+        if (foundItem) {
+            setCashedImage(foundItem[coinName]?.base64data);
+        }
+    }, [])
+
     return (
         <>
             <div className='flex flex-row gap-2 items-center'>
                 <ImageLazy
                     src={
-                        props?.cashed_images?.length > 0
-                            ? props.cashed_images.find(item =>
-                                item[props?.row?.name]?.url === props?.row?.logo
-                            )?.[props?.row?.name]?.base64data || props?.row?.logo
-                            : props?.row?.logo
+                        cashedImage ?
+                            cashedImage :
+                            props?.row?.local_image ?
+                                props?.row?.local_image :
+                                props?.row?.logo ?
+                                    props?.row?.logo :
+                                    DEFAULT_COIN_IMAGE
                     }
                     onError={(e) => {
                         e.target.src = DEFAULT_COIN_IMAGE;
                     }}
 
-                    alt={props?.item?.name + "-logo"} className={"w-8 h-8 rounded-full"} />
+                    alt={props?.row?.name + "-logo"} className={"w-8 h-8 rounded-full"} />
                 <div className='flex flex-col w-full gap-2 justify-center'>
                     <div className="text-white text-sm font-medium  leading-none tracking-wide">{props?.row?.name}</div>
 

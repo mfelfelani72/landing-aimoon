@@ -21,8 +21,6 @@ export const ALL_ROUTES = [
   "/dashboard/coin-list",
   "/dashboard/coin",
 
-
-
   // dashboard-author
   "/dashboard/author-list",
   "/dashboard/author",

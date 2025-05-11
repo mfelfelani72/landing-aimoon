@@ -13,6 +13,7 @@ import LoaderPage from '../../app/components/LoaderPage.jsx';
 import { ConnectToServer } from '../../../utils/services/api/ConnectToServer.js';
 import { cashImages } from "../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../utils/lib/arraysEqual.js";
+import { safeSentenceHelper } from '../../../utils/helpers/stringHelper.js';
 
 // Constants
 
@@ -66,7 +67,7 @@ const CoinLanding = () => {
                 ) {
                     cashImages(
                         "data-dashboard-coins-images",
-                        response?.data?.data?.map((item) => item?.name),
+                        response?.data?.data?.map((item) => safeSentenceHelper(item?.name)),
                         response?.data?.data?.map((item) => item?.logo)
                     );
                     getCashedImagesLocal();
