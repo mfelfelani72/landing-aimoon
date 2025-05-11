@@ -19,6 +19,7 @@ import { arraysEqual } from "../../../../utils/lib/arraysEqual.js";
 // Hooks
 
 import useScrollToBottom from '../../../../utils/hooks/useScrollToBottom.js';
+import useSetTitle from '../../../../utils/hooks/useSetTitle.js';
 
 // Zustand
 
@@ -27,6 +28,7 @@ import useAppStore from "../../../app/stores/AppStore.js";
 const CoinDashboard = () => {
     // hooks
     const location = useLocation();
+    useSetTitle("coin_dashboard")
 
     // states and consts
 
@@ -50,6 +52,7 @@ const CoinDashboard = () => {
 
     const { languageApp } = useAppStore();
 
+
     // functions
     const getNews = (cash = "true") => {
         const parameter = {
@@ -63,7 +66,7 @@ const CoinDashboard = () => {
             llmOnly: true,
         };
 
-        
+
         ConnectToServer(
             "post",
             LATEST_NEWS,
@@ -137,7 +140,7 @@ const CoinDashboard = () => {
     useEffect(() => {
         if (newsData == "free") {
             getNews();
-           
+
             newsData.shift();
         }
     }, [newsData]);

@@ -15,20 +15,31 @@ import { cashImages } from "../../../utils/lib/cashImages.js";
 import { arraysEqual } from "../../../utils/lib/arraysEqual.js";
 import { safeSentenceHelper } from '../../../utils/helpers/stringHelper.js';
 
+// Hooks
+
+import useSetTitle from '../../../utils/hooks/useSetTitle.js';
+
 // Constants
 
 import { SYMBOLS } from "./utils/constants/EndPoints.js";
+
+// Zustand
+
+import useAppStore from "../../app/stores/AppStore.js";
 
 const CoinLanding = () => {
     // hooks
     const { t } = useTranslation();
     const navigate = useNavigate();
+    useSetTitle("coins_list")
 
     // states
     const [symbolsList, setSymbolsList] = useState([]);
     const [symbolsListTemp, setSymbolsListTemp] = useState([]);
     const [priority, setPriority] = useState(0);
     const [cashedImages, setCashedImages] = useState([]);
+
+    const setTitlePage = useAppStore((state) => state.setTitlePage);
 
     let tempImages;
 

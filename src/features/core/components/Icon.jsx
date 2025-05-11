@@ -46,4 +46,15 @@ export const Lock = ({ ...props }) => {
         </>
     )
 }
+export const Back = ({ ...props }) => {
+    return (
+        <>
+            <svg width={props?.width} height={props?.height} viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.37109 13.0108L18.7461 13.0108" stroke={props?.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M10.1694 19.0353C10.1694 19.0353 4.37152 15.7743 4.37152 13.0123C4.37152 10.2483 10.1694 6.98625 10.1694 6.98625" stroke={props?.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+
+        </>
+    )
+}
 

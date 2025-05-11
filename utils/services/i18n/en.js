@@ -70,7 +70,6 @@ const en = {
   step_box_4_text_check_4: "News agency dashboard",
   step_box_4_text_check_5: "Journalist dashboard",
 
-
   // aimoonhub statistics
   aimoonhub_statistics_slogan:
     "Transparent and Accurate | Aimoonhub Statistics",
@@ -99,9 +98,6 @@ const en = {
   name_3: "Mohammad Karimi",
   occupation_3: "Technical Analyst",
   review_3: "Technical analysis alone isn't enough; news has a huge impact on the market. Aimoon Hub has helped me better understand which news events could shift market trends!",
-
-
-
 
   // plans
   plans_title: "Subscription plans suitable for every trading style",
@@ -151,7 +147,6 @@ const en = {
   question_4: "How can I purchase a professional or premium subscription?",
   answer_4: "You can purchase a professional or premium subscription by visiting the official website and selecting your preferred plan under the ‘Subscriptions’ section. You can also request a purchase through Telegram’s support channel.",
 
-
   // contact us
   contact_us: "Contact Us",
   title_contact_us:
@@ -162,20 +157,15 @@ const en = {
   write_here_message: "Write your message in the box below",
   send: "Send",
 
-
-
-
   // authors 
   author_list_title: "Author list",
   search_authors: "Search authors",
   author_worked: "Worked",
-  
+
   // providers
   provider_list_title: "Provider list",
   search_providers: "Search providers",
   provider_dec: "Provider authors",
-
-
 
   // footer
   address: "beheshti 47",
@@ -183,9 +173,6 @@ const en = {
   copyright: "© 2025 Aimoon Hub. All rights reserved",
 
   // dashboard
-
-  mood_day: "Mood day",
-  mood_week: "Mood week",
 
   register: "Register",
   login: "Login",
@@ -200,9 +187,13 @@ const en = {
 
   // dashboard-coin
 
+  coins_list: "Coins list",
   coin_list_title: "Select your desired coin to enter the dashboard",
   search_coin: "Search in coins",
   news_count: "News count",
+
+  coin_dashboard: "Coin dashboard",
+  all_information: "All information",
   description: "Description",
   word_cloud_coin: "<0>{{name}}</0> currency pair word cloud chart",
   news_summary: "<0>{{name}}</0> news summary",
@@ -232,8 +223,8 @@ const en = {
   negative: "Negative",
   neutral: "Neutral",
   sentiment: "Sentiment",
-
-  all_information: "All information",
+  mood_day: "Mood day",
+  mood_week: "Mood week",
 
   // date helper
   day_singular: "Day",

@@ -17,17 +17,23 @@ import MarqueeCoins from '../coin/containers/MarqueeCoins.js';
 
 import icon_notification from "../../../assets/icons/svg/icon-light-notification.svg";
 
+// Zustand
+
+import useAppStore from "../../app/stores/AppStore.js";
+
 
 const DashboardLanding = () => {
   // hooks
   const { t } = useTranslation();
+
+  const titlePage = useAppStore((state) => state.titlePage);
 
   // functions
   useEffect(() => {
     // Set new background color
     document.body.style.backgroundColor = "#1f1e2e";
 
-    return ()=>{
+    return () => {
       document.body.style.backgroundColor = "white";
     }
   }, []);
@@ -47,9 +53,9 @@ const DashboardLanding = () => {
             </div>
 
 
-            <h2 className="text-sm font-bold">{t("aimoonhub")}</h2>
+            <h2 className="text-sm font-bold">{t(titlePage)}</h2>
 
-            <TopButton> 
+            <TopButton>
               <Image src={icon_notification} alt={"icon_notification"} className={"w-6 h-6"} />
             </TopButton>
           </div>
