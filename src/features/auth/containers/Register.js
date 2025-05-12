@@ -73,7 +73,6 @@ const Register = () => {
                         <div className="text-xl font-bold ">{t(titlePage)}</div>
                         <div className="text-Neutral-300 text-base font-normal mt-3">{t("input_info_login")}</div>
                         {/* inputs */}
-                        {console.log(errors["email"])}
                         <div className="flex flex-col mt-3">
                             <InputEmail id="username" type="auth" label={t("email")} placeholder="aimoonhub@gmail.com" error={errors["email"]} />
                             <div className="text-Neutral-300 text-base font-normal mt-6 mb-3">لطفا رمز عبور خود را وارد نمایید.</div>

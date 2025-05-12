@@ -114,8 +114,6 @@ export const InputText = ({ className, ...props }) => {
 export const InputEmail = ({ className, ...props }) => {
   // hooks
   const { t } = useTranslation();
-
-  console.log(props)
   return (
     <>
       <label
@@ -137,9 +135,10 @@ export const InputEmail = ({ className, ...props }) => {
               className
             )}
             onBlur={() => {
-              document
-                .getElementById("input_email_validate")
-                .classList.add("hidden");
+              if (document.getElementById("input_email_validate"))
+                document
+                  .getElementById("input_email_validate")
+                  .classList.add("hidden");
             }}
             onFocus={() => {
               document.getElementById("danger_email").classList.add("hidden");
@@ -175,13 +174,13 @@ export const InputEmail = ({ className, ...props }) => {
             </div>
           </div>
           {/* input validate */}
-          {typeof props?.error !== 'undefined' && (
+          {typeof props?.error !== "undefined" && (
             <div
               id="input_email_validate"
               className="peer-focus:hidden absolute inset-x-0 mt-2 mx-3"
             >
               <div className="text-Error-400 text-xs font-medium">
-                {t("error_invalid_emailsss")}
+                {props?.error}
               </div>
             </div>
           )}

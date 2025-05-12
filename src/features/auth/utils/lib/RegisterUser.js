@@ -7,12 +7,10 @@ const RegisterUser = (navigate, parameter, setErrors, setSendRequest) => {
 
   ConnectToServer("post", userRegister, parameter, "", "RegisterUser").then((response) => {
     if (response?.data?.return) {
-      console.log(response)
       setSendRequest(false);
-      // navigate()
+      navigate("/login")
     }
     else {
-      console.log(response)
       setErrors({ email: "invalid_email" });
       setSendRequest(false);
     }
