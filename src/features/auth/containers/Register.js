@@ -6,14 +6,14 @@ import { useTranslation } from "react-i18next";
 
 import Languages from '../../core/components/Languages.jsx'
 import TopButton from '../../core/components/TopButton.jsx'
-import { InputText, InputPassword, InputRePassword } from '../../core/components/Input.jsx';
+import { InputText, InputPassword, InputRePassword, InputEmail } from '../../core/components/Input.jsx';
 import { ButtonNoLink } from '../../core/components/Button.jsx';
 import LoaderDotSpinner from '../../core/components/LoaderDotSpinner.jsx';
 import { Back } from '../../core/components/Icon.jsx';
 
 // Functions
 
-import LoginUser from "../utils/lib/LoginUser.js";
+import RegisterUser from '../utils/lib/RegisterUser.js';
 
 // Hooks
 
@@ -34,12 +34,17 @@ const Register = () => {
 
     const sendRequest = useAppStore((state) => state.sendRequest);
     const setSendRequest = useAppStore((state) => state.setSendRequest);
+
     const titlePage = useAppStore((state) => state.titlePage);
     const backAddress = useAppStore((state) => state.backAddress);
 
     const handleClick = () => {
+        const parameter = {
+            email: document.getElementById("username").value,
+            password: document.getElementById("ch_password")?.value
+        }
         if (!sendRequest)
-            LoginUser(navigate, "password", setErrors, setSendRequest);
+            RegisterUser(navigate, parameter, setErrors, setSendRequest);
         setSendRequest(true);
     };
 
@@ -68,16 +73,16 @@ const Register = () => {
                         <div className="text-xl font-bold ">{t(titlePage)}</div>
                         <div className="text-Neutral-300 text-base font-normal mt-3">{t("input_info_login")}</div>
                         {/* inputs */}
+                        {console.log(errors["email"])}
                         <div className="flex flex-col mt-3">
-                            <InputText id="username" label={t("email")} placeholder="aimoonhub@gmail.com" />
+                            <InputEmail id="username" type="auth" label={t("email")} placeholder="aimoonhub@gmail.com" error={errors["email"]} />
                             <div className="text-Neutral-300 text-base font-normal mt-6 mb-3">لطفا رمز عبور خود را وارد نمایید.</div>
-                            <div className='mb-9'>
+                            <div className='mb-7'>
                                 <InputPassword
                                     id="ch_password"
                                     type="change_password"
                                     label={t("password")}
                                     theme={"dark"}
-                                    error={errors["password"]}
                                 />
                             </div>
                             <div className=''>

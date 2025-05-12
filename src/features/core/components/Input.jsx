@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 // Components
 
 import { Image } from "../../core/components/Image.jsx"
-import { CloseSquare, Danger, Hide, Lock, Show } from "./Icon.jsx";
+import { CloseSquare, Danger, Email, Hide, Lock, Show } from "./Icon.jsx";
 
 // Functions
 
@@ -112,25 +112,103 @@ export const InputText = ({ className, ...props }) => {
   );
 }
 export const InputEmail = ({ className, ...props }) => {
+  // hooks
+  const { t } = useTranslation();
+
+  console.log(props)
   return (
     <>
-      <div className="flex flex-col">
-        <label
-          htmlFor={props?.id}
-          className="block text-base font-medium text-black px-6 mb-1"
-        >
-          {props?.label}
-        </label>
-        <input
-          {...props}
-          type="text"
-          id={props?.id}
-          className={cn(
-            "px-4 rounded-[20px] h-20 border-2 border-Neutral-50",
-            className
+      <label
+        htmlFor={props?.id}
+        className="block text-base font-medium text-Neutral-200 px-6 mb-1"
+      >
+        {props?.label}
+      </label>
+      {props?.type == "auth" ?
+        <div className="relative">
+
+          <input
+            {...props}
+            pattern="[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[a-zA-Z]{2,}(:[0-9]{1,5})?"
+            type="email"
+            placeholder="aimoonx@gmail.com"
+            className={cn(
+              "peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400  justify-between items-center relative",
+              className
+            )}
+            onBlur={() => {
+              document
+                .getElementById("input_email_validate")
+                .classList.add("hidden");
+            }}
+            onFocus={() => {
+              document.getElementById("danger_email").classList.add("hidden");
+              document.getElementById("close_email").classList.remove("hidden");
+              document.getElementById("close_email").classList.add("flex");
+            }}
+          />
+          <div
+            id="close_email"
+            className="absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center"
+          >
+            {props?.disabled !== "disabled" && (
+              <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 flex items-center">
+                <div className="p-2">
+                  <div className="flex cursor-pointer px-1" onClick={() => handleClear(props?.id)}>
+                    <CloseSquare width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div
+            id="danger_email"
+            className="hidden absolute top-[6px] rtl:left-[1px] ltr:right-[1px] rtl:pl-3 ltr:pr-3 items-center "
+          >
+            <div className="flex">
+              <Danger width={"24"} height={"24"} color={"#d71e1e"} />
+            </div>
+          </div>
+          <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
+            <div className="flex">
+              <Email width={"24"} height={"24"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+            </div>
+          </div>
+          {/* input validate */}
+          {typeof props?.error !== 'undefined' && (
+            <div
+              id="input_email_validate"
+              className="peer-focus:hidden absolute inset-x-0 mt-2 mx-3"
+            >
+              <div className="text-Error-400 text-xs font-medium">
+                {t("error_invalid_emailsss")}
+              </div>
+            </div>
           )}
-        />
-      </div>
+          <div className={`hidden peer-invalid:flex absolute mt-2 mx-3`}>
+            <div className="text-Error-400 text-xs font-medium">
+              {t("error_invalid_email")}</div>
+          </div>
+
+          {/* input validate */}
+        </div> : <div className="flex flex-col">
+          <label
+            htmlFor={props?.id}
+            className="block text-base font-medium text-black px-6 mb-1"
+          >
+            {props?.label}
+          </label>
+          <input
+            {...props}
+            type="text"
+            id={props?.id}
+            className={cn(
+              "px-4 rounded-[20px] h-20 border-2 border-Neutral-50",
+              className
+            )}
+          />
+        </div>}
+
     </>
   );
 };

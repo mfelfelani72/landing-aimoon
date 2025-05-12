@@ -65,7 +65,16 @@ export const Back = ({ ...props }) => {
                 <path d="M4.37109 13.0108L18.7461 13.0108" stroke={props?.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M10.1694 19.0353C10.1694 19.0353 4.37152 15.7743 4.37152 13.0123C4.37152 10.2483 10.1694 6.98625 10.1694 6.98625" stroke={props?.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-
+        </>
+    )
+}
+export const Email = ({ ...props }) => {
+    return (
+        <>
+            <svg width={props?.width} height={props?.height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5448 9.01904C17.5448 9.01904 14.3348 12.8717 11.9869 12.8717C9.64004 12.8717 6.39392 9.01904 6.39392 9.01904" stroke={props?.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path fillRule="evenodd" clipRule="evenodd" d="M2.45203 11.9688C2.45203 5.13075 4.83298 2.85205 11.9758 2.85205C19.1187 2.85205 21.4996 5.13075 21.4996 11.9688C21.4996 18.8059 19.1187 21.0856 11.9758 21.0856C4.83298 21.0856 2.45203 18.8059 2.45203 11.9688Z" stroke={props?.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
         </>
     )
 }
