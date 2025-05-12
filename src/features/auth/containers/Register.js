@@ -102,7 +102,7 @@ const Register = () => {
                                 className="hidden relative"
                             >
                                 <div className="text-white">
-                                    {t("register")}{" "}
+                                    {t("register")}
                                 </div>
                                 {sendRequest && <LoaderDotSpinner className={"rtl:left-0 ltr:right-0"} />}
                             </ButtonNoLink>

@@ -1,4 +1,4 @@
-import auth_en from "../../../src/features/author/utils/services/i18n/en"
+import auth_en from "../../../src/features/auth/utils/services/i18n/en"
 import author_en from "../../../src/features/author/utils/services/i18n/en"
 import coin_en from "../../../src/features/coin/utils/services/i18n/en"
 import dashboard_en from "../../../src/features/dashboard/utils/services/i18n/en"

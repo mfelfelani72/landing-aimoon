@@ -118,7 +118,7 @@ export const InputEmail = ({ className, ...props }) => {
     <>
       <label
         htmlFor={props?.id}
-        className="block text-base font-medium text-Neutral-200 px-6 mb-1"
+        className="text-base font-medium text-Neutral-300 px-3 mb-1"
       >
         {props?.label}
       </label>
@@ -129,7 +129,7 @@ export const InputEmail = ({ className, ...props }) => {
             {...props}
             pattern="[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[a-zA-Z]{2,}(:[0-9]{1,5})?"
             type="email"
-            placeholder="aimoonx@gmail.com"
+            placeholder={props?.placeholder}
             className={cn(
               "peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400  justify-between items-center relative",
               className
@@ -262,14 +262,14 @@ export const InputPassword = ({ className, ...props }) => {
     <>
       <label
         htmlFor={props?.id}
-        className="text-base font-medium text-Neutral-300 px-3 mb-1"
+        className="text-base font-medium text-Neutral-300 px-3"
       >
         {props?.label}
       </label>
       {/* password */}
       {props?.type == "password" && (
         <>
-          <div className="w-full relative">
+          <div className="w-full relative mt-1">
             <input
               {...props}
               type="password"
@@ -339,7 +339,7 @@ export const InputPassword = ({ className, ...props }) => {
                 <div className="text-Error-400 text-xs font-medium">{t(props?.error)}</div>
               </div>
             )}
-            <div className={`hidden peer-invalid:flex absolute mt-2 mx-3`}>
+            <div className="hidden peer-invalid:flex absolute my-2 mx-3">
               <div className="text-Error-400 text-xs font-medium">
                 {t("error_min_length_password")}
               </div>
@@ -351,7 +351,7 @@ export const InputPassword = ({ className, ...props }) => {
 
       {/* change_password */}
       {props?.type == "change_password" && (
-        <div className="w-full relative">
+        <div className="w-full relative mt-1">
           <input
             {...props}
             type="password"
@@ -399,11 +399,11 @@ export const InputRePassword = ({ ...props }) => {
     <>
       <label
         htmlFor={props?.id}
-        className="text-base font-medium text-Neutral-300 px-3 mb-1"
+        className="text-base font-medium text-Neutral-300 px-3"
       >
         {props?.label}
       </label>
-      <div className="w-full relative">
+      <div className="w-full relative mt-1">
         <input
           id={props?.id}
           type="password"

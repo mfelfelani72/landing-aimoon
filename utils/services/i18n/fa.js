@@ -1,4 +1,4 @@
-import auth_fa from "../../../src/features/author/utils/services/i18n/fa"
+import auth_fa from "../../../src/features/auth/utils/services/i18n/fa"
 import author_fa from "../../../src/features/author/utils/services/i18n/fa"
 import coin_fa from "../../../src/features/coin/utils/services/i18n/fa"
 import dashboard_fa from "../../../src/features/dashboard/utils/services/i18n/fa"

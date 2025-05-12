@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import Languages from '../../core/components/Languages.jsx'
 import TopButton from '../../core/components/TopButton.jsx'
-import { InputText, InputPassword } from '../../core/components/Input.jsx';
+import { InputEmail, InputPassword } from '../../core/components/Input.jsx';
 import { ButtonNoLink } from '../../core/components/Button.jsx';
 import LoaderDotSpinner from '../../core/components/LoaderDotSpinner.jsx';
 import { Back } from '../../core/components/Icon.jsx';
@@ -67,17 +67,17 @@ const Login = () => {
                         <div className="text-Neutral-300 text-base font-normal mt-3">{t("input_info_login")}</div>
                         {/* inputs */}
                         <div className="flex flex-col mt-3">
-                            <InputText id="username" label={t("email")} placeholder="aimoonhub@gmail.com" />
-                            <div className="text-Neutral-300 text-base font-normal mt-6 mb-3">لطفا رمز عبور خود را وارد نمایید.</div>
+                            <InputEmail id="username" type="auth" label={t("email")} placeholder="aimoonhub@gmail.com" />
+                            <div className="text-Neutral-300 text-base font-normal mt-6 mb-3">{t("enter_password")}</div>
                             <InputPassword
                                 id="password"
                                 type="password"
                                 label={t("password")}
                                 theme={"dark"}
-                                button_first_id="sign_in"
-                                button_secound_id="sign_in_disable"
+                                button_first_id="login"
+                                button_secound_id="login_disable"
                                 onChange={(event) => {
-                                    EnableButtonControl(event, "sign_in", "sign_in_disable");
+                                    EnableButtonControl(event, "login", "login_disable");
                                 }}
                                 error={errors["password"]}
                             />
@@ -86,7 +86,7 @@ const Login = () => {
                         {/* buttons */}
                         <div className="fixed bottom-4 w-84">
                             <ButtonNoLink
-                                id="sign_in"
+                                id="login"
                                 type="no_link"
                                 onClick={() => {
                                     handleClick();
@@ -94,15 +94,15 @@ const Login = () => {
                                 className="hidden relative"
                             >
                                 <div className="text-white">
-                                    {t("sign_in")}{" "}
+                                    {t("login")}
                                 </div>
                                 {sendRequest && <LoaderDotSpinner className={"rtl:left-0 ltr:right-0"} />}
                             </ButtonNoLink>
                             <ButtonNoLink
-                                id="sign_in_disable"
+                                id="login_disable"
                                 className="flex bg-Neutral-100 hover:bg-Neutral-100 focus:bg-Neutral-100 pointer-events-none cursor-default"
                             >
-                                <div className="text-white">{t("sign_in")}</div>
+                                <div className="text-white">{t("login")}</div>
                             </ButtonNoLink>
                         </div>
                     </div>

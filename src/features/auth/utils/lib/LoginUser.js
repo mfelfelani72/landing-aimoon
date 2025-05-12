@@ -12,18 +12,15 @@ const LoginUser = (navigate, param, setErrors, setSendRequest) => {
   const password = document.getElementById("password").value;
 
   const parameter = {
-    // email: username,
-    // password: password,
-    email: "pouyasoltani81@gmail.com",
-    password: "123",
+    email: username,
+    password: password,
   }
 
   ConnectToServer("post", userLogin, parameter, "", "login").then(
     (response) => {
-      console.log(response);
       if (response?.data?.return) {
         sessionStorage.setItem("session_id", response?.data?.user_token);
-        sessionStorage.setItem("key", response?.data?.user_id);
+        sessionStorage.setItem("key", response?.data?.username);
         setSendRequest(false);
         navigate("/dashboard/home", {
           state: { to_location: "/dashboard/home" },
