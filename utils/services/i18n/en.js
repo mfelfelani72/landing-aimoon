@@ -1,5 +1,6 @@
-import provider_en from "./provider/en"
+import auth_en from "./author/en"
 import author_en from "./author/en"
+import provider_en from "./provider/en"
 
 const global_en = {
   // global
@@ -251,8 +252,9 @@ const global_en = {
 
 const en = {
   ...global_en,
-  ...provider_en,
+  ...auth_en,
   ...author_en,
+  ...provider_en,
 };
 
 export default en;

@@ -1,5 +1,6 @@
-import provider_ar from "./provider/ar"
+import auth_ar from "./auth/ar"
 import author_ar from "./author/ar"
+import provider_ar from "./provider/ar"
 
 const global_ar = {
   // global
@@ -217,8 +218,9 @@ const global_ar = {
 
 const ar = {
   ...global_ar,
-  ...provider_ar,
+  ...auth_ar,
   ...author_ar,
+  ...provider_ar,
 };
 
 

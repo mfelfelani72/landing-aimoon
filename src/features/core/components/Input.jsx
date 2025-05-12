@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Components
 
 import { Image } from "../../core/components/Image.jsx"
-import { CloseSquare, Danger, Lock, Show } from "./Icon.jsx";
+import { CloseSquare, Danger, Hide, Lock, Show } from "./Icon.jsx";
 
 // Functions
 
 import { cn } from "../../../../utils/lib/cn";
+
+// Functions
 
 //  --> for remove value input and disable submit Button
 const handleClear = (id, first_id, secound_id, afterFunction) => {
@@ -27,22 +29,23 @@ const handleClear = (id, first_id, secound_id, afterFunction) => {
   }
 };
 //  --> for toggle show/hidden password
-const handleShow = (id, setIconStatus) => {
+const handleShow = (id) => {
   const input = document.getElementById(id);
-
   if (input.type === "text") {
     input.type = "password";
-    setIconStatus("show");
+    document.getElementById(id + "-show").classList.toggle("hidden");
+    document.getElementById(id + "-hide").classList.toggle("hidden");
   } else {
     input.type = "text";
-    setIconStatus("hide");
+    document.getElementById(id + "-show").classList.toggle("hidden");
+    document.getElementById(id + "-hide").classList.toggle("hidden");
   }
 };
 // --> for compare ch_password and ch_confirm_password
-const ComparePassword = (event, Button_id) => {
+const comparePassword = (event, button_id) => {
   const ch_password = document.getElementById("ch_password");
-  const Button1 = document.getElementById(Button_id);
-  const Button2 = document.getElementById(`${Button_id}_disable`);
+  const Button1 = document.getElementById(button_id);
+  const Button2 = document.getElementById(`${button_id}_disable`);
 
   if (ch_password.value !== event.target.value) {
     Button1.classList.add("hidden");
@@ -54,18 +57,18 @@ const ComparePassword = (event, Button_id) => {
   if (
     ch_password.value.slice(0, event.target.value.length) !== event.target.value
   ) {
-    event.target.classList.add("!focus:border-Error/400", "!border-Error/400");
+    event.target.classList.add("!focus:border-Error-400", "!border-Error-400");
     document.getElementById("error_message").classList.remove("hidden");
   } else {
-    if (ch_password.value === event.target.value) {
+    if (ch_password.value === event.target.value && ch_password.value.length !== 0 && event.target.value.length !== 0) {
       Button1.classList.add("flex");
       Button1.classList.remove("hidden");
       Button2.classList.add("hidden");
       Button2.classList.remove("flex");
       document.getElementById("error_message").classList.add("hidden");
       event.target.classList.remove(
-        "!focus:border-Error/400",
-        "!border-Error/400"
+        "!focus:border-Error-400",
+        "!border-Error-400"
       );
     }
   }
@@ -175,10 +178,8 @@ export const InputSearch = ({ className, ...props }) => {
   );
 }
 export const InputPassword = ({ className, ...props }) => {
+  // hooks
   const { t } = useTranslation();
-
-  // states
-  const [iconStatusPassword, setIconStatusPassword] = useState("show");
 
   return (
     <>
@@ -281,28 +282,27 @@ export const InputPassword = ({ className, ...props }) => {
             placeholder="xxxx xxxx xxxx xxxx"
             className="peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 invalid:focus:border-Error-400 invalid:border-Error-400 justify-between items-center relative"
           />
-          <div className="peer-invalid:hidden absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center ">
-            <div className="p-2">
-              <div
-                className="flex"
-                onClick={() => handleShow(props?.id, setIconStatusPassword)}
-              >
-                {iconStatusPassword == "show" ? <Show width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} /> : <CloseSquare width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />}
+          <div className="peer-invalid:hidden absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center cursor-pointer">
+            <div
+              className="flex"
+              onClick={() => handleShow(props?.id)}
+            >
+              <div id={props?.id + "-show"} className="">
+                <Show width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+              </div>
+              <div id={props?.id + "-hide"} className="hidden">
+                <Hide width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
               </div>
             </div>
           </div>
           <div className="hidden peer-invalid:flex absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 items-center ">
-            <div className="p-2">
-              <div className="flex">
-                <Danger width={"24"} height={"24"} color={"#d71e1e"} />
-              </div>
+            <div className="flex">
+              <Danger width={"24"} height={"24"} color={"#d71e1e"} />
             </div>
           </div>
           <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
-            <div className="">
-              <div className="flex">
-                <Lock width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
-              </div>
+            <div className="flex">
+              <Lock width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
             </div>
           </div>
           <div className="hidden peer-invalid:flex absolute my-2 mx-3">
@@ -312,6 +312,53 @@ export const InputPassword = ({ className, ...props }) => {
           </div>
         </div>
       )}
+    </>
+  );
+};
+export const InputRePassword = ({ ...props }) => {
+  // hooks
+  const { t } = useTranslation();
+  return (
+    <>
+      <label
+        htmlFor={props?.id}
+        className="text-base font-medium text-Neutral-300 px-3 mb-1"
+      >
+        {props?.label}
+      </label>
+      <div className="w-full relative">
+        <input
+          id={props?.id}
+          type="password"
+          placeholder="xxxx xxxx xxxx xxxx"
+          className="placeholder-Neutral/200 w-full px-[2.7rem] py-3 rounded-2xl bg-secondary/50 border border-secondary/100 focus:outline-none focus:ring-0 focus:border-secondary/400 justify-between items-center relative"
+          onChange={(event) => comparePassword(event, props?.button_id)}
+        />
+        <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center ">
+          <div
+            className="flex"
+            onClick={() => handleShow(props?.id)}
+          >
+            <div id={props?.id + "-show"} className="">
+              <Show width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+            </div>
+            <div id={props?.id + "-hide"} className="hidden">
+              <Hide width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
+          <div className="flex">
+            <Lock width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+          </div>
+        </div>
+
+        <div id="error_message" className="hidden absolute mt-2 mx-3">
+          <div className="text-Error-400 text-xs font-medium">
+            {t("error_re_password")}
+          </div>
+        </div>
+      </div>
     </>
   );
 };

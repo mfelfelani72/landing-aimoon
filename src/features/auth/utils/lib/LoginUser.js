@@ -11,17 +11,12 @@ const LoginUser = (navigate, param, setErrors, setSendRequest) => {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  console.log("fsdfsdf")
-
-
   const parameter = {
     // email: username,
     // password: password,
     email: "pouyasoltani81@gmail.com",
-    password: "123sdfsd",
+    password: "123",
   }
-
-
 
   ConnectToServer("post", userLogin, parameter, "", "login").then(
     (response) => {

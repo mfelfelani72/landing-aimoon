@@ -1,5 +1,6 @@
-import provider_fa from "./provider/fa"
+import auth_fa from "./author/fa"
 import author_fa from "./author/fa"
+import provider_fa from "./provider/fa"
 
 const global_fa = {
   // global
@@ -249,8 +250,9 @@ const global_fa = {
 
 const fa = {
   ...global_fa,
-  ...provider_fa,
+  ...auth_fa,
   ...author_fa,
+  ...provider_fa,
 };
 
 export default fa;
