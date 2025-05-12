@@ -103,11 +103,11 @@ const NewsBox = ({ className, children, ...props }) => {
                     y: props?.row?.Negative,
                     color: "#D80F0F",
                   }, {
-                    name: 'positive',
+                    name: t('positive'),
                     y: props?.row?.Positive,
                     color: "white",
                   }, {
-                    name: 'neutral',
+                    name: t('neutral'),
                     y: props?.row?.Neutral,
                     color: "#6A6783",
                   }]} />
@@ -130,7 +130,7 @@ const NewsBox = ({ className, children, ...props }) => {
               </TooltipWrapper>
 
             }
-  
+
             {props.row?.provider_info && <TooltipWrapper title={"Description of the provider"} description={"number of news per week / average number of news per week"} className={""}><div className='flex flex-col gap-1 justify-center items-center pointer-events-none'>
               <div className="text-base font-medium left-to-right">
                 {props.row?.provider_info["last_week_count"].toLocaleString() +

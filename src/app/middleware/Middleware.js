@@ -21,8 +21,6 @@ const Middleware = (location, navigate) => {
   // for prevent reload page
   for (let index = 0; index < NOT_RELOAD_ROUTES.length; index++)
     if (NOT_RELOAD_ROUTES[index][1].includes(location.pathname)) {
-      console.log(NOT_RELOAD_ROUTES[index][0])
-      console.log(IsLogin())
       if (NOT_RELOAD_ROUTES[index][0] === "is_login" && IsLogin() == true)
         navigate("/landing");
       else if (NOT_RELOAD_ROUTES[index][0] === "is_login" && IsLogin() == false)

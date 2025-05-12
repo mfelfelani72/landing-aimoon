@@ -67,10 +67,10 @@ const Register = () => {
                         <div className="text-Neutral-300 text-base font-normal mt-3">{t("input_info_login")}</div>
                         {/* inputs */}
                         <div className="flex flex-col mt-3">
-                            <InputText id="username" label={t("email")} placeholder="aimoonhub@gmail.com" />
+                            <InputText id="username" label={t("mohammad")} placeholder="aimoonhub@gmail.com" />
                             <div className="text-Neutral-300 text-base font-normal mt-6 mb-3">لطفا رمز عبور خود را وارد نمایید.</div>
                             <InputPassword
-                                id="password"
+                                id="ch_password"
                                 type="change_password"
                                 label={t("password")}
                                 theme={"dark"}

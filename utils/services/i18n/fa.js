@@ -1,4 +1,7 @@
-const fa = {
+import provider_fa from "./provider/fa"
+import author_fa from "./author/fa"
+
+const global_fa = {
   // global
   aimoonhub: "آیمون‌هاب",
 
@@ -242,6 +245,12 @@ const fa = {
   arabic: "عربی",
   light: "روشن",
   dark: "تیره",
+}
+
+const fa = {
+  ...global_fa,
+  ...provider_fa,
+  ...author_fa,
 };
 
 export default fa;

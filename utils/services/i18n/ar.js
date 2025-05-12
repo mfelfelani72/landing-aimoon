@@ -1,4 +1,7 @@
-const ar = {
+import provider_ar from "./provider/ar"
+import author_ar from "./author/ar"
+
+const global_ar = {
   // global
   aimoonhub: "أيمون هاب",
 
@@ -192,7 +195,7 @@ const ar = {
 
   all_information: "جميع المعلومات",
 
-   // date helper
+  // date helper
   day_singular: "يوم",
   day_plural: "أيام",
   hour_singular: "ساعة",
@@ -211,5 +214,12 @@ const ar = {
   light: "فاتح",
   dark: "غامق"
 };
+
+const ar = {
+  ...global_ar,
+  ...provider_ar,
+  ...author_ar,
+};
+
 
 export default ar;

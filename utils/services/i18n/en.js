@@ -1,4 +1,7 @@
-const en = {
+import provider_en from "./provider/en"
+import author_en from "./author/en"
+
+const global_en = {
   // global
   aimoonhub: "Aimoonhub",
 
@@ -244,6 +247,12 @@ const en = {
   arabic: "Arabic",
   light: "Light",
   dark: "Dark",
+};
+
+const en = {
+  ...global_en,
+  ...provider_en,
+  ...author_en,
 };
 
 export default en;

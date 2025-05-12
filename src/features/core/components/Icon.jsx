@@ -19,7 +19,19 @@ export const Show = ({ ...props }) => {
                 <path fillRule="evenodd" clipRule="evenodd" d="M15.1643 12.0516C15.1643 13.7976 13.7483 15.2136 12.0023 15.2136C10.2563 15.2136 8.84033 13.7976 8.84033 12.0516C8.84033 10.3046 10.2563 8.88965 12.0023 8.88965C13.7483 8.88965 15.1643 10.3046 15.1643 12.0516Z" stroke={props?.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 <path fillRule="evenodd" clipRule="evenodd" d="M2.75031 12.052C2.75031 15.332 6.8923 19.354 12.0023 19.354C17.1113 19.354 21.2543 15.335 21.2543 12.052C21.2543 8.769 17.1113 4.75 12.0023 4.75C6.8923 4.75 2.75031 8.772 2.75031 12.052Z" stroke={props?.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-
+        </>
+    )
+}
+export const Hide = ({ ...props }) => {
+    return (
+        <>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.42 17.7298C4.19 16.2698 2.75 14.0698 2.75 12.1398C2.75 8.85984 6.89 4.83984 12 4.83984C14.09 4.83984 16.03 5.50984 17.59 6.54984" stroke="#797882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.8497 8.61035C20.7407 9.74035 21.2597 10.9904 21.2597 12.1404C21.2597 15.4204 17.1097 19.4404 11.9997 19.4404C11.0897 19.4404 10.2007 19.3104 9.36969 19.0804" stroke="#797882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9.76572 14.3667C9.17072 13.7777 8.83772 12.9747 8.84072 12.1377C8.83672 10.3927 10.2487 8.97469 11.9947 8.97169C12.8347 8.96969 13.6407 9.30269 14.2347 9.89669" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15.1095 12.6992C14.8755 13.9912 13.8645 15.0042 12.5725 15.2412" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.8917 4.25L4.11768 20.024" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
 
         </>
     )
