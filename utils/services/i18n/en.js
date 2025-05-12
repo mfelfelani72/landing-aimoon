@@ -1,6 +1,9 @@
-import auth_en from "./author/en"
-import author_en from "./author/en"
-import provider_en from "./provider/en"
+import auth_en from "../../../src/features/author/utils/services/i18n/en"
+import author_en from "../../../src/features/author/utils/services/i18n/en"
+import coin_en from "../../../src/features/coin/utils/services/i18n/en"
+import dashboard_en from "../../../src/features/dashboard/utils/services/i18n/en"
+import home_en from "../../../src/features/home/utils/services/i18n/en"
+import provider_en from "../../../src/features/provider/utils/services/i18n/en"
 
 const global_en = {
   // global
@@ -254,6 +257,9 @@ const en = {
   ...global_en,
   ...auth_en,
   ...author_en,
+  ...coin_en,
+  ...dashboard_en,
+  ...home_en,
   ...provider_en,
 };
 

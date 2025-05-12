@@ -1,6 +1,9 @@
-import auth_fa from "./author/fa"
-import author_fa from "./author/fa"
-import provider_fa from "./provider/fa"
+import auth_fa from "../../../src/features/author/utils/services/i18n/fa"
+import author_fa from "../../../src/features/author/utils/services/i18n/fa"
+import coin_fa from "../../../src/features/coin/utils/services/i18n/fa"
+import dashboard_fa from "../../../src/features/dashboard/utils/services/i18n/fa"
+import home_fa from "../../../src/features/home/utils/services/i18n/fa"
+import provider_fa from "../../../src/features/provider/utils/services/i18n/fa"
 
 const global_fa = {
   // global
@@ -252,6 +255,9 @@ const fa = {
   ...global_fa,
   ...auth_fa,
   ...author_fa,
+  ...coin_fa,
+  ...dashboard_fa,
+  ...home_fa,
   ...provider_fa,
 };
 

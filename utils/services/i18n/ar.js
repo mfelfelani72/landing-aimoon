@@ -1,6 +1,9 @@
-import auth_ar from "./auth/ar"
-import author_ar from "./author/ar"
-import provider_ar from "./provider/ar"
+import auth_ar from "../../../src/features/auth/utils/services/i18n/ar"
+import author_ar from "../../../src/features/author/utils/services/i18n/ar"
+import coin_ar from "../../../src/features/coin/utils/services/i18n/ar"
+import dashboard_ar from "../../../src/features/dashboard/utils/services/i18n/ar"
+import home_ar from "../../../src/features/home/utils/services/i18n/ar"
+import provider_ar from "../../../src/features/provider/utils/services/i18n/ar"
 
 const global_ar = {
   // global
@@ -220,8 +223,10 @@ const ar = {
   ...global_ar,
   ...auth_ar,
   ...author_ar,
+  ...coin_ar,
+  ...dashboard_ar,
+  ...home_ar,
   ...provider_ar,
 };
-
 
 export default ar;
