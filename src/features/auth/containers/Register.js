@@ -75,7 +75,7 @@ const Register = () => {
                         {/* inputs */}
                         <div className="flex flex-col mt-3">
                             <InputEmail id="username" type="auth" label={t("email")} placeholder="aimoonhub@gmail.com" error={errors["email"]} />
-                            <div className="text-Neutral-300 text-base font-normal mt-6 mb-3">لطفا رمز عبور خود را وارد نمایید.</div>
+                            <div className="text-Neutral-300 text-base font-normal mt-6 mb-3">{t("enter_password")}</div>
                             <div className='mb-7'>
                                 <InputPassword
                                     id="ch_password"

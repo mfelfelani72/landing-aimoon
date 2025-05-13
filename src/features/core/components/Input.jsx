@@ -44,6 +44,7 @@ const handleShow = (id) => {
 // --> for compare ch_password and ch_confirm_password
 const comparePassword = (event, button_id) => {
   const ch_password = document.getElementById("ch_password");
+  const username = document.getElementById("username");
   const Button1 = document.getElementById(button_id);
   const Button2 = document.getElementById(`${button_id}_disable`);
 
@@ -180,7 +181,7 @@ export const InputEmail = ({ className, ...props }) => {
               className="peer-focus:hidden absolute inset-x-0 mt-2 mx-3"
             >
               <div className="text-Error-400 text-xs font-medium">
-                {props?.error}
+                {t(props?.error)}
               </div>
             </div>
           )}
@@ -359,7 +360,7 @@ export const InputPassword = ({ className, ...props }) => {
             placeholder="xxxx xxxx xxxx xxxx"
             className="peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 invalid:focus:border-Error-400 invalid:border-Error-400 justify-between items-center relative"
           />
-          <div className="peer-invalid:hidden absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center cursor-pointer">
+          <div className=" absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center">
             <div
               className="flex"
               onClick={() => handleShow(props?.id)}
@@ -370,11 +371,6 @@ export const InputPassword = ({ className, ...props }) => {
               <div id={props?.id + "-hide"} className="hidden">
                 <Hide width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
               </div>
-            </div>
-          </div>
-          <div className="hidden peer-invalid:flex absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 items-center ">
-            <div className="flex">
-              <Danger width={"24"} height={"24"} color={"#d71e1e"} />
             </div>
           </div>
           <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
@@ -408,10 +404,10 @@ export const InputRePassword = ({ ...props }) => {
           id={props?.id}
           type="password"
           placeholder="xxxx xxxx xxxx xxxx"
-          className="placeholder-Neutral/200 w-full px-[2.7rem] py-3 rounded-2xl bg-secondary/50 border border-secondary/100 focus:outline-none focus:ring-0 focus:border-secondary/400 justify-between items-center relative"
+          className="placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 justify-between items-center relative"
           onChange={(event) => comparePassword(event, props?.button_id)}
         />
-        <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center ">
+        <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center cursor-pointer">
           <div
             className="flex"
             onClick={() => handleShow(props?.id)}
