@@ -25,7 +25,7 @@ const DashboardLanding = () => {
   const navigate = useNavigate();
 
   // states and constants
-  const drawerLocation = "top";
+  const drawerLocation = "right";
 
   const titlePage = useAppStore((state) => state.titlePage);
   const backAddress = useAppStore((state) => state.backAddress);
