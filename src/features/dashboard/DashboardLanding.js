@@ -51,7 +51,7 @@ const DashboardLanding = () => {
         location={drawerLocation}
         className={"bg-background-light"}
       >
-        <div className='w-full bg-lime-300'>
+        <div className='w-64 bg-lime-300'>
           sdfsdf
         </div>
       </Drawer>
