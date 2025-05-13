@@ -26,8 +26,9 @@ const LoginUser = (navigate, param, setErrors, setSendRequest) => {
           state: { to_location: "/dashboard/home" },
         });
       } else if (response?.data?.return === false) {
+        console.log(response?.data)
         setSendRequest(false);
-        setErrors({ password: "login_invalid" });
+        setErrors({ password: "login_failed" });
         SetErrorOnInput({ type: param });
       }
     }

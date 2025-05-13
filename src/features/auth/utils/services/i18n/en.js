@@ -4,6 +4,7 @@ const en = {
   enter_password: "Please enter your password",
   password: "Password",
   login: "Login",
+  login_failed: "login failed",
 }
 
 export default en;

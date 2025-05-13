@@ -157,8 +157,6 @@
     background: linear-gradient(90deg, #9175EA 33.33%, #CC6E3C 33.33%);
   }
 
-
-
   .element-with-marquee {
     animation: marquee 100s linear infinite;
   }
@@ -224,6 +222,19 @@
     scrollbar-width: none;
     /* Firefox */
   }
+
+  /* for keep orginal color input */
+  .autofill-input-dark:-webkit-autofill {
+    -webkit-text-fill-color: white !important; 
+    -webkit-box-shadow: 0 0 0px 1000px #28263a inset !important;
+  }
+  
+  .autofill-input-dark:-webkit-autofill:hover,
+  .autofill-input-dark:-webkit-autofill:focus {
+    -webkit-text-fill-color: #eee !important;
+    -webkit-box-shadow: 0 0 0px 1000px #28263a inset !important;
+  }
+
 }
 
 @theme {

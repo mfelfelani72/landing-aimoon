@@ -131,7 +131,7 @@ export const InputEmail = ({ className, ...props }) => {
             type="email"
             placeholder={props?.placeholder}
             className={cn(
-              "peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400  justify-between items-center relative",
+              "autofill-input-dark peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400  justify-between items-center relative",
               className
             )}
             onBlur={() => {

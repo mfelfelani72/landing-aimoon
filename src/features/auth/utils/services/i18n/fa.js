@@ -4,6 +4,7 @@ const fa = {
   enter_password: "لطفا رمز عبور خود را وارد نمایید",
   password: "کلمه عبور",
   login: "ورود",
+  login_failed: "ورود ناموفق بود",
 }
 
 export default fa;
