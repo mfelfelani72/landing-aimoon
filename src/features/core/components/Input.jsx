@@ -276,7 +276,7 @@ export const InputPassword = ({ className, ...props }) => {
               minLength={5}
               placeholder="xxxx xxxx xxxx xxxx"
               className={cn(
-                "placeholder-Neutral-200 w-full px-[2.5rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 justify-between items-center relative",
+                "peer placeholder-Neutral-200 w-full px-[2.5rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 justify-between items-center relative",
                 className
               )}
               onBlur={() => {

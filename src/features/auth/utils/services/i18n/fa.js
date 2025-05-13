@@ -5,6 +5,7 @@ const fa = {
   password: "کلمه عبور",
   login: "ورود",
   login_failed: "ورود ناموفق بود",
+  error_min_length_password: "حداقل 5 کاراکتر",
 }
 
 export default fa;
