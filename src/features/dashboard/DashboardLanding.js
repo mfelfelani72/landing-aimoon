@@ -8,6 +8,7 @@ import TopButton from '../core/components/TopButton.jsx'
 import { Back } from "../../features/core/components/Icon.jsx"
 import Navigation from "../core/components/Navigation.jsx"
 import Languages from "../core/components/Languages.jsx"
+import Drawer from "../core/components/Drawer.jsx"
 
 // Containers
 
@@ -23,11 +24,15 @@ const DashboardLanding = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
+  // states and constants
+  const drawerLocation = "top";
+
   const titlePage = useAppStore((state) => state.titlePage);
   const backAddress = useAppStore((state) => state.backAddress);
 
   // functions
   useEffect(() => {
+
     // Set new background color
     document.body.style.backgroundColor = "#1f1e2e";
 
@@ -40,6 +45,16 @@ const DashboardLanding = () => {
     <>
       <div className="fixed inset-y-0 left-0  w-[calc(50%-12rem)] bg-white z-[100]"></div>
       <div className="fixed inset-y-0 right-0 w-[calc(50%-12rem)] bg-white z-[100]"></div>
+      <Drawer
+        id="drawer-card"
+        overlayId="clickableOverlay"
+        location={drawerLocation}
+        className={"bg-background-light"}
+      >
+        <div className='w-full bg-lime-300'>
+          sdfsdf
+        </div>
+      </Drawer>
 
       <div className='w-full h-screen inline-flex justify-center relative z-[10]'>
         <div className='mobile w-96 bg-Neutral-500 text-white'>

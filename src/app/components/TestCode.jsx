@@ -1,30 +1,24 @@
 import React from 'react';
-import { DonutChart } from '../../features/core/components/Chart.jsx';
+import Drawer from '../../features/core/components/Drawer.jsx';
 
 
 
 
 const CleanSplineChart = () => {
-
-  const data = [{
-    name: 'Spain',
-    y: 150,
-    z: 150 / 3 * 100,
-    color: "#4caefe",
-  }, {
-    name: 'France',
-    y: 26,
-    z: 26 / 3 * 100,
-    color: "#3dc3e8",
-  }, {
-    name: 'Poland',
-    y: 68,
-    z: 68 / 3 * 100,
-    color: "#2dd9db",
-  },]
+  const drawerLocation = "bottom";
 
   return (
-    <DonutChart data={data} />
+
+    <Drawer
+      id="drawer-card"
+      overlayId="clickableOverlay"
+      location={drawerLocation}
+    >
+      <div className=' bg-lime-500'>
+        sdfsdf
+      </div>
+    </Drawer>
+
   );
 };
 
