@@ -277,7 +277,7 @@ export const InputPassword = ({ className, ...props }) => {
               minLength={5}
               placeholder="xxxx xxxx xxxx xxxx"
               className={cn(
-                "peer placeholder-Neutral-200 w-full px-[2.5rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 justify-between items-center relative",
+                "autofill-input-dark peer placeholder-Neutral-200 w-full px-[2.5rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 justify-between items-center relative",
                 className
               )}
               onBlur={() => {
@@ -358,7 +358,7 @@ export const InputPassword = ({ className, ...props }) => {
             type="password"
             minLength={5}
             placeholder="xxxx xxxx xxxx xxxx"
-            className="peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 invalid:focus:border-Error-400 invalid:border-Error-400 justify-between items-center relative"
+            className="autofill-input-dark peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 invalid:focus:border-Error-400 invalid:border-Error-400 justify-between items-center relative"
           />
           <div className=" absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center">
             <div
@@ -404,7 +404,7 @@ export const InputRePassword = ({ ...props }) => {
           id={props?.id}
           type="password"
           placeholder="xxxx xxxx xxxx xxxx"
-          className="placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 justify-between items-center relative"
+          className="autofill-input-dark placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-2xl bg-background-light border border-secondary-100 focus:outline-none focus:ring-0 focus:border-secondary-400 justify-between items-center relative"
           onChange={(event) => comparePassword(event, props?.button_id)}
         />
         <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center cursor-pointer">
