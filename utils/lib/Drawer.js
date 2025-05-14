@@ -1,15 +1,15 @@
-export const ShowDrawer = ({ location = "bottom", drawerId, overlayId }) => {
+export const ShowDrawer = ({ drawerLocation = "bottom", drawerId, overlayId }) => {
   let translate = "translate-y-full";
   const drawer = document.getElementById(drawerId);
   const overlay = document.getElementById(overlayId);
 
-  if (location === "bottom") {
+  if (drawerLocation === "bottom") {
     translate = "translate-y-full";
-  } else if (location === "top") {
+  } else if (drawerLocation === "top") {
     translate = "-translate-y-full";
-  } else if (location === "left") {
+  } else if (drawerLocation === "left") {
     translate = "-translate-x-full";
-  } else if (location === "right") {
+  } else if (drawerLocation === "right") {
     translate = "translate-x-full";
   }
 
@@ -45,5 +45,6 @@ export const CloseDrawer = ({ location = "bottom", drawerId, overlayId }) => {
   }, 200);
 
   overlay.classList.add("hidden");
+  // overlay.classList.remove("inline-flex");
   document.body.style.overflow = "auto";
 };

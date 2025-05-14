@@ -17,6 +17,7 @@ import MarqueeCoins from '../coin/containers/MarqueeCoins.js';
 // Zustand
 
 import useAppStore from "../../app/stores/AppStore.js";
+import { ShowDrawer } from '../../../utils/lib/Drawer.js';
 
 
 const DashboardLanding = () => {
@@ -25,7 +26,12 @@ const DashboardLanding = () => {
   const navigate = useNavigate();
 
   // states and constants
-  const drawerLocation = "right";
+
+  const configureDrawer = {
+    drawerLocation: "right",
+    drawerId: "drawer_menu",
+    overlayId: "clickableOverlay",
+  }
 
   const titlePage = useAppStore((state) => state.titlePage);
   const backAddress = useAppStore((state) => state.backAddress);
@@ -43,15 +49,17 @@ const DashboardLanding = () => {
 
   return (
     <>
-      <div className="fixed inset-y-0 left-0  w-[calc(50%-12rem)] bg-white z-[100]"></div>
-      <div className="fixed inset-y-0 right-0 w-[calc(50%-12rem)] bg-white z-[100]"></div>
+      <div className="fixed inset-y-0 left-0  w-[calc(50%-12rem)] bg-white z-[999]"></div>
+      <div className="fixed inset-y-0 right-0 w-[calc(50%-12rem)] bg-white z-[999]"></div>
       <Drawer
-        id="drawer-card"
-        overlayId="clickableOverlay"
-        location={drawerLocation}
-        className={"bg-background-light"}
+        id={configureDrawer?.drawerId}
+        overlayId={configureDrawer?.overlayId}
+        location={configureDrawer?.drawerLocation}
+        className={"bg-background-light w-96"}
       >
-        <div className='w-64 bg-lime-300'>
+        <div
+
+          className='w-64 bg-lime-300'>
           sdfsdf
         </div>
       </Drawer>
@@ -64,6 +72,8 @@ const DashboardLanding = () => {
             <div className='text-Neutral-500'>
               <Languages />
             </div>
+
+            <div onClick={() => ShowDrawer(configureDrawer)} className=''>sdfsd</div>
 
 
             <h2 className="text-sm font-bold">{t(titlePage)}</h2>
