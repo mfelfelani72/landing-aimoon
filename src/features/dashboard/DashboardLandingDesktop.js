@@ -19,6 +19,8 @@ import {
   DesktopNavActiveOuter,
   DesktopNavBlackHole,
   DesktopNavWallet,
+  BackgoundAimoonLogo,
+  DesktopBackgoundSyncth,
 } from "../../features/core/components/Icon.jsx";
 import Navigation from "../core/components/Navigation.jsx";
 import Languages from "../core/components/Languages.jsx";
@@ -52,8 +54,15 @@ const DashboardLanding = () => {
   return (
     <>
       {/* top header */}
-      <div className="fixed top-0 w-full inline-flex z-[100] bg-background justify-between ">
-        <div className="w-1/6  h-dvh flex flex-col  justify-between">
+      <div className="flex flex-row">
+        <div className="relative w-[21rem]  h-dvh inline-flex flex-col  justify-between overflow-auto">
+          <div className="absolute -top-[2rem] -left-[3rem] w-full h-full z-[20]">
+            <div className="w-36 h-36 opacity-60 bg-violet-300/30 rounded-full blur-2xl" />
+          </div>
+
+          <div className="absolute top-0 left-0 w-full h-full z-[10]">
+            <BackgoundAimoonLogo />
+          </div>
           <div className="flex flex-row items-center justify-center pt-16 px-10 w-full gap-2">
             <DesktopLogo width={"34"} height={"30"} />
 
@@ -88,7 +97,6 @@ const DashboardLanding = () => {
                   Latest News
                 </div>
               </div>
-              
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
@@ -128,24 +136,28 @@ const DashboardLanding = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="w-full flex flex-col gap-2 justify-center items-center">
-              <div className="rotate-2">
-                <DesktopNavWallet
-                  width={"139"}
-                  height={"139"}
-                  
+            <div className="w-full relative inline-flex flex-col gap-2 justify-center items-center">
+              <div className="absolute top-[1.75rem] left-[5rem] w-full h-full z-[20]">
+                <div className="w-36 h-36 opacity-60 bg-violet-300/30 rounded-full blur-2xl" />
+              </div>
+              <div className="rotate-2 z-30">
+                <DesktopNavWallet width={"139"} height={"139"} />
+              </div>
+              <div>
+                <DesktopNavBlackHole
+                  width={"123"}
+                  height={"24"}
+                  color={"#161521"}
                 />
               </div>
-              <DesktopNavBlackHole
-                width={"123"}
-                height={"24"}
-                color={"#161521"}
-              />
             </div>
 
             <div className="w-[60%] my-4 h-0 mx-auto outline-1 outline-offset-[-0.50px] outline-Neutral-400" />
 
-            <div className="flex flex-col items-end px-6 gap-2 pb-16">
+            <div className="relative inline-flex flex-col items-end px-6 gap-2 pb-16">
+              <div className="absolute -top-[15rem] -left-[5rem] w-full h-full z-[20]">
+                <DesktopBackgoundSyncth />
+              </div>
               <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center gap-2">
                   <DesktopNavConfig
@@ -185,7 +197,7 @@ const DashboardLanding = () => {
             </div>
           </div>
         </div>
-        <div className="w-5/6 bg-amber-950">
+        <div className="w-full bg-amber-950">
           {backAddress && (
             <TopButton onClick={() => navigate(backAddress)}>
               <Back width={"14"} height={"14"} color={"white"} />
