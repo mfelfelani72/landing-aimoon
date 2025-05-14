@@ -32,7 +32,7 @@ const Drawer = ({ children, className, ...props }) => {
     contentClass = "flex-row h-full";
     handle = "rotate-90";
   } else if (props?.location == "right") {
-    inset = "inset-y-0 right-0 xs:right-[calc(50%-5rem)] translate-x-full z-[101]";
+    inset = "inset-y-0 right-0 xs:right-[calc(50%-16rem)] translate-x-full z-[101]";
     moreClass = "h-full rounded-l-lg py-4 pr-4";
     contentClass = "flex-row-reverse h-full";
     handle = "rotate-90";

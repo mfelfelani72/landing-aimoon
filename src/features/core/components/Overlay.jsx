@@ -8,7 +8,7 @@ export const ClickableOverlay = ({ className, ...props }) => {
   return (
     <div
       id={props?.overlayId}
-      className="fixed hidden w-[25rem] h-screen mx-[calc(50%-12rem)] bg-lime-500 opacity-10 z-[100] cursor-pointer"
+      className="fixed hidden w-[25rem] h-screen mx-[calc(50%-12rem)] bg-black opacity-10 z-[100] cursor-pointer"
       onClick={() => props?.function(props)}
     ></div>
   );
