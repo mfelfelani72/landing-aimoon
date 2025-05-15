@@ -4,7 +4,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 
 // Components
 
-import TopButton from "../core/components/TopButton.jsx";
+import TopButton from "../../../core/components/TopButton.jsx";
 import {
   Back,
   DesktopLogo,
@@ -21,17 +21,17 @@ import {
   DesktopNavWallet,
   BackgoundAimoonLogo,
   DesktopBackgoundSyncth,
-} from "../../features/core/components/Icon.jsx";
-import Navigation from "../core/components/Navigation.jsx";
-import Languages from "../core/components/Languages.jsx";
+} from "../../../core/components/Icon.jsx";
+import Navigation from "../../../core/components/Navigation.jsx";
+import Languages from "../../../core/components/Languages.jsx";
 
 // Containers
 
-import MarqueeCoins from "../coin/containers/MarqueeCoins.js";
+import MarqueeCoins from "../../../coin/containers/MarqueeCoins.js";
 
 // Zustand
 
-import useAppStore from "../../app/stores/AppStore.js";
+import useAppStore from "../../../../app/stores/AppStore.js";
 
 const DashboardLanding = () => {
   // hooks
@@ -197,7 +197,7 @@ const DashboardLanding = () => {
             </div>
           </div>
         </div>
-        <div className="w-full bg-amber-950">
+        <div className="w-full bg-background-light">
           {backAddress && (
             <TopButton onClick={() => navigate(backAddress)}>
               <Back width={"14"} height={"14"} color={"white"} />
