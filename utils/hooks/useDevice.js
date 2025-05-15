@@ -1,10 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
 
 const useDevice = () => {
+    // states
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
 
+    // functions
     useEffect(() => {
         // Detect touch device
         setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
