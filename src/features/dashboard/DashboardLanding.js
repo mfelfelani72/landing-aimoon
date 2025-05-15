@@ -13,12 +13,15 @@ import Drawer from "../core/components/Drawer.jsx"
 // Containers
 
 import MarqueeCoins from '../coin/containers/MarqueeCoins.js';
+import HumbergerMenu from './containers/HumbergerMenu.js';
+
+// Functions
+
+import { ShowDrawer } from '../../../utils/lib/Drawer.js';
 
 // Zustand
 
 import useAppStore from "../../app/stores/AppStore.js";
-import { ShowDrawer } from '../../../utils/lib/Drawer.js';
-
 
 const DashboardLanding = () => {
   // hooks
@@ -57,11 +60,7 @@ const DashboardLanding = () => {
         location={configureDrawer?.drawerLocation}
         className={"bg-background-light w-96"}
       >
-        <div
-
-          className='w-64 bg-lime-300'>
-          sdfsdf
-        </div>
+        <HumbergerMenu />
       </Drawer>
 
       <div className='w-full h-screen inline-flex justify-center relative z-[10]'>
