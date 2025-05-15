@@ -60,7 +60,7 @@ const Drawer = ({ children, className, ...props }) => {
             <div className="w-8 h-1 bg-Neutral-500 rounded-[6.25rem]"></div>
           </div>
 
-          <div className="mt-4" id={`drawer-content-${props?.id}`}>
+          <div className="mt-4 w-full" id={`drawer-content-${props?.id}`}>
             {children}
           </div>
         </div>
