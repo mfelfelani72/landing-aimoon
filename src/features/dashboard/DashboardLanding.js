@@ -28,7 +28,7 @@ const DashboardLanding = () => {
   // states and constants
 
   const configureDrawer = {
-    drawerLocation: "left",
+    drawerLocation: "right",
     drawerId: "drawer_menu",
     overlayId: "clickableOverlay",
   }
