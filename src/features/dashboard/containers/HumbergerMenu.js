@@ -1,9 +1,9 @@
 import React from "react";
 import {
-  DesktopNavLogout,
+  LogoutIcon,
   SunIcon,
   AboutIcon,
-  DesktopNavNotification,
+  NotificationIcon,
   LangIcon,
   BackgoundAimoonLogo,
 } from "../../core/components/Icon.jsx";
@@ -37,7 +37,7 @@ const HumbergerMenu = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full ">
               <div className="w-full ">
                 <InputSearch
                   id="hamburger-search"
@@ -49,12 +49,12 @@ const HumbergerMenu = () => {
             <div className="flex flex-col w-full items-end">
               <div className="cursor-pointer flex  flex-row  justify-between w-full px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center gap-2">
-                  <DesktopNavNotification
-                    width={"1.5rem"}
-                    height={"1.5rem"}
+                  <NotificationIcon
+                    width={"1.25rem"}
+                    height={"1.25rem"}
                     color={"white"}
                   />
-                  <div className=" text-[white] text-base   font-bold leading-9">
+                  <div className="  text-right justify-start text-white text-sm font-medium  leading-tight tracking-tight">
                     اعلانات
                   </div>
                 </div>
@@ -65,11 +65,11 @@ const HumbergerMenu = () => {
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <AboutIcon
-                    width={"1.5rem"}
-                    height={"1.5rem"}
+                    width={"1.25rem"}
+                    height={"1.25rem"}
                     color={"white"}
                   />
-                  <div className=" text-[white] text-base   font-bold leading-9">
+                  <div className="   text-right justify-start text-white text-sm font-medium  leading-tight tracking-tight">
                     درباره آیمون هاب
                   </div>
                 </div>
@@ -77,57 +77,62 @@ const HumbergerMenu = () => {
               <div className="cursor-pointer flex  flex-row  justify-between w-full px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center gap-2">
                   <LangIcon
-                    width={"1.5rem"}
-                    height={"1.5rem"}
+                    width={"1.25rem"}
+                    height={"1.25rem"}
                     color={"white"}
                   />
-                  <div className=" text-[white] text-base   font-bold leading-9">
+                  <div className="   text-right justify-start text-white text-sm font-medium  leading-tight tracking-tight">
                     تغییر زبان
                   </div>
                 </div>
               </div>
               <div className="cursor-pointer flex  flex-row  justify-between  items-center w-full px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center  gap-2">
-                  <SunIcon width={"1.5rem"} height={"1.5rem"} color={"white"} />
-                  <div className=" text-[white] text-base   font-bold leading-9">
+                  <SunIcon
+                    width={"1.25rem"}
+                    height={"1.25rem"}
+                    color={"white"}
+                  />
+                  <div className="   text-right justify-start text-white text-sm font-medium  leading-tight tracking-tight">
                     حالت روشن
                   </div>
                 </div>
 
-                
-<label class="inline-flex items-center relative">
-  <input class="peer hidden" id="toggle" type="checkbox" />
-  <div
-    class="relative w-[110px] h-[50px] bg-white peer-checked:bg-zinc-500 rounded-full after:absolute after:content-[''] after:w-[40px] after:h-[40px] after:bg-gradient-to-r from-orange-500 to-yellow-400 peer-checked:after:from-zinc-900 peer-checked:after:to-zinc-900 after:rounded-full after:top-[5px] after:left-[5px] active:after:w-[50px] peer-checked:after:left-[105px] peer-checked:after:translate-x-[-100%] shadow-sm duration-300 after:duration-300 after:shadow-md"
-  ></div>
-  <svg
-    height="0"
-    width="100"
-    viewBox="0 0 24 24"
-    data-name="Layer 1"
-    id="Layer_1"
-    xmlns="http://www.w3.org/2000/svg"
-    class="fill-white peer-checked:opacity-60 absolute w-6 h-6 left-[13px]"
-  >
-    <path
-      d="M12,17c-2.76,0-5-2.24-5-5s2.24-5,5-5,5,2.24,5,5-2.24,5-5,5ZM13,0h-2V5h2V0Zm0,19h-2v5h2v-5ZM5,11H0v2H5v-2Zm19,0h-5v2h5v-2Zm-2.81-6.78l-1.41-1.41-3.54,3.54,1.41,1.41,3.54-3.54ZM7.76,17.66l-1.41-1.41-3.54,3.54,1.41,1.41,3.54-3.54Zm0-11.31l-3.54-3.54-1.41,1.41,3.54,3.54,1.41-1.41Zm13.44,13.44l-3.54-3.54-1.41,1.41,3.54,3.54,1.41-1.41Z"
-    ></path>
-  </svg>
-  <svg
-    height="512"
-    width="512"
-    viewBox="0 0 24 24"
-    data-name="Layer 1"
-    id="Layer_1"
-    xmlns="http://www.w3.org/2000/svg"
-    class="fill-black opacity-60 peer-checked:opacity-70 peer-checked:fill-white absolute w-6 h-6 right-[13px]"
-  >
-    <path
-      d="M12.009,24A12.067,12.067,0,0,1,.075,10.725,12.121,12.121,0,0,1,10.1.152a13,13,0,0,1,5.03.206,2.5,2.5,0,0,1,1.8,1.8,2.47,2.47,0,0,1-.7,2.425c-4.559,4.168-4.165,10.645.807,14.412h0a2.5,2.5,0,0,1-.7,4.319A13.875,13.875,0,0,1,12.009,24Zm.074-22a10.776,10.776,0,0,0-1.675.127,10.1,10.1,0,0,0-8.344,8.8A9.928,9.928,0,0,0,4.581,18.7a10.473,10.473,0,0,0,11.093,2.734.5.5,0,0,0,.138-.856h0C9.883,16.1,9.417,8.087,14.865,3.124a.459.459,0,0,0,.127-.465.491.491,0,0,0-.356-.362A10.68,10.68,0,0,0,12.083,2ZM20.5,12a1,1,0,0,1-.97-.757l-.358-1.43L17.74,9.428a1,1,0,0,1,.035-1.94l1.4-.325.351-1.406a1,1,0,0,1,1.94,0l.355,1.418,1.418.355a1,1,0,0,1,0,1.94l-1.418.355-.355,1.418A1,1,0,0,1,20.5,12ZM16,14a1,1,0,0,0,2,0A1,1,0,0,0,16,14Zm6,4a1,1,0,0,0,2,0A1,1,0,0,0,22,18Z"
-    ></path>
-  </svg>
-</label>
+                <label class="inline-flex items-center relative">
+                  <input
+                    class="peer hidden"
+                    id="toggle"
+                    type="checkbox"
+                    checked
+                  />
+                  <div
+                    class="relative w-[55px] h-[32px] bg-white peer-checked:bg-zinc-500 rounded-full 
+            after:absolute after:content-[''] after:w-[24px] after:h-[24px] 
+            after:rounded-full after:top-[4px] after:left-[4px] 
+            after:bg-[linear-gradient(to_right,_#f97316,_#facc15)] 
+            peer-checked:after:bg-[linear-gradient(to_right,_#18181b,_#18181b)] 
+            active:after:w-[30px] peer-checked:after:left-[51px] 
+            peer-checked:after:translate-x-[-100%] 
+            shadow-sm duration-300 after:duration-300 after:shadow-md"
+                  ></div>
 
+                  <SunIcon
+                    width={"1.25rem"}
+                    height={"1.25rem"}
+                    color={"white"}
+                    className="fill-white peer-checked:opacity-60 absolute w-4 h-4 left-[8px]"
+                  />
+
+                  <svg
+                    height="512"
+                    width="512"
+                    viewBox="0 0 24 24"
+                    class="fill-black opacity-60 peer-checked:opacity-70 peer-checked:fill-white absolute w-4 h-4 right-[8px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12.009,24A12.067,12.067,0,0,1,.075,10.725,12.121,12.121,0,0,1,10.1.152a13,13,0,0,1,5.03.206,2.5,2.5,0,0,1,1.8,1.8,2.47,2.47,0,0,1-.7,2.425c-4.559,4.168-4.165,10.645.807,14.412h0a2.5,2.5,0,0,1-.7,4.319A13.875,13.875,0,0,1,12.009,24Zm.074-22a10.776,10.776,0,0,0-1.675.127,10.1,10.1,0,0,0-8.344,8.8A9.928,9.928,0,0,0,4.581,18.7a10.473,10.473,0,0,0,11.093,2.734.5.5,0,0,0,.138-.856h0C9.883,16.1,9.417,8.087,14.865,3.124a.459.459,0,0,0,.127-.465.491.491,0,0,0-.356-.362A10.68,10.68,0,0,0,12.083,2ZM20.5,12a1,1,0,0,1-.97-.757l-.358-1.43L17.74,9.428a1,1,0,0,1,.035-1.94l1.4-.325.351-1.406a1,1,0,0,1,1.94,0l.355,1.418,1.418.355a1,1,0,0,1,0,1.94l-1.418.355-.355,1.418A1,1,0,0,1,20.5,12ZM16,14a1,1,0,0,0,2,0A1,1,0,0,0,16,14Zm6,4a1,1,0,0,0,2,0A1,1,0,0,0,22,18Z"></path>
+                  </svg>
+                </label>
               </div>
             </div>
           </div>
@@ -140,14 +145,14 @@ const HumbergerMenu = () => {
                   <BackgoundAimoonLogo />
                 </div>
                 <div className="absolute top-[10rem] -right-[3rem] w-full h-full z-[100]">
-                <div className="w-40 h-40 left-0 top-0 absolute origin-top-left rotate-180 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
+                  <div className="w-40 h-40 left-0 top-0 absolute origin-top-left rotate-180 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
                 </div>
-                <DesktopNavLogout
-                  width={"1.5rem"}
-                  height={"1.5rem"}
+                <LogoutIcon
+                  width={"1.25rem"}
+                  height={"1.25rem"}
                   color={"#DC815D"}
                 />
-                <div className=" text-[#DC815D] text-base  font-bold leading-9">
+                <div className="   text-right justify-start text-primary-300 text-base font-bold  leading-tight tracking-tight">
                   خروج از حساب
                 </div>
               </div>
