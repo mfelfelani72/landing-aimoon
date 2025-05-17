@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 // Components
 
-import TopButton from "../../../core/components/TopButton.jsx";
 import {
   Back,
   DesktopLogo,
@@ -22,8 +21,6 @@ import {
   BackgoundAimoonLogo,
   DesktopBackgoundSyncth,
 } from "../../../core/components/Icon.jsx";
-import Navigation from "../../../core/components/Navigation.jsx";
-import Languages from "../../../core/components/Languages.jsx";
 
 // Containers
 
@@ -36,16 +33,15 @@ import useAppStore from "../../../../app/stores/AppStore.js";
 const DashboardLanding = () => {
   // hooks
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
+  // state
   const titlePage = useAppStore((state) => state.titlePage);
-  const backAddress = useAppStore((state) => state.backAddress);
 
   return (
     <>
-      {/* top header */}
       <div className="flex flex-row">
-        <div className="relative w-[21rem] h-dvh inline-flex flex-col bg-background-light justify-between overflow-auto z-[100]">
+        {/* sidebar */}
+        <div className="fixed w-[21rem] h-dvh inline-flex flex-col bg-background-light justify-between overflow-x-clip overflow-y-auto z-[100]">
           <div className="absolute -top-[2rem] -left-[3rem] w-full h-full z-[20]">
             <div className="w-36 h-36 opacity-60 bg-violet-300/30 rounded-full blur-2xl" />
           </div>
@@ -187,26 +183,20 @@ const DashboardLanding = () => {
             </div>
           </div>
         </div>
-        <div className="w-full bg-background">
+
+        {/* content */}
+        <div className="flex flex-col h-screen ltr:ml-[21rem] rtl:mr-[21rem] w-full bg-background text-white">
+
           <MarqueeCoins
-            className={"text-white fixed top-[2rem] right-0 bg-background z-[99] mb-4"}
+            className={"fixed top-[1rem] right-0 bg-background z-[99] mb-4"}
           />
-          {/* {backAddress && (
-            <TopButton onClick={() => navigate(backAddress)}>
-              <Back width={"14"} height={"14"} color={"white"} />
-            </TopButton>
-          )} */}
-          {/* <span className="ml-4">{titlePage}</span> */}
+
+          <div className="fixed w-full pt-20 ltr:pl-9 rtl:pr-9 bg-background z-[98]">{t(titlePage)}</div>
+
+          <Outlet />
+
         </div>
       </div>
-      {/* <MarqueeCoins
-        className={"fixed top-[4.5rem] right-0 bg-background z-[99] mb-4"}
-      />
-
-       */}
-
-      {/* navigation */}
-      {/* <Navigation text={"aimoonhub"} /> */}
     </>
   );
 };
