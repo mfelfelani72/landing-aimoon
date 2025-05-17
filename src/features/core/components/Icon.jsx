@@ -1043,27 +1043,27 @@ export const AboutIcon = ({ ...props }) => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M19.25 9.99991C19.25 16.9369 16.937 19.2499 10 19.2499C3.063 19.2499 0.75 16.9369 0.75 9.99991C0.75 3.06291 3.063 0.749908 10 0.749908C16.937 0.749908 19.25 3.06291 19.25 9.99991Z"
           stroke={props?.color}
           strokeWidth="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M10 13.895V10"
           stroke={props?.color}
           strokeWidth="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M10.0045 6.5H9.9955"
           stroke={props?.color}
           strokeWidth="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </>

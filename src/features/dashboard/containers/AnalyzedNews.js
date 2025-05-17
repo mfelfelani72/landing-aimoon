@@ -133,7 +133,7 @@ const AnalyzedNews = ({ ...props }) => {
   }, [newsPage])
   return (
     <>
-      <div className="flex flex-col gap-7 mt-8 px-6 bg-Neutral-500 pb-[7rem]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-3 4xl:grid-cols-4 5xl:grid-cols-5 gap-7 mt-8 px-6 bg-Neutral-500 pb-[7rem]">
         {newsAnalyzedData?.length == 0 ? (
           <LoaderPage className={"bg-background mt-[1rem]"} />
         ) : (

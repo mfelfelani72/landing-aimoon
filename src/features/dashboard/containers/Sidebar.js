@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from "react-i18next";
+import { useNavigate } from 'react-router-dom';
 
 // Components
 
@@ -23,6 +24,10 @@ import {
 const Sidebar = () => {
     // hooks
     const { t } = useTranslation();
+    const navigate = useNavigate();
+
+    // states
+    const [activeLink, setActiveLink] = useState("analyzed_news");
     return (
         <>
             <div className="fixed w-[21rem] h-dvh inline-flex flex-col bg-background-light justify-between overflow-x-clip overflow-y-auto z-[100]">
@@ -41,68 +46,87 @@ const Sidebar = () => {
                     </span>
                 </div>
 
-                <div className="flex flex-col items-end px-6 gap-2">
-                    <div className="cursor-pointer flex  flex-row items-center justify-between w-full px-4 py-2.5 gap-2">
-                        <div className="flex flex-row items-center gap-2">
-                            <CoinIcon
-                                width={"1.5rem"}
-                                height={"1.5rem"}
-                                color={"#DC815D"}
-                            />
-                            <div className=" text-[#DC815D] text-base  font-bold leading-9">
-                                {t("coin_dashboard")}
-                            </div>
-                        </div>
-
-                        <ActiveOuterIcon width={"1.5rem"} height={"1.5rem"} />
-                    </div>
-                    <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
-                        <div className="flex flex-row items-center gap-2">
-                            <NewsIcon
-                                width={"1.5rem"}
-                                height={"1.5rem"}
-                                color={"white"}
-                            />
-                            <div className=" text-Neutral-100 text-base font-bold leading-9 ">
-                                {t("latest_news")}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
-                        <div className="flex flex-row items-center gap-2">
-                            <ReportersIcon
-                                width={"1.5rem"}
-                                height={"1.5rem"}
-                                color={"white"}
-                            />
-                            <div className=" text-Neutral-100 text-base font-bold leading-9 ">
-                                {t("authors_dashboard")}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
-                        <div className="flex flex-row items-center gap-2">
-                            <AgenciesIcon
-                                width={"1.5rem"}
-                                height={"1.5rem"}
-                                color={"white"}
-                            />
-                            <div className=" text-Neutral-100 text-base font-bold leading-9 ">
-                                {t("providers_dashboard")}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
+                <div className="relative flex flex-col items-end px-6 gap-2 z-[100]">
+                    <div onClick={() => {
+                        setActiveLink("analyzed_news");
+                        navigate("/dashboard/home")
+                    }} className="cursor-pointer rounded-2xl border border-background-light hover:border-primary-300 flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
                         <div className="flex flex-row items-center gap-2">
                             <AnalysisIcon
                                 width={"1.5rem"}
                                 height={"1.5rem"}
-                                color={"white"}
+                                color={`${activeLink == "analyzed_news" ? "#ea9669 " : "white"}`}
                             />
-                            <div className=" text-Neutral-100 text-base font-bold leading-9 ">
-                                {t("news_analysis")}
+                            <div className={`${activeLink == "analyzed_news" ? "text-primary-300" : "text-Neutral-100"}  text-base font-bold leading-9`}>
+                                {t("analyzed_news")}
                             </div>
                         </div>
+                        {activeLink == "analyzed_news" && <ActiveOuterIcon width={"1.5rem"} height={"1.5rem"} />}
+                    </div>
+                    <div onClick={() => {
+                        setActiveLink("latest_news");
+                        navigate("/dashboard/home")
+                    }} className="cursor-pointer rounded-2xl border border-background-light hover:border-primary-300 flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
+                        <div className="flex flex-row items-center gap-2">
+                            <NewsIcon
+                                width={"1.5rem"}
+                                height={"1.5rem"}
+                                color={`${activeLink == "latest_news" ? "#ea9669 " : "white"}`}
+                            />
+                            <div className={`${activeLink == "latest_news" ? "text-primary-300" : "text-Neutral-100"}  text-base font-bold leading-9`}>
+                                {t("latest_news")}
+                            </div>
+                        </div>
+                        {activeLink == "latest_news" && <ActiveOuterIcon width={"1.5rem"} height={"1.5rem"} />}
+                    </div>
+                    <div onClick={() => {
+                        setActiveLink("coin_dashboard");
+                        navigate("/dashboard/coin-list");
+                    }} className="cursor-pointer rounded-2xl border border-background-light hover:border-primary-300 flex  flex-row items-center justify-between w-full px-4 py-2.5 gap-2">
+                        <div className="flex flex-row items-center gap-2">
+                            <CoinIcon
+                                width={"1.5rem"}
+                                height={"1.5rem"}
+                                color={`${activeLink == "coin_dashboard" ? "#ea9669 " : "white"}`}
+                            />
+                            <div className={`${activeLink == "coin_dashboard" ? "text-primary-300" : "text-Neutral-100"}  text-base font-bold leading-9`}>
+                                {t("coin_dashboard")}
+                            </div>
+                        </div>
+
+                        {activeLink == "coin_dashboard" && <ActiveOuterIcon width={"1.5rem"} height={"1.5rem"} />}
+                    </div>
+                    <div onClick={() => {
+                        setActiveLink("authors_dashboard");
+                        navigate("/dashboard/author-list");
+                    }} className="cursor-pointer rounded-2xl border border-background-light hover:border-primary-300 flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
+                        <div className="flex flex-row items-center gap-2">
+                            <ReportersIcon
+                                width={"1.5rem"}
+                                height={"1.5rem"}
+                                color={`${activeLink == "authors_dashboard" ? "#ea9669 " : "white"}`}
+                            />
+                            <div className={`${activeLink == "authors_dashboard" ? "text-primary-300" : "text-Neutral-100"}  text-base font-bold leading-9`}>
+                                {t("authors_dashboard")}
+                            </div>
+                        </div>
+                        {activeLink == "authors_dashboard" && <ActiveOuterIcon width={"1.5rem"} height={"1.5rem"} />}
+                    </div>
+                    <div onClick={() => {
+                        setActiveLink("providers_dashboard");
+                        navigate("/dashboard/provider-list");
+                    }} className="cursor-pointer rounded-2xl border border-background-light hover:border-primary-300 flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
+                        <div className="flex flex-row items-center gap-2">
+                            <AgenciesIcon
+                                width={"1.5rem"}
+                                height={"1.5rem"}
+                                color={`${activeLink == "providers_dashboard" ? "#ea9669 " : "white"}`}
+                            />
+                            <div className={`${activeLink == "providers_dashboard" ? "text-primary-300" : "text-Neutral-100"}  text-base font-bold leading-9`}>
+                                {t("providers_dashboard")}
+                            </div>
+                        </div>
+                        {activeLink == "providers_dashboard" && <ActiveOuterIcon width={"1.5rem"} height={"1.5rem"} />}
                     </div>
                 </div>
                 <div className="flex flex-col">
