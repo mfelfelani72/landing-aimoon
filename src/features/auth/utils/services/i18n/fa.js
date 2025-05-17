@@ -5,6 +5,7 @@ const fa = {
   enter_password: "لطفا رمز کلمه خود را وارد نمایید",
   password: "کلمه عبور",
   login: "ورود",
+  log_out: "خروج از حساب",
   login_failed: "ورود ناموفق بود",
   error_min_length_password: "حداقل 5 کاراکتر",
 

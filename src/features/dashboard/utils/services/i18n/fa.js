@@ -1,5 +1,6 @@
 const fa = {
-  mohammad: "محمد"
+  configuration: "تنظیمات",
+  notification: "اعلانات",
 }
 
 export default fa;

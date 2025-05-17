@@ -5,7 +5,7 @@ import {
   AboutIcon,
   NotificationIcon,
   LangIcon,
-  BackgoundAimoonLogo,
+  BackgroundAimoonLogo,
 } from "../../core/components/Icon.jsx";
 import { InputSearch } from "../../core/components/Input.jsx";
 import { useTranslation } from "react-i18next";
@@ -142,7 +142,7 @@ const HumbergerMenu = () => {
 
               <div className="inline-flex relative flex-row items-center gap-2">
                 <div className="absolute -top-[3rem] right-[4rem] w-full h-full z-[100]">
-                  <BackgoundAimoonLogo />
+                  <BackgroundAimoonLogo />
                 </div>
                 <div className="absolute top-[10rem] -right-[3rem] w-full h-full z-[100]">
                   <div className="w-40 h-40 left-0 top-0 absolute origin-top-left rotate-180 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />

@@ -1,8 +1,8 @@
 <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Iconly/Curved/Light/Folder">
 <g id="Folder">
-<path id="Stroke 1" d="M12.6127 24.2902H28.601" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Stroke 2" fill-rule="evenodd" clip-rule="evenodd" d="M4.60318 12.9971C4.60318 8.92727 6.68651 5.43203 10.6398 4.62092C14.5915 3.80822 17.5948 4.08917 20.0898 5.43521C22.5865 6.78124 21.8715 8.76854 24.4365 10.2273C27.0032 11.6876 31.1315 9.49394 33.8282 12.4035C36.6515 15.4495 36.6365 20.1257 36.6365 23.1066C36.6365 34.4336 30.2915 35.332 20.6198 35.332C10.9482 35.332 4.60318 34.5479 4.60318 23.1066V12.9971Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 1" d="M12.6127 24.2902H28.601" stroke="white" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 2" fill-rule="evenodd" clip-rule="evenodd" d="M4.60318 12.9971C4.60318 8.92727 6.68651 5.43203 10.6398 4.62092C14.5915 3.80822 17.5948 4.08917 20.0898 5.43521C22.5865 6.78124 21.8715 8.76854 24.4365 10.2273C27.0032 11.6876 31.1315 9.49394 33.8282 12.4035C36.6515 15.4495 36.6365 20.1257 36.6365 23.1066C36.6365 34.4336 30.2915 35.332 20.6198 35.332C10.9482 35.332 4.60318 34.5479 4.60318 23.1066V12.9971Z" stroke="white" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 </svg>

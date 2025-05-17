@@ -5,6 +5,7 @@ const en = {
   enter_password: "Please enter your password",
   password: "Password",
   login: "Login",
+  log_out: "Log out",
   login_failed: "login failed",
   error_min_length_password: "At least 5 characters",
 

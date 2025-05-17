@@ -1,5 +1,6 @@
 const en = {
-  mohamamd: "Mohammad"
+  configuration: "Configuration",
+  notification: "Notification",
 }
 
 export default en;

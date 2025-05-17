@@ -23,10 +23,6 @@ import useSetHeaderConfigure from '../../../utils/hooks/useSetHeaderConfigure.js
 
 import { SYMBOLS } from "./utils/constants/EndPoints.js";
 
-// Zustand
-
-import useAppStore from "../../app/stores/AppStore.js";
-
 const CoinLanding = () => {
     // hooks
     const { t } = useTranslation();

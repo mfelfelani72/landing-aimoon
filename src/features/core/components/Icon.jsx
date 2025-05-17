@@ -596,7 +596,7 @@ export const LogoutIcon = ({ ...props }) => {
   );
 };
 
-export const ActiveOuter = ({ ...props }) => {
+export const ActiveOuterIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -691,7 +691,7 @@ export const BlackHole = ({ ...props }) => {
   );
 };
 
-export const Wallet = ({ ...props }) => {
+export const WalletIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -846,7 +846,7 @@ export const Wallet = ({ ...props }) => {
   );
 };
 
-export const BackgoundAimoonLogo = ({ ...props }) => {
+export const BackgroundAimoonLogo = ({ ...props }) => {
   return (
     <>
       <svg
@@ -860,32 +860,32 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
           <path
             d="M172.493 -24.0353H181.922C213.97 -24.0353 239.949 6.51454 239.949 44.1997V150.924H172.493V-24.0353Z"
             stroke="url(#paint0_linear_5962_19112)"
-            stroke-width="0.833384"
+            strokeWidth="0.833384"
           />
           <path
             d="M-13.4701 -24.0353H-22.8997C-54.9472 -24.0353 -80.9268 6.51454 -80.9268 44.1997V150.924H-13.4701V-24.0353Z"
             stroke="url(#paint1_linear_5962_19112)"
-            stroke-width="0.833384"
+            strokeWidth="0.833384"
           />
           <path
             d="M156.291 -24.0353H146.861C114.814 -24.0353 88.8342 6.51454 88.8342 44.1997V54.1278H156.291V-24.0353Z"
             stroke="url(#paint2_linear_5962_19112)"
-            stroke-width="0.833384"
+            strokeWidth="0.833384"
           />
           <path
             d="M156.291 150.924H146.861C114.814 150.924 88.8342 120.374 88.8342 82.6894V72.8523H156.291V150.924Z"
             stroke="url(#paint3_linear_5962_19112)"
-            stroke-width="0.833384"
+            strokeWidth="0.833384"
           />
           <path
             d="M3.36782 -24.0353H12.7974C44.8449 -24.0353 70.8245 6.51454 70.8245 44.1997V54.1278H3.36782V-24.0353Z"
             stroke="url(#paint4_linear_5962_19112)"
-            stroke-width="0.833384"
+            strokeWidth="0.833384"
           />
           <path
             d="M3.36782 72.8522H72.7682V150.924H3.36782V72.8522Z"
             stroke="url(#paint5_linear_5962_19112)"
-            stroke-width="0.833384"
+            strokeWidth="0.833384"
           />
         </g>
         <defs>
@@ -897,9 +897,9 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
             y2="30.774"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.200951" stop-color="#282736" />
-            <stop offset="0.535" stop-color="#B4A2F1" />
-            <stop offset="0.845801" stop-color="#1F1E2E" />
+            <stop offset="0.200951" stopColor="#282736" />
+            <stop offset="0.535" stopColor="#B4A2F1" />
+            <stop offset="0.845801" stopColor="#1F1E2E" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_5962_19112"
@@ -909,9 +909,9 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
             y2="30.774"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.200951" stop-color="#282736" />
-            <stop offset="0.535" stop-color="#B4A2F1" />
-            <stop offset="0.845801" stop-color="#1F1E2E" />
+            <stop offset="0.200951" stopColor="#282736" />
+            <stop offset="0.535" stopColor="#B4A2F1" />
+            <stop offset="0.845801" stopColor="#1F1E2E" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_5962_19112"
@@ -921,9 +921,9 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
             y2="30.774"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.200951" stop-color="#282736" />
-            <stop offset="0.535" stop-color="#B4A2F1" />
-            <stop offset="0.845801" stop-color="#1F1E2E" />
+            <stop offset="0.200951" stopColor="#282736" />
+            <stop offset="0.535" stopColor="#B4A2F1" />
+            <stop offset="0.845801" stopColor="#1F1E2E" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_5962_19112"
@@ -933,9 +933,9 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
             y2="30.774"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.200951" stop-color="#282736" />
-            <stop offset="0.535" stop-color="#B4A2F1" />
-            <stop offset="0.845801" stop-color="#1F1E2E" />
+            <stop offset="0.200951" stopColor="#282736" />
+            <stop offset="0.535" stopColor="#B4A2F1" />
+            <stop offset="0.845801" stopColor="#1F1E2E" />
           </linearGradient>
           <linearGradient
             id="paint4_linear_5962_19112"
@@ -945,9 +945,9 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
             y2="30.774"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.200951" stop-color="#282736" />
-            <stop offset="0.535" stop-color="#B4A2F1" />
-            <stop offset="0.845801" stop-color="#1F1E2E" />
+            <stop offset="0.200951" stopColor="#282736" />
+            <stop offset="0.535" stopColor="#B4A2F1" />
+            <stop offset="0.845801" stopColor="#1F1E2E" />
           </linearGradient>
           <linearGradient
             id="paint5_linear_5962_19112"
@@ -957,9 +957,9 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
             y2="30.774"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.200951" stop-color="#282736" />
-            <stop offset="0.535" stop-color="#B4A2F1" />
-            <stop offset="0.845801" stop-color="#1F1E2E" />
+            <stop offset="0.200951" stopColor="#282736" />
+            <stop offset="0.535" stopColor="#B4A2F1" />
+            <stop offset="0.845801" stopColor="#1F1E2E" />
           </linearGradient>
         </defs>
       </svg>
@@ -967,7 +967,7 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
   );
 };
 
-export const BackgoundSyncth = () => {
+export const BackgroundSyncthIcon = () => {
   return (
     <>
       <svg
@@ -981,7 +981,7 @@ export const BackgoundSyncth = () => {
           <path
             d="M184.75 266.532C184.75 236.976 177.461 207.876 163.528 181.81C149.596 155.744 129.45 133.517 104.875 117.097C80.3005 100.676 52.0554 90.57 22.6419 87.673C-6.77156 84.7761 -36.4456 89.1778 -63.7516 100.488C-91.0576 111.799 -115.153 129.669 -133.903 152.516C-152.653 175.363 -165.479 202.481 -171.245 231.469C-177.011 260.457 -175.539 290.42 -166.959 318.703C-158.38 346.986 -142.957 372.717 -122.058 393.616L-93.586 365.144C-109.803 348.927 -121.77 328.961 -128.427 307.014C-135.085 285.068 -136.227 261.818 -131.753 239.325C-127.278 216.831 -117.326 195.789 -102.777 178.06C-88.2276 160.332 -69.5308 146.466 -48.3425 137.689C-27.1542 128.913 -4.12843 125.497 18.6952 127.745C41.5188 129.993 63.4358 137.835 82.5047 150.576C101.574 163.318 117.206 180.566 128.017 200.792C138.828 221.018 144.484 243.598 144.484 266.532H184.75Z"
             fill="#C3B5F4"
-            fill-opacity="0.35"
+            fillOpacity="0.35"
           />
         </g>
         <defs>
@@ -992,9 +992,9 @@ export const BackgoundSyncth = () => {
             width="532.248"
             height="479.608"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -1047,21 +1047,21 @@ export const AboutIcon = ({ ...props }) => {
           clip-rule="evenodd"
           d="M19.25 9.99991C19.25 16.9369 16.937 19.2499 10 19.2499C3.063 19.2499 0.75 16.9369 0.75 9.99991C0.75 3.06291 3.063 0.749908 10 0.749908C16.937 0.749908 19.25 3.06291 19.25 9.99991Z"
           stroke={props?.color}
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
         <path
           d="M10 13.895V10"
           stroke={props?.color}
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
         <path
           d="M10.0045 6.5H9.9955"
           stroke={props?.color}
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />

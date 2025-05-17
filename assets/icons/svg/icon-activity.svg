@@ -1,9 +1,9 @@
 <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Iconly/Curved/Light/Activity">
 <g id="Activity">
-<path id="Stroke 1" d="M11.675 25.6473L16.6634 19.1656L22.3534 23.6323L27.2351 17.3323" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Stroke 2" fill-rule="evenodd" clip-rule="evenodd" d="M32.925 4.80737C34.695 4.80737 36.1283 6.24071 36.1283 8.01071C36.1283 9.77904 34.695 11.214 32.925 11.214C31.155 11.214 29.7217 9.77904 29.7217 8.01071C29.7217 6.24071 31.155 4.80737 32.925 4.80737Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Stroke 4" d="M34.739 16.339C34.9607 17.8307 35.0623 19.5107 35.0623 21.3957C35.0623 32.959 31.209 36.8123 19.6457 36.8123C8.084 36.8123 4.229 32.959 4.229 21.3957C4.229 9.834 8.084 5.979 19.6457 5.979C21.4957 5.979 23.1473 6.07734 24.6173 6.29067" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 1" d="M11.675 25.6473L16.6634 19.1656L22.3534 23.6323L27.2351 17.3323" stroke="white" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 2" fill-rule="evenodd" clip-rule="evenodd" d="M32.925 4.80737C34.695 4.80737 36.1283 6.24071 36.1283 8.01071C36.1283 9.77904 34.695 11.214 32.925 11.214C31.155 11.214 29.7217 9.77904 29.7217 8.01071C29.7217 6.24071 31.155 4.80737 32.925 4.80737Z" stroke="white" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 4" d="M34.739 16.339C34.9607 17.8307 35.0623 19.5107 35.0623 21.3957C35.0623 32.959 31.209 36.8123 19.6457 36.8123C8.084 36.8123 4.229 32.959 4.229 21.3957C4.229 9.834 8.084 5.979 19.6457 5.979C21.4957 5.979 23.1473 6.07734 24.6173 6.29067" stroke="white" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 </svg>
