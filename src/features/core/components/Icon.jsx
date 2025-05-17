@@ -1,5 +1,9 @@
 import React from "react";
 
+// Functions
+
+import { cn } from "../../../../utils/lib/cn";
+
 export const CloseSquare = ({ ...props }) => {
   return (
     <>
@@ -246,7 +250,7 @@ export const Email = ({ ...props }) => {
   );
 };
 
-export const DesktopLogo = ({ ...props }) => {
+export const Logo = ({ ...props }) => {
   return (
     <>
       <svg
@@ -289,7 +293,7 @@ export const DesktopLogo = ({ ...props }) => {
   );
 };
 
-export const DesktopNavCoin = ({ ...props }) => {
+export const Coin = ({ ...props }) => {
   return (
     <>
       <svg
@@ -321,7 +325,7 @@ export const DesktopNavCoin = ({ ...props }) => {
   );
 };
 
-export const DesktopNavNews = ({ ...props }) => {
+export const News = ({ ...props }) => {
   return (
     <>
       <svg
@@ -359,7 +363,7 @@ export const DesktopNavNews = ({ ...props }) => {
   );
 };
 
-export const DesktopNavReporters = ({ ...props }) => {
+export const Reporters = ({ ...props }) => {
   return (
     <>
       <svg
@@ -420,7 +424,7 @@ export const DesktopNavReporters = ({ ...props }) => {
   );
 };
 
-export const DesktopNavAgencies = ({ ...props }) => {
+export const Agencies = ({ ...props }) => {
   return (
     <>
       <svg
@@ -453,7 +457,7 @@ export const DesktopNavAgencies = ({ ...props }) => {
   );
 };
 
-export const DesktopNavAnalysis = ({ ...props }) => {
+export const Analysis = ({ ...props }) => {
   return (
     <>
       <svg
@@ -492,7 +496,7 @@ export const DesktopNavAnalysis = ({ ...props }) => {
   );
 };
 
-export const DesktopNavConfig = ({ ...props }) => {
+export const Config = ({ ...props }) => {
   return (
     <>
       <svg
@@ -525,7 +529,7 @@ export const DesktopNavConfig = ({ ...props }) => {
   );
 };
 
-export const DesktopNavNotification = ({ ...props }) => {
+export const NotificationIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -556,7 +560,7 @@ export const DesktopNavNotification = ({ ...props }) => {
   );
 };
 
-export const DesktopNavLogout = ({ ...props }) => {
+export const LogoutIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -592,7 +596,7 @@ export const DesktopNavLogout = ({ ...props }) => {
   );
 };
 
-export const DesktopNavActiveOuter = ({ ...props }) => {
+export const ActiveOuter = ({ ...props }) => {
   return (
     <>
       <svg
@@ -664,7 +668,7 @@ export const DesktopNavActiveOuter = ({ ...props }) => {
   );
 };
 
-export const DesktopNavBlackHole = ({ ...props }) => {
+export const BlackHole = ({ ...props }) => {
   return (
     <>
       <svg
@@ -687,7 +691,7 @@ export const DesktopNavBlackHole = ({ ...props }) => {
   );
 };
 
-export const DesktopNavWallet = ({ ...props }) => {
+export const Wallet = ({ ...props }) => {
   return (
     <>
       <svg
@@ -963,7 +967,7 @@ export const BackgoundAimoonLogo = ({ ...props }) => {
   );
 };
 
-export const DesktopBackgoundSyncth = () => {
+export const BackgoundSyncth = () => {
   return (
     <>
       <svg
@@ -1008,13 +1012,13 @@ export const DesktopBackgoundSyncth = () => {
   );
 };
 
-export const SunIcon = ({ ...props }) => {
+export const SunIcon = ({ className, ...props }) => {
   return (
     <>
       <svg
         width={props?.width}
         height={props?.height}
-        className={props?.className}
+        className={cn("",className)}
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

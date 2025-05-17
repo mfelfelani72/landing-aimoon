@@ -5,20 +5,20 @@ import { Outlet } from "react-router-dom";
 // Components
 
 import {
-  DesktopLogo,
-  DesktopNavCoin,
-  DesktopNavNews,
-  DesktopNavReporters,
-  DesktopNavAgencies,
-  DesktopNavAnalysis,
-  DesktopNavConfig,
-  DesktopNavNotification,
-  DesktopNavLogout,
-  DesktopNavActiveOuter,
-  DesktopNavBlackHole,
-  DesktopNavWallet,
+  Logo,
+  Coin,
+  News,
+  Reporters,
+  Agencies,
+  Analysis,
+  Config,
+  NotificationIcon,
+  LogoutIcon,
+  ActiveOuter,
+  BlackHole,
+  Wallet,
   BackgoundAimoonLogo,
-  DesktopBackgoundSyncth,
+  BackgoundSyncth,
 } from "../../../core/components/Icon.jsx";
 
 // Containers
@@ -49,7 +49,7 @@ const DashboardLanding = () => {
             <BackgoundAimoonLogo />
           </div>
           <div className="flex flex-row items-center justify-center pt-16 px-10 w-full gap-2">
-            <DesktopLogo width={"34"} height={"30"} />
+            <Logo width={"34"} height={"30"} />
 
             <span className=" text-white text-2xl font-medium  flex pt-3">
               AimoonHub
@@ -59,7 +59,7 @@ const DashboardLanding = () => {
           <div className="flex flex-col items-end px-6 gap-2">
             <div className="cursor-pointer flex  flex-row items-center justify-between w-full px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <DesktopNavCoin
+                <Coin
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"#DC815D"}
@@ -69,11 +69,11 @@ const DashboardLanding = () => {
                 </div>
               </div>
 
-              <DesktopNavActiveOuter width={"1.5rem"} height={"1.5rem"} />
+              <ActiveOuter width={"1.5rem"} height={"1.5rem"} />
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <DesktopNavNews
+                <News
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"white"}
@@ -85,7 +85,7 @@ const DashboardLanding = () => {
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <DesktopNavReporters
+                <Reporters
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"white"}
@@ -97,7 +97,7 @@ const DashboardLanding = () => {
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <DesktopNavAgencies
+                <Agencies
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"white"}
@@ -109,7 +109,7 @@ const DashboardLanding = () => {
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <DesktopNavAnalysis
+                <Analysis
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"white"}
@@ -126,10 +126,10 @@ const DashboardLanding = () => {
                 <div className="w-36 h-36 opacity-60 bg-violet-300/30 rounded-full blur-2xl" />
               </div>
               <div className="rotate-2 z-30">
-                <DesktopNavWallet width={"139"} height={"139"} />
+                <Wallet width={"139"} height={"139"} />
               </div>
               <div>
-                <DesktopNavBlackHole
+                <BlackHole
                   width={"123"}
                   height={"24"}
                   color={"#161521"}
@@ -141,11 +141,11 @@ const DashboardLanding = () => {
 
             <div className="relative inline-flex flex-col items-end px-6 gap-2 pb-16">
               <div className="absolute -top-[15rem] -left-[5rem] w-full h-full z-[20]">
-                <DesktopBackgoundSyncth />
+                <BackgoundSyncth />
               </div>
               <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center gap-2">
-                  <DesktopNavConfig
+                  <Config
                     width={"1.5rem"}
                     height={"1.5rem"}
                     color={"white"}
@@ -157,7 +157,7 @@ const DashboardLanding = () => {
               </div>
               <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center gap-2">
-                  <DesktopNavNotification
+                  <NotificationIcon
                     width={"1.5rem"}
                     height={"1.5rem"}
                     color={"white"}
@@ -169,7 +169,7 @@ const DashboardLanding = () => {
               </div>
               <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center gap-2">
-                  <DesktopNavLogout
+                  <LogoutIcon
                     width={"1.5rem"}
                     height={"1.5rem"}
                     color={"#E68956"}
