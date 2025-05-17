@@ -4,7 +4,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 
 // Components
 
-import TopButton from "../core/components/TopButton.jsx";
+import TopButton from "../../../core/components/TopButton.jsx";
 import {
   Back,
   DesktopLogo,
@@ -21,17 +21,17 @@ import {
   DesktopNavWallet,
   BackgoundAimoonLogo,
   DesktopBackgoundSyncth,
-} from "../../features/core/components/Icon.jsx";
-import Navigation from "../core/components/Navigation.jsx";
-import Languages from "../core/components/Languages.jsx";
+} from "../../../core/components/Icon.jsx";
+import Navigation from "../../../core/components/Navigation.jsx";
+import Languages from "../../../core/components/Languages.jsx";
 
 // Containers
 
-import MarqueeCoins from "../coin/containers/MarqueeCoins.js";
+import MarqueeCoins from "../../../coin/containers/MarqueeCoins.js";
 
 // Zustand
 
-import useAppStore from "../../app/stores/AppStore.js";
+import useAppStore from "../../../../app/stores/AppStore.js";
 
 const DashboardLanding = () => {
   // hooks
@@ -41,21 +41,11 @@ const DashboardLanding = () => {
   const titlePage = useAppStore((state) => state.titlePage);
   const backAddress = useAppStore((state) => state.backAddress);
 
-  // functions
-  useEffect(() => {
-    // Set new background color
-    document.body.style.backgroundColor = "#1f1e2e";
-
-    return () => {
-      document.body.style.backgroundColor = "white";
-    };
-  }, []);
-
   return (
     <>
       {/* top header */}
       <div className="flex flex-row">
-        <div className="relative w-[21rem]  h-dvh inline-flex flex-col  justify-between overflow-auto">
+        <div className="relative w-[21rem] h-dvh inline-flex flex-col bg-background-light justify-between overflow-auto z-[100]">
           <div className="absolute -top-[2rem] -left-[3rem] w-full h-full z-[20]">
             <div className="w-36 h-36 opacity-60 bg-violet-300/30 rounded-full blur-2xl" />
           </div>
@@ -197,13 +187,16 @@ const DashboardLanding = () => {
             </div>
           </div>
         </div>
-        <div className="w-full bg-amber-950">
-          {backAddress && (
+        <div className="w-full bg-background">
+          <MarqueeCoins
+            className={"text-white fixed top-[2rem] right-0 bg-background z-[99] mb-4"}
+          />
+          {/* {backAddress && (
             <TopButton onClick={() => navigate(backAddress)}>
               <Back width={"14"} height={"14"} color={"white"} />
             </TopButton>
-          )}
-          <span className="ml-4">{titlePage}</span>
+          )} */}
+          {/* <span className="ml-4">{titlePage}</span> */}
         </div>
       </div>
       {/* <MarqueeCoins
