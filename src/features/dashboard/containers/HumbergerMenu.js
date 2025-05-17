@@ -1,9 +1,9 @@
 import React from "react";
 import {
-  DesktopNavLogout,
+  LogoutIcon,
   SunIcon,
   AboutIcon,
-  DesktopNavNotification,
+  NotificationIcon,
   LangIcon,
   BackgoundAimoonLogo,
 } from "../../core/components/Icon.jsx";
@@ -49,7 +49,7 @@ const HumbergerMenu = () => {
             <div className="flex flex-col w-full items-end">
               <div className="cursor-pointer flex  flex-row  justify-between w-full px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center gap-2">
-                  <DesktopNavNotification
+                  <NotificationIcon
                     width={"1.25rem"}
                     height={"1.25rem"}
                     color={"white"}
@@ -147,7 +147,7 @@ const HumbergerMenu = () => {
                 <div className="absolute top-[10rem] -right-[3rem] w-full h-full z-[100]">
                   <div className="w-40 h-40 left-0 top-0 absolute origin-top-left rotate-180 opacity-50 bg-violet-300/30 rounded-full blur-2xl" />
                 </div>
-                <DesktopNavLogout
+                <LogoutIcon
                   width={"1.25rem"}
                   height={"1.25rem"}
                   color={"#DC815D"}
