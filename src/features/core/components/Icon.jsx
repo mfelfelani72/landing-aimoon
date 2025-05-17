@@ -4,7 +4,7 @@ import React from "react";
 
 import { cn } from "../../../../utils/lib/cn";
 
-export const CloseSquare = ({ ...props }) => {
+export const CloseSquareIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -41,7 +41,7 @@ export const CloseSquare = ({ ...props }) => {
     </>
   );
 };
-export const Show = ({ ...props }) => {
+export const ShowIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -73,7 +73,7 @@ export const Show = ({ ...props }) => {
     </>
   );
 };
-export const Hide = ({ ...props }) => {
+export const HideIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -122,7 +122,7 @@ export const Hide = ({ ...props }) => {
     </>
   );
 };
-export const Danger = ({ ...props }) => {
+export const DangerIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -154,7 +154,7 @@ export const Danger = ({ ...props }) => {
     </>
   );
 };
-export const Lock = ({ ...props }) => {
+export const LockIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -191,7 +191,7 @@ export const Lock = ({ ...props }) => {
     </>
   );
 };
-export const Back = ({ ...props }) => {
+export const BackIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -219,7 +219,7 @@ export const Back = ({ ...props }) => {
     </>
   );
 };
-export const Email = ({ ...props }) => {
+export const EmailIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -250,7 +250,7 @@ export const Email = ({ ...props }) => {
   );
 };
 
-export const Logo = ({ ...props }) => {
+export const LogoIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -293,7 +293,7 @@ export const Logo = ({ ...props }) => {
   );
 };
 
-export const Coin = ({ ...props }) => {
+export const CoinIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -325,7 +325,7 @@ export const Coin = ({ ...props }) => {
   );
 };
 
-export const News = ({ ...props }) => {
+export const NewsIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -363,7 +363,7 @@ export const News = ({ ...props }) => {
   );
 };
 
-export const Reporters = ({ ...props }) => {
+export const ReportersIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -424,7 +424,7 @@ export const Reporters = ({ ...props }) => {
   );
 };
 
-export const Agencies = ({ ...props }) => {
+export const AgenciesIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -457,7 +457,7 @@ export const Agencies = ({ ...props }) => {
   );
 };
 
-export const Analysis = ({ ...props }) => {
+export const AnalysisIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -496,7 +496,7 @@ export const Analysis = ({ ...props }) => {
   );
 };
 
-export const Config = ({ ...props }) => {
+export const ConfigIcon = ({ ...props }) => {
   return (
     <>
       <svg
@@ -1018,7 +1018,7 @@ export const SunIcon = ({ className, ...props }) => {
       <svg
         width={props?.width}
         height={props?.height}
-        className={cn("",className)}
+        className={cn("", className)}
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

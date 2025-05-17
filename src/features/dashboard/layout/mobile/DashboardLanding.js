@@ -5,7 +5,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 // Components
 
 import TopButton from "../../../core/components/TopButton.jsx";
-import { Back } from "../../../../features/core/components/Icon.jsx";
+import { BackIcon } from "../../../../features/core/components/Icon.jsx";
 import Navigation from "../../../core/components/Navigation.jsx";
 import Languages from "../../../core/components/Languages.jsx";
 import Drawer from "../../../core/components/Drawer.jsx";
@@ -88,7 +88,7 @@ const DashboardLanding = () => {
                 navigate(backAddress);
               }}
             >
-              <Back
+              <BackIcon
                 width={"30"}
                 height={"30"}
                 color={`${"dark" == "light" ? "#797882" : "white"}`}

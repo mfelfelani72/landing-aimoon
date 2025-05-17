@@ -5,13 +5,13 @@ import { Outlet } from "react-router-dom";
 // Components
 
 import {
-  Logo,
-  Coin,
-  News,
-  Reporters,
-  Agencies,
-  Analysis,
-  Config,
+  LogoIcon,
+  CoinIcon,
+  NewsIcon,
+  ReportersIcon,
+  AgenciesIcon,
+  AnalysisIcon,
+  ConfigIcon,
   NotificationIcon,
   LogoutIcon,
   ActiveOuter,
@@ -49,7 +49,7 @@ const DashboardLanding = () => {
             <BackgoundAimoonLogo />
           </div>
           <div className="flex flex-row items-center justify-center pt-16 px-10 w-full gap-2">
-            <Logo width={"34"} height={"30"} />
+            <LogoIcon width={"34"} height={"30"} />
 
             <span className=" text-white text-2xl font-medium  flex pt-3">
               AimoonHub
@@ -59,7 +59,7 @@ const DashboardLanding = () => {
           <div className="flex flex-col items-end px-6 gap-2">
             <div className="cursor-pointer flex  flex-row items-center justify-between w-full px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <Coin
+                <CoinIcon
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"#DC815D"}
@@ -73,7 +73,7 @@ const DashboardLanding = () => {
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <News
+                <NewsIcon
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"white"}
@@ -85,7 +85,7 @@ const DashboardLanding = () => {
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <Reporters
+                <ReportersIcon
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"white"}
@@ -97,7 +97,7 @@ const DashboardLanding = () => {
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <Agencies
+                <AgenciesIcon
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"white"}
@@ -109,7 +109,7 @@ const DashboardLanding = () => {
             </div>
             <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
               <div className="flex flex-row items-center gap-2">
-                <Analysis
+                <AnalysisIcon
                   width={"1.5rem"}
                   height={"1.5rem"}
                   color={"white"}
@@ -145,7 +145,7 @@ const DashboardLanding = () => {
               </div>
               <div className="cursor-pointer flex w-full justify-between flex-row items-center  px-4 py-2.5 gap-2">
                 <div className="flex flex-row items-center gap-2">
-                  <Config
+                  <ConfigIcon
                     width={"1.5rem"}
                     height={"1.5rem"}
                     color={"white"}

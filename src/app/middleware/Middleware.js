@@ -42,7 +42,7 @@ const Middleware = (location, navigate) => {
   //   navigate("/dashboard", { state: { from_location: "redirect" } });
   // }
 
-  // show landing page
+  // Show landing page
   else if (location.pathname === "/") {
     // if (IsLogin() === true) navigate("/dashboard");
     // else

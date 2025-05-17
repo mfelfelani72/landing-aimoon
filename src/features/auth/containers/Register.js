@@ -9,7 +9,7 @@ import TopButton from '../../core/components/TopButton.jsx'
 import { InputText, InputPassword, InputRePassword, InputEmail } from '../../core/components/Input.jsx';
 import { ButtonNoLink } from '../../core/components/Button.jsx';
 import LoaderDotSpinner from '../../core/components/LoaderDotSpinner.jsx';
-import { Back } from '../../core/components/Icon.jsx';
+import { BackIcon } from '../../core/components/Icon.jsx';
 
 // Functions
 
@@ -64,7 +64,7 @@ const Register = () => {
                         <TopButton className={"ltr:rotate-180"} onClick={() => {
                             navigate(backAddress)
                         }}>
-                            <Back width={"30"} height={"30"} color={`${"dark" == "light" ? "#797882" : "white"}`} />
+                            <BackIcon width={"30"} height={"30"} color={`${"dark" == "light" ? "#797882" : "white"}`} />
                         </TopButton>
                     </div>
 

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 // Components
 
 import { Image } from "../../core/components/Image.jsx"
-import { CloseSquare, Danger, Email, Hide, Lock, Show } from "./Icon.jsx";
+import { CloseSquareIcon, DangerIcon, EmailIcon, HideIcon, LockIcon, ShowIcon } from "./Icon.jsx";
 
 // Functions
 
@@ -28,17 +28,17 @@ const handleClear = (id, first_id, secound_id, afterFunction) => {
     afterFunction();
   }
 };
-//  --> for toggle show/hidden password
+//  --> for toggle ShowIcon/hidden password
 const handleShow = (id) => {
   const input = document.getElementById(id);
   if (input.type === "text") {
     input.type = "password";
-    document.getElementById(id + "-show").classList.toggle("hidden");
-    document.getElementById(id + "-hide").classList.toggle("hidden");
+    document.getElementById(id + "-ShowIcon").classList.toggle("hidden");
+    document.getElementById(id + "-HideIcon").classList.toggle("hidden");
   } else {
     input.type = "text";
-    document.getElementById(id + "-show").classList.toggle("hidden");
-    document.getElementById(id + "-hide").classList.toggle("hidden");
+    document.getElementById(id + "-ShowIcon").classList.toggle("hidden");
+    document.getElementById(id + "-HideIcon").classList.toggle("hidden");
   }
 };
 // --> for compare ch_password and ch_confirm_password
@@ -102,7 +102,7 @@ export const InputText = ({ className, ...props }) => {
             <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 flex items-center">
               <div className="p-2">
                 <div className="flex cursor-pointer px-1" onClick={() => handleClear(props?.id)}>
-                  <CloseSquare width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+                  <CloseSquareIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ export const InputEmail = ({ className, ...props }) => {
               <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 flex items-center">
                 <div className="p-2">
                   <div className="flex cursor-pointer px-1" onClick={() => handleClear(props?.id)}>
-                    <CloseSquare width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+                    <CloseSquareIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
                   </div>
                 </div>
               </div>
@@ -166,12 +166,12 @@ export const InputEmail = ({ className, ...props }) => {
             className="hidden absolute top-[6px] rtl:left-[1px] ltr:right-[1px] rtl:pl-3 ltr:pr-3 items-center "
           >
             <div className="flex">
-              <Danger width={"24"} height={"24"} color={"#d71e1e"} />
+              <DangerIcon width={"24"} height={"24"} color={"#d71e1e"} />
             </div>
           </div>
           <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
             <div className="flex">
-              <Email width={"24"} height={"24"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+              <EmailIcon width={"24"} height={"24"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
             </div>
           </div>
           {/* input validate */}
@@ -310,7 +310,7 @@ export const InputPassword = ({ className, ...props }) => {
                   )
                 }
               >
-                <CloseSquare width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+                <CloseSquareIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
               </div>
 
             </div>
@@ -320,14 +320,14 @@ export const InputPassword = ({ className, ...props }) => {
             >
               <div className="p-2">
                 <div className="flex">
-                  <Danger width={"24"} height={"24"} color={"#d71e1e"} />
+                  <DangerIcon width={"24"} height={"24"} color={"#d71e1e"} />
                 </div>
               </div>
             </div>
             <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
               <div className="">
                 <div className="flex">
-                  <Lock width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+                  <LockIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
                 </div>
               </div>
             </div>
@@ -365,17 +365,17 @@ export const InputPassword = ({ className, ...props }) => {
               className="flex"
               onClick={() => handleShow(props?.id)}
             >
-              <div id={props?.id + "-show"} className="">
-                <Show width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+              <div id={props?.id + "-ShowIcon"} className="">
+                <ShowIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
               </div>
-              <div id={props?.id + "-hide"} className="hidden">
-                <Hide width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+              <div id={props?.id + "-HideIcon"} className="hidden">
+                <HideIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
             <div className="flex">
-              <Lock width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+              <LockIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
             </div>
           </div>
           <div className="hidden peer-invalid:flex absolute my-2 mx-3">
@@ -412,17 +412,17 @@ export const InputRePassword = ({ ...props }) => {
             className="flex"
             onClick={() => handleShow(props?.id)}
           >
-            <div id={props?.id + "-show"} className="">
-              <Show width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+            <div id={props?.id + "-ShowIcon"} className="">
+              <ShowIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
             </div>
-            <div id={props?.id + "-hide"} className="hidden">
-              <Hide width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+            <div id={props?.id + "-HideIcon"} className="hidden">
+              <HideIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
             </div>
           </div>
         </div>
         <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
           <div className="flex">
-            <Lock width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+            <LockIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
           </div>
         </div>
 
