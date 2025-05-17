@@ -5,7 +5,6 @@ import { Outlet } from "react-router-dom";
 // Components
 
 import {
-  Back,
   DesktopLogo,
   DesktopNavCoin,
   DesktopNavNews,
