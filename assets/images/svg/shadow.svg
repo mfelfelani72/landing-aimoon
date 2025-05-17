@@ -14,8 +14,8 @@
 </g>
 </g>
 <defs>
-<filter id="filter0_f_5342_20255" x="-184.198" y="-213.458" width="780.912" height="1257.51" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_f_5342_20255" x="-184.198" y="-213.458" width="780.912" height="1257.51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="106.823" result="effect1_foregroundBlur_5342_20255"/>
 </filter>
